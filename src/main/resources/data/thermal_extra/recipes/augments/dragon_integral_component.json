@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "IGI",
+    "RXR",
+    "IGI"
+  ],
+  "key": {
+    "G": {
+      "item": "thermal_extra:dragon_breath_plating"
+    },
+    "I": {
+      "item": "thermal_extra:dragon_enderium_ingot"
+    },
+    "R": {
+      "tag": "forge:dusts/sulfur"
+    },
+    "X": {
+      "item": "thermal:upgrade_augment_3"
+    }
+  },
+  "result": {
+    "item": "thermal_extra:dragon_integral_component"
+  },
+  "conditions": [
+    {
+      "flag": "upgrade_augments",
+      "type": "thermal:flag"
+    }
+  ]
+}

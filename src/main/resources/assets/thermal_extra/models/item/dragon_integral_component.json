@@ -1,0 +1,8 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "thermal_extra:item/augments/dragon_integral_component",
+    "layer1": "thermal_extra:item/augments/dragon_integral_component_lights",
+    "layer2": "thermal:item/augments/upgrade_augment_anim"
+  }
+}
