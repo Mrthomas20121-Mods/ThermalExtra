@@ -13,5 +13,6 @@ public class ThermalExtra {
 
 	public ThermalExtra() {
 		ItemRegistry.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+		ThermalExtraFluids.FLUIDS.register(FMLJavaModLoadingContext.get().getModEventBus());
 	}
 }
