@@ -1,2 +1,2 @@
-# Hostile Neural Compat
-Add Mob from other mods to Hostile Neural Networks
+# Thermal Extra
+Add new Augments and Other Stuff to Thermal Serie.
