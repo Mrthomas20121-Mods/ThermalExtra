@@ -1,7 +1,8 @@
-package mrthomas20121.thermal_extra;
+package mrthomas20121.thermal_extra.init;
 
 import cofh.lib.fluid.FluidCoFH;
 import cofh.lib.util.DeferredRegisterCoFH;
+import mrthomas20121.thermal_extra.ThermalExtra;
 import mrthomas20121.thermal_extra.fluid.FluidThermalExtra;
 import net.minecraft.fluid.Fluid;
 import net.minecraftforge.registries.ForgeRegistries;

@@ -1,6 +1,5 @@
 package mrthomas20121.thermal_extra.item;
 
-import mrthomas20121.thermal_extra.ItemRegistry;
 import net.minecraft.entity.Entity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;

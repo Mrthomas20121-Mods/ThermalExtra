@@ -1,4 +1,4 @@
-package mrthomas20121.thermal_extra;
+package mrthomas20121.thermal_extra.init;
 
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IArmorMaterial;
@@ -15,7 +15,7 @@ import java.util.function.Supplier;
 public enum ThermalArmorMaterial implements IArmorMaterial {
 
     DRAGON_BRONZE("dragon_bronze", 37, new int[]{3, 6, 8, 3}, 15, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0F, () -> {
-        return Ingredient.of(ItemRegistry.dragon_bronze_ingot.get());
+        return Ingredient.of(Items.dragon_bronze_ingot.get());
     });
 
     private static final int[] HEALTH_PER_SLOT = new int[]{13, 15, 16, 11};
