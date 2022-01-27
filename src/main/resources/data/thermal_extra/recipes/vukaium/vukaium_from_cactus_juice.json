@@ -1,0 +1,17 @@
+{
+    "type": "thermal:chiller",
+    "ingredient": [
+        {
+            "item": "thermal_extra:nectium_ingot"
+        },
+        {
+            "fluid": "thermal_extra:cactus_juice",
+            "amount": 400
+        }
+    ],
+    "result": [
+        {
+            "item": "thermal_extra:vukaium_ingot"
+        }
+    ]
+}
