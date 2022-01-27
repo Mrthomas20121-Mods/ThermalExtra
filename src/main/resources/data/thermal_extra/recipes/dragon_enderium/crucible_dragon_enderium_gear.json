@@ -1,0 +1,12 @@
+{
+  "type": "thermal:crucible",
+  "ingredient": {
+    "tag": "forge:gears/dragon_enderium"
+  },
+  "result": [
+    {
+      "fluid": "thermal_extra:dragon_enderium",
+      "amount": 576
+    }
+  ]
+}

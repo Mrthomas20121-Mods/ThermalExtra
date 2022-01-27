@@ -1,0 +1,19 @@
+{
+  "type": "thermal:press",
+  "ingredients": [
+    {
+      "tag": "forge:ingots/nebulium",
+      "count": 1
+    },
+    {
+      "item": "thermal:press_coin_die"
+    }
+  ],
+  "result": [
+    {
+      "item": "thermal_extra:nebulium_coin",
+      "count": 3
+    }
+  ],
+  "energy": 2400
+}

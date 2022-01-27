@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "thermal_extra:dragon_bronze_plate",
+    "thermal_extra:dragon_enderium_plate",
+    "thermal_extra:vukaium_plate",
+    "thermal_extra:nebulium_plate",
+    "thermal_extra:nectium_plate",
+    "thermal_extra:polarium_plate",
+    "thermal_extra:zauvium_plate",
+    "thermal_extra:drownium_plate"
+  ]
+}

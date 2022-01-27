@@ -1,0 +1,12 @@
+{
+  "type": "thermal:crucible",
+  "ingredient": {
+    "tag": "forge:plates/nectium"
+  },
+  "result": [
+    {
+      "fluid": "thermal_extra:nectium",
+      "amount": 144
+    }
+  ]
+}

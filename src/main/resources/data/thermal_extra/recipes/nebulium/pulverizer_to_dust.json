@@ -1,0 +1,13 @@
+{
+  "type": "thermal:pulverizer",
+  "ingredient": {
+    "tag": "forge:ingots/nebulium"
+  },
+  "result": [
+    {
+      "item": "thermal_extra:nebulium_dust",
+      "count": 1
+    }
+  ],
+  "experience": 0.2
+}

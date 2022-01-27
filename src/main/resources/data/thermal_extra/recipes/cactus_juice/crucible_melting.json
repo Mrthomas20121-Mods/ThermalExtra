@@ -1,0 +1,12 @@
+{
+    "type": "thermal:crucible",
+    "ingredient": {
+        "item": "minecraft:cactus"
+    },
+    "result": [
+        {
+            "fluid": "thermal_extra:cactus_juice",
+            "amount": 200
+        }
+    ]
+}

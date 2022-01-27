@@ -1,0 +1,12 @@
+{
+  "type": "thermal:crucible",
+  "ingredient": {
+    "tag": "forge:dusts/polarium"
+  },
+  "result": [
+    {
+      "fluid": "thermal_extra:polarium",
+      "amount": 144
+    }
+  ]
+}

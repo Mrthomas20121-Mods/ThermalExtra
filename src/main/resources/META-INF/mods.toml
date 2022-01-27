@@ -1,29 +1,43 @@
-modLoader="javafml"
-loaderVersion="[36,)"
-license="MIT License"
-issueTrackerURL="https://github.com/Mrthomas20121/ThermalExtra/issues"
+modLoader = "javafml"
+loaderVersion = "[36,)"
+license = "MIT License"
+issueTrackerURL = "https://github.com/Mrthomas20121/ThermalExtra/issues"
 
 [[mods]]
-modId="thermal_extra"
-version="1.0.6"
-displayName="Thermal: Extra"
-displayURL="https://www.curseforge.com/minecraft/mc-mods/thermal_extra"
+modId = "thermal_extra"
+version = "1.0.6"
+displayName = "Thermal: Extra"
+displayURL = "https://www.curseforge.com/minecraft/mc-mods/thermal_extra"
 #logoFile="tinkers_reforged_logo.png"
-authors="Mrthomas20121"
-description='''
+credits = "Team CoFH"
+authors = "Mrthomas20121"
+description = '''
 Add more augments to Thermal
 '''
 
 [[dependencies.thermal_extra]]
-    modId="forge"
-    mandatory=true
-    versionRange="[36.2.19,)"
-    ordering="NONE"
-    side="BOTH"
+    modId = "forge"
+    mandatory = true
+    versionRange = "[36.2.19,)"
+    ordering = "NONE"
+    side = "BOTH"
 
 [[dependencies.thermal_extra]]
-    modId="minecraft"
-    mandatory=true
-    versionRange="[1.16.5,)"
-    ordering="NONE"
-    side="BOTH"
+    modId = "minecraft"
+    mandatory = true
+    versionRange = "[1.16.5,)"
+    ordering = "NONE"
+    side = "BOTH"
+[[dependencies.thermal_extra]]
+    modId = "cofh_core"
+    mandatory = true
+    versionRange = "[1.4.1,1.5]"
+    ordering = "AFTER"
+    side = "BOTH"
+
+[[dependencies.thermal_extra]]
+    modId = "thermal"
+    mandatory = true
+    versionRange = "[1.4.1,1.5]"
+    ordering = "AFTER"
+    side = "BOTH"

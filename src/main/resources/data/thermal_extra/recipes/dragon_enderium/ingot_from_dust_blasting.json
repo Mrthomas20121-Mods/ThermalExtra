@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "thermal_extra:dragon_enderium_dust"
+  },
+  "result": "thermal_extra:dragon_enderium_ingot",
+  "experience": 0,
+  "cookingtime": 100
+}

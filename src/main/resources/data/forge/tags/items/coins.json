@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "thermal_extra:dragon_bronze_coin",
+    "thermal_extra:dragon_enderium_coin",
+    "thermal_extra:vukaium_coin",
+    "thermal_extra:nebulium_coin",
+    "thermal_extra:nectium_coin",
+    "thermal_extra:polarium_coin",
+    "thermal_extra:zauvium_coin",
+    "thermal_extra:drownium_coin"
+  ]
+}

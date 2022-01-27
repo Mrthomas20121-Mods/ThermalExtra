@@ -1,0 +1,13 @@
+{
+  "type": "thermal:pulverizer",
+  "ingredient": {
+    "tag": "forge:ingots/vukaium"
+  },
+  "result": [
+    {
+      "item": "thermal_extra:vukaium_dust",
+      "count": 1
+    }
+  ],
+  "experience": 0.2
+}

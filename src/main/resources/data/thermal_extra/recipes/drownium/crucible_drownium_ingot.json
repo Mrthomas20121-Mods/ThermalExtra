@@ -1,0 +1,12 @@
+{
+  "type": "thermal:crucible",
+  "ingredient": {
+    "tag": "forge:ingots/drownium"
+  },
+  "result": [
+    {
+      "fluid": "thermal_extra:drownium",
+      "amount": 144
+    }
+  ]
+}

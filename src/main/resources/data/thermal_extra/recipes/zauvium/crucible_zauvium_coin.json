@@ -1,0 +1,12 @@
+{
+  "type": "thermal:crucible",
+  "ingredient": {
+    "tag": "forge:coins/zauvium"
+  },
+  "result": [
+    {
+      "fluid": "thermal_extra:zauvium",
+      "amount": 48
+    }
+  ]
+}

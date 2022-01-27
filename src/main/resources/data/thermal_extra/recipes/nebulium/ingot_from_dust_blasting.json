@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "thermal_extra:nebulium_dust"
+  },
+  "result": "thermal_extra:nebulium_ingot",
+  "experience": 0,
+  "cookingtime": 100
+}

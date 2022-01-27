@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "thermal_extra:dragon_bronze_gear",
+    "thermal_extra:dragon_enderium_gear",
+    "thermal_extra:vukaium_gear",
+    "thermal_extra:nebulium_gear",
+    "thermal_extra:nectium_gear",
+    "thermal_extra:polarium_gear",
+    "thermal_extra:zauvium_gear",
+    "thermal_extra:drownium_gear"
+  ]
+}

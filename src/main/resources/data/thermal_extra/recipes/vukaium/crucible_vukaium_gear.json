@@ -1,0 +1,12 @@
+{
+  "type": "thermal:crucible",
+  "ingredient": {
+    "tag": "forge:gears/vukaium"
+  },
+  "result": [
+    {
+      "fluid": "thermal_extra:vukaium",
+      "amount": 576
+    }
+  ]
+}

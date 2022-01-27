@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "thermal_extra:vukaium_dust"
+  },
+  "result": "thermal_extra:vukaium_ingot",
+  "experience": 0.5,
+  "cookingtime": 200
+}

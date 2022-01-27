@@ -1,0 +1,38 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "thermal_extra:item/zauvium/coin_0"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "count": 0
+      },
+      "model": "thermal_extra:item/zauvium_coin_0"
+    },
+    {
+      "predicate": {
+        "count": 0.03125
+      },
+      "model": "thermal_extra:item/zauvium_coin_1"
+    },
+    {
+      "predicate": {
+        "count": 0.25
+      },
+      "model": "thermal_extra:item/zauvium_coin_2"
+    },
+    {
+      "predicate": {
+        "count": 0.5
+      },
+      "model": "thermal_extra:item/zauvium_coin_3"
+    },
+    {
+      "predicate": {
+        "count": 1
+      },
+      "model": "thermal_extra:item/zauvium_coin_4"
+    }
+  ]
+}

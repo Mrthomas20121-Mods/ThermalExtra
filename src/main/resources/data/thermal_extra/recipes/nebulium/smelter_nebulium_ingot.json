@@ -1,0 +1,16 @@
+{
+  "type": "thermal:smelter",
+  "ingredients": [
+    {
+      "tag": "forge:dusts/nebulium",
+      "count": 1
+    }
+  ],
+  "result": [
+    {
+      "item": "thermal_extra:nebulium_ingot",
+      "count": 1
+    }
+  ],
+  "energy": 4000
+}

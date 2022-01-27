@@ -1,0 +1,13 @@
+{
+  "type": "thermal:pulverizer",
+  "ingredient": {
+    "tag": "forge:ingots/nectium"
+  },
+  "result": [
+    {
+      "item": "thermal_extra:nectium_dust",
+      "count": 1
+    }
+  ],
+  "experience": 0.2
+}

@@ -1,6 +1,6 @@
 {
-  "parent": "minecraft:item/generated",
+  "parent": "item/generated",
   "textures": {
-    "layer0": "thermal_extra:item/dragon_enderium_ingot"
+    "layer0": "thermal_extra:item/dragon_enderium/ingot"
   }
 }

@@ -1,0 +1,12 @@
+{
+  "type": "thermal:crucible",
+  "ingredient": {
+    "tag": "forge:dusts/nebulium"
+  },
+  "result": [
+    {
+      "fluid": "thermal_extra:nebulium",
+      "amount": 144
+    }
+  ]
+}

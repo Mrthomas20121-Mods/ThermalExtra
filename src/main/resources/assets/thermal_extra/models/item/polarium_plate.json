@@ -1,0 +1,32 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "thermal_extra:item/polarium/plate_0"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "count": 0
+      },
+      "model": "thermal_extra:item/polarium_plate_0"
+    },
+    {
+      "predicate": {
+        "count": 0.25
+      },
+      "model": "thermal_extra:item/polarium_plate_1"
+    },
+    {
+      "predicate": {
+        "count": 0.5
+      },
+      "model": "thermal_extra:item/polarium_plate_2"
+    },
+    {
+      "predicate": {
+        "count": 1
+      },
+      "model": "thermal_extra:item/polarium_plate_3"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "type": "thermal:crucible",
+  "ingredient": {
+    "tag": "forge:dusts/dragon_bronze"
+  },
+  "result": [
+    {
+      "fluid": "thermal_extra:dragon_bronze",
+      "amount": 144
+    }
+  ]
+}

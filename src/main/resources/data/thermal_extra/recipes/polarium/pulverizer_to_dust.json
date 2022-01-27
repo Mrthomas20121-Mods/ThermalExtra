@@ -1,0 +1,13 @@
+{
+  "type": "thermal:pulverizer",
+  "ingredient": {
+    "tag": "forge:ingots/polarium"
+  },
+  "result": [
+    {
+      "item": "thermal_extra:polarium_dust",
+      "count": 1
+    }
+  ],
+  "experience": 0.2
+}
