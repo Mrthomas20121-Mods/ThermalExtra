@@ -74,7 +74,8 @@
   "item.thermal_extra.end_speed_augment.desc": "Increases Process speed but reduce RF efficiency even more.",
   "item.thermal_extra.ender_rf_coil_augment": "Ender RF Coil",
   "item.thermal_extra.ender_rf_coil_augment.desc": "Increases RF Transfer but lower RF Capacity.",
-  "fluid.thermal_extra.cactus_juice": "Cactus Juice",
+  "item.thermal_extra.cactus_soup": "Cactus Soup",
   "item.thermal_extra.cactus_juice_bucket": "Cactus Juice Bucket",
+  "fluid.thermal_extra.cactus_juice": "Cactus Juice",
   "itemGroup.thermal_extra": "Thermal Extra"
 }

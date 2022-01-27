@@ -1,0 +1,16 @@
+{
+    "type": "thermal:bottler",
+    "ingredient": [
+        {
+            "item": "minecraft:bowl",
+            "count": 1
+        },
+        {
+            "fluid": "thermal_extra:cactus_juice",
+            "amount": 200
+        }
+    ],
+    "result": {
+        "item": "thermal_extra:cactus_soup"
+    }
+}
