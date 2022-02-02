@@ -15,7 +15,7 @@ import java.util.function.Supplier;
 public enum ThermalArmorMaterial implements IArmorMaterial {
 
     DRAGON_BRONZE("dragon_bronze", 37, new int[]{3, 6, 8, 3}, 15, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0F, () -> {
-        return Ingredient.of(Items.dragon_bronze_ingot.get());
+        return Ingredient.of(ThermalExtraItems.dragon_bronze_ingot.get());
     });
 
     private static final int[] HEALTH_PER_SLOT = new int[]{13, 15, 16, 11};

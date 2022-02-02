@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "HCH",
+    "QRZ",
+    "HCH"
+  ],
+  "key": {
+    "Q": {
+      "tag": "forge:gears/quartz"
+    },
+    "Z": {
+      "tag": "forge:gears/zauvium"
+    },
+    "H": {
+      "tag": "thermal:glass/hardened"
+    },
+    "C": {
+      "tag": "forge:dusts/cinnabar"
+    },
+    "R": {
+      "item": "thermal:fluid_tank_augment"
+    }
+  },
+  "result": {
+    "item": "thermal_extra:nether_fluid_tank_augment"
+  },
+  "conditions": [
+    {
+      "flag": "storage_augments",
+      "type": "thermal:flag"
+    }
+  ]
+}

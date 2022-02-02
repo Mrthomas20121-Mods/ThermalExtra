@@ -1,7 +1,7 @@
 package mrthomas20121.thermal_extra.fluid;
 
 import cofh.lib.fluid.FluidCoFH;
-import mrthomas20121.thermal_extra.init.Items;
+import mrthomas20121.thermal_extra.init.ThermalExtraItems;
 import mrthomas20121.thermal_extra.init.ThermalExtraFluids;
 import net.minecraft.fluid.FlowingFluid;
 import net.minecraft.item.BucketItem;
@@ -19,7 +19,7 @@ public class FluidThermalExtra extends FluidCoFH {
                         .viscosity(2500)
                         .sound(SoundEvents.BUCKET_FILL, SoundEvents.BUCKET_EMPTY));
 
-        bucket = Items.ITEMS.register(bucket(key), () -> new BucketItem(stillFluid, new Item.Properties().craftRemainder(net.minecraft.item.Items.BUCKET).stacksTo(1).tab(Items.group)));
+        bucket = ThermalExtraItems.ITEMS.register(bucket(key), () -> new BucketItem(stillFluid, new Item.Properties().craftRemainder(net.minecraft.item.Items.BUCKET).stacksTo(1).tab(ThermalExtraItems.group)));
 
         properties.bucket(bucket);
     }

@@ -2,21 +2,21 @@
     "type": "thermal:smelter",
     "ingredients": [
         {
-            "item": "thermal:rosin_block",
+            "item": "minecraft:red_nether_bricks",
             "count": 1
         },
         {
-            "tag": "forge:dusts/nectium",
+            "tag": "forge:dusts/quartz",
             "count": 1
         },
         {
-            "item": "thermal_extra:cactus_juice_bucket",
+            "tag": "forge:ingots/electrum",
             "count": 1
         }
     ],
     "result": [
         {
-            "item": "thermal_extra:vukaium_ingot",
+            "item": "thermal_extra:zauvium_ingot",
             "count": 1
         }
     ],

@@ -2,22 +2,22 @@
     "type": "thermal:smelter",
     "ingredients": [
         {
-            "item": "thermal:rosin_block",
+            "tag": "forge:storage_blocks/coal_coke",
             "count": 1
         },
         {
-            "tag": "forge:dusts/nectium",
+            "item": "minecraft:heart_of_the_sea",
             "count": 1
         },
         {
-            "item": "thermal_extra:cactus_juice_bucket",
+            "tag": "forge:ingots/invar",
             "count": 1
         }
     ],
     "result": [
         {
-            "item": "thermal_extra:vukaium_ingot",
-            "count": 1
+            "item": "thermal_extra:drownium_ingot",
+            "count": 2
         }
     ],
     "energy": 8000

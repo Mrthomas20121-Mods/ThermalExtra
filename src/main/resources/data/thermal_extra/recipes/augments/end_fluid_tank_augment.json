@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "HCH",
+    "ARN",
+    "HCH"
+  ],
+  "key": {
+    "A": {
+      "tag": "forge:dusts/apatite"
+    },
+    "N": {
+      "tag": "forge:dusts/nebulium"
+    },
+    "H": {
+      "tag": "thermal:glass/hardened"
+    },
+    "C": {
+      "tag": "forge:dusts/niter"
+    },
+    "R": {
+      "item": "thermal_extra:nether_fluid_tank_augment"
+    }
+  },
+  "result": {
+    "item": "thermal_extra:end_fluid_tank_augment"
+  },
+  "conditions": [
+    {
+      "flag": "storage_augments",
+      "type": "thermal:flag"
+    }
+  ]
+}
