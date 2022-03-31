@@ -3,6 +3,7 @@ package mrthomas20121.thermal_extra.init;
 import cofh.core.item.ItemCoFH;
 import cofh.lib.util.helpers.AugmentDataHelper;
 import cofh.thermal.lib.item.AugmentItem;
+import mrthomas20121.thermal_extra.ThermalExtraConfig;
 import mrthomas20121.thermal_extra.item.CustomArmorItem;
 import mrthomas20121.thermal_extra.item.CustomAugmentItem;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -90,33 +91,33 @@ public class ThermalExtraItems {
     public static final RegistryObject<ItemCoFH> dragon_integral_component = ITEMS.register("dragon_integral_component", () -> new CustomAugmentItem(new Item.Properties().tab(group).rarity(Rarity.RARE),
             AugmentDataHelper.builder()
                     .type(TAG_AUGMENT_TYPE_UPGRADE)
-                    .mod(TAG_AUGMENT_BASE_MOD, 4.5F)
+                    .mod(TAG_AUGMENT_BASE_MOD, ThermalExtraConfig.DRAGON_COMPONENT_MULTIPLIER.get().floatValue())
                     .build()).setShowInGroups(getFlag(FLAG_UPGRADE_AUGMENTS)));
 
     public static final RegistryObject<ItemCoFH> end_speed_augment = ITEMS.register("end_speed_augment", () -> new CustomAugmentItem(new Item.Properties().tab(group).rarity(Rarity.RARE),
             AugmentDataHelper.builder()
                     .type(TAG_AUGMENT_TYPE_MACHINE)
-                    .mod(TAG_AUGMENT_MACHINE_POWER, 1.2F)
-                    .mod(TAG_AUGMENT_MACHINE_ENERGY, 1.5F)
+                    .mod(TAG_AUGMENT_MACHINE_POWER, ThermalExtraConfig.END_SPEED_AUGMENT_POWER_MULTIPLIER.get().floatValue())
+                    .mod(TAG_AUGMENT_MACHINE_ENERGY, ThermalExtraConfig.END_SPEED_AUGMENT_ENERGY_MULTIPLIER.get().floatValue())
                     .build()).setShowInGroups(getFlag(FLAG_MACHINE_AUGMENTS)));
 
     public static final RegistryObject<ItemCoFH> ender_rf_coil_augment = ITEMS.register("ender_rf_coil_augment", () -> new AugmentItem(new Item.Properties().tab(group).rarity(Rarity.RARE),
             AugmentDataHelper.builder()
                     .type(TAG_AUGMENT_TYPE_RF)
-                    .mod(TAG_AUGMENT_RF_XFER, 8.0F)
-                    .mod(TAG_AUGMENT_RF_STORAGE, 0.3F)
+                    .mod(TAG_AUGMENT_RF_XFER, ThermalExtraConfig.ENDER_RF_COIL_AUGMENT_TRANSFER_MULTIPLIER.get().floatValue())
+                    .mod(TAG_AUGMENT_RF_STORAGE, ThermalExtraConfig.ENDER_RF_COIL_AUGMENT_CAPACITY_MULTIPLIER.get().floatValue())
                     .build()).setShowInGroups(getFlag(FLAG_STORAGE_AUGMENTS)));
 
     public static final RegistryObject<ItemCoFH> nether_fluid_tank_augment = ITEMS.register("nether_fluid_tank_augment", () -> new AugmentItem(new Item.Properties().tab(group).rarity(Rarity.UNCOMMON),
             AugmentDataHelper.builder()
                     .type(TAG_AUGMENT_TYPE_FLUID)
-                    .mod(TAG_AUGMENT_FLUID_STORAGE, 10.0F)
+                    .mod(TAG_AUGMENT_FLUID_STORAGE, ThermalExtraConfig.NETHER_FLUID_TANK_AUGMENT_CAPACITY_MULTIPLIER.get().floatValue())
                     .build()).setShowInGroups(getFlag(FLAG_STORAGE_AUGMENTS)));
 
     public static final RegistryObject<ItemCoFH> end_fluid_tank_augment = ITEMS.register("end_fluid_tank_augment", () -> new AugmentItem(new Item.Properties().tab(group).rarity(Rarity.RARE),
                 AugmentDataHelper.builder()
                         .type(TAG_AUGMENT_TYPE_FLUID)
-                        .mod(TAG_AUGMENT_FLUID_STORAGE, 16.0F)
+                        .mod(TAG_AUGMENT_FLUID_STORAGE, ThermalExtraConfig.END_FLUID_TANK_AUGMENT_CAPACITY_MULTIPLIER.get().floatValue())
                         .build()).setShowInGroups(getFlag(FLAG_STORAGE_AUGMENTS)));
 
     public static Item register() {
