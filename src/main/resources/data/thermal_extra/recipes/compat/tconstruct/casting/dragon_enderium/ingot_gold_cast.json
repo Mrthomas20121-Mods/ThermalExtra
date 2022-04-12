@@ -1,0 +1,20 @@
+{
+  "type": "tconstruct:casting_table",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "tconstruct"
+    }
+  ],
+  "cast": {
+    "tag": "tconstruct:casts/multi_use/ingot"
+  },
+  "fluid": {
+    "tag": "forge:molten_dragon_enderium",
+    "amount": 144
+  },
+  "result": {
+    "tag": "forge:ingots/dragon_enderium"
+  },
+  "cooling_time": 54
+}

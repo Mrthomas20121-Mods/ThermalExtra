@@ -2,10 +2,6 @@
     "type": "thermal:smelter",
     "ingredients": [
         {
-            "tag": "forge:dusts/ender_pearl",
-            "count": 1
-        },
-        {
             "tag": "forge:dusts/netherite",
             "count": 1
         },

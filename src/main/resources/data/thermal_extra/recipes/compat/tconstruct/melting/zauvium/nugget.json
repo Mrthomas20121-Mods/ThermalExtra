@@ -1,0 +1,18 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "tconstruct"
+    }
+  ],
+  "ingredient": {
+    "tag": "forge:nuggets/zauvium"
+  },
+  "result": {
+    "fluid": "thermal_extra:zauvium",
+    "amount": 16
+  },
+  "temperature": 1200,
+  "time": 25
+}

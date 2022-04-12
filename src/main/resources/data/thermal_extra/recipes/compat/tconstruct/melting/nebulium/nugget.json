@@ -1,0 +1,18 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "tconstruct"
+    }
+  ],
+  "ingredient": {
+    "tag": "forge:nuggets/nebulium"
+  },
+  "result": {
+    "fluid": "thermal_extra:nebulium",
+    "amount": 16
+  },
+  "temperature": 1400,
+  "time": 25
+}

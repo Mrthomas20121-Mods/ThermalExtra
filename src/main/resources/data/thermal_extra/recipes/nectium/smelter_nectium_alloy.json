@@ -2,12 +2,8 @@
     "type": "thermal:smelter",
     "ingredients": [
         {
-            "tag": "forge:storage_blocks/bitumen",
-            "count": 1
-        },
-        {
             "item": "minecraft:honey_block",
-            "count": 4
+            "count": 1
         },
         {
             "tag": "forge:ingots/constantan",
@@ -17,7 +13,7 @@
     "result": [
         {
             "item": "thermal_extra:nectium_ingot",
-            "count": 2
+            "count": 1
         }
     ],
     "energy": 8000

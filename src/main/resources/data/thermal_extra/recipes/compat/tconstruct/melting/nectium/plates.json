@@ -1,0 +1,18 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "tconstruct"
+    }
+  ],
+  "ingredient": {
+    "tag": "forge:plates/nectium"
+  },
+  "result": {
+    "fluid": "thermal_extra:nectium",
+    "amount": 144
+  },
+  "temperature": 1000,
+  "time": 65
+}

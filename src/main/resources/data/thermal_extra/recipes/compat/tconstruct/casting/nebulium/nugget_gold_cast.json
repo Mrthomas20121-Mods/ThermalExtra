@@ -1,0 +1,20 @@
+{
+  "type": "tconstruct:casting_table",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "tconstruct"
+    }
+  ],
+  "cast": {
+    "tag": "tconstruct:casts/multi_use/nugget"
+  },
+  "fluid": {
+    "tag": "forge:molten_nebulium",
+    "amount": 16
+  },
+  "result": {
+    "tag": "forge:nuggets/nebulium"
+  },
+  "cooling_time": 18
+}

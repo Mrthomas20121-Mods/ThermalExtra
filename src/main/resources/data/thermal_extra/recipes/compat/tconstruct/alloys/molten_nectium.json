@@ -1,0 +1,24 @@
+{
+  "type": "tconstruct:alloy",
+  "inputs": [
+    {
+      "tag": "forge:molten_constantan",
+      "amount": 144
+    },
+    {
+      "tag": "forge:honey",
+      "amount": 1000
+    }
+  ],
+  "result": {
+    "fluid": "thermal_extra:nectium",
+    "amount": 144
+  },
+  "temperature": 1500,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "tconstruct"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "type": "tconstruct:casting_table",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "tconstruct"
+    }
+  ],
+  "cast": {
+    "tag": "tconstruct:casts/single_use/gear"
+  },
+  "cast_consumed": true,
+  "fluid": {
+    "tag": "forge:molten_nebulium",
+    "amount": 576
+  },
+  "result": {
+    "tag": "thermal_extra:zauvium_gear"
+  },
+  "cooling_time": 90
+}

@@ -1,0 +1,20 @@
+{
+  "type": "tconstruct:casting_table",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "tconstruct"
+    }
+  ],
+  "cast": {
+    "tag": "tconstruct:casts/multi_use/gear"
+  },
+  "fluid": {
+    "tag": "forge:molten_vukaium",
+    "amount": 576
+  },
+  "result": {
+    "tag": "thermal_extra:zauvium_gear"
+  },
+  "cooling_time": 90
+}

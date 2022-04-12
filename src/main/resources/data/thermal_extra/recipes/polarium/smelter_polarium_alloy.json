@@ -1,0 +1,20 @@
+{
+    "type": "thermal:smelter",
+    "ingredients": [
+        {
+            "item": "minecraft:ice",
+            "count": 1
+        },
+        {
+            "tag": "forge:ingots/lead",
+            "count": 1
+        }
+    ],
+    "result": [
+        {
+            "item": "thermal_extra:polarium_ingot",
+            "count": 1
+        }
+    ],
+    "energy": 8000
+}

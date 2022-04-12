@@ -1,0 +1,18 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "tconstruct"
+    }
+  ],
+  "ingredient": {
+    "tag": "forge:ingots/vukaium"
+  },
+  "result": {
+    "fluid": "thermal_extra:vukaium",
+    "amount": 144
+  },
+  "temperature": 1100,
+  "time": 65
+}

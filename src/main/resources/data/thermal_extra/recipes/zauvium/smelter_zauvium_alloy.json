@@ -2,10 +2,6 @@
     "type": "thermal:smelter",
     "ingredients": [
         {
-            "item": "minecraft:red_nether_bricks",
-            "count": 1
-        },
-        {
             "tag": "forge:dusts/quartz",
             "count": 1
         },

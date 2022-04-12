@@ -1,0 +1,21 @@
+{
+  "type": "tconstruct:casting_table",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "tconstruct"
+    }
+  ],
+  "cast": {
+    "tag": "tconstruct:casts/single_use/coin"
+  },
+  "cast_consumed": true,
+  "fluid": {
+    "tag": "forge:molten_vukaium",
+    "amount": 48
+  },
+  "result": {
+    "tag": "thermal_extra:zauvium_coin"
+  },
+  "cooling_time": 30
+}

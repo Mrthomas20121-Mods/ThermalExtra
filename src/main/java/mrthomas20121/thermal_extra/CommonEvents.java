@@ -45,7 +45,7 @@ public class CommonEvents {
             }
 
             if(index == 4) {
-                event.getDrops().add(new ItemEntity(enderman.level, enderman.getX(), enderman.getY(), enderman.getZ(), new ItemStack(Items.DRAGON_BREATH)));
+                event.getDrops().add(new ItemEntity(enderman.level, enderman.getX()+0.5d, enderman.getY()+0.5d, enderman.getZ()+0.5d, new ItemStack(Items.DRAGON_BREATH)));
             }
         }
     }
