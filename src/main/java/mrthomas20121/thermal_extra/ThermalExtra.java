@@ -2,7 +2,9 @@ package mrthomas20121.thermal_extra;
 
 import mrthomas20121.thermal_extra.init.ThermalExtraFluids;
 import mrthomas20121.thermal_extra.init.ThermalExtraItems;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -16,5 +18,9 @@ public class ThermalExtra {
 	public ThermalExtra() {
 		ThermalExtraItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
 		ThermalExtraFluids.FLUIDS.register(FMLJavaModLoadingContext.get().getModEventBus());
+
+		ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ThermalExtraConfig.COMMON);
+
+		ConfigHelper.loadConfig(ThermalExtraConfig.COMMON, "thermalextra-common.toml");
 	}
 }
