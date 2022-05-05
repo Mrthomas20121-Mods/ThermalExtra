@@ -14,7 +14,7 @@
     "amount": 576
   },
   "result": {
-    "tag": "thermal_extra:zauvium_gear"
+    "tag": "forge:gears/polarium"
   },
   "cooling_time": 90
 }

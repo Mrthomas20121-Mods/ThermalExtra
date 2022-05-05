@@ -102,15 +102,15 @@ public class ThermalExtraItems {
                     .mod(TAG_AUGMENT_BASE_MOD, 4.5F)
                     .build()).setShowInGroups(getFlag(FLAG_UPGRADE_AUGMENTS)));
 
+    public static final RegistryObject<Item> advanced_item_filter = ITEMS.register("advanced_item_filter_augment", () -> new AugmentItem(new Item.Properties().tab(augmentGroup),
+            AugmentDataHelper.builder()
+                    .type(TAG_AUGMENT_TYPE_FILTER)
+                    .feature(TAG_FILTER_TYPE, AdvancedFilter.ITEM_FILTER_TYPE)
+                    .build()).setShowInGroups(getFlag(FLAG_FILTER_AUGMENTS)));
+
     public static final RegistryObject<Item> augment_base = ITEMS.register("augment_base", () -> register(augmentGroup));
 
     public static final RegistryObject<Item> advanced_augment_base = ITEMS.register("advanced_augment_base", () -> register(augmentGroup));
-
-    public static final RegistryObject<Item> advanced_item_filter = ITEMS.register("advanced_item_filter_augment", () -> new AugmentItem(new Item.Properties().tab(augmentGroup),
-                AugmentDataHelper.builder()
-                        .type(TAG_AUGMENT_TYPE_FILTER)
-                        .feature(TAG_FILTER_TYPE, AdvancedFilter.ITEM_FILTER_TYPE)
-                        .build()).setShowInGroups(getFlag(FLAG_FILTER_AUGMENTS)));
 
     public static final RegistryObject<Item> advanced_area_radius = ITEMS.register("advanced_area_radius_augment", () -> new AugmentItem(new Item.Properties().tab(augmentGroup),
                 AugmentDataHelper.builder()
