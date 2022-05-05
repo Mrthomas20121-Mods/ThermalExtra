@@ -1,0 +1,24 @@
+{
+    "type": "thermal:smelter",
+    "ingredients": [
+        {
+            "item": "thermal:item_filter_augment",
+            "count": 1
+        },
+        {
+            "item": "thermal:signalum_glass",
+            "count": 4
+        },
+		{
+            "tag": "forge:ingots/nebulium",
+            "count": 1
+        }
+    ],
+    "result": [
+        {
+            "item": "thermal_extra:advanced_item_filter_augment",
+            "count": 1
+        }
+    ],
+    "energy": 8000
+}

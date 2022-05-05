@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "thermal_extra:item/augments/nether_fluid_tank_augment"
-  }
-}

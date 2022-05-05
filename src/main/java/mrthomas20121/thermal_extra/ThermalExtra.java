@@ -1,5 +1,6 @@
 package mrthomas20121.thermal_extra;
 
+import mrthomas20121.thermal_extra.filter.AdvancedFilter;
 import mrthomas20121.thermal_extra.init.ThermalExtraFluids;
 import mrthomas20121.thermal_extra.init.ThermalExtraItems;
 import net.minecraftforge.fml.common.Mod;
@@ -14,6 +15,7 @@ public class ThermalExtra {
 	public static final Logger LOGGER = LogManager.getLogger();
 
 	public ThermalExtra() {
+		AdvancedFilter.init();
 		ThermalExtraItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
 		ThermalExtraFluids.FLUIDS.register(FMLJavaModLoadingContext.get().getModEventBus());
 	}

@@ -6,25 +6,25 @@
   "overrides": [
     {
       "predicate": {
-        "count": 0
+        "count": 0.00000
       },
       "model": "thermal_extra:item/nebulium_plate_0"
     },
     {
       "predicate": {
-        "count": 0.25
+        "count": 0.25000
       },
       "model": "thermal_extra:item/nebulium_plate_1"
     },
     {
       "predicate": {
-        "count": 0.5
+        "count": 0.50000
       },
       "model": "thermal_extra:item/nebulium_plate_2"
     },
     {
       "predicate": {
-        "count": 1
+        "count": 1.00000
       },
       "model": "thermal_extra:item/nebulium_plate_3"
     }

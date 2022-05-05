@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#c#",
+    "cdc",
+    "#c#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:ender_eye"
+    },
+	"d": {
+      "item": "thermal_extra:augment_base"
+    },
+	"c": {
+      "tag": "forge:dusts/cactus"
+    }
+  },
+  "result": {
+    "item": "thermal_extra:advanced_augment_base"
+  }
+}

@@ -1,0 +1,24 @@
+{
+    "type": "thermal:smelter",
+    "ingredients": [
+        {
+            "item": "thermal:rf_coil_xfer_augment",
+            "count": 1
+        },
+		{
+            "item": "thermal_extra:advanced_augment_base",
+            "count": 1
+        },
+		{
+            "tag": "forge:ingots/dragon_bronze",
+            "count": 1
+        }
+    ],
+    "result": [
+        {
+            "item": "thermal_extra:advanced_rf_coil_xfer_augment",
+            "count": 1
+        }
+    ],
+    "energy": 8000
+}

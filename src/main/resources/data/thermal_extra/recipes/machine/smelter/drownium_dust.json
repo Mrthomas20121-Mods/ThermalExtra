@@ -1,0 +1,20 @@
+{
+    "type": "thermal:smelter",
+    "ingredients": [
+        {
+            "item": "minecraft:prismarine_shard",
+            "count": 1
+        },
+        {
+            "tag": "forge:dusts/invar",
+            "count": 1
+        }
+    ],
+    "result": [
+        {
+            "item": "thermal_extra:drownium_dust",
+            "count": 2
+        }
+    ],
+    "energy": 8000
+}

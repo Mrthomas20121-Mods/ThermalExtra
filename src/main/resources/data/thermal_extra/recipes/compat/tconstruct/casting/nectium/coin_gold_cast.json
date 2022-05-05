@@ -14,7 +14,7 @@
     "amount": 48
   },
   "result": {
-    "tag": "thermal_extra:zauvium_coin"
+    "tag": "forge:coins/nectium"
   },
   "cooling_time": 30
 }

@@ -8,6 +8,7 @@
     "thermal_extra:nectium_dust",
     "thermal_extra:polarium_dust",
     "thermal_extra:zauvium_dust",
-    "thermal_extra:drownium_dust"
+    "thermal_extra:drownium_dust",
+    "thermal_extra:cactus_dust"
   ]
 }

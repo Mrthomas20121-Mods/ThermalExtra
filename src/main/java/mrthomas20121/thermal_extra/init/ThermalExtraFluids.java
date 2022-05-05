@@ -10,7 +10,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class ThermalExtraFluids {
     public static final DeferredRegisterCoFH<Fluid> FLUIDS = DeferredRegisterCoFH.create(ForgeRegistries.FLUIDS, ThermalExtra.MOD_ID);
 
-    public static FluidCoFH cactus_juice = registerFluid("cactus_juice");
     public static FluidCoFH dragon_enderium = registerFluid("dragon_enderium");
     public static FluidCoFH dragon_bronze = registerFluid("dragon_bronze");
     public static FluidCoFH drownium = registerFluid("drownium");

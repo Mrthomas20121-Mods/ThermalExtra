@@ -1,0 +1,20 @@
+{
+  "type": "thermal:smelter",
+  "ingredients": [
+    {
+      "item": "thermal_extra:dragon_breath_plating",
+      "count": 1
+    },
+    {
+      "tag": "forge:dusts/bronze",
+      "count": 1
+    }
+  ],
+  "result": [
+    {
+      "item": "thermal_extra:dragon_bronze_dust",
+      "count": 1
+    }
+  ],
+  "energy": 4000
+}

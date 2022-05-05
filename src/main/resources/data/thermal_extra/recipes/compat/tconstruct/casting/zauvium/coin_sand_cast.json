@@ -15,7 +15,7 @@
     "amount": 48
   },
   "result": {
-    "tag": "thermal_extra:zauvium_coin"
+    "tag": "forge:coins/zauvium"
   },
   "cooling_time": 30
 }

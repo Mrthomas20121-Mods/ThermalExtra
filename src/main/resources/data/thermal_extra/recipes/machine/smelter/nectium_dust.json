@@ -1,0 +1,20 @@
+{
+    "type": "thermal:smelter",
+    "ingredients": [
+        {
+            "item": "minecraft:honey_block",
+            "count": 1
+        },
+        {
+            "tag": "forge:dusts/constantan",
+            "count": 1
+        }
+    ],
+    "result": [
+        {
+            "item": "thermal_extra:nectium_dust",
+            "count": 1
+        }
+    ],
+    "energy": 8000
+}

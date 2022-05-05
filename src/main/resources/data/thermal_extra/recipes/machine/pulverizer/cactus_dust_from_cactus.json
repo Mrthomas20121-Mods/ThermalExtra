@@ -1,0 +1,13 @@
+{
+  "type": "thermal:pulverizer",
+  "ingredient": {
+    "item": "minecraft:cactus"
+  },
+  "result": [
+    {
+      "item": "thermal_extra:cactus_dust",
+      "count": 1
+    }
+  ],
+  "experience": 0.2
+}
