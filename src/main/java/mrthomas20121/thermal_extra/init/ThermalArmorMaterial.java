@@ -14,9 +14,7 @@ import java.util.function.Supplier;
 
 public enum ThermalArmorMaterial implements IArmorMaterial {
 
-    DRAGON_BRONZE("dragon_bronze", 37, new int[]{3, 6, 8, 3}, 15, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0F, () -> {
-        return Ingredient.of(ThermalExtraItems.dragon_bronze_ingot.get());
-    });
+    DRAGON_BRONZE("dragon_bronze", 37, new int[]{3, 6, 8, 3}, 15, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0F, () -> Ingredient.of(ThermalExtraItems.dragon_bronze_ingot.get()));
 
     private static final int[] HEALTH_PER_SLOT = new int[]{13, 15, 16, 11};
     private final String name;
@@ -39,38 +37,46 @@ public enum ThermalArmorMaterial implements IArmorMaterial {
         this.repairIngredient = new LazyValue<>(p_i231593_10_);
     }
 
+    @Override
     public int getDurabilityForSlot(EquipmentSlotType p_200896_1_) {
         return HEALTH_PER_SLOT[p_200896_1_.getIndex()] * this.durabilityMultiplier;
     }
 
+    @Override
     public int getDefenseForSlot(EquipmentSlotType p_200902_1_) {
         return this.slotProtections[p_200902_1_.getIndex()];
     }
 
+    @Override
     public int getEnchantmentValue() {
         return this.enchantmentValue;
     }
 
+    @Override
     @Nonnull
     public SoundEvent getEquipSound() {
         return this.sound;
     }
 
+    @Override
     @Nonnull
     public Ingredient getRepairIngredient() {
         return this.repairIngredient.get();
     }
 
+    @Override
     @OnlyIn(Dist.CLIENT)
     @Nonnull
     public String getName() {
         return this.name;
     }
 
+    @Override
     public float getToughness() {
         return this.toughness;
     }
 
+    @Override
     public float getKnockbackResistance() {
         return this.knockbackResistance;
     }
