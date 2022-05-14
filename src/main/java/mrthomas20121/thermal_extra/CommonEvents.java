@@ -1,19 +1,12 @@
 package mrthomas20121.thermal_extra;
 
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.item.ItemEntity;
-import net.minecraft.entity.monster.EndermanEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
-import net.minecraft.particles.ParticleTypes;
-import net.minecraft.potion.EffectInstance;
-import net.minecraft.potion.Effects;
-import net.minecraft.util.DamageSource;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.world.World;
-import net.minecraftforge.event.entity.living.LivingAttackEvent;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.monster.EnderMan;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -32,9 +25,8 @@ public class CommonEvents {
         DamageSource source = event.getSource();
         Entity attacker = source.getEntity();
 
-        if(attacker instanceof PlayerEntity && event.getEntityLiving() instanceof EndermanEntity) {
-            EndermanEntity enderman = (EndermanEntity) event.getEntityLiving();
-            PlayerEntity player = (PlayerEntity) attacker;
+        if(attacker instanceof Player && event.getEntityLiving() instanceof EnderMan enderman) {
+            Player player = (Player) attacker;
             int index = 0;
             for(ItemStack stack: player.getArmorSlots()) {
                 if(!stack.isEmpty()) {

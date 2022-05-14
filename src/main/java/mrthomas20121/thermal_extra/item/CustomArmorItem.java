@@ -1,11 +1,11 @@
 package mrthomas20121.thermal_extra.item;
 
-import net.minecraft.entity.Entity;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.IArmorMaterial;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.item.ArmorMaterial;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 
 import javax.annotation.Nullable;
 
@@ -13,9 +13,9 @@ public class CustomArmorItem extends ArmorItem {
 
     private String armorTexture;
 
-    public CustomArmorItem(IArmorMaterial material, EquipmentSlotType slot, Item.Properties properties) {
+    public CustomArmorItem(ArmorMaterial material, EquipmentSlot slot, Item.Properties properties) {
         super(material, slot, properties);
-        if(!slot.equals(EquipmentSlotType.LEGS)) {
+        if(!slot.equals(EquipmentSlot.LEGS)) {
             this.setArmorTexture("dragon_bronze_layer_1");
         }
         else {
@@ -30,7 +30,7 @@ public class CustomArmorItem extends ArmorItem {
 
     @Nullable
     @Override
-    public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
+    public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
         return "thermal_extra:textures/models/armor/"+this.armorTexture+".png";
     }
 }

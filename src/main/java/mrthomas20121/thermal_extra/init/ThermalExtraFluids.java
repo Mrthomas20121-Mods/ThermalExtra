@@ -4,7 +4,7 @@ import cofh.lib.fluid.FluidCoFH;
 import cofh.lib.util.DeferredRegisterCoFH;
 import mrthomas20121.thermal_extra.ThermalExtra;
 import mrthomas20121.thermal_extra.fluid.FluidThermalExtra;
-import net.minecraft.fluid.Fluid;
+import net.minecraft.world.level.material.Fluid;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class ThermalExtraFluids {

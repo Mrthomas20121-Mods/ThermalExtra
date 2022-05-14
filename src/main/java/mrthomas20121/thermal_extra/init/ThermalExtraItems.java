@@ -7,12 +7,15 @@ import cofh.thermal.lib.item.AugmentItem;
 import mrthomas20121.thermal_extra.filter.AdvancedFilter;
 import mrthomas20121.thermal_extra.item.CustomArmorItem;
 import mrthomas20121.thermal_extra.item.CustomAugmentItem;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.*;
-import net.minecraftforge.fml.RegistryObject;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Rarity;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
 import javax.annotation.Nonnull;
 
@@ -24,7 +27,7 @@ public class ThermalExtraItems {
 
     public static DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, mrthomas20121.thermal_extra.ThermalExtra.MOD_ID);
 
-    public static ItemGroup group = new ItemGroup("thermal_extra_resources") {
+    public static CreativeModeTab group = new CreativeModeTab("thermal_extra_resources") {
         @Nonnull
         @Override
         public ItemStack makeIcon() {
@@ -32,7 +35,7 @@ public class ThermalExtraItems {
         }
     };
 
-    public static ItemGroup augmentGroup = new ItemGroup("thermal_extra_augments") {
+    public static CreativeModeTab augmentGroup = new CreativeModeTab("thermal_extra_augments") {
         @Nonnull
         @Override
         public ItemStack makeIcon() {
@@ -41,10 +44,10 @@ public class ThermalExtraItems {
     };
 
     public static final RegistryObject<Item> dragon_breath_plating = ITEMS.register("dragon_breath_plating", ThermalExtraItems::registerEndMaterial);
-    public static final RegistryObject<Item> dragon_bronze_helmet = ITEMS.register("dragon_bronze_helmet", () -> new CustomArmorItem(ThermalArmorMaterial.DRAGON_BRONZE, EquipmentSlotType.HEAD, (new Item.Properties()).tab(group)));
-    public static final RegistryObject<Item> dragon_bronze_chestplate = ITEMS.register("dragon_bronze_chestplate", () -> new CustomArmorItem(ThermalArmorMaterial.DRAGON_BRONZE, EquipmentSlotType.CHEST, (new Item.Properties()).tab(group)));
-    public static final RegistryObject<Item> dragon_bronze_leggings = ITEMS.register("dragon_bronze_leggings", () -> new CustomArmorItem(ThermalArmorMaterial.DRAGON_BRONZE, EquipmentSlotType.LEGS, (new Item.Properties()).tab(group)));
-    public static final RegistryObject<Item> dragon_bronze_boots = ITEMS.register("dragon_bronze_boots", () -> new CustomArmorItem(ThermalArmorMaterial.DRAGON_BRONZE, EquipmentSlotType.FEET, (new Item.Properties()).tab(group)));
+    public static final RegistryObject<Item> dragon_bronze_helmet = ITEMS.register("dragon_bronze_helmet", () -> new CustomArmorItem(ThermalArmorMaterial.DRAGON_BRONZE, EquipmentSlot.HEAD, (new Item.Properties()).tab(group)));
+    public static final RegistryObject<Item> dragon_bronze_chestplate = ITEMS.register("dragon_bronze_chestplate", () -> new CustomArmorItem(ThermalArmorMaterial.DRAGON_BRONZE, EquipmentSlot.CHEST, (new Item.Properties()).tab(group)));
+    public static final RegistryObject<Item> dragon_bronze_leggings = ITEMS.register("dragon_bronze_leggings", () -> new CustomArmorItem(ThermalArmorMaterial.DRAGON_BRONZE, EquipmentSlot.LEGS, (new Item.Properties()).tab(group)));
+    public static final RegistryObject<Item> dragon_bronze_boots = ITEMS.register("dragon_bronze_boots", () -> new CustomArmorItem(ThermalArmorMaterial.DRAGON_BRONZE, EquipmentSlot.FEET, (new Item.Properties()).tab(group)));
     public static final RegistryObject<Item> dragon_bronze_ingot = ITEMS.register("dragon_bronze_ingot", ThermalExtraItems::registerEndMaterial);
     public static final RegistryObject<Item> dragon_bronze_nugget = ITEMS.register("dragon_bronze_nugget", ThermalExtraItems::registerEndMaterial);
     public static final RegistryObject<Item> dragon_bronze_dust = ITEMS.register("dragon_bronze_dust", ThermalExtraItems::registerEndMaterial);
@@ -166,11 +169,11 @@ public class ThermalExtraItems {
         return new Item(new Item.Properties().tab(group).rarity(Rarity.UNCOMMON));
     }
 
-    public static Item register(ItemGroup g) {
+    public static Item register(CreativeModeTab g) {
         return new Item(new Item.Properties().tab(g));
     }
 
-    public static Item registerEndMaterial(ItemGroup g) {
+    public static Item registerEndMaterial(CreativeModeTab g) {
         return new Item(new Item.Properties().tab(g).rarity(Rarity.RARE));
     }
 
