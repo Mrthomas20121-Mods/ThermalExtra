@@ -2,7 +2,7 @@
     "type": "thermal:smelter",
     "ingredients": [
         {
-            "item": "minecraft:snow_ball",
+            "item": "minecraft:snowball",
             "count": 2
         },
         {
