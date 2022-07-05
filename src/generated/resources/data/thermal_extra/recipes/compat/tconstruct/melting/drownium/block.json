@@ -1,0 +1,18 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "modid": "tconstruct",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "ingredient": {
+    "tag": "forge:storage_blocks/drownium"
+  },
+  "result": {
+    "fluid": "thermal_extra:drownium",
+    "amount": 810
+  },
+  "temperature": 0,
+  "time": 84
+}

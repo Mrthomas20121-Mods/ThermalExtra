@@ -1,0 +1,25 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "value": {
+        "tag": "forge:plates/vukaium",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
+    },
+    {
+      "modid": "tconstruct",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "ingredient": {
+    "tag": "forge:plates/vukaium"
+  },
+  "result": {
+    "fluid": "thermal_extra:vukaium",
+    "amount": 90
+  },
+  "temperature": 0,
+  "time": 28
+}

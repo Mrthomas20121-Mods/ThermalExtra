@@ -1,0 +1,25 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "value": {
+        "tag": "forge:sheetmetals/dragon_enderium",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
+    },
+    {
+      "modid": "tconstruct",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "ingredient": {
+    "tag": "forge:sheetmetals/dragon_enderium"
+  },
+  "result": {
+    "fluid": "thermal_extra:dragon_enderium",
+    "amount": 90
+  },
+  "temperature": 0,
+  "time": 28
+}

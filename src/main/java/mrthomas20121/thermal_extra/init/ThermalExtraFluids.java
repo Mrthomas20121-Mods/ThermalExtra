@@ -10,16 +10,16 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class ThermalExtraFluids {
     public static final DeferredRegisterCoFH<Fluid> FLUIDS = DeferredRegisterCoFH.create(ForgeRegistries.FLUIDS, ThermalExtra.MOD_ID);
 
-    public static FluidCoFH dragon_enderium = registerFluid("dragon_enderium");
-    public static FluidCoFH dragon_bronze = registerFluid("dragon_bronze");
-    public static FluidCoFH drownium = registerFluid("drownium");
-    public static FluidCoFH nebulium = registerFluid("nebulium");
-    public static FluidCoFH nectium = registerFluid("nectium");
-    public static FluidCoFH polarium = registerFluid("polarium");
-    public static FluidCoFH vukaium = registerFluid("vukaium");
-    public static FluidCoFH zauvium = registerFluid("zauvium");
+    public static FluidThermalExtra dragon_enderium = registerFluid("dragon_enderium");
+    public static FluidThermalExtra dragon_bronze = registerFluid("dragon_bronze");
+    public static FluidThermalExtra drownium = registerFluid("drownium");
+    public static FluidThermalExtra nebulium = registerFluid("nebulium");
+    public static FluidThermalExtra nectium = registerFluid("nectium");
+    public static FluidThermalExtra polarium = registerFluid("polarium");
+    public static FluidThermalExtra vukaium = registerFluid("vukaium");
+    public static FluidThermalExtra zauvium = registerFluid("zauvium");
 
-    public static FluidCoFH registerFluid(String name) {
+    public static FluidThermalExtra registerFluid(String name) {
         return new FluidThermalExtra(name, String.format("thermal_extra:block/fluids/%s_still", name), String.format("thermal:block/fluids/%s_flow", name));
     }
 }

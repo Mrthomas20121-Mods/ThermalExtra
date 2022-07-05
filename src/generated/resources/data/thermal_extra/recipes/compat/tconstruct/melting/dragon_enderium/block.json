@@ -1,0 +1,18 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "modid": "tconstruct",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "ingredient": {
+    "tag": "forge:storage_blocks/dragon_enderium"
+  },
+  "result": {
+    "fluid": "thermal_extra:dragon_enderium",
+    "amount": 810
+  },
+  "temperature": 0,
+  "time": 84
+}

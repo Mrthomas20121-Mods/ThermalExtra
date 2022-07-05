@@ -1,0 +1,25 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "value": {
+        "tag": "forge:rods/nebulium",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
+    },
+    {
+      "modid": "tconstruct",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "ingredient": {
+    "tag": "forge:rods/nebulium"
+  },
+  "result": {
+    "fluid": "thermal_extra:nebulium",
+    "amount": 45
+  },
+  "temperature": 0,
+  "time": 6
+}

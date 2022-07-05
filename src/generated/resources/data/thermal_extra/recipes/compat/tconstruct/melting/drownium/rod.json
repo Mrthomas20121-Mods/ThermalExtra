@@ -1,0 +1,25 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "value": {
+        "tag": "forge:rods/drownium",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
+    },
+    {
+      "modid": "tconstruct",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "ingredient": {
+    "tag": "forge:rods/drownium"
+  },
+  "result": {
+    "fluid": "thermal_extra:drownium",
+    "amount": 45
+  },
+  "temperature": 0,
+  "time": 6
+}

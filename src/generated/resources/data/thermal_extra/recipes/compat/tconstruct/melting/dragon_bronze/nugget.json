@@ -1,0 +1,18 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "modid": "tconstruct",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "ingredient": {
+    "tag": "forge:nuggets/dragon_bronze"
+  },
+  "result": {
+    "fluid": "thermal_extra:dragon_bronze",
+    "amount": 10
+  },
+  "temperature": 0,
+  "time": 9
+}

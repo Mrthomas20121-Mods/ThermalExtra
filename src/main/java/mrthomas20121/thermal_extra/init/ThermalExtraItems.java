@@ -1,7 +1,6 @@
 package mrthomas20121.thermal_extra.init;
 
 import cofh.core.item.ItemCoFH;
-import cofh.core.util.filter.FilterRegistry;
 import cofh.lib.util.helpers.AugmentDataHelper;
 import cofh.thermal.lib.item.AugmentItem;
 import mrthomas20121.thermal_extra.filter.AdvancedFilter;
@@ -44,10 +43,10 @@ public class ThermalExtraItems {
     };
 
     public static final RegistryObject<Item> dragon_breath_plating = ITEMS.register("dragon_breath_plating", ThermalExtraItems::registerEndMaterial);
-    public static final RegistryObject<Item> dragon_bronze_helmet = ITEMS.register("dragon_bronze_helmet", () -> new CustomArmorItem(ThermalArmorMaterial.DRAGON_BRONZE, EquipmentSlot.HEAD, (new Item.Properties()).tab(group)));
-    public static final RegistryObject<Item> dragon_bronze_chestplate = ITEMS.register("dragon_bronze_chestplate", () -> new CustomArmorItem(ThermalArmorMaterial.DRAGON_BRONZE, EquipmentSlot.CHEST, (new Item.Properties()).tab(group)));
-    public static final RegistryObject<Item> dragon_bronze_leggings = ITEMS.register("dragon_bronze_leggings", () -> new CustomArmorItem(ThermalArmorMaterial.DRAGON_BRONZE, EquipmentSlot.LEGS, (new Item.Properties()).tab(group)));
-    public static final RegistryObject<Item> dragon_bronze_boots = ITEMS.register("dragon_bronze_boots", () -> new CustomArmorItem(ThermalArmorMaterial.DRAGON_BRONZE, EquipmentSlot.FEET, (new Item.Properties()).tab(group)));
+    public static final RegistryObject<Item> dragon_bronze_helmet = ITEMS.register("dragon_bronze_helmet", () -> new CustomArmorItem(ThermalExtraArmorMaterial.DRAGON_BRONZE, EquipmentSlot.HEAD, (new Item.Properties()).tab(group)));
+    public static final RegistryObject<Item> dragon_bronze_chestplate = ITEMS.register("dragon_bronze_chestplate", () -> new CustomArmorItem(ThermalExtraArmorMaterial.DRAGON_BRONZE, EquipmentSlot.CHEST, (new Item.Properties()).tab(group)));
+    public static final RegistryObject<Item> dragon_bronze_leggings = ITEMS.register("dragon_bronze_leggings", () -> new CustomArmorItem(ThermalExtraArmorMaterial.DRAGON_BRONZE, EquipmentSlot.LEGS, (new Item.Properties()).tab(group)));
+    public static final RegistryObject<Item> dragon_bronze_boots = ITEMS.register("dragon_bronze_boots", () -> new CustomArmorItem(ThermalExtraArmorMaterial.DRAGON_BRONZE, EquipmentSlot.FEET, (new Item.Properties()).tab(group)));
     public static final RegistryObject<Item> dragon_bronze_ingot = ITEMS.register("dragon_bronze_ingot", ThermalExtraItems::registerEndMaterial);
     public static final RegistryObject<Item> dragon_bronze_nugget = ITEMS.register("dragon_bronze_nugget", ThermalExtraItems::registerEndMaterial);
     public static final RegistryObject<Item> dragon_bronze_dust = ITEMS.register("dragon_bronze_dust", ThermalExtraItems::registerEndMaterial);

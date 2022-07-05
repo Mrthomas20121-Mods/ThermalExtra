@@ -1,0 +1,18 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "modid": "tconstruct",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "ingredient": {
+    "tag": "forge:ingots/nectium"
+  },
+  "result": {
+    "fluid": "thermal_extra:nectium",
+    "amount": 90
+  },
+  "temperature": 0,
+  "time": 28
+}
