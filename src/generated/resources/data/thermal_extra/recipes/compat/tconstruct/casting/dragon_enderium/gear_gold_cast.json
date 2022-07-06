@@ -17,11 +17,11 @@
     "tag": "tconstruct:casts/multi_use/gear"
   },
   "fluid": {
-    "tag": "forge:dragon_enderium",
+    "tag": "forge:molten_dragon_enderium",
     "amount": 360
   },
   "result": {
     "tag": "forge:gears/dragon_enderium"
   },
-  "cooling_time": 56
+  "cooling_time": 144
 }

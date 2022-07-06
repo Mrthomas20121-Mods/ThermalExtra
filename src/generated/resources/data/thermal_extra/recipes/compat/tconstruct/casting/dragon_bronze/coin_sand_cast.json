@@ -18,11 +18,11 @@
   },
   "cast_consumed": true,
   "fluid": {
-    "tag": "forge:dragon_bronze",
+    "tag": "forge:molten_dragon_bronze",
     "amount": 30
   },
   "result": {
     "tag": "forge:coins/dragon_bronze"
   },
-  "cooling_time": 16
+  "cooling_time": 33
 }

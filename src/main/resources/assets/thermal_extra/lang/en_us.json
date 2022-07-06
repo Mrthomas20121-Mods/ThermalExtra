@@ -81,9 +81,13 @@
   "item.thermal_extra.advanced_machine_speed_augment": "Advanced Flux Linkage Amplifier",
   "item.thermal_extra.advanced_item_filter_augment": "Advanced Item Filter",
   "item.thermal_extra.advanced_area_radius_augment": "Advanced Radial Enhancement",
-  "item.thermal_extra.cactus_soup": "Cactus Soup",
-  "item.thermal_extra.cactus_juice_bucket": "Cactus Juice Bucket",
-  "fluid.thermal_extra.cactus_juice": "Cactus Juice",
+  "item.thermal_extra.sunflower_oil_bucket": "Sunflower Oil Bucket",
+  "fluid.thermal_extra.sunflower_oil": "Sunflower Oil",
+  "item.thermal_extra.crystallized_sunflower_oil_bucket": "Crystallized Sunflower Oil Bucket",
+  "fluid.thermal_extra.crystallized_sunflower_oil": "Crystallized Sunflower Oil",
+  "item.thermal_extra.refined_sunflower_oil_bucket": "Refined Sunflower Oil Bucket",
+  "fluid.thermal_extra.refined_sunflower_oil": "Refined Sunflower Oil",
+  "item.thermal_extra.sticky_ball": "Sticky Ball",
   "itemGroup.thermal_extra_resources": "Thermal Extra: Resources",
   "itemGroup.thermal_extra_augments": "Thermal Extra: Augments"
 }

@@ -18,11 +18,11 @@
   },
   "cast_consumed": true,
   "fluid": {
-    "tag": "forge:dragon_enderium",
+    "tag": "forge:molten_nebulium",
     "amount": 30
   },
   "result": {
     "tag": "forge:coins/nebulium"
   },
-  "cooling_time": 16
+  "cooling_time": 31
 }

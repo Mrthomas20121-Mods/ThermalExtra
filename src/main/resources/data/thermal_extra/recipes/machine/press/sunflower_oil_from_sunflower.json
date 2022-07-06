@@ -1,0 +1,15 @@
+{
+  "type": "thermal:press",
+  "ingredients": [
+    {
+      "item": "minecraft:sunflower"
+    }
+  ],
+  "result": [
+    {
+      "fluid": "thermal_extra:sunflower_oil",
+      "amount": 50
+    }
+  ],
+  "energy": 500
+}

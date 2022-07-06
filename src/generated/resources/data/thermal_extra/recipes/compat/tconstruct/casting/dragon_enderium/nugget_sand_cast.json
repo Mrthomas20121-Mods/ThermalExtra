@@ -18,11 +18,11 @@
   },
   "cast_consumed": true,
   "fluid": {
-    "tag": "forge:dragon_enderium",
+    "tag": "forge:molten_dragon_enderium",
     "amount": 10
   },
   "result": {
     "tag": "forge:nuggets/dragon_enderium"
   },
-  "cooling_time": 9
+  "cooling_time": 24
 }

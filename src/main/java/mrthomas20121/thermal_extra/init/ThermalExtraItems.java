@@ -96,6 +96,7 @@ public class ThermalExtraItems {
     public static final RegistryObject<Item> drownium_gear = ITEMS.register("drownium_gear", ThermalExtraItems::register);
     public static final RegistryObject<Item> drownium_coin = ITEMS.register("drownium_coin", ThermalExtraItems::register);
     public static final RegistryObject<Item> cactus_dust = ITEMS.register("cactus_dust", ThermalExtraItems::register);
+    public static final RegistryObject<Item> sticky_ball = ITEMS.register("sticky_ball", ThermalExtraItems::register);
 
     // augments
     public static final RegistryObject<ItemCoFH> dragon_integral_component = ITEMS.register("dragon_integral_component", () -> new CustomAugmentItem(new Item.Properties().tab(augmentGroup).rarity(Rarity.RARE),

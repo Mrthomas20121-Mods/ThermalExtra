@@ -20,6 +20,6 @@
     "fluid": "thermal_extra:polarium",
     "amount": 90
   },
-  "temperature": 0,
-  "time": 21
+  "temperature": 600,
+  "time": 40
 }

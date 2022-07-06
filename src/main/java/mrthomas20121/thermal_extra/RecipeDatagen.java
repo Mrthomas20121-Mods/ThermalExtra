@@ -5,15 +5,10 @@ import mrthomas20121.thermal_extra.init.ThermalExtraFluids;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
-import net.minecraftforge.common.crafting.conditions.TagEmptyCondition;
-import net.minecraftforge.fluids.ForgeFlowingFluid;
 import slimeknights.mantle.recipe.helper.ItemOutput;
-import slimeknights.mantle.registration.object.FluidObject;
 import slimeknights.tconstruct.common.registration.CastItemObject;
 import slimeknights.tconstruct.library.data.recipe.ICommonRecipeHelper;
 import slimeknights.tconstruct.library.data.recipe.IMaterialRecipeHelper;
@@ -24,9 +19,7 @@ import slimeknights.tconstruct.library.recipe.casting.ItemCastingRecipeBuilder;
 import slimeknights.tconstruct.smeltery.TinkerSmeltery;
 
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import java.util.function.Consumer;
-import java.util.function.Supplier;
 
 public class RecipeDatagen extends RecipeProvider  implements IConditionBuilder, IMaterialRecipeHelper, IToolRecipeHelper, ISmelteryRecipeHelper, ICommonRecipeHelper {
 
@@ -56,11 +49,11 @@ public class RecipeDatagen extends RecipeProvider  implements IConditionBuilder,
 
         metalTagCasting(withCondition(consumer, modLoaded("tconstruct")), ThermalExtraFluids.dragon_bronze, "dragon_bronze", castingFolder, false);
         metalTagCasting(withCondition(consumer, modLoaded("tconstruct")), ThermalExtraFluids.dragon_enderium, "dragon_enderium", castingFolder, false);
-        metalTagCasting(withCondition(consumer, modLoaded("tconstruct")), ThermalExtraFluids.dragon_enderium, "drownium", castingFolder, false);
-        metalTagCasting(withCondition(consumer, modLoaded("tconstruct")), ThermalExtraFluids.dragon_enderium, "nebulium", castingFolder, false);
-        metalTagCasting(withCondition(consumer, modLoaded("tconstruct")), ThermalExtraFluids.dragon_enderium, "nectium", castingFolder, false);
-        metalTagCasting(withCondition(consumer, modLoaded("tconstruct")), ThermalExtraFluids.dragon_enderium, "polarium", castingFolder, false);
-        metalTagCasting(withCondition(consumer, modLoaded("tconstruct")), ThermalExtraFluids.dragon_enderium, "zauvium", castingFolder, false);
+        metalTagCasting(withCondition(consumer, modLoaded("tconstruct")), ThermalExtraFluids.drownium, "drownium", castingFolder, false);
+        metalTagCasting(withCondition(consumer, modLoaded("tconstruct")), ThermalExtraFluids.nebulium, "nebulium", castingFolder, false);
+        metalTagCasting(withCondition(consumer, modLoaded("tconstruct")), ThermalExtraFluids.nectium, "nectium", castingFolder, false);
+        metalTagCasting(withCondition(consumer, modLoaded("tconstruct")), ThermalExtraFluids.polarium, "polarium", castingFolder, false);
+        metalTagCasting(withCondition(consumer, modLoaded("tconstruct")), ThermalExtraFluids.zauvium, "zauvium", castingFolder, false);
     }
 
     private  void metalTagCasting(Consumer<FinishedRecipe> consumer, FluidThermalExtra fluid, String name, String folder, boolean forceStandard) {

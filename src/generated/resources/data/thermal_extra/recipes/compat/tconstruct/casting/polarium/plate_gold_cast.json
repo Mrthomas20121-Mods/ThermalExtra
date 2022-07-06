@@ -17,11 +17,11 @@
     "tag": "tconstruct:casts/multi_use/plate"
   },
   "fluid": {
-    "tag": "forge:dragon_enderium",
+    "tag": "forge:molten_polarium",
     "amount": 90
   },
   "result": {
     "tag": "forge:plates/polarium"
   },
-  "cooling_time": 28
+  "cooling_time": 53
 }

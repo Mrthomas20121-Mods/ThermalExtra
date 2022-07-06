@@ -18,11 +18,11 @@
   },
   "cast_consumed": true,
   "fluid": {
-    "tag": "forge:dragon_bronze",
+    "tag": "forge:molten_dragon_bronze",
     "amount": 360
   },
   "result": {
     "tag": "forge:gears/dragon_bronze"
   },
-  "cooling_time": 56
+  "cooling_time": 114
 }

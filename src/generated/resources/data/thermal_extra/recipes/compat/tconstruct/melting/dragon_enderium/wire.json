@@ -20,6 +20,6 @@
     "fluid": "thermal_extra:dragon_enderium",
     "amount": 45
   },
-  "temperature": 0,
-  "time": 6
+  "temperature": 1200,
+  "time": 14
 }

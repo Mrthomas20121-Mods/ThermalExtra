@@ -20,6 +20,6 @@
     "fluid": "thermal_extra:vukaium",
     "amount": 90
   },
-  "temperature": 0,
-  "time": 28
+  "temperature": 600,
+  "time": 53
 }

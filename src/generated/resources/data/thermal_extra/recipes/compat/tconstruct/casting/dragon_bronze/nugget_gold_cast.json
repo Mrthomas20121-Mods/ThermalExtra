@@ -17,11 +17,11 @@
     "tag": "tconstruct:casts/multi_use/nugget"
   },
   "fluid": {
-    "tag": "forge:dragon_bronze",
+    "tag": "forge:molten_dragon_bronze",
     "amount": 10
   },
   "result": {
     "tag": "forge:nuggets/dragon_bronze"
   },
-  "cooling_time": 9
+  "cooling_time": 19
 }

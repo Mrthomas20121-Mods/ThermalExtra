@@ -20,6 +20,6 @@
     "fluid": "thermal_extra:nectium",
     "amount": 360
   },
-  "temperature": 0,
-  "time": 56
+  "temperature": 600,
+  "time": 107
 }

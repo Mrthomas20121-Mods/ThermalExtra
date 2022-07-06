@@ -19,10 +19,11 @@ public class FluidThermalExtra extends FluidCoFH {
 
     private final String key;
 
-    public FluidThermalExtra(String key, String stillTexture, String flowTexture) {
+    public FluidThermalExtra(String key, String stillTexture, String flowTexture, int temp) {
         super(ThermalExtraFluids.FLUIDS, key, FluidAttributes.builder(new ResourceLocation(stillTexture), new ResourceLocation(flowTexture))
                         .density(4000)
                         .viscosity(2500)
+                        .temperature(temp)
                         .sound(SoundEvents.BUCKET_FILL, SoundEvents.BUCKET_EMPTY));
 
         this.key = key;
@@ -45,6 +46,6 @@ public class FluidThermalExtra extends FluidCoFH {
     }
 
     public TagKey<Fluid> getFluidTag() {
-        return FluidTags.create(new ResourceLocation("forge", key));
+        return FluidTags.create(new ResourceLocation("forge", "molten_"+key));
     }
 }

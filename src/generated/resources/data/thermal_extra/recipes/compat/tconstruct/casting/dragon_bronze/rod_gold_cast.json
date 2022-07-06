@@ -17,11 +17,11 @@
     "tag": "tconstruct:casts/multi_use/rod"
   },
   "fluid": {
-    "tag": "forge:dragon_bronze",
+    "tag": "forge:molten_dragon_bronze",
     "amount": 45
   },
   "result": {
     "tag": "forge:rods/dragon_bronze"
   },
-  "cooling_time": 20
+  "cooling_time": 40
 }

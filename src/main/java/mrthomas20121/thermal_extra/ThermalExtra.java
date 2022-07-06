@@ -13,7 +13,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 @Mod(mrthomas20121.thermal_extra.ThermalExtra.MOD_ID)
-@Mod.EventBusSubscriber(modid = ThermalExtra.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+//@Mod.EventBusSubscriber(modid = ThermalExtra.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ThermalExtra {
 
 	public static final String MOD_ID = "thermal_extra";
@@ -25,12 +25,12 @@ public class ThermalExtra {
 		AdvancedFilter.init();
 	}
 
-	@SubscribeEvent
-	public static void gatherData(final GatherDataEvent event) {
-		DataGenerator gen = event.getGenerator();
-		ExistingFileHelper fileHelper = event.getExistingFileHelper();
-		if (event.includeServer()) {
-			gen.addProvider(new RecipeDatagen(gen));
-		}
-	}
+//	@SubscribeEvent
+//	public static void gatherData(final GatherDataEvent event) {
+//		DataGenerator gen = event.getGenerator();
+//		ExistingFileHelper fileHelper = event.getExistingFileHelper();
+//		if (event.includeServer()) {
+//			gen.addProvider(new RecipeDatagen(gen));
+//		}
+//	}
 }

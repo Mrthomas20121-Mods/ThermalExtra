@@ -20,6 +20,6 @@
     "fluid": "thermal_extra:zauvium",
     "amount": 30
   },
-  "temperature": 0,
-  "time": 19
+  "temperature": 600,
+  "time": 36
 }

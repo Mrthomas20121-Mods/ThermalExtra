@@ -18,11 +18,11 @@
   },
   "cast_consumed": true,
   "fluid": {
-    "tag": "forge:dragon_enderium",
+    "tag": "forge:molten_polarium",
     "amount": 360
   },
   "result": {
     "tag": "forge:gears/polarium"
   },
-  "cooling_time": 56
+  "cooling_time": 107
 }

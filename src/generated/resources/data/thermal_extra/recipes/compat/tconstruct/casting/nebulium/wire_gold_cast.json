@@ -17,11 +17,11 @@
     "tag": "tconstruct:casts/multi_use/wire"
   },
   "fluid": {
-    "tag": "forge:dragon_enderium",
+    "tag": "forge:molten_nebulium",
     "amount": 45
   },
   "result": {
     "tag": "forge:wires/nebulium"
   },
-  "cooling_time": 20
+  "cooling_time": 38
 }

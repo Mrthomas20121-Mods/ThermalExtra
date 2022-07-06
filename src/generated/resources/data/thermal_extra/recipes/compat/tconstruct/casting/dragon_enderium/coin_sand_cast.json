@@ -18,11 +18,11 @@
   },
   "cast_consumed": true,
   "fluid": {
-    "tag": "forge:dragon_enderium",
+    "tag": "forge:molten_dragon_enderium",
     "amount": 30
   },
   "result": {
     "tag": "forge:coins/dragon_enderium"
   },
-  "cooling_time": 16
+  "cooling_time": 42
 }

@@ -1,0 +1,23 @@
+{
+  "type": "thermal:refinery",
+  "ingredients": [
+	{
+      "fluid": "thermal_extra:crystallized_sunflower_oil",
+	  "amount": 50
+    }
+  ],
+  "result": [
+	{
+      "item": "thermal_extra:sticky_ball"
+    },
+    {
+      "fluid": "thermal_extra:refined_sunflower_oil",
+      "amount": 50
+    },
+	{
+      "fluid": "minecraft:water",
+      "amount": 50
+    }
+  ],
+  "energy": 1000
+}

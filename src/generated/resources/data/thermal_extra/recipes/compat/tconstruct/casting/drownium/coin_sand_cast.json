@@ -18,11 +18,11 @@
   },
   "cast_consumed": true,
   "fluid": {
-    "tag": "forge:dragon_enderium",
+    "tag": "forge:molten_drownium",
     "amount": 30
   },
   "result": {
     "tag": "forge:coins/drownium"
   },
-  "cooling_time": 16
+  "cooling_time": 31
 }

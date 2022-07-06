@@ -13,6 +13,6 @@
     "fluid": "thermal_extra:dragon_bronze",
     "amount": 90
   },
-  "temperature": 0,
-  "time": 28
+  "temperature": 700,
+  "time": 57
 }

@@ -20,6 +20,6 @@
     "fluid": "thermal_extra:drownium",
     "amount": 45
   },
-  "temperature": 0,
-  "time": 6
+  "temperature": 600,
+  "time": 11
 }

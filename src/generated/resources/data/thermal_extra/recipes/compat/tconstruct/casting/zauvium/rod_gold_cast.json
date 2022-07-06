@@ -17,11 +17,11 @@
     "tag": "tconstruct:casts/multi_use/rod"
   },
   "fluid": {
-    "tag": "forge:dragon_enderium",
+    "tag": "forge:molten_zauvium",
     "amount": 45
   },
   "result": {
     "tag": "forge:rods/zauvium"
   },
-  "cooling_time": 20
+  "cooling_time": 38
 }

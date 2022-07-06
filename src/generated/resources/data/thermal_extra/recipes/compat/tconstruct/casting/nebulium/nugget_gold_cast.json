@@ -17,11 +17,11 @@
     "tag": "tconstruct:casts/multi_use/nugget"
   },
   "fluid": {
-    "tag": "forge:dragon_enderium",
+    "tag": "forge:molten_nebulium",
     "amount": 10
   },
   "result": {
     "tag": "forge:nuggets/nebulium"
   },
-  "cooling_time": 9
+  "cooling_time": 18
 }
