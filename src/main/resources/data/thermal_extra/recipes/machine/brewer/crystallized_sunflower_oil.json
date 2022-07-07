@@ -6,13 +6,13 @@
     },
 	{
       "fluid": "thermal_extra:sunflower_oil",
-	  "amount": 50
+	  "amount": 1000
     }
   ],
   "result": [
     {
       "fluid": "thermal_extra:crystallized_sunflower_oil",
-      "amount": 50
+      "amount": 1000
     }
   ],
   "energy": 1000

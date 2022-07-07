@@ -3,7 +3,7 @@
   "ingredients": [
 	{
       "fluid": "thermal_extra:crystallized_sunflower_oil",
-	  "amount": 50
+	  "amount": 100
     }
   ],
   "result": [
@@ -12,11 +12,7 @@
     },
     {
       "fluid": "thermal_extra:refined_sunflower_oil",
-      "amount": 50
-    },
-	{
-      "fluid": "minecraft:water",
-      "amount": 50
+      "amount": 100
     }
   ],
   "energy": 1000
