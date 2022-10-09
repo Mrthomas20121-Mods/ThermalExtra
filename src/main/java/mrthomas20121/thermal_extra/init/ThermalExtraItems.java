@@ -1,7 +1,8 @@
 package mrthomas20121.thermal_extra.init;
 
 import cofh.core.item.ItemCoFH;
-import cofh.lib.util.helpers.AugmentDataHelper;
+import cofh.core.util.filter.FilterRegistry;
+import cofh.core.util.helpers.AugmentDataHelper;
 import cofh.thermal.lib.item.AugmentItem;
 import mrthomas20121.thermal_extra.filter.AdvancedFilter;
 import mrthomas20121.thermal_extra.item.CustomArmorItem;
@@ -38,7 +39,7 @@ public class ThermalExtraItems {
         @Nonnull
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(augment_base.get());
+            return new ItemStack(advanced_augment_base.get());
         }
     };
 
@@ -110,8 +111,6 @@ public class ThermalExtraItems {
                     .type(TAG_AUGMENT_TYPE_FILTER)
                     .feature(TAG_FILTER_TYPE, AdvancedFilter.ITEM_FILTER_TYPE)
                     .build()).setShowInGroups(getFlag(FLAG_FILTER_AUGMENTS)));
-
-    public static final RegistryObject<Item> augment_base = ITEMS.register("augment_base", () -> register(augmentGroup));
 
     public static final RegistryObject<Item> advanced_augment_base = ITEMS.register("advanced_augment_base", () -> register(augmentGroup));
 

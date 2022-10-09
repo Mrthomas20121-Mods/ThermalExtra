@@ -25,8 +25,7 @@ public class CommonEvents {
         DamageSource source = event.getSource();
         Entity attacker = source.getEntity();
 
-        if(attacker instanceof Player && event.getEntityLiving() instanceof EnderMan enderman) {
-            Player player = (Player) attacker;
+        if(attacker instanceof Player player && event.getEntityLiving() instanceof EnderMan enderman) {
             int index = 0;
             for(ItemStack stack: player.getArmorSlots()) {
                 if(!stack.isEmpty()) {

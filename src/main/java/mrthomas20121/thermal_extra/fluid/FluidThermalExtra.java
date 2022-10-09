@@ -13,6 +13,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.material.FlowingFluid;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraftforge.fluids.FluidAttributes;
+import net.minecraftforge.fluids.ForgeFlowingFluid;
 import net.minecraftforge.registries.RegistryObject;
 
 public class FluidThermalExtra extends FluidCoFH {
@@ -37,11 +38,11 @@ public class FluidThermalExtra extends FluidCoFH {
         return this.bucket;
     }
 
-    public RegistryObject<FlowingFluid> getStillFluid() {
+    public RegistryObject<ForgeFlowingFluid> getStillFluid() {
         return this.stillFluid;
     }
 
-    public RegistryObject<FlowingFluid> getFlowingFluid() {
+    public RegistryObject<ForgeFlowingFluid> getFlowingFluid() {
         return this.flowingFluid;
     }
 

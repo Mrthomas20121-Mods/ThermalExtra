@@ -10,7 +10,7 @@
       "item": "minecraft:ender_eye"
     },
 	"d": {
-      "item": "thermal_extra:augment_base"
+      "item": "thermal:compost"
     },
 	"c": {
       "tag": "forge:dusts/cactus"
