@@ -17,11 +17,11 @@
     "tag": "tconstruct:casts/multi_use/gear"
   },
   "fluid": {
-    "tag": "forge:molten_drownium",
+    "tag": "forge:molten_twinite",
     "amount": 360
   },
   "result": {
     "tag": "forge:gears/drownium"
   },
-  "cooling_time": 107
+  "cooling_time": 133
 }

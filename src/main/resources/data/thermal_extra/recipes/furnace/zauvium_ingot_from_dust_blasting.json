@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "ingredient": {
-    "item": "thermal_extra:zauvium_dust"
-  },
-  "result": "thermal_extra:zauvium_ingot",
-  "experience": 0,
-  "cookingtime": 100
-}

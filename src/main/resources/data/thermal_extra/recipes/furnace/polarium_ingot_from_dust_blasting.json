@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "ingredient": {
-    "item": "thermal_extra:polarium_dust"
-  },
-  "result": "thermal_extra:polarium_ingot",
-  "experience": 0,
-  "cookingtime": 100
-}

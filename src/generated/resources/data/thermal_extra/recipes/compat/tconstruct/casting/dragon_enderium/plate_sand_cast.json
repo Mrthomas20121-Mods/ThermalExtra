@@ -18,11 +18,11 @@
   },
   "cast_consumed": true,
   "fluid": {
-    "tag": "forge:molten_dragon_enderium",
+    "tag": "forge:molten_shellite",
     "amount": 90
   },
   "result": {
     "tag": "forge:plates/dragon_enderium"
   },
-  "cooling_time": 72
+  "cooling_time": 60
 }

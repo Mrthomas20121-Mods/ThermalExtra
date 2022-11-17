@@ -1,0 +1,25 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "value": {
+        "tag": "forge:wires/twinite",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
+    },
+    {
+      "modid": "tconstruct",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "ingredient": {
+    "tag": "forge:wires/twinite"
+  },
+  "result": {
+    "fluid": "thermal_extra:twinite",
+    "amount": 45
+  },
+  "temperature": 1000,
+  "time": 13
+}

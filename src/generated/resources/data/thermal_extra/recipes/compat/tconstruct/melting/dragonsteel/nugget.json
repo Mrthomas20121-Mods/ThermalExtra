@@ -1,0 +1,18 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "modid": "tconstruct",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "ingredient": {
+    "tag": "forge:nuggets/dragonsteel"
+  },
+  "result": {
+    "fluid": "thermal_extra:dragonsteel",
+    "amount": 10
+  },
+  "temperature": 1200,
+  "time": 24
+}

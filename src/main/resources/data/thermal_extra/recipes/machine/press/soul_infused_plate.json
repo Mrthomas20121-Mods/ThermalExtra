@@ -1,0 +1,16 @@
+{
+  "type": "thermal:press",
+  "ingredients": [
+    {
+      "tag": "forge:ingots/soul_infused",
+      "count": 1
+    }
+  ],
+  "result": [
+    {
+      "item": "thermal_extra:soul_infused_plate",
+      "count": 1
+    }
+  ],
+  "energy": 2400
+}

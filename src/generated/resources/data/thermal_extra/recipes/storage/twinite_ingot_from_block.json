@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "thermal_extra:twinite_block"
+    }
+  ],
+  "result": {
+    "item": "thermal_extra:twinite_ingot",
+    "count": 9
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "value": {
+        "tag": "forge:sheetmetals/twinite",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
+    },
+    {
+      "modid": "tconstruct",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "ingredient": {
+    "tag": "forge:sheetmetals/twinite"
+  },
+  "result": {
+    "fluid": "thermal_extra:twinite",
+    "amount": 90
+  },
+  "temperature": 1000,
+  "time": 66
+}

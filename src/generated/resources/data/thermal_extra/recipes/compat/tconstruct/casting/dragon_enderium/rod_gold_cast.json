@@ -17,11 +17,11 @@
     "tag": "tconstruct:casts/multi_use/rod"
   },
   "fluid": {
-    "tag": "forge:molten_dragon_enderium",
+    "tag": "forge:molten_shellite",
     "amount": 45
   },
   "result": {
     "tag": "forge:rods/dragon_enderium"
   },
-  "cooling_time": 51
+  "cooling_time": 43
 }

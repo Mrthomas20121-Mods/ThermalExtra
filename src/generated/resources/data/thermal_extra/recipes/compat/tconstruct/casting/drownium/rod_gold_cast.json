@@ -17,11 +17,11 @@
     "tag": "tconstruct:casts/multi_use/rod"
   },
   "fluid": {
-    "tag": "forge:molten_drownium",
+    "tag": "forge:molten_twinite",
     "amount": 45
   },
   "result": {
     "tag": "forge:rods/drownium"
   },
-  "cooling_time": 38
+  "cooling_time": 47
 }

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:dragon_breath"
+    },
+    {
+      "item": "minecraft:dragon_breath"
+    },
+    {
+      "item": "minecraft:dragon_breath"
+    },
+    {
+      "tag": "forge:dusts/apatite"
+    },
+    {
+      "tag": "forge:dusts/apatite"
+    },
+    {
+      "tag": "forge:dusts/netherite"
+    }
+  ],
+  "result": {
+    "item": "thermal_extra:dragonsteel_dust",
+    "count": 2
+  }
+}

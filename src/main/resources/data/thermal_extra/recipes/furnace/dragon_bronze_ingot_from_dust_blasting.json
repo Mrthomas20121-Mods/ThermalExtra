@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "ingredient": {
-    "item": "thermal_extra:dragon_bronze_dust"
-  },
-  "result": "thermal_extra:dragon_bronze_ingot",
-  "experience": 0,
-  "cookingtime": 100
-}

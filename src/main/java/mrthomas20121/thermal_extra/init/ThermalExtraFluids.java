@@ -10,14 +10,10 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class ThermalExtraFluids {
     public static final DeferredRegisterCoFH<Fluid> FLUIDS = DeferredRegisterCoFH.create(ForgeRegistries.FLUIDS, ThermalExtra.MOD_ID);
 
-    public static FluidThermalExtra dragon_enderium = registerFluid("dragon_enderium", 1500);
-    public static FluidThermalExtra dragon_bronze = registerFluid("dragon_bronze", 1000);
-    public static FluidThermalExtra drownium = registerFluid("drownium", 900);
-    public static FluidThermalExtra nebulium = registerFluid("nebulium", 900);
-    public static FluidThermalExtra nectium = registerFluid("nectium", 900);
-    public static FluidThermalExtra polarium = registerFluid("polarium", 900);
-    public static FluidThermalExtra vukaium = registerFluid("vukaium", 900);
-    public static FluidThermalExtra zauvium = registerFluid("zauvium", 900);
+    public static FluidThermalExtra soul_infused = registerFluid("soul_infused", 1000);
+    public static FluidThermalExtra shellite = registerFluid("shellite", 1100);
+    public static FluidThermalExtra twinite = registerFluid("twinite", 1300);
+    public static FluidThermalExtra dragonsteel = registerFluid("dragonsteel", 1500);
     public static FluidThermalExtra sunflower_oil = registerFluid("sunflower_oil", 400);
     public static FluidThermalExtra crystallized_sunflower_oil = registerFluid("crystallized_sunflower_oil", 500);
     public static FluidThermalExtra refined_sunflower_oil = registerFluid("refined_sunflower_oil", 500);

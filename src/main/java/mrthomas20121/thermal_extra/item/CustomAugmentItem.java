@@ -23,7 +23,7 @@ public class CustomAugmentItem extends AugmentItem {
     @OnlyIn(Dist.CLIENT)
     @Override
     public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn) {
-        tooltip.add(1, getTextComponent(String.format("item.%s.%s.desc", this.getRegistryName().getNamespace(), this.getRegistryName().getPath()))
+        tooltip.add(1, getTextComponent("thermal_extra.augment.upgrade")
                 .withStyle(ChatFormatting.GOLD));
     }
 }

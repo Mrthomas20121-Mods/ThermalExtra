@@ -1,0 +1,25 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "value": {
+        "tag": "forge:gears/dragonsteel",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
+    },
+    {
+      "modid": "tconstruct",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "ingredient": {
+    "tag": "forge:gears/dragonsteel"
+  },
+  "result": {
+    "fluid": "thermal_extra:dragonsteel",
+    "amount": 360
+  },
+  "temperature": 1200,
+  "time": 144
+}

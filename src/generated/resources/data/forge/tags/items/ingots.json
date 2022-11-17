@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "thermal_extra:soul_infused_ingot",
+    "thermal_extra:twinite_ingot",
+    "thermal_extra:twinite_ingot",
+    "thermal_extra:dragonsteel_ingot"
+  ]
+}

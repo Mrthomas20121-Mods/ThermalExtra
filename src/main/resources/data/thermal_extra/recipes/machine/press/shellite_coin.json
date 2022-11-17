@@ -1,0 +1,19 @@
+{
+  "type": "thermal:press",
+  "ingredients": [
+    {
+      "tag": "forge:ingots/shellite",
+      "count": 1
+    },
+    {
+      "item": "thermal:press_coin_die"
+    }
+  ],
+  "result": [
+    {
+      "item": "thermal_extra:shellite_coin",
+      "count": 3
+    }
+  ],
+  "energy": 2400
+}

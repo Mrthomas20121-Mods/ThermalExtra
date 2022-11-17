@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "thermal_extra:nebulium_dust"
-  },
-  "result": "thermal_extra:nebulium_ingot",
-  "experience": 0.5,
-  "cookingtime": 200
-}

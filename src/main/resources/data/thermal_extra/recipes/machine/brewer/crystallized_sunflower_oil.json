@@ -2,7 +2,7 @@
   "type": "thermal:brewer",
   "ingredients": [
     {
-      "item": "minecraft:amethyst_shard"
+      "tag": "forge:gems/amethyst"
     },
 	{
       "fluid": "thermal_extra:sunflower_oil",

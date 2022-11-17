@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:dusts/soul_sand"
+    },
+    {
+      "tag": "forge:dusts/soul_sand"
+    },
+    {
+      "tag": "forge:dusts/soul_sand"
+    },
+    {
+      "tag": "forge:dusts/apatite"
+    },
+    {
+      "tag": "forge:dusts/invar"
+    },
+    {
+      "tag": "forge:dusts/invar"
+    }
+  ],
+  "result": {
+    "item": "thermal_extra:soul_infused_dust",
+    "count": 2
+  }
+}

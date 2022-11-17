@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:dusts/amethyst"
+    },
+    {
+      "tag": "forge:dusts/amethyst"
+    },
+    {
+      "tag": "forge:dusts/amethyst"
+    },
+    {
+      "tag": "forge:dusts/apatite"
+    },
+    {
+      "tag": "forge:dusts/enderium"
+    },
+    {
+      "tag": "forge:dusts/enderium"
+    }
+  ],
+  "result": {
+    "item": "thermal_extra:twinite_dust",
+    "count": 2
+  }
+}

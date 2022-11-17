@@ -14,11 +14,11 @@
     }
   ],
   "fluid": {
-    "tag": "forge:molten_dragon_enderium",
+    "tag": "forge:molten_shellite",
     "amount": 810
   },
   "result": {
     "tag": "forge:storage_blocks/dragon_enderium"
   },
-  "cooling_time": 216
+  "cooling_time": 180
 }

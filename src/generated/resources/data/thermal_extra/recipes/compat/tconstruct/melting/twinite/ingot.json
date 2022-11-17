@@ -1,0 +1,18 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "modid": "tconstruct",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "ingredient": {
+    "tag": "forge:ingots/twinite"
+  },
+  "result": {
+    "fluid": "thermal_extra:twinite",
+    "amount": 90
+  },
+  "temperature": 1000,
+  "time": 66
+}

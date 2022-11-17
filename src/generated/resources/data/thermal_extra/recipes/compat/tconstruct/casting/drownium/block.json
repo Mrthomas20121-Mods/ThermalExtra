@@ -14,11 +14,11 @@
     }
   ],
   "fluid": {
-    "tag": "forge:molten_drownium",
+    "tag": "forge:molten_twinite",
     "amount": 810
   },
   "result": {
     "tag": "forge:storage_blocks/drownium"
   },
-  "cooling_time": 160
+  "cooling_time": 199
 }

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "thermal_extra:twinite_dust"
+  },
+  "result": "thermal_extra:twinite_ingot",
+  "experience": 0.0,
+  "cookingtime": 100
+}

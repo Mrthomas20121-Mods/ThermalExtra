@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "thermal_extra:soul_infused_glass",
+    "thermal_extra:shellite_glass",
+    "thermal_extra:twinite_glass",
+    "thermal_extra:dragonsteel_glass"
+  ]
+}

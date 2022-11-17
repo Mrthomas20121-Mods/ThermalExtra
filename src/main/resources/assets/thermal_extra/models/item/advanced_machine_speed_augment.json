@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "thermal_extra:item/augments/advanced_machine_speed_augment"
-  }
-}

@@ -1,0 +1,18 @@
+{
+  "type": "thermal:brewer",
+  "ingredients": [
+    {
+      "item": "thermal_extra:fluid_tank_augment_5"
+    },
+	{
+      "fluid": "thermal:ender",
+	  "amount": 1000
+    }
+  ],
+  "result": [
+    {
+      "item": "thermal_extra:thermal_extra:fluid_tank_augment_6"
+    }
+  ],
+  "energy": 10000
+}

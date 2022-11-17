@@ -1,0 +1,13 @@
+{
+  "type": "thermal:pulverizer",
+  "ingredient": {
+    "item": "minecraft:soul_sand"
+  },
+  "result": [
+    {
+      "item": "thermal_extra:soul_sand_dust",
+      "count": 1
+    }
+  ],
+  "experience": 0.2
+}

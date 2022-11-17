@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "thermal_extra:soul_infused_dust"
+  },
+  "result": "thermal_extra:soul_infused_ingot",
+  "experience": 0.0,
+  "cookingtime": 200
+}

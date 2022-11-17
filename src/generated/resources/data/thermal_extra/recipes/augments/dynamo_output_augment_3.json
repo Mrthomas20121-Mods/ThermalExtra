@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "IGI",
+    "GXG",
+    "IGI"
+  ],
+  "key": {
+    "G": {
+      "tag": "forge:gears/shellite"
+    },
+    "I": {
+      "tag": "forge:dusts/niter"
+    },
+    "X": {
+      "item": "thermal_extra:dynamo_output_augment_2"
+    }
+  },
+  "result": {
+    "item": "thermal_extra:dynamo_output_augment_3"
+  }
+}

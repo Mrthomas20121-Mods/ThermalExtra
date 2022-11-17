@@ -1,0 +1,13 @@
+{
+  "type": "thermal:pulverizer",
+  "ingredient": {
+    "tag": "forge:ingots/dragonsteel"
+  },
+  "result": [
+    {
+      "item": "thermal_extra:dragonsteel_dust",
+      "count": 1
+    }
+  ],
+  "experience": 0.2
+}

@@ -18,11 +18,11 @@
   },
   "cast_consumed": true,
   "fluid": {
-    "tag": "forge:molten_dragon_enderium",
+    "tag": "forge:molten_shellite",
     "amount": 45
   },
   "result": {
     "tag": "forge:wires/dragon_enderium"
   },
-  "cooling_time": 51
+  "cooling_time": 43
 }

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "IGI",
+    "GXG",
+    "IGI"
+  ],
+  "key": {
+    "G": {
+      "tag": "forge:gears/enderium"
+    },
+    "I": {
+      "tag": "forge:dusts/apatite"
+    },
+    "X": {
+      "item": "thermal_extra:fluid_tank_augment_1"
+    }
+  },
+  "result": {
+    "item": "thermal_extra:fluid_tank_augment_2"
+  }
+}

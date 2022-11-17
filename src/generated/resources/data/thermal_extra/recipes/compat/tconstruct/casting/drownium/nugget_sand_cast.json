@@ -18,11 +18,11 @@
   },
   "cast_consumed": true,
   "fluid": {
-    "tag": "forge:molten_drownium",
+    "tag": "forge:molten_twinite",
     "amount": 10
   },
   "result": {
     "tag": "forge:nuggets/drownium"
   },
-  "cooling_time": 18
+  "cooling_time": 22
 }

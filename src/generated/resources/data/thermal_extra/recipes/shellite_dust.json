@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:shulker_shell"
+    },
+    {
+      "item": "minecraft:shulker_shell"
+    },
+    {
+      "item": "minecraft:shulker_shell"
+    },
+    {
+      "tag": "forge:dusts/apatite"
+    },
+    {
+      "tag": "forge:dusts/bronze"
+    },
+    {
+      "tag": "forge:dusts/bronze"
+    }
+  ],
+  "result": {
+    "item": "thermal_extra:shellite_dust",
+    "count": 2
+  }
+}

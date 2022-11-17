@@ -1,0 +1,18 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "modid": "tconstruct",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "ingredient": {
+    "tag": "forge:storage_blocks/soul_infused"
+  },
+  "result": {
+    "fluid": "thermal_extra:soul_infused",
+    "amount": 810
+  },
+  "temperature": 700,
+  "time": 171
+}

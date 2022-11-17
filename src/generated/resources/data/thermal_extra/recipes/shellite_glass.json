@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "thermal:obsidian_glass"
+    },
+    {
+      "item": "thermal:obsidian_glass"
+    },
+    [
+      {
+        "tag": "forge:ingots/shellite"
+      },
+      {
+        "tag": "forge:dusts/shellite"
+      }
+    ],
+    {
+      "item": "minecraft:fire_charge"
+    }
+  ],
+  "result": {
+    "item": "thermal_extra:shellite_glass",
+    "count": 2
+  }
+}

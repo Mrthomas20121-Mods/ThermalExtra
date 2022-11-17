@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "thermal_extra:soul_infused_ingot"
+    }
+  ],
+  "result": {
+    "item": "thermal_extra:soul_infused_nugget",
+    "count": 9
+  }
+}

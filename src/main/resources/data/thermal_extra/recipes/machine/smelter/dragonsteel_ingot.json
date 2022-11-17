@@ -1,0 +1,24 @@
+{
+  "type": "thermal:smelter",
+  "ingredients": [
+    {
+      "item": "minecraft:dragon_breath",
+      "count": 3
+    },
+    {
+      "tag": "forge:gems/apatite",
+      "count": 2
+    },
+    {
+      "tag": "forge:ingots/netherite",
+      "count": 1
+    }
+  ],
+  "result": [
+    {
+      "item": "thermal_extra:dragonsteel_ingot",
+      "count": 1
+    }
+  ],
+  "energy": 4000
+}
