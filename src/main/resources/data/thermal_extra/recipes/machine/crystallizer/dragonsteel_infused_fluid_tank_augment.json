@@ -1,17 +1,17 @@
 {
-  "type": "thermal:brewer",
+  "type": "thermal:crystallizer",
   "ingredients": [
     {
-      "item": "thermal_extra:fluid_tank_augment_5"
-    },
-	{
       "fluid": "thermal:ender",
-	  "amount": 1000
+      "amount": 1000
+    },
+    {
+      "item": "thermal_extra:fluid_tank_augment_5"
     }
   ],
   "result": [
     {
-      "item": "thermal_extra:thermal_extra:fluid_tank_augment_6"
+      "item": "thermal_extra:fluid_tank_augment_6"
     }
   ],
   "energy": 10000
