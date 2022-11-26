@@ -21,7 +21,7 @@
     }
   ],
   "result": {
-    "item": "thermal_extra:soul_infused_dust",
-    "count": 2
+    "count": 2,
+    "item": "thermal_extra:soul_infused_dust"
   }
 }

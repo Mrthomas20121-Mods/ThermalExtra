@@ -1,6 +1,6 @@
 package mrthomas20121.thermal_extra.init;
 
-import cofh.lib.block.HardenedGlassBlock;
+import cofh.thermal.core.block.HardenedGlassBlock;
 import mrthomas20121.thermal_extra.ThermalExtra;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.EntityType;

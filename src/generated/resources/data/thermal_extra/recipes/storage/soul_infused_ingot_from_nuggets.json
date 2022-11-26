@@ -1,18 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "tag": "forge:nuggets/soul_infused"
+    },
+    "I": {
+      "item": "thermal_extra:soul_infused_nugget"
+    }
+  },
   "pattern": [
     "###",
     "#I#",
     "###"
   ],
-  "key": {
-    "I": {
-      "item": "thermal_extra:soul_infused_nugget"
-    },
-    "#": {
-      "tag": "forge:nuggets/soul_infused"
-    }
-  },
   "result": {
     "item": "thermal_extra:soul_infused_ingot"
   }

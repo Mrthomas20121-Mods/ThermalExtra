@@ -1,18 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "tag": "forge:ingots/dragonsteel"
+    },
+    "I": {
+      "item": "thermal_extra:dragonsteel_ingot"
+    }
+  },
   "pattern": [
     "###",
     "#I#",
     "###"
   ],
-  "key": {
-    "I": {
-      "item": "thermal_extra:dragonsteel_ingot"
-    },
-    "#": {
-      "tag": "forge:ingots/dragonsteel"
-    }
-  },
   "result": {
     "item": "thermal_extra:dragonsteel_block"
   }

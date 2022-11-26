@@ -37,8 +37,8 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .requires(ItemTagsCoFH.DUSTS_APATITE)
                 .requires(ItemTagsCoFH.DUSTS_INVAR)
                 .requires(ItemTagsCoFH.DUSTS_INVAR)
-                .unlockedBy("has_apatite_dust", has(ItemTagsCoFH.DUSTS_APATITE))
-                .unlockedBy("has_invar_dust", has(ItemTagsCoFH.DUSTS_INVAR))
+                .m_126132_("has_apatite_dust", has(ItemTagsCoFH.DUSTS_APATITE))
+                .m_126132_("has_invar_dust", has(ItemTagsCoFH.DUSTS_INVAR))
                 .save(consumer);
 
         ShapelessRecipeBuilder.shapeless(ThermalExtraItems.shellite_dust.get(), 2)
@@ -48,8 +48,8 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .requires(ItemTagsCoFH.DUSTS_APATITE)
                 .requires(ItemTagsCoFH.DUSTS_BRONZE)
                 .requires(ItemTagsCoFH.DUSTS_BRONZE)
-                .unlockedBy("has_apatite_dust", has(ItemTagsCoFH.DUSTS_APATITE))
-                .unlockedBy("has_bronze_dust", has(ItemTagsCoFH.DUSTS_BRONZE))
+                .m_126132_("has_apatite_dust", has(ItemTagsCoFH.DUSTS_APATITE))
+                .m_126132_("has_bronze_dust", has(ItemTagsCoFH.DUSTS_BRONZE))
                 .save(consumer);
 
         ShapelessRecipeBuilder.shapeless(ThermalExtraItems.twinite_dust.get(), 2)
@@ -59,8 +59,8 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .requires(ItemTagsCoFH.DUSTS_APATITE)
                 .requires(ItemTagsCoFH.DUSTS_ENDERIUM)
                 .requires(ItemTagsCoFH.DUSTS_ENDERIUM)
-                .unlockedBy("has_apatite_dust", has(ItemTagsCoFH.DUSTS_APATITE))
-                .unlockedBy("has_bronze_dust", has(ItemTagsCoFH.DUSTS_BRONZE))
+                .m_126132_("has_apatite_dust", has(ItemTagsCoFH.DUSTS_APATITE))
+                .m_126132_("has_bronze_dust", has(ItemTagsCoFH.DUSTS_BRONZE))
                 .save(consumer);
 
         ShapelessRecipeBuilder.shapeless(ThermalExtraItems.dragon_steel_dust.get(), 2)
@@ -70,8 +70,8 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .requires(ItemTagsCoFH.DUSTS_APATITE)
                 .requires(ItemTagsCoFH.DUSTS_APATITE)
                 .requires(ItemTagsCoFH.DUSTS_NETHERITE)
-                .unlockedBy("has_netherite_dust", has(ItemTagsCoFH.DUSTS_NETHERITE))
-                .unlockedBy("has_apatite_dust", has(ItemTagsCoFH.DUSTS_APATITE))
+                .m_126132_("has_netherite_dust", has(ItemTagsCoFH.DUSTS_NETHERITE))
+                .m_126132_("has_apatite_dust", has(ItemTagsCoFH.DUSTS_APATITE))
                 .save(consumer);
 
         Block glass = ThermalCore.BLOCKS.get("obsidian_glass");
@@ -81,7 +81,7 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .requires(glass)
                 .requires(fromTags(ThermalExtraTags.Items.SOUL_INFUSED_INGOT, ThermalExtraTags.Items.SOUL_INFUSED_DUST))
                 .requires(Items.FIRE_CHARGE)
-                .unlockedBy("has_obsidian_glass", has(glass))
+                .m_126132_("has_obsidian_glass", has(glass))
                 .save(consumer);
 
         ShapelessRecipeBuilder.shapeless(ThermalExtraBlocks.SHELLITE_GLASS.get(), 2)
@@ -89,7 +89,7 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .requires(glass)
                 .requires(fromTags(ThermalExtraTags.Items.SHELLITE_INGOT, ThermalExtraTags.Items.SHELLITE_DUST))
                 .requires(Items.FIRE_CHARGE)
-                .unlockedBy("has_obsidian_glass", has(glass))
+                .m_126132_("has_obsidian_glass", has(glass))
                 .save(consumer);
 
         ShapelessRecipeBuilder.shapeless(ThermalExtraBlocks.TWINITE_GLASS.get(), 2)
@@ -97,7 +97,7 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .requires(glass)
                 .requires(fromTags(ThermalExtraTags.Items.TWINITE_INGOT, ThermalExtraTags.Items.TWINITE_DUST))
                 .requires(Items.FIRE_CHARGE)
-                .unlockedBy("has_obsidian_glass", has(glass))
+                .m_126132_("has_obsidian_glass", has(glass))
                 .save(consumer);
 
         ShapelessRecipeBuilder.shapeless(ThermalExtraBlocks.DRAGONSTEEL_GLASS.get(), 2)
@@ -105,7 +105,7 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .requires(glass)
                 .requires(fromTags(ThermalExtraTags.Items.DRAGONSTEEL_INGOT, ThermalExtraTags.Items.DRAGONSTEEL_DUST))
                 .requires(Items.FIRE_CHARGE)
-                .unlockedBy("has_obsidian_glass", has(glass))
+                .m_126132_("has_obsidian_glass", has(glass))
                 .save(consumer);
 
         this.generateTypeRecipes(ThermalExtraItems.ITEMS, consumer, "soul_infused");
@@ -149,7 +149,7 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .pattern("IGI")
                 .pattern("GXG")
                 .pattern("IGI")
-                .unlockedBy("has_upgrade_augment_3", has(part))
+                .m_126132_("has_upgrade_augment_3", has(part))
                 .save(withConditions(consumer).flag(FLAG_UPGRADE_AUGMENTS), this.modid + ":" + folder + "/" + name(result));
 
         result = ThermalExtraItems.av_item_filter_augment.get();
@@ -162,7 +162,7 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .pattern("IGI")
                 .pattern("GXG")
                 .pattern("IGI")
-                .unlockedBy("has_item_filter_augment", has(part))
+                .m_126132_("has_item_filter_augment", has(part))
                 .save(withConditions(consumer).flag(FLAG_UPGRADE_AUGMENTS), this.modid + ":" + folder + "/" + name(result));
     }
 
@@ -187,7 +187,7 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .pattern("IGI")
                 .pattern("GXG")
                 .pattern("IGI")
-                .unlockedBy("has_"+name, has(part))
+                .m_126132_("has_"+name, has(part))
                 .save(withConditions(consumer).flag(flag), this.modid + ":" + folder + "/" + name(result));
 
         result = ThermalExtraItems.ITEMS.get(name+"_2");
@@ -200,7 +200,7 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .pattern("IGI")
                 .pattern("GXG")
                 .pattern("IGI")
-                .unlockedBy("has_"+name+"_1", has(part))
+                .m_126132_("has_"+name+"_1", has(part))
                 .save(withConditions(consumer).flag(flag), this.modid + ":" + folder + "/" + name(result));
 
         result = ThermalExtraItems.ITEMS.get(name+"_3");
@@ -213,7 +213,7 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .pattern("IGI")
                 .pattern("GXG")
                 .pattern("IGI")
-                .unlockedBy("has_"+name+"_1", has(part))
+                .m_126132_("has_"+name+"_1", has(part))
                 .save(withConditions(consumer).flag(flag), this.modid + ":" + folder + "/" + name(result));
 
         if(forth) {
@@ -228,7 +228,7 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                     .pattern("IGI")
                     .pattern("GXG")
                     .pattern("IGI")
-                    .unlockedBy("has_"+name+"_3", has(part))
+                    .m_126132_("has_"+name+"_3", has(part))
                     .save(withConditions(consumer).flag(flag), this.modid + ":" + folder + "/" + name(result));
             if(fifth) {
 
@@ -242,7 +242,7 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                         .pattern("IGI")
                         .pattern("GXG")
                         .pattern("IGI")
-                        .unlockedBy("has_"+name+"_4", has(part))
+                        .m_126132_("has_"+name+"_4", has(part))
                         .save(withConditions(consumer).flag(flag), this.modid + ":" + folder + "/" + name(result));
             }
         }

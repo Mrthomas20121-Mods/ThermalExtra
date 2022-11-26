@@ -14,7 +14,7 @@ import net.minecraft.tags.BlockTags;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
-import slimeknights.tconstruct.common.TinkerTags;
+//import slimeknights.tconstruct.common.TinkerTags;
 
 public class ExtraTagGen {
 
@@ -124,12 +124,12 @@ public class ExtraTagGen {
                     ThermalExtraBlocks.DRAGONSTEEL_BLOCK.get().asItem()
             );
 
-            tag(TinkerTags.Items.ANVIL_METAL).add(
-                    ThermalExtraBlocks.SOUL_INFUSED_BLOCK.get().asItem(),
-                    ThermalExtraBlocks.SHELLITE_BLOCK.get().asItem(),
-                    ThermalExtraBlocks.TWINITE_BLOCK.get().asItem(),
-                    ThermalExtraBlocks.DRAGONSTEEL_BLOCK.get().asItem()
-            );
+//            tag(TinkerTags.Items.ANVIL_METAL).add(
+//                    ThermalExtraBlocks.SOUL_INFUSED_BLOCK.get().asItem(),
+//                    ThermalExtraBlocks.SHELLITE_BLOCK.get().asItem(),
+//                    ThermalExtraBlocks.TWINITE_BLOCK.get().asItem(),
+//                    ThermalExtraBlocks.DRAGONSTEEL_BLOCK.get().asItem()
+//            );
 
             tag(ThermalTags.Items.HARDENED_GLASS).add(
                     ThermalExtraBlocks.SOUL_INFUSED_GLASS.get().asItem(),
@@ -161,12 +161,12 @@ public class ExtraTagGen {
                     ThermalExtraBlocks.DRAGONSTEEL_GLASS.get()
             );
 
-            tag(TinkerTags.Blocks.ANVIL_METAL).add(
-                    ThermalExtraBlocks.SOUL_INFUSED_BLOCK.get(),
-                    ThermalExtraBlocks.SHELLITE_BLOCK.get(),
-                    ThermalExtraBlocks.TWINITE_BLOCK.get(),
-                    ThermalExtraBlocks.DRAGONSTEEL_BLOCK.get()
-            );
+//            tag(TinkerTags.Blocks.ANVIL_METAL).add(
+//                    ThermalExtraBlocks.SOUL_INFUSED_BLOCK.get(),
+//                    ThermalExtraBlocks.SHELLITE_BLOCK.get(),
+//                    ThermalExtraBlocks.TWINITE_BLOCK.get(),
+//                    ThermalExtraBlocks.DRAGONSTEEL_BLOCK.get()
+//            );
 
             tag(Tags.Blocks.STORAGE_BLOCKS).add(
                     ThermalExtraBlocks.SOUL_INFUSED_BLOCK.get(),

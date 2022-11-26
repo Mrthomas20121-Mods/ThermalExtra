@@ -1,10 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "IGI",
-    "GXG",
-    "IGI"
-  ],
   "key": {
     "G": {
       "tag": "forge:gears/twinite"
@@ -16,6 +11,11 @@
       "item": "thermal_extra:dynamo_fuel_augment_3"
     }
   },
+  "pattern": [
+    "IGI",
+    "GXG",
+    "IGI"
+  ],
   "result": {
     "item": "thermal_extra:dynamo_fuel_augment_4"
   }

@@ -1,10 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "IGI",
-    "GXG",
-    "IGI"
-  ],
   "key": {
     "G": {
       "tag": "forge:gears/shellite"
@@ -16,6 +11,11 @@
       "item": "thermal_extra:machine_speed_augment_2"
     }
   },
+  "pattern": [
+    "IGI",
+    "GXG",
+    "IGI"
+  ],
   "result": {
     "item": "thermal_extra:machine_speed_augment_3"
   }

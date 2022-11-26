@@ -1,10 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "IGI",
-    "GXG",
-    "IGI"
-  ],
   "key": {
     "G": {
       "tag": "forge:gears/dragonsteel"
@@ -16,6 +11,11 @@
       "item": "thermal:area_radius_augment"
     }
   },
+  "pattern": [
+    "IGI",
+    "GXG",
+    "IGI"
+  ],
   "result": {
     "item": "thermal_extra:area_radius_augment_1"
   }

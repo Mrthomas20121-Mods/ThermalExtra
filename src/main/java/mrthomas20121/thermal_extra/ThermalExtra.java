@@ -9,13 +9,13 @@ import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -31,20 +31,8 @@ public class ThermalExtra {
 		ThermalExtraItems.ITEMS.register(bus);
 		ThermalExtraBlocks.BLOCKS.register(bus);
 		ThermalExtraFluids.FLUIDS.register(bus);
+		ThermalExtraFluids.FLUID_TYPES.register(bus);
 		AdvancedFilter.init();
-		bus.addListener(this::clientStuff);
-	}
-
-	public void clientStuff(final FMLClientSetupEvent event) {
-
-		event.enqueueWork(this::registerRenderLayers);
-	}
-
-	public void registerRenderLayers() {
-		ItemBlockRenderTypes.setRenderLayer(ThermalExtraBlocks.SOUL_INFUSED_GLASS.get(), RenderType.translucent());
-		ItemBlockRenderTypes.setRenderLayer(ThermalExtraBlocks.SHELLITE_GLASS.get(), RenderType.translucent());
-		ItemBlockRenderTypes.setRenderLayer(ThermalExtraBlocks.TWINITE_GLASS.get(), RenderType.translucent());
-		ItemBlockRenderTypes.setRenderLayer(ThermalExtraBlocks.DRAGONSTEEL_GLASS.get(), RenderType.translucent());
 	}
 
 	@SubscribeEvent
@@ -53,18 +41,18 @@ public class ThermalExtra {
 		ExistingFileHelper fileHelper = event.getExistingFileHelper();
 		if(event.includeServer()) {
 			if(ModList.get().isLoaded("tconstruct")) {
-				gen.addProvider(new TinkerRecipeDatagen(gen));
+				//gen.m_236039_(true, new TinkerRecipeDatagen(gen));
 			}
-			gen.addProvider(new ExtraRecipeGen(gen));
+			gen.m_236039_(true, new ExtraRecipeGen(gen));
 			ExtraTagGen.BlockTags blockTags = new ExtraTagGen.BlockTags(gen, fileHelper);
-			gen.addProvider(blockTags);
-			gen.addProvider(new ExtraTagGen.ItemTags(gen, blockTags, fileHelper));
-			gen.addProvider(new ExtraTagGen.FluidTags(gen, fileHelper));
+			gen.m_236039_(true, blockTags);
+			gen.m_236039_(true, new ExtraTagGen.ItemTags(gen, blockTags, fileHelper));
+			gen.m_236039_(true, new ExtraTagGen.FluidTags(gen, fileHelper));
 		}
 		if(event.includeClient()) {
-			gen.addProvider(new ExtraModelGen(gen, fileHelper));
-			gen.addProvider(new ExtraLangGen(gen));
-			gen.addProvider(new ExtraBlockstateGen(gen, fileHelper));
+			gen.m_236039_(true, new ExtraModelGen(gen, fileHelper));
+			gen.m_236039_(true, new ExtraLangGen(gen));
+			gen.m_236039_(true, new ExtraBlockstateGen(gen, fileHelper));
 		}
 	}
 }

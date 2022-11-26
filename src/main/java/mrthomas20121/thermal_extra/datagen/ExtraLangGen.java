@@ -22,13 +22,13 @@ public class ExtraLangGen extends LanguageProvider {
         add("itemGroup.thermal_extra.augments", "Thermal Extra: Augments");
 
         // fluids and buckets
-        add("fluid.thermal_extra.soul_infused", "Molten Soul Infused");
-        add("fluid.thermal_extra.shellite", "Molten Shellite");
-        add("fluid.thermal_extra.twinite", "Molten Twinite");
-        add("fluid.thermal_extra.dragonsteel", "Molten Dragonsteel");
-        add("fluid.thermal_extra.sunflower_oil", "Sunflower Oil");
-        add("fluid.thermal_extra.crystallized_sunflower_oil", "Crystallized Sunflower Oil");
-        add("fluid.thermal_extra.refined_sunflower_oil", "Refined Sunflower Oil");
+        add("fluid_types.thermal_extra.soul_infused", "Molten Soul Infused");
+        add("fluid_types.thermal_extra.shellite", "Molten Shellite");
+        add("fluid_types.thermal_extra.twinite", "Molten Twinite");
+        add("fluid_types.thermal_extra.dragonsteel", "Molten Dragonsteel");
+        add("fluid_types.thermal_extra.sunflower_oil", "Sunflower Oil");
+        add("fluid_types.thermal_extra.crystallized_sunflower_oil", "Crystallized Sunflower Oil");
+        add("fluid_types.thermal_extra.refined_sunflower_oil", "Refined Sunflower Oil");
         addItem(ThermalExtraFluids.soul_infused.getBucket(), "Molten Soul Infused Bucket");
         addItem(ThermalExtraFluids.shellite.getBucket(), "Molten Shellite Bucket");
         addItem(ThermalExtraFluids.twinite.getBucket(), "Molten Twinite Bucket");

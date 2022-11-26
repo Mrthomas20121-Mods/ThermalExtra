@@ -6,7 +6,7 @@
     }
   ],
   "result": {
-    "item": "thermal_extra:soul_infused_nugget",
-    "count": 9
+    "count": 9,
+    "item": "thermal_extra:soul_infused_nugget"
   }
 }

@@ -5,7 +5,7 @@ issueTrackerURL = "https://github.com/Mrthomas20121/ThermalExtra/issues"
 
 [[mods]]
 modId = "thermal_extra"
-version = "2.0.1"
+version = "3.0.0"
 displayName = "Thermal: Extra"
 displayURL = "https://www.curseforge.com/minecraft/mc-mods/thermal_extra"
 #logoFile="tinkers_reforged_logo.png"
@@ -18,13 +18,13 @@ Add more augments to Thermal
 [[dependencies.thermal_extra]]
     modId = "forge"
     mandatory = true
-    versionRange = "[40.1.19,)"
+    versionRange = "[43.1.1,)"
     ordering = "NONE"
     side = "BOTH"
 
 [[dependencies.thermal_extra]]
     modId = "minecraft"
     mandatory = true
-    versionRange = "[1.18.2,)"
+    versionRange = "[1.19.2,)"
     ordering = "NONE"
     side = "BOTH"

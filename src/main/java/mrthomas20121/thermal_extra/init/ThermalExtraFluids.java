@@ -5,10 +5,14 @@ import cofh.lib.util.DeferredRegisterCoFH;
 import mrthomas20121.thermal_extra.ThermalExtra;
 import mrthomas20121.thermal_extra.fluid.FluidThermalExtra;
 import net.minecraft.world.level.material.Fluid;
+import net.minecraftforge.fluids.FluidType;
 import net.minecraftforge.registries.ForgeRegistries;
+
+import static cofh.lib.util.constants.ModIds.ID_COFH_CORE;
 
 public class ThermalExtraFluids {
     public static final DeferredRegisterCoFH<Fluid> FLUIDS = DeferredRegisterCoFH.create(ForgeRegistries.FLUIDS, ThermalExtra.MOD_ID);
+    public static final DeferredRegisterCoFH<FluidType> FLUID_TYPES = DeferredRegisterCoFH.create(ForgeRegistries.Keys.FLUID_TYPES, ThermalExtra.MOD_ID);
 
     public static FluidThermalExtra soul_infused = registerFluid("soul_infused", 1000);
     public static FluidThermalExtra shellite = registerFluid("shellite", 1100);

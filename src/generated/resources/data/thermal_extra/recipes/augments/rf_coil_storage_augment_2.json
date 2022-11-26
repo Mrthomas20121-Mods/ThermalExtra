@@ -1,10 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "IGI",
-    "GXG",
-    "IGI"
-  ],
   "key": {
     "G": {
       "tag": "forge:gears/enderium"
@@ -16,6 +11,11 @@
       "item": "thermal_extra:rf_coil_storage_augment_1"
     }
   },
+  "pattern": [
+    "IGI",
+    "GXG",
+    "IGI"
+  ],
   "result": {
     "item": "thermal_extra:rf_coil_storage_augment_2"
   }

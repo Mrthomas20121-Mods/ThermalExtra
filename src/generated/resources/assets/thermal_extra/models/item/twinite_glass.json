@@ -1,3 +1,4 @@
 {
-  "parent": "thermal_extra:block/twinite_glass"
+  "parent": "thermal_extra:block/twinite_glass",
+  "render_type": "minecraft:translucent"
 }
