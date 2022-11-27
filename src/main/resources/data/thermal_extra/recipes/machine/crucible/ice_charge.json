@@ -1,0 +1,15 @@
+{
+    "type": "thermal:crucible",
+    "ingredients": [
+        {
+            "item": "thermal:ice_charge"
+        }
+    ],
+    "result": [
+        {
+            "fluid": "thermal_extra:icy_water",
+            "amount": 500
+        }
+    ],
+    "energy": 1000
+}

@@ -22,13 +22,17 @@ public class ExtraLangGen extends LanguageProvider {
         add("itemGroup.thermal_extra.augments", "Thermal Extra: Augments");
 
         // fluids and buckets
-        add("fluid_types.thermal_extra.soul_infused", "Molten Soul Infused");
-        add("fluid_types.thermal_extra.shellite", "Molten Shellite");
-        add("fluid_types.thermal_extra.twinite", "Molten Twinite");
-        add("fluid_types.thermal_extra.dragonsteel", "Molten Dragonsteel");
-        add("fluid_types.thermal_extra.sunflower_oil", "Sunflower Oil");
-        add("fluid_types.thermal_extra.crystallized_sunflower_oil", "Crystallized Sunflower Oil");
-        add("fluid_types.thermal_extra.refined_sunflower_oil", "Refined Sunflower Oil");
+        add("fluid_type.thermal_extra.soul_infused", "Molten Soul Infused");
+        add("fluid_type.thermal_extra.shellite", "Molten Shellite");
+        add("fluid_type.thermal_extra.twinite", "Molten Twinite");
+        add("fluid_type.thermal_extra.dragonsteel", "Molten Dragonsteel");
+        add("fluid_type.thermal_extra.sunflower_oil", "Sunflower Oil");
+        add("fluid_type.thermal_extra.crystallized_sunflower_oil", "Crystallized Sunflower Oil");
+        add("fluid_type.thermal_extra.refined_sunflower_oil", "Refined Sunflower Oil");
+        add("fluid_type.thermal_extra.basalt", "Basalt");
+        add("fluid_type.thermal_extra.blitz", "Blitz");
+        add("fluid_type.thermal_extra.blizz", "Blizz");
+        add("fluid_type.thermal_extra.icy_water", "Icy Water");
         addItem(ThermalExtraFluids.soul_infused.getBucket(), "Molten Soul Infused Bucket");
         addItem(ThermalExtraFluids.shellite.getBucket(), "Molten Shellite Bucket");
         addItem(ThermalExtraFluids.twinite.getBucket(), "Molten Twinite Bucket");
@@ -36,6 +40,11 @@ public class ExtraLangGen extends LanguageProvider {
         addItem(ThermalExtraFluids.sunflower_oil.getBucket(), "Sunflower Oil Bucket");
         addItem(ThermalExtraFluids.crystallized_sunflower_oil.getBucket(), "Crystallized Sunflower Oil Bucket");
         addItem(ThermalExtraFluids.refined_sunflower_oil.getBucket(), "Refined Sunflower Oil Bucket");
+        addItem(ThermalExtraFluids.basalt.getBucket(), "Basalt Bucket");
+        addItem(ThermalExtraFluids.blitz.getBucket(), "Blitz Bucket");
+        addItem(ThermalExtraFluids.blizz.getBucket(), "Blizz Bucket");
+        addItem(ThermalExtraFluids.icy_water.getBucket(), "Icy Water Bucket");
+
 
         // items and blocks
         addItem(ThermalExtraItems.amethyst_dust, "Amethyst Dust");

@@ -35,9 +35,17 @@ public class ExtraBlockstateGen extends BlockStateProvider {
     }
 
     public void translucentBlock(Block block) {
-        this.simpleBlock(block);
         ResourceLocation registryName = ForgeRegistries.BLOCKS.getKey(block);
-        this.itemModels().withExistingParent("thermal_extra:item/"+registryName.getPath(), "thermal_extra:block/"+registryName.getPath()).renderType("translucent");
+        this.simpleBlock(block, models().cubeAll(name(block), blockTexture(block)).renderType("translucent"));
+        this.itemModels().withExistingParent("thermal_extra:item/"+registryName.getPath(), "thermal_extra:block/"+registryName.getPath());
+    }
+
+    private ResourceLocation key(Block block) {
+        return ForgeRegistries.BLOCKS.getKey(block);
+    }
+
+    private String name(Block block) {
+        return key(block).getPath();
     }
 
     @Override
