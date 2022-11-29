@@ -7,10 +7,10 @@
   ],
   "key": {
     "G": {
-      "tag": "forge:gears/dragonsteel"
+      "tag": "forge:gears/soul_infused"
     },
     "I": {
-      "tag": "forge:dusts/netherite"
+      "tag": "forge:dusts/niter"
     },
     "X": {
       "item": "thermal:rf_coil_augment"
