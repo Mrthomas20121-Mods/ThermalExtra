@@ -181,8 +181,8 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
         Item part = ThermalCore.ITEMS.get(name);
 
         ShapedRecipeBuilder.shaped(result)
-                .define('G', ThermalExtraTags.Items.DRAGONSTEEL_GEAR)
-                .define('I', ItemTagsCoFH.DUSTS_NETHERITE)
+                .define('G', ThermalExtraTags.Items.SOUL_INFUSED_GEAR)
+                .define('I', ItemTagsCoFH.DUSTS_NITER)
                 .define('X', part)
                 .pattern("IGI")
                 .pattern("GXG")
@@ -208,7 +208,7 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
 
         ShapedRecipeBuilder.shaped(result)
                 .define('G', ThermalExtraTags.Items.SHELLITE_GEAR)
-                .define('I', ItemTagsCoFH.DUSTS_NITER)
+                .define('I', ItemTagsCoFH.DUSTS_CINNABAR)
                 .define('X', part)
                 .pattern("IGI")
                 .pattern("GXG")
