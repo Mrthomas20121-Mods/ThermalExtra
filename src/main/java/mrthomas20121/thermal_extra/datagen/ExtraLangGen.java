@@ -88,7 +88,7 @@ public class ExtraLangGen extends LanguageProvider {
         addItem(ThermalExtraItems.dragon_steel_nugget, "Dragonsteel nugget");
 
         // augments
-        addItem(ThermalExtraItems.integral_component, "Draconic Integral Component");
+        addItem(ThermalExtraItems.integral_component, "Draconic Integral Components");
         add("thermal_extra.augment.upgrade", "Improves base attributes. Other augments may be more effective as a result.");
 
         addItem(ThermalExtraItems.av_item_filter_augment, "Item Filter Augment Plus");
