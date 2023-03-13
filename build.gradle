@@ -86,6 +86,7 @@ minecraft {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
+    maven { url = 'https://maven.minecraftforge.net/' }
     maven {
         name 'Thermal Maven'
         url 'https://maven.covers1624.net/'
@@ -103,7 +104,8 @@ repositories {
         url 'https://maven.theillusivec4.top/'
     }
     maven {
-        url "https://cfa2.cursemaven.com/"
+        name "cf"
+        url "https://cursemaven.com/"
         content {
             includeGroup "curse.maven"
         }
@@ -111,14 +113,15 @@ repositories {
 }
 
 dependencies {
-    minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+    minecraft "net.minecraftforge:forge:${mc_version}-${forge_version}"
 
     // compile against the JEI API but do not include it at runtime
-    compileOnly fg.deobf("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}")
-    compileOnly fg.deobf("mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}")
+    compileOnly fg.deobf("mezz.jei:jei-${mc_version}-common-api:${jei_version}")
+    compileOnly fg.deobf("mezz.jei:jei-${mc_version}-forge-api:${jei_version}")
+
     // at runtime, use the full JEI
-    runtimeOnly fg.deobf("mezz.jei:jei-${minecraft_version}-common:${jei_version}")
-    runtimeOnly fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}")
+    runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}-common:${jei_version}")
+    runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}-forge:${jei_version}")
 
     //compileOnly fg.deobf("vazkii.patchouli:Patchouli:${patchouli_version}:api")
     //runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:${patchouli_version}")
@@ -128,9 +131,9 @@ dependencies {
 
     //compileOnly fg.deobf("com.blamejared.crafttweaker:CraftTweaker-forge-${minecraft_version}:${crt_version}")
 
-    implementation fg.deobf("com.teamcofh:cofh_core:${minecraft_version}-${cofh_core_version}")
-    implementation fg.deobf("com.teamcofh:thermal_core:${minecraft_version}-${thermal_core_version}")
-    implementation fg.deobf("com.teamcofh:thermal_expansion:${minecraft_version}-${thermal_expansion_version}")
+    implementation fg.deobf("com.teamcofh:cofh_core:${mc_version}-${cofh_core_version}.+")
+    implementation fg.deobf("com.teamcofh:thermal_core:${mc_version}-${thermal_core_version}.+")
+    implementation fg.deobf("com.teamcofh:thermal_expansion:${mc_version}-${thermal_expansion_version}.+")
 
     //implementation fg.deobf("slimeknights.tconstruct:TConstruct:${minecraft_version}-${tcon_version}")
     //implementation fg.deobf("slimeknights.mantle:Mantle:${minecraft_version}-${mantle_version}")
