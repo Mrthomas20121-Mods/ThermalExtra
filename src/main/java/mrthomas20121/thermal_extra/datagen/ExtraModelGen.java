@@ -121,10 +121,6 @@ public class ExtraModelGen extends ItemModelProvider {
         itemModel(ThermalExtraFluids.shellite.getBucket());
         itemModel(ThermalExtraFluids.twinite.getBucket());
         itemModel(ThermalExtraFluids.dragonsteel.getBucket());
-        itemModel(ThermalExtraFluids.basalt.getBucket());
-        itemModel(ThermalExtraFluids.blitz.getBucket());
-        itemModel(ThermalExtraFluids.blizz.getBucket());
-        itemModel(ThermalExtraFluids.icy_water.getBucket());
     }
 
     public void itemModel(RegistryObject<? extends Item> registryObject) {

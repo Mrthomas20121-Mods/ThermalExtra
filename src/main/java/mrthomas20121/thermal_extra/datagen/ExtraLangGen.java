@@ -40,11 +40,6 @@ public class ExtraLangGen extends LanguageProvider {
         addItem(ThermalExtraFluids.sunflower_oil.getBucket(), "Sunflower Oil Bucket");
         addItem(ThermalExtraFluids.crystallized_sunflower_oil.getBucket(), "Crystallized Sunflower Oil Bucket");
         addItem(ThermalExtraFluids.refined_sunflower_oil.getBucket(), "Refined Sunflower Oil Bucket");
-        addItem(ThermalExtraFluids.basalt.getBucket(), "Basalt Bucket");
-        addItem(ThermalExtraFluids.blitz.getBucket(), "Blitz Bucket");
-        addItem(ThermalExtraFluids.blizz.getBucket(), "Blizz Bucket");
-        addItem(ThermalExtraFluids.icy_water.getBucket(), "Icy Water Bucket");
-
 
         // items and blocks
         addItem(ThermalExtraItems.amethyst_dust, "Amethyst Dust");
