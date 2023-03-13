@@ -1,0 +1,13 @@
+{
+  "type": "advgenerators:liquid_fuel",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "advgenerators"
+    }
+  ],
+  "fuel": {
+    "fluid": "thermal_extra:sunflower_oil"
+  },
+  "fePerMb": 35
+}
