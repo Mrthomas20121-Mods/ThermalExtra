@@ -118,7 +118,7 @@ public class ThermalExtraItems {
     public static final RegistryObject<Item> area_radius_augment_4 = ITEMS.register("area_radius_augment_4", () -> new AugmentItem(new Item.Properties().rarity(line_rarity).tab(augmentTab),
             AugmentDataHelper.builder()
                     .type(TAG_AUGMENT_TYPE_AREA_EFFECT)
-                    .mod(TAG_AUGMENT_RADIUS, 4.0F)
+                    .mod(TAG_AUGMENT_RADIUS, 5.0F)
                     .build()).setShowInGroups(getFlag(FLAG_AREA_AUGMENTS)));
 
     public static final RegistryObject<Item> potion_amplifier_augment_1 = ITEMS.register("potion_amplifier_augment_1", () -> new AugmentItem(new Item.Properties().rarity(line_rarity).tab(augmentTab),

@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "thermal_extra:item/icy_water_bucket"
-  }
-}

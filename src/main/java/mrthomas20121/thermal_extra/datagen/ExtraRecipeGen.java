@@ -11,6 +11,7 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -29,6 +30,13 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
 
     @Override
     protected void buildCraftingRecipes(@Nonnull Consumer<FinishedRecipe> consumer) {
+
+        ShapelessRecipeBuilder.shapeless(Items.PAPER, 2)
+                .requires(ThermalExtraItems.sticky_ball.get())
+                .requires(ThermalExtraItems.sticky_ball.get())
+                .requires(ThermalExtraItems.sticky_ball.get())
+                .m_126132_("has_sticky_ball", has(ThermalExtraItems.sticky_ball.get()))
+                .m_126140_(consumer, new ResourceLocation("thermal_extra:sticky_ball_to_paper"));
 
         ShapelessRecipeBuilder.shapeless(ThermalExtraItems.soul_infused_dust.get(), 2)
                 .requires(ThermalExtraTags.Items.SOUL_SAND_DUST)

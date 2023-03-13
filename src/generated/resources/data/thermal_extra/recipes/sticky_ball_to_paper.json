@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "thermal_extra:sticky_ball"
+    },
+    {
+      "item": "thermal_extra:sticky_ball"
+    },
+    {
+      "item": "thermal_extra:sticky_ball"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "minecraft:paper"
+  }
+}
