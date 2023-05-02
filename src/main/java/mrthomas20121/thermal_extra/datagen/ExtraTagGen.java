@@ -186,6 +186,17 @@ public class ExtraTagGen {
             tag(ThermalExtraTags.Blocks.SHELLITE_BLOCK).add(ThermalExtraBlocks.SHELLITE_BLOCK.get());
             tag(ThermalExtraTags.Blocks.TWINITE_BLOCK).add(ThermalExtraBlocks.TWINITE_BLOCK.get());
             tag(ThermalExtraTags.Blocks.DRAGONSTEEL_BLOCK).add(ThermalExtraBlocks.DRAGONSTEEL_BLOCK.get());
+
+            tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(
+                    ThermalExtraBlocks.SOUL_INFUSED_BLOCK.get(),
+                    ThermalExtraBlocks.SHELLITE_BLOCK.get(),
+                    ThermalExtraBlocks.TWINITE_BLOCK.get(),
+                    ThermalExtraBlocks.DRAGONSTEEL_BLOCK.get(),
+                    ThermalExtraBlocks.SOUL_INFUSED_GLASS.get(),
+                    ThermalExtraBlocks.SHELLITE_GLASS.get(),
+                    ThermalExtraBlocks.TWINITE_GLASS.get(),
+                    ThermalExtraBlocks.DRAGONSTEEL_GLASS.get()
+            );
         }
     }
 }
