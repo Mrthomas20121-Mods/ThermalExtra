@@ -10,14 +10,14 @@ import org.jetbrains.annotations.Nullable;
 
 public class ExtraItemFilter extends ItemFilter {
 
-    public ExtraItemFilter(int size, boolean held, BlockPos pos, int filterId) {
-        super(size, held, pos, filterId);
+    public ExtraItemFilter(int size, boolean held, BlockPos pos) {
+        super(size, held, pos);
     }
 
     @Nullable
     @Override
     public AbstractContainerMenu createMenu(int i, Inventory inventory, Player player) {
 
-        return new ItemFilterContainer(i, player.level, inventory, player, held, pos, filterId);
+        return new ItemFilterContainer(i, player.level, inventory, player, held, pos);
     }
 }
