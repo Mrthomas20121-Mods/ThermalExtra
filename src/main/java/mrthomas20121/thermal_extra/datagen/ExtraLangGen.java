@@ -119,9 +119,9 @@ public class ExtraLangGen extends LanguageProvider {
         addItem(ThermalExtraItems.machine_output_augment_2, "Enderium Auxiliary Process Sieve");
         addItem(ThermalExtraItems.machine_output_augment_3, "Shellite Auxiliary Process Sieve");
 
-        addItem(ThermalExtraItems.machine_catalyst_augment_1, "Soul Infused Catalytic Relamation Chamber");
-        addItem(ThermalExtraItems.machine_catalyst_augment_2, "Enderium Catalytic Relamation Chamber");
-        addItem(ThermalExtraItems.machine_catalyst_augment_3, "Shellite Catalytic Relamation Chamber");
+        addItem(ThermalExtraItems.machine_catalyst_augment_1, "Soul Infused Catalytic Reclamation Chamber");
+        addItem(ThermalExtraItems.machine_catalyst_augment_2, "Enderium Catalytic Reclamation Chamber");
+        addItem(ThermalExtraItems.machine_catalyst_augment_3, "Shellite Catalytic Reclamation Chamber");
 
         addItem(ThermalExtraItems.machine_efficiency_augment_1, "Soul Infused Flux Efficiency");
         addItem(ThermalExtraItems.machine_efficiency_augment_2, "Enderium Flux Efficiency");
