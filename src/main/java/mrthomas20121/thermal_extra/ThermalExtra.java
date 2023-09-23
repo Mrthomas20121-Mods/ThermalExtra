@@ -5,8 +5,6 @@ import mrthomas20121.thermal_extra.filter.AdvancedFilter;
 import mrthomas20121.thermal_extra.init.ThermalExtraBlocks;
 import mrthomas20121.thermal_extra.init.ThermalExtraFluids;
 import mrthomas20121.thermal_extra.init.ThermalExtraItems;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
@@ -14,7 +12,6 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -39,20 +36,17 @@ public class ThermalExtra {
 	public static void gatherData(final GatherDataEvent event) {
 		DataGenerator gen = event.getGenerator();
 		ExistingFileHelper fileHelper = event.getExistingFileHelper();
-		if(event.includeServer()) {
-			if(ModList.get().isLoaded("tconstruct")) {
-				//gen.m_236039_(true, new TinkerRecipeDatagen(gen));
-			}
-			gen.m_236039_(true, new ExtraRecipeGen(gen));
-			ExtraTagGen.BlockTags blockTags = new ExtraTagGen.BlockTags(gen, fileHelper);
-			gen.m_236039_(true, blockTags);
-			gen.m_236039_(true, new ExtraTagGen.ItemTags(gen, blockTags, fileHelper));
-			gen.m_236039_(true, new ExtraTagGen.FluidTags(gen, fileHelper));
+		if(ModList.get().isLoaded("tconstruct")) {
+			//gen.m_236039_(true, new TinkerRecipeDatagen(gen));
 		}
-		if(event.includeClient()) {
-			gen.m_236039_(true, new ExtraModelGen(gen, fileHelper));
-			gen.m_236039_(true, new ExtraLangGen(gen));
-			gen.m_236039_(true, new ExtraBlockstateGen(gen, fileHelper));
-		}
+		gen.addProvider(event.includeServer(), new ExtraRecipeGen(gen));
+		ExtraTagGen.BlockTags blockTags = new ExtraTagGen.BlockTags(gen, fileHelper);
+		gen.addProvider(event.includeServer(), blockTags);
+		gen.addProvider(event.includeServer(), new ExtraTagGen.ItemTags(gen, blockTags, fileHelper));
+		gen.addProvider(event.includeServer(), new ExtraTagGen.FluidTags(gen, fileHelper));
+
+		gen.addProvider(event.includeClient(), new ExtraModelGen(gen, fileHelper));
+		gen.addProvider(event.includeClient(), new ExtraLangGen(gen));
+		gen.addProvider(event.includeClient(), new ExtraBlockstateGen(gen, fileHelper));
 	}
 }
