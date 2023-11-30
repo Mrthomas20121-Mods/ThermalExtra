@@ -31,20 +31,35 @@ public class ThermalExtraBlocks {
     public static RegistryObject<Block> TWINITE_GLASS = registerGlass("twinite_glass");
     public static RegistryObject<Block> DRAGONSTEEL_GLASS = registerGlass("dragonsteel_glass");
 
+    private static Rarity getRarity(String name) {
+
+        if(name.contains("soul_infused")) {
+            return ThermalExtraItems.tier1Rarity;
+        }
+        else if(name.contains("shellite")) {
+            return ThermalExtraItems.tier2Rarity;
+        }
+        else if(name.contains("twinite")) {
+            return ThermalExtraItems.tier3Rarity;
+        }
+
+        return ThermalExtraItems.tier0Rarity;
+    }
+
     public static RegistryObject<Block> registerGlass(String name) {
         RegistryObject<Block> block = BLOCKS.register(name, () -> new HardenedGlassBlock(Block.Properties.copy(Blocks.GLASS)
                 .isValidSpawn(ThermalExtraBlocks::neverAllowSpawn)
                 .isRedstoneConductor(ThermalExtraBlocks::isNotSolid)
                 .isSuffocating(ThermalExtraBlocks::isNotSolid)
                 .isViewBlocking(ThermalExtraBlocks::isNotSolid)));
-        Rarity rarity = name.contains("soul_infused") ? Rarity.RARE : Rarity.EPIC;
+        Rarity rarity = getRarity(name);
         ThermalExtraItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(ThermalExtraItems.resourcesTab).tab(ThermalExtraItems.resourcesTab).rarity(rarity)));
         return block;
     }
 
     public static RegistryObject<Block> register(String name) {
         RegistryObject<Block> block = BLOCKS.register(name, () -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(5f, 5f).sound(SoundType.METAL)));
-        Rarity rarity = name.contains("soul_infused") ? Rarity.RARE : ThermalExtraItems.gold_rarity;
+        Rarity rarity = getRarity(name);
         ThermalExtraItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(ThermalExtraItems.blockTab).rarity(rarity)));
         return block;
     }

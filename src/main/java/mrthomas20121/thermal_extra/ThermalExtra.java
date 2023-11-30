@@ -1,5 +1,6 @@
 package mrthomas20121.thermal_extra;
 
+import cofh.core.event.CoreClientEvents;
 import mrthomas20121.thermal_extra.datagen.*;
 import mrthomas20121.thermal_extra.filter.AdvancedFilter;
 import mrthomas20121.thermal_extra.init.ThermalExtraBlocks;
@@ -12,6 +13,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -36,9 +38,9 @@ public class ThermalExtra {
 	public static void gatherData(final GatherDataEvent event) {
 		DataGenerator gen = event.getGenerator();
 		ExistingFileHelper fileHelper = event.getExistingFileHelper();
-		if(ModList.get().isLoaded("tconstruct")) {
+		//if(ModList.get().isLoaded("tconstruct")) {
 			//gen.m_236039_(true, new TinkerRecipeDatagen(gen));
-		}
+		//}
 		gen.addProvider(event.includeServer(), new ExtraRecipeGen(gen));
 		ExtraTagGen.BlockTags blockTags = new ExtraTagGen.BlockTags(gen, fileHelper);
 		gen.addProvider(event.includeServer(), blockTags);
@@ -48,5 +50,10 @@ public class ThermalExtra {
 		gen.addProvider(event.includeClient(), new ExtraModelGen(gen, fileHelper));
 		gen.addProvider(event.includeClient(), new ExtraLangGen(gen));
 		gen.addProvider(event.includeClient(), new ExtraBlockstateGen(gen, fileHelper));
+	}
+
+	@SubscribeEvent
+	public static void clientEvents(FMLClientSetupEvent event) {
+		event.enqueueWork(() -> CoreClientEvents.addNamespace(MOD_ID));
 	}
 }
