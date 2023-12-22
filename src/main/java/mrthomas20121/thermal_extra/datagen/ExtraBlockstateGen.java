@@ -3,6 +3,7 @@ package mrthomas20121.thermal_extra.datagen;
 import mrthomas20121.thermal_extra.ThermalExtra;
 import mrthomas20121.thermal_extra.init.ThermalExtraBlocks;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
@@ -13,7 +14,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class ExtraBlockstateGen extends BlockStateProvider {
 
-    public ExtraBlockstateGen(DataGenerator gen, ExistingFileHelper exFileHelper) {
+    public ExtraBlockstateGen(PackOutput gen, ExistingFileHelper exFileHelper) {
         super(gen, ThermalExtra.MOD_ID, exFileHelper);
     }
 

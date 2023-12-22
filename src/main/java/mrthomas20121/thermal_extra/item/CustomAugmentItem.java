@@ -1,6 +1,6 @@
 package mrthomas20121.thermal_extra.item;
 
-import cofh.thermal.lib.item.AugmentItem;
+import cofh.thermal.lib.common.item.AugmentItem;
 import net.minecraft.ChatFormatting;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;

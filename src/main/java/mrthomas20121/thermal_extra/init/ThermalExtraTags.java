@@ -2,6 +2,7 @@ package mrthomas20121.thermal_extra.init;
 
 import mrthomas20121.thermal_extra.ThermalExtra;
 import net.minecraft.core.Registry;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
@@ -12,7 +13,7 @@ public class ThermalExtraTags {
 
     public static class Fluids {
         private static TagKey<Fluid> create(String name) {
-            return TagKey.create(Registry.FLUID_REGISTRY, new ResourceLocation(name));
+            return TagKey.create(Registries.FLUID, new ResourceLocation(name));
         }
 
         public static TagKey<Fluid> SOUL_INFUSED = ThermalExtraFluids.soul_infused.getFluidTag();
@@ -24,7 +25,7 @@ public class ThermalExtraTags {
     public static class Blocks {
 
         private static TagKey<Block> create(String name) {
-            return TagKey.create(Registry.BLOCK_REGISTRY, new ResourceLocation(name));
+            return TagKey.create(Registries.BLOCK, new ResourceLocation(name));
         }
 
         public static TagKey<Block> SOUL_INFUSED_BLOCK = create("forge:storage_blocks/soul_infused");
@@ -36,7 +37,7 @@ public class ThermalExtraTags {
     public static class Items {
 
         private static TagKey<Item> create(String name) {
-            return TagKey.create(Registry.ITEM_REGISTRY, new ResourceLocation(name));
+            return TagKey.create(Registries.ITEM, new ResourceLocation(name));
         }
 
         public static TagKey<Item> GEARS = create("forge:gears");

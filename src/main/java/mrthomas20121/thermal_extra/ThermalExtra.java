@@ -1,9 +1,10 @@
 package mrthomas20121.thermal_extra;
 
-import cofh.core.event.CoreClientEvents;
+import cofh.core.client.event.CoreClientEvents;
 import mrthomas20121.thermal_extra.datagen.*;
 import mrthomas20121.thermal_extra.filter.AdvancedFilter;
 import mrthomas20121.thermal_extra.init.ThermalExtraBlocks;
+import mrthomas20121.thermal_extra.init.ThermalExtraCreativeTabs;
 import mrthomas20121.thermal_extra.init.ThermalExtraFluids;
 import mrthomas20121.thermal_extra.init.ThermalExtraItems;
 import net.minecraft.data.DataGenerator;
@@ -31,25 +32,26 @@ public class ThermalExtra {
 		ThermalExtraBlocks.BLOCKS.register(bus);
 		ThermalExtraFluids.FLUIDS.register(bus);
 		ThermalExtraFluids.FLUID_TYPES.register(bus);
+		ThermalExtraCreativeTabs.CREATIVE_TABS.register(bus);
 		AdvancedFilter.init();
 	}
 
 	@SubscribeEvent
 	public static void gatherData(final GatherDataEvent event) {
-		DataGenerator gen = event.getGenerator();
-		ExistingFileHelper fileHelper = event.getExistingFileHelper();
-		//if(ModList.get().isLoaded("tconstruct")) {
-			//gen.m_236039_(true, new TinkerRecipeDatagen(gen));
-		//}
-		gen.addProvider(event.includeServer(), new ExtraRecipeGen(gen));
-		ExtraTagGen.BlockTags blockTags = new ExtraTagGen.BlockTags(gen, fileHelper);
-		gen.addProvider(event.includeServer(), blockTags);
-		gen.addProvider(event.includeServer(), new ExtraTagGen.ItemTags(gen, blockTags, fileHelper));
-		gen.addProvider(event.includeServer(), new ExtraTagGen.FluidTags(gen, fileHelper));
-
-		gen.addProvider(event.includeClient(), new ExtraModelGen(gen, fileHelper));
-		gen.addProvider(event.includeClient(), new ExtraLangGen(gen));
-		gen.addProvider(event.includeClient(), new ExtraBlockstateGen(gen, fileHelper));
+//		DataGenerator gen = event.getGenerator();
+//		ExistingFileHelper fileHelper = event.getExistingFileHelper();
+//		//if(ModList.get().isLoaded("tconstruct")) {
+//			//gen.m_236039_(true, new TinkerRecipeDatagen(gen));
+//		//}
+//		gen.addProvider(event.includeServer(), new ExtraRecipeGen(gen));
+//		ExtraTagGen.BlockTags blockTags = new ExtraTagGen.BlockTags(gen, fileHelper);
+//		gen.addProvider(event.includeServer(), blockTags);
+//		gen.addProvider(event.includeServer(), new ExtraTagGen.ItemTags(gen, blockTags, fileHelper));
+//		gen.addProvider(event.includeServer(), new ExtraTagGen.FluidTags(gen, fileHelper));
+//
+//		gen.addProvider(event.includeClient(), new ExtraModelGen(gen, fileHelper));
+//		gen.addProvider(event.includeClient(), new ExtraLangGen(gen));
+//		gen.addProvider(event.includeClient(), new ExtraBlockstateGen(gen, fileHelper));
 	}
 
 	@SubscribeEvent

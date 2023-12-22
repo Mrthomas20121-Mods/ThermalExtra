@@ -5,11 +5,12 @@ import mrthomas20121.thermal_extra.init.ThermalExtraBlocks;
 import mrthomas20121.thermal_extra.init.ThermalExtraFluids;
 import mrthomas20121.thermal_extra.init.ThermalExtraItems;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.LanguageProvider;
 
 public class ExtraLangGen extends LanguageProvider {
 
-    public ExtraLangGen(DataGenerator gen) {
+    public ExtraLangGen(PackOutput gen) {
         super(gen, ThermalExtra.MOD_ID, "en_us");
     }
 

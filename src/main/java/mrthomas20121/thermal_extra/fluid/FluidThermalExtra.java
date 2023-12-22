@@ -1,7 +1,6 @@
 package mrthomas20121.thermal_extra.fluid;
 
-import cofh.lib.fluid.FluidCoFH;
-import cofh.thermal.lib.common.ThermalItemGroups;
+import cofh.lib.common.fluid.FluidCoFH;
 import mrthomas20121.thermal_extra.init.ThermalExtraItems;
 import mrthomas20121.thermal_extra.init.ThermalExtraFluids;
 import net.minecraft.resources.ResourceLocation;
@@ -46,7 +45,7 @@ public class FluidThermalExtra extends FluidCoFH {
             }
         });
 
-        bucket = ThermalExtraItems.ITEMS.register(bucket(key), () -> new BucketItem(stillFluid, new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1).tab(ThermalItemGroups.THERMAL_ITEMS)));
+        bucket = ThermalExtraItems.ITEMS.register(bucket(key), () -> new BucketItem(stillFluid, new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
     }
 
     public RegistryObject<Item> getBucket() {

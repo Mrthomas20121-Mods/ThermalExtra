@@ -4,6 +4,7 @@ import mrthomas20121.thermal_extra.ThermalExtra;
 import mrthomas20121.thermal_extra.init.ThermalExtraFluids;
 import mrthomas20121.thermal_extra.init.ThermalExtraItems;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
@@ -12,7 +13,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ExtraModelGen extends ItemModelProvider {
 
-    public ExtraModelGen(DataGenerator generator, ExistingFileHelper existingFileHelper) {
+    public ExtraModelGen(PackOutput generator, ExistingFileHelper existingFileHelper) {
         super(generator, ThermalExtra.MOD_ID, existingFileHelper);
     }
 
