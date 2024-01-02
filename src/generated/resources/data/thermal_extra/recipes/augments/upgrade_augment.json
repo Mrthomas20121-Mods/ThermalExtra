@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "redstone",
   "key": {
     "G": {
       "tag": "forge:gears/dragonsteel"
@@ -18,5 +19,6 @@
   ],
   "result": {
     "item": "thermal_extra:upgrade_augment"
-  }
+  },
+  "show_notification": true
 }

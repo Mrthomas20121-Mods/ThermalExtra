@@ -18,9 +18,8 @@ public class ExtraLangGen extends LanguageProvider {
     protected void addTranslations() {
 
         // creative tabs
-        add("itemGroup.thermal_extra.blocks", "Thermal Extra: Blocks");
-        add("itemGroup.thermal_extra.resources", "Thermal Extra: Resources");
-        add("itemGroup.thermal_extra.augments", "Thermal Extra: Augments");
+        add("creative_tab.thermal_extra.resources", "Thermal Extra: Resources");
+        add("creative_tab.thermal_extra.augments", "Thermal Extra: Augments");
 
         // fluids and buckets
         add("fluid_type.thermal_extra.soul_infused", "Molten Soul Infused");

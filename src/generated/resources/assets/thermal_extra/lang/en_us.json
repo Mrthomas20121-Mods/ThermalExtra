@@ -7,6 +7,8 @@
   "block.thermal_extra.soul_infused_glass": "Soul Infused Glass",
   "block.thermal_extra.twinite_block": "Twinite Block",
   "block.thermal_extra.twinite_glass": "Twinite Glass",
+  "creative_tab.thermal_extra.augments": "Thermal Extra: Augments",
+  "creative_tab.thermal_extra.resources": "Thermal Extra: Resources",
   "fluid_type.thermal_extra.basalt": "Basalt",
   "fluid_type.thermal_extra.blitz": "Blitz",
   "fluid_type.thermal_extra.blizz": "Blizz",
@@ -111,8 +113,5 @@
   "item.thermal_extra.twinite_nugget": "Twinite nugget",
   "item.thermal_extra.twinite_plate": "Twinite Plate",
   "item.thermal_extra.upgrade_augment": "Draconic Integral Component",
-  "itemGroup.thermal_extra.augments": "Thermal Extra: Augments",
-  "itemGroup.thermal_extra.blocks": "Thermal Extra: Blocks",
-  "itemGroup.thermal_extra.resources": "Thermal Extra: Resources",
   "thermal_extra.augment.upgrade": "Improves base attributes. Other augments may be more effective as a result."
 }

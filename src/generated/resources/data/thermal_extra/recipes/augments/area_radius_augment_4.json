@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "redstone",
   "key": {
     "G": {
       "tag": "forge:gears/twinite"
@@ -18,5 +19,6 @@
   ],
   "result": {
     "item": "thermal_extra:area_radius_augment_4"
-  }
+  },
+  "show_notification": true
 }

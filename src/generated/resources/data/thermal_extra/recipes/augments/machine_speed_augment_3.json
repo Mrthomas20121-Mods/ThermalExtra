@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "redstone",
   "key": {
     "G": {
       "tag": "forge:gears/shellite"
@@ -18,5 +19,6 @@
   ],
   "result": {
     "item": "thermal_extra:machine_speed_augment_3"
-  }
+  },
+  "show_notification": true
 }

@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "key": {
     "#": {
       "tag": "forge:nuggets/shellite"
@@ -15,5 +16,6 @@
   ],
   "result": {
     "item": "thermal_extra:shellite_ingot"
-  }
+  },
+  "show_notification": true
 }

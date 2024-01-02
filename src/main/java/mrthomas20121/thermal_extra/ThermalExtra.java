@@ -7,7 +7,9 @@ import mrthomas20121.thermal_extra.init.ThermalExtraBlocks;
 import mrthomas20121.thermal_extra.init.ThermalExtraCreativeTabs;
 import mrthomas20121.thermal_extra.init.ThermalExtraFluids;
 import mrthomas20121.thermal_extra.init.ThermalExtraItems;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -18,6 +20,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import java.util.concurrent.CompletableFuture;
 
 @Mod(mrthomas20121.thermal_extra.ThermalExtra.MOD_ID)
 @Mod.EventBusSubscriber(modid = ThermalExtra.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -38,20 +42,22 @@ public class ThermalExtra {
 
 	@SubscribeEvent
 	public static void gatherData(final GatherDataEvent event) {
-//		DataGenerator gen = event.getGenerator();
-//		ExistingFileHelper fileHelper = event.getExistingFileHelper();
-//		//if(ModList.get().isLoaded("tconstruct")) {
-//			//gen.m_236039_(true, new TinkerRecipeDatagen(gen));
-//		//}
-//		gen.addProvider(event.includeServer(), new ExtraRecipeGen(gen));
-//		ExtraTagGen.BlockTags blockTags = new ExtraTagGen.BlockTags(gen, fileHelper);
-//		gen.addProvider(event.includeServer(), blockTags);
-//		gen.addProvider(event.includeServer(), new ExtraTagGen.ItemTags(gen, blockTags, fileHelper));
-//		gen.addProvider(event.includeServer(), new ExtraTagGen.FluidTags(gen, fileHelper));
-//
-//		gen.addProvider(event.includeClient(), new ExtraModelGen(gen, fileHelper));
-//		gen.addProvider(event.includeClient(), new ExtraLangGen(gen));
-//		gen.addProvider(event.includeClient(), new ExtraBlockstateGen(gen, fileHelper));
+		DataGenerator gen = event.getGenerator();
+		ExistingFileHelper fileHelper = event.getExistingFileHelper();
+		PackOutput packOutput = gen.getPackOutput();
+		CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
+
+		// server stuff
+		gen.addProvider(event.includeServer(), new ExtraRecipeGen(packOutput));
+		ExtraTagGen.BlockTags blockTags = new ExtraTagGen.BlockTags(packOutput, lookupProvider, fileHelper);
+		gen.addProvider(event.includeServer(), blockTags);
+		gen.addProvider(event.includeServer(), new ExtraTagGen.ItemTags(packOutput, lookupProvider, blockTags.contentsGetter(), fileHelper));
+		gen.addProvider(event.includeServer(), new ExtraTagGen.FluidTags(packOutput, lookupProvider, fileHelper));
+
+		// client stuff
+		gen.addProvider(event.includeClient(), new ExtraModelGen(packOutput, fileHelper));
+		gen.addProvider(event.includeClient(), new ExtraLangGen(packOutput));
+		gen.addProvider(event.includeClient(), new ExtraBlockstateGen(packOutput, fileHelper));
 	}
 
 	@SubscribeEvent

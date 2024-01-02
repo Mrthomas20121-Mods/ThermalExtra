@@ -14,7 +14,7 @@ public class ThermalExtraCreativeTabs {
 
     public static RegistryObject<CreativeModeTab> tab_augments = CREATIVE_TABS.register("augments", () -> CreativeModeTab.builder()
             .icon(() -> new ItemStack(ThermalExtraItems.integral_component.get()))
-            .title(Component.translatable("creative_tab.thermal_extra.augment"))
+            .title(Component.translatable("creative_tab.thermal_extra.augments"))
             .displayItems((feature, output) -> {
                 output.accept(ThermalExtraItems.integral_component.get());
 

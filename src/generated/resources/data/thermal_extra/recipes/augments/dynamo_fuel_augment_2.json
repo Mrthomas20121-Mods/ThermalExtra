@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "redstone",
   "key": {
     "G": {
       "tag": "forge:gears/enderium"
@@ -18,5 +19,6 @@
   ],
   "result": {
     "item": "thermal_extra:dynamo_fuel_augment_2"
-  }
+  },
+  "show_notification": true
 }

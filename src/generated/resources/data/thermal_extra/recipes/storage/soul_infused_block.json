@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "key": {
     "#": {
       "tag": "forge:ingots/soul_infused"
@@ -15,5 +16,6 @@
   ],
   "result": {
     "item": "thermal_extra:soul_infused_block"
-  }
+  },
+  "show_notification": true
 }

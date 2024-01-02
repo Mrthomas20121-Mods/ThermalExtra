@@ -22,6 +22,7 @@ import java.util.function.Consumer;
 import java.util.function.Supplier;
 
 import static cofh.lib.util.constants.NBTTags.*;
+import static cofh.thermal.lib.util.ThermalAugmentRules.*;
 import static cofh.thermal.lib.util.ThermalFlags.*;
 import static cofh.thermal.lib.util.ThermalFlags.getFlag;
 
@@ -460,6 +461,11 @@ public class ThermalExtraItems {
                     .mod(TAG_AUGMENT_DYNAMO_POWER, 1F)
                     .mod(TAG_AUGMENT_DYNAMO_ENERGY, 1.1F)
                     .build()));
+
+    public static void augmentFlags() {
+        flagUniqueAugment(ITEMS.get("integral_augment"));
+        flagUniqueAugment(ITEMS.get("av_item_filter_augment"));
+    }
 
     public static Supplier<ItemCoFH> item(Consumer<Item.Properties> consumer) {
         return item(consumer, false);
