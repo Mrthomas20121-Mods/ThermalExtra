@@ -17,6 +17,8 @@ public class ExtraLangGen extends LanguageProvider {
     @Override
     protected void addTranslations() {
 
+        add("info.thermal_extra.dynamo_frost", "Generate RF from Cold Items.");
+
         // creative tabs
         add("creative_tab.thermal_extra.resources", "Thermal Extra: Resources");
         add("creative_tab.thermal_extra.augments", "Thermal Extra: Augments");
@@ -40,6 +42,8 @@ public class ExtraLangGen extends LanguageProvider {
         addItem(ThermalExtraFluids.sunflower_oil.getBucket(), "Sunflower Oil Bucket");
         addItem(ThermalExtraFluids.crystallized_sunflower_oil.getBucket(), "Crystallized Sunflower Oil Bucket");
         addItem(ThermalExtraFluids.refined_sunflower_oil.getBucket(), "Refined Sunflower Oil Bucket");
+
+        addBlock(ThermalExtraBlocks.DYNAMO_COLD, "Frost Dynamo");
 
         // items and blocks
         addItem(ThermalExtraItems.amethyst_dust, "Amethyst Dust");

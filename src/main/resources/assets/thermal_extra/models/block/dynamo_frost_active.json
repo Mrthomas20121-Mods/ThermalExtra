@@ -1,0 +1,9 @@
+{
+  "parent": "thermal_extra:block/dynamo_frost",
+  "textures": {
+    "top": "thermal_extra:block/dynamos/dynamo_cold_active",
+    "side": "thermal_extra:block/dynamos/dynamo_cold_side_active",
+    "bottom": "thermal_extra:block/dynamos/dynamo_cold_active",
+    "coil": "thermal:block/dynamos/dynamo_coil_rf_active"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "type": "thermal_extra:cold_fuel",
+  "ingredient": {
+    "item": "minecraft:powder_snow_bucket"
+  },
+  "energy": 1500
+}

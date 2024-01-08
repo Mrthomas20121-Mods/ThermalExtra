@@ -1,5 +1,6 @@
 package mrthomas20121.thermal_extra.datagen;
 
+import cofh.lib.init.data.BlockStateProviderCoFH;
 import mrthomas20121.thermal_extra.ThermalExtra;
 import mrthomas20121.thermal_extra.init.ThermalExtraBlocks;
 import net.minecraft.data.DataGenerator;
@@ -12,7 +13,7 @@ import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 
-public class ExtraBlockstateGen extends BlockStateProvider {
+public class ExtraBlockstateGen extends BlockStateProviderCoFH {
 
     public ExtraBlockstateGen(PackOutput gen, ExistingFileHelper exFileHelper) {
         super(gen, ThermalExtra.MOD_ID, exFileHelper);
@@ -29,10 +30,6 @@ public class ExtraBlockstateGen extends BlockStateProvider {
         this.translucentBlock(ThermalExtraBlocks.SHELLITE_GLASS.get());
         this.translucentBlock(ThermalExtraBlocks.TWINITE_GLASS.get());
         this.translucentBlock(ThermalExtraBlocks.DRAGONSTEEL_GLASS.get());
-    }
-
-    public void simpleBlock(Block block, ModelFile model) {
-        simpleBlock(block, new ConfiguredModel(model));
     }
 
     public void translucentBlock(Block block) {

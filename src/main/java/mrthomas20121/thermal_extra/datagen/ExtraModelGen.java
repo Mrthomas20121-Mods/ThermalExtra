@@ -1,6 +1,8 @@
 package mrthomas20121.thermal_extra.datagen;
 
+import cofh.lib.init.data.ItemModelProviderCoFH;
 import mrthomas20121.thermal_extra.ThermalExtra;
+import mrthomas20121.thermal_extra.init.ThermalExtraBlocks;
 import mrthomas20121.thermal_extra.init.ThermalExtraFluids;
 import mrthomas20121.thermal_extra.init.ThermalExtraItems;
 import net.minecraft.data.DataGenerator;
@@ -11,7 +13,7 @@ import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 
-public class ExtraModelGen extends ItemModelProvider {
+public class ExtraModelGen extends ItemModelProviderCoFH {
 
     public ExtraModelGen(PackOutput generator, ExistingFileHelper existingFileHelper) {
         super(generator, ThermalExtra.MOD_ID, existingFileHelper);
@@ -122,6 +124,8 @@ public class ExtraModelGen extends ItemModelProvider {
         itemModel(ThermalExtraFluids.shellite.getBucket());
         itemModel(ThermalExtraFluids.twinite.getBucket());
         itemModel(ThermalExtraFluids.dragonsteel.getBucket());
+
+        blockItem(ThermalExtraBlocks.DYNAMO_COLD);
     }
 
     public void itemModel(RegistryObject<? extends Item> registryObject) {

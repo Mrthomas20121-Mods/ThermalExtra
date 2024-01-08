@@ -1,7 +1,11 @@
 package mrthomas20121.thermal_extra.init;
 
 import cofh.thermal.core.common.block.HardenedGlassBlock;
+import cofh.thermal.core.common.config.ThermalCoreConfig;
+import cofh.thermal.expansion.common.block.entity.dynamo.DynamoStirlingBlockEntity;
+import cofh.thermal.lib.common.block.DynamoBlock;
 import mrthomas20121.thermal_extra.ThermalExtra;
+import mrthomas20121.thermal_extra.block.DynamoColdBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.BlockItem;
@@ -17,6 +21,13 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import static cofh.lib.util.constants.BlockStatePropertiesCoFH.ACTIVE;
+import static cofh.lib.util.constants.ModIds.ID_THERMAL_EXPANSION;
+import static cofh.lib.util.helpers.BlockHelper.lightValue;
+import static cofh.thermal.expansion.init.registries.TExpBlockEntities.DYNAMO_STIRLING_TILE;
+import static cofh.thermal.lib.util.ThermalAugmentRules.DYNAMO_NO_FLUID_VALIDATOR;
+import static net.minecraft.world.level.block.state.BlockBehaviour.Properties.of;
+
 public class ThermalExtraBlocks {
 
     public static DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, ThermalExtra.MOD_ID);
@@ -29,6 +40,8 @@ public class ThermalExtraBlocks {
     public static RegistryObject<Block> SHELLITE_GLASS = registerGlass("shellite_glass");
     public static RegistryObject<Block> TWINITE_GLASS = registerGlass("twinite_glass");
     public static RegistryObject<Block> DRAGONSTEEL_GLASS = registerGlass("dragonsteel_glass");
+
+    public static RegistryObject<DynamoBlock> DYNAMO_COLD = BLOCKS.register("dynamo_frost", () -> new DynamoBlock(of().sound(SoundType.NETHERITE_BLOCK).strength(2.0F).lightLevel(lightValue(ACTIVE, 7)), DynamoColdBlockEntity.class, ThermalExtraBlockEntities.DYNAMO_COLD));
 
     private static Rarity getRarity(String name) {
 

@@ -1,0 +1,7 @@
+{
+  "type": "thermal_extra:cold_fuel",
+  "ingredient": {
+    "item": "thermal:blizz_rod"
+  },
+  "energy": 15000
+}

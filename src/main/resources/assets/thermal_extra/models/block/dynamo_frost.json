@@ -1,0 +1,8 @@
+{
+  "parent": "thermal:block/dynamo_base",
+  "textures": {
+    "top": "thermal_extra:block/dynamos/dynamo_cold",
+    "side": "thermal_extra:block/dynamos/dynamo_cold_side",
+    "bottom": "thermal_extra:block/dynamos/dynamo_cold"
+  }
+}

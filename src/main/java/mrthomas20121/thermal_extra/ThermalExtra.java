@@ -1,12 +1,11 @@
 package mrthomas20121.thermal_extra;
 
 import cofh.core.client.event.CoreClientEvents;
+import mrthomas20121.thermal_extra.client.gui.DynamoFrostScreen;
 import mrthomas20121.thermal_extra.datagen.*;
 import mrthomas20121.thermal_extra.filter.AdvancedFilter;
-import mrthomas20121.thermal_extra.init.ThermalExtraBlocks;
-import mrthomas20121.thermal_extra.init.ThermalExtraCreativeTabs;
-import mrthomas20121.thermal_extra.init.ThermalExtraFluids;
-import mrthomas20121.thermal_extra.init.ThermalExtraItems;
+import mrthomas20121.thermal_extra.init.*;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -14,7 +13,6 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -36,6 +34,9 @@ public class ThermalExtra {
 		ThermalExtraBlocks.BLOCKS.register(bus);
 		ThermalExtraFluids.FLUIDS.register(bus);
 		ThermalExtraFluids.FLUID_TYPES.register(bus);
+		ThermalExtraBlockEntities.BLOCK_ENTITIES.register(bus);
+		ThermalExtraContainers.CONTAINERS.register(bus);
+		ThermalExtraRecipeTypes.register(bus);
 		ThermalExtraCreativeTabs.CREATIVE_TABS.register(bus);
 		AdvancedFilter.init();
 	}
@@ -63,5 +64,8 @@ public class ThermalExtra {
 	@SubscribeEvent
 	public static void clientEvents(FMLClientSetupEvent event) {
 		event.enqueueWork(() -> CoreClientEvents.addNamespace(MOD_ID));
+		event.enqueueWork(() -> {
+			MenuScreens.register(ThermalExtraContainers.DYNAMO_FROST_CONTAINER.get(), DynamoFrostScreen::new);
+		});
 	}
 }

@@ -97,6 +97,17 @@ public class ThermalExtraCreativeTabs {
             .icon(() -> new ItemStack(ThermalExtraItems.amethyst_dust.get()))
             .title(Component.translatable("creative_tab.thermal_extra.resources"))
             .displayItems((feature, output) -> {
+
+                output.accept(ThermalExtraBlocks.DYNAMO_COLD.get());
+
+                output.accept(ThermalExtraFluids.dragonsteel.getBucket().get());
+                output.accept(ThermalExtraFluids.twinite.getBucket().get());
+                output.accept(ThermalExtraFluids.shellite.getBucket().get());
+                output.accept(ThermalExtraFluids.soul_infused.getBucket().get());
+                output.accept(ThermalExtraFluids.crystallized_sunflower_oil.getBucket().get());
+                output.accept(ThermalExtraFluids.refined_sunflower_oil.getBucket().get());
+                output.accept(ThermalExtraFluids.sunflower_oil.getBucket().get());
+
                 output.accept(ThermalExtraItems.amethyst_dust.get());
                 output.accept(ThermalExtraItems.soul_sand_dust.get());
                 output.accept(ThermalExtraItems.sticky_ball.get());
