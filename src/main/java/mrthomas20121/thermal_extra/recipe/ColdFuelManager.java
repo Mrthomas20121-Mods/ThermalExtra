@@ -5,9 +5,6 @@ import cofh.thermal.lib.util.recipes.internal.IDynamoFuel;
 import mrthomas20121.thermal_extra.init.ThermalExtraRecipeTypes;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeManager;
-import net.minecraftforge.common.capabilities.ForgeCapabilities;
-
-import static cofh.thermal.core.init.registries.TCoreRecipeTypes.NUMISMATIC_FUEL;
 
 
 public class ColdFuelManager extends SingleItemFuelManager {
@@ -36,9 +33,9 @@ public class ColdFuelManager extends SingleItemFuelManager {
     public void refresh(RecipeManager recipeManager) {
 
         clear();
-        var recipes = recipeManager.byType(ThermalExtraRecipeTypes.COLD_FUEL.get());
-        for (var entry : recipes.entrySet()) {
-            addFuel(entry.getValue());
+        var recipes = recipeManager.getAllRecipesFor(ThermalExtraRecipeTypes.COLD_FUEL.get());
+        for (var entry : recipes) {
+            addFuel(entry);
         }
     }
     // endregion

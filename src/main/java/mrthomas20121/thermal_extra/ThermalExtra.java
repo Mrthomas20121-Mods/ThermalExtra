@@ -1,7 +1,7 @@
 package mrthomas20121.thermal_extra;
 
 import cofh.core.client.event.CoreClientEvents;
-import mrthomas20121.thermal_extra.client.gui.DynamoFrostScreen;
+import mrthomas20121.thermal_extra.client.screens.DynamoFrostScreen;
 import mrthomas20121.thermal_extra.datagen.*;
 import mrthomas20121.thermal_extra.filter.AdvancedFilter;
 import mrthomas20121.thermal_extra.init.*;
@@ -36,7 +36,8 @@ public class ThermalExtra {
 		ThermalExtraFluids.FLUID_TYPES.register(bus);
 		ThermalExtraBlockEntities.BLOCK_ENTITIES.register(bus);
 		ThermalExtraContainers.CONTAINERS.register(bus);
-		ThermalExtraRecipeTypes.register(bus);
+		ThermalExtraRecipeTypes.RECIPE_TYPES.register(bus);
+		ThermalExtraRecipeSerializers.RECIPE_SERIALIZERS.register(bus);
 		ThermalExtraCreativeTabs.CREATIVE_TABS.register(bus);
 		AdvancedFilter.init();
 	}

@@ -8,7 +8,7 @@ import mezz.jei.api.registration.IRecipeCatalystRegistration;
 import mezz.jei.api.registration.IRecipeCategoryRegistration;
 import mezz.jei.api.registration.IRecipeRegistration;
 import mrthomas20121.thermal_extra.ThermalExtra;
-import mrthomas20121.thermal_extra.client.gui.DynamoFrostScreen;
+import mrthomas20121.thermal_extra.client.screens.DynamoFrostScreen;
 import mrthomas20121.thermal_extra.init.ThermalExtraBlocks;
 import mrthomas20121.thermal_extra.init.ThermalExtraRecipeTypes;
 import mrthomas20121.thermal_extra.recipe.ColdFuel;

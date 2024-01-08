@@ -1,4 +1,4 @@
-package mrthomas20121.thermal_extra.client.gui;
+package mrthomas20121.thermal_extra.containers;
 
 import cofh.core.common.inventory.BlockEntityCoFHMenu;
 import cofh.lib.common.inventory.SlotCoFH;

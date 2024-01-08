@@ -3,7 +3,7 @@ package mrthomas20121.thermal_extra.block;
 import cofh.lib.common.inventory.ItemStorageCoFH;
 import cofh.thermal.core.common.config.ThermalCoreConfig;
 import cofh.thermal.lib.common.block.entity.DynamoBlockEntity;
-import mrthomas20121.thermal_extra.client.gui.DynamoFrostMenu;
+import mrthomas20121.thermal_extra.containers.DynamoFrostMenu;
 import mrthomas20121.thermal_extra.init.ThermalExtraBlockEntities;
 import mrthomas20121.thermal_extra.recipe.ColdFuelManager;
 import net.minecraft.core.BlockPos;

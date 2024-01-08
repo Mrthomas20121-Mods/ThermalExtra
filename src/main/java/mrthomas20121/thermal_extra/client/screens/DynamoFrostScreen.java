@@ -1,7 +1,8 @@
-package mrthomas20121.thermal_extra.client.gui;
+package mrthomas20121.thermal_extra.client.screens;
 
 import cofh.thermal.core.client.gui.ThermalGuiHelper;
 import cofh.thermal.lib.client.gui.DynamoScreen;
+import mrthomas20121.thermal_extra.containers.DynamoFrostMenu;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;

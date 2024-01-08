@@ -2,7 +2,7 @@ package mrthomas20121.thermal_extra.init;
 
 import cofh.lib.util.DeferredRegisterCoFH;
 import mrthomas20121.thermal_extra.ThermalExtra;
-import mrthomas20121.thermal_extra.client.gui.DynamoFrostMenu;
+import mrthomas20121.thermal_extra.containers.DynamoFrostMenu;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraftforge.common.extensions.IForgeMenuType;
 import net.minecraftforge.registries.ForgeRegistries;
