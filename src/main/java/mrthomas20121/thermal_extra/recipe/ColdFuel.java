@@ -4,6 +4,7 @@ import cofh.lib.common.fluid.FluidIngredient;
 import cofh.lib.util.helpers.MathHelper;
 import cofh.thermal.lib.util.recipes.ThermalFuel;
 import mrthomas20121.thermal_extra.ThermalExtra;
+import mrthomas20121.thermal_extra.init.ThermalExtraRecipeSerializers;
 import mrthomas20121.thermal_extra.init.ThermalExtraRecipeTypes;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -33,7 +34,7 @@ public class ColdFuel extends ThermalFuel {
     @Override
     public RecipeSerializer<?> getSerializer() {
 
-        return ThermalExtraRecipeTypes.COLD_FUEL_SERIALIZER.get();
+        return ThermalExtraRecipeSerializers.COLD_FUEL_SERIALIZER.get();
     }
 
     @Nonnull
