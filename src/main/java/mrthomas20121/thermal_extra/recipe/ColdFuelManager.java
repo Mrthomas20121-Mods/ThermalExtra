@@ -34,8 +34,10 @@ public class ColdFuelManager extends SingleItemFuelManager {
 
         clear();
         var recipes = recipeManager.getAllRecipesFor(ThermalExtraRecipeTypes.COLD_FUEL.get());
-        for (var entry : recipes) {
-            addFuel(entry);
+        if(!recipes.isEmpty()) {
+            for (var entry : recipes) {
+                addFuel(entry);
+            }
         }
     }
     // endregion

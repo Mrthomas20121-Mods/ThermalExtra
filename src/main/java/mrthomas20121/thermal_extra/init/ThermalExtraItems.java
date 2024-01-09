@@ -6,6 +6,7 @@ import cofh.core.common.item.ItemCoFH;
 import cofh.core.util.helpers.AugmentDataHelper;
 import cofh.lib.util.DeferredRegisterCoFH;
 import cofh.thermal.lib.common.item.AugmentItem;
+import cofh.thermal.lib.common.item.BlockItemAugmentable;
 import mrthomas20121.thermal_extra.filter.AdvancedFilter;
 import mrthomas20121.thermal_extra.item.CustomAugmentItem;
 import net.minecraft.ChatFormatting;
@@ -38,7 +39,7 @@ public class ThermalExtraItems {
     public static Rarity tier3Rarity = Rarity.create("tier_three", style -> style.withColor(0x006e90));
     public static Rarity tier4Rarity = Rarity.create("tier_four", style -> style.withColor(0x7f2982));
 
-    public static final RegistryObject<BlockItemCoFH> DYNAMO_COLD = ITEMS.register("dynamo_frost", () -> new BlockItemCoFH(ThermalExtraBlocks.DYNAMO_COLD.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItemCoFH> DYNAMO_COLD = ITEMS.register("dynamo_frost", () -> new BlockItemAugmentable(ThermalExtraBlocks.DYNAMO_COLD.get(), new Item.Properties()).setAugValidator(DYNAMO_NO_FLUID_VALIDATOR));
 
     public static final RegistryObject<Item> amethyst_dust = ITEMS.register("amethyst_dust", item((prop) -> prop.rarity(tier0Rarity)));
     public static final RegistryObject<Item> soul_sand_dust = ITEMS.register("soul_sand_dust", item((prop) -> prop.rarity(tier1Rarity)));

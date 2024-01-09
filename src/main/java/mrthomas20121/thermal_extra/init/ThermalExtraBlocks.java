@@ -1,8 +1,6 @@
 package mrthomas20121.thermal_extra.init;
 
 import cofh.thermal.core.common.block.HardenedGlassBlock;
-import cofh.thermal.core.common.config.ThermalCoreConfig;
-import cofh.thermal.expansion.common.block.entity.dynamo.DynamoStirlingBlockEntity;
 import cofh.thermal.lib.common.block.DynamoBlock;
 import mrthomas20121.thermal_extra.ThermalExtra;
 import mrthomas20121.thermal_extra.block.DynamoColdBlockEntity;
@@ -22,10 +20,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 import static cofh.lib.util.constants.BlockStatePropertiesCoFH.ACTIVE;
-import static cofh.lib.util.constants.ModIds.ID_THERMAL_EXPANSION;
 import static cofh.lib.util.helpers.BlockHelper.lightValue;
-import static cofh.thermal.expansion.init.registries.TExpBlockEntities.DYNAMO_STIRLING_TILE;
-import static cofh.thermal.lib.util.ThermalAugmentRules.DYNAMO_NO_FLUID_VALIDATOR;
 import static net.minecraft.world.level.block.state.BlockBehaviour.Properties.of;
 
 public class ThermalExtraBlocks {

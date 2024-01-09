@@ -17,6 +17,7 @@ public class ExtraLangGen extends LanguageProvider {
     @Override
     protected void addTranslations() {
 
+        add("info.thermal_extra.item_filter", "Advanced Item Filter");
         add("info.thermal_extra.dynamo_frost", "Generate RF from Cold Items.");
 
         // creative tabs
@@ -90,7 +91,7 @@ public class ExtraLangGen extends LanguageProvider {
         addItem(ThermalExtraItems.integral_component, "Draconic Integral Component");
         add("thermal_extra.augment.upgrade", "Improves base attributes. Other augments may be more effective as a result.");
 
-        addItem(ThermalExtraItems.av_item_filter_augment, "Item Filter Augment Plus");
+        addItem(ThermalExtraItems.av_item_filter_augment, "Advanced Item Filter Augment");
 
         addItem(ThermalExtraItems.area_radius_augment_1, "Soul Infused Radial Enhancement");
         addItem(ThermalExtraItems.area_radius_augment_2, "Enderium Radial Enhancement");

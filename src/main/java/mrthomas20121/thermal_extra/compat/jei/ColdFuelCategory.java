@@ -1,6 +1,5 @@
 package mrthomas20121.thermal_extra.compat.jei;
 
-import cofh.thermal.core.util.recipes.dynamo.StirlingFuel;
 import cofh.thermal.expansion.client.gui.dynamo.DynamoStirlingScreen;
 import cofh.thermal.lib.compat.jei.Drawables;
 import cofh.thermal.lib.compat.jei.ThermalFuelCategory;
@@ -18,8 +17,6 @@ import net.minecraft.world.item.crafting.Ingredient;
 import java.util.List;
 
 import static cofh.lib.util.helpers.StringHelper.getTextComponent;
-import static cofh.thermal.core.ThermalCore.BLOCKS;
-import static cofh.thermal.lib.util.ThermalIDs.ID_DYNAMO_STIRLING;
 
 public class ColdFuelCategory extends ThermalFuelCategory<ColdFuel> {
 

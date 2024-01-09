@@ -1,6 +1,7 @@
 package mrthomas20121.thermal_extra;
 
 import cofh.core.client.event.CoreClientEvents;
+import mrthomas20121.thermal_extra.client.screens.AdvancedItemFilterScreen;
 import mrthomas20121.thermal_extra.client.screens.DynamoFrostScreen;
 import mrthomas20121.thermal_extra.datagen.*;
 import mrthomas20121.thermal_extra.filter.AdvancedFilter;
@@ -40,6 +41,7 @@ public class ThermalExtra {
 		ThermalExtraRecipeSerializers.RECIPE_SERIALIZERS.register(bus);
 		ThermalExtraCreativeTabs.CREATIVE_TABS.register(bus);
 		AdvancedFilter.init();
+		ThermalExtraRecipeManagers.register();
 	}
 
 	@SubscribeEvent
@@ -67,6 +69,7 @@ public class ThermalExtra {
 		event.enqueueWork(() -> CoreClientEvents.addNamespace(MOD_ID));
 		event.enqueueWork(() -> {
 			MenuScreens.register(ThermalExtraContainers.DYNAMO_FROST_CONTAINER.get(), DynamoFrostScreen::new);
+			MenuScreens.register(ThermalExtraContainers.ADVANCED_ITEM_FILTER_CONTAINER.get(), AdvancedItemFilterScreen::new);
 		});
 	}
 }
