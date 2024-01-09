@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "D": {
+      "tag": "forge:dusts/amethyst"
+    },
+    "E": {
+      "tag": "forge:dusts/redstone"
+    },
+    "G": {
+      "tag": "forge:gears/invar"
+    },
+    "I": {
+      "tag": "forge:ingots/silver"
+    },
+    "R": {
+      "item": "thermal:rf_coil"
+    }
+  },
+  "pattern": [
+    " R ",
+    "IGI",
+    "DED"
+  ],
+  "result": {
+    "item": "thermal_extra:dynamo_frost"
+  },
+  "show_notification": true
+}

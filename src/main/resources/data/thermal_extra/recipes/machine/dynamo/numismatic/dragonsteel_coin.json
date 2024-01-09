@@ -1,7 +1,7 @@
 {
   "type": "thermal:numismatic_fuel",
   "ingredient": {
-    "tag": "forge:coins/shellite"
+    "tag": "forge:coins/dragonsteel"
   },
-  "energy": 50000
+  "energy": 200000
 }

@@ -16,6 +16,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
+import net.minecraftforge.common.Tags;
 
 import javax.annotation.Nonnull;
 import java.util.function.Consumer;
@@ -115,6 +116,18 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .requires(Items.FIRE_CHARGE)
                 .unlockedBy("has_obsidian_glass", has(glass))
                 .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, ThermalExtraBlocks.DYNAMO_COLD.get())
+                .define('R', ThermalCore.ITEMS.get("rf_coil"))
+                .define('G', ItemTagsCoFH.GEARS_INVAR)
+                .define('I', ItemTagsCoFH.INGOTS_SILVER)
+                .define('D', ThermalExtraTags.Items.DUSTS_AMETHYST)
+                .define('E', Tags.Items.DUSTS_REDSTONE)
+                .pattern(" R ")
+                .pattern("IGI")
+                .pattern("DED")
+                .unlockedBy("has_rf_coil", has(ThermalCore.ITEMS.get("rf_coil")))
+                .save(consumer, this.modid + ":crafting/dynamo_frost");
 
         this.generateTypeRecipes(ThermalExtraItems.ITEMS, consumer, "soul_infused");
         this.generateTypeRecipes(ThermalExtraItems.ITEMS, consumer, "shellite");
