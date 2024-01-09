@@ -18,7 +18,8 @@ public class ExtraLangGen extends LanguageProvider {
     protected void addTranslations() {
 
         add("info.thermal_extra.item_filter", "Advanced Item Filter");
-        add("info.thermal_extra.dynamo_frost", "Generate RF from Cold Items.");
+        add("info.thermal_extra.dynamo_frost.0", "Generate RF from Cold Items.");
+        add("block.thermal_extra.dynamo_frost.keyword", "blizz cube snow ice packed blue cold frost frozen engine generator");
 
         // creative tabs
         add("creative_tab.thermal_extra.resources", "Thermal Extra: Resources");
