@@ -202,7 +202,8 @@ public class ExtraTagGen {
                     ThermalExtraBlocks.SOUL_INFUSED_GLASS.get(),
                     ThermalExtraBlocks.SHELLITE_GLASS.get(),
                     ThermalExtraBlocks.TWINITE_GLASS.get(),
-                    ThermalExtraBlocks.DRAGONSTEEL_GLASS.get()
+                    ThermalExtraBlocks.DRAGONSTEEL_GLASS.get(),
+                    ThermalExtraBlocks.DYNAMO_COLD.get()
             );
         }
     }
