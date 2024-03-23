@@ -1,9 +1,13 @@
 package mrthomas20121.thermal_extra.init;
 
+import cofh.core.common.block.EntityBlockActive4Way;
+import cofh.lib.util.DeferredRegisterCoFH;
 import cofh.thermal.core.common.block.HardenedGlassBlock;
+import cofh.thermal.core.common.config.ThermalCoreConfig;
 import cofh.thermal.lib.common.block.DynamoBlock;
 import mrthomas20121.thermal_extra.ThermalExtra;
-import mrthomas20121.thermal_extra.block.DynamoColdBlockEntity;
+import mrthomas20121.thermal_extra.block.entity.DynamoColdBlockEntity;
+import mrthomas20121.thermal_extra.block.entity.MachineMetalInfuserBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.BlockItem;
@@ -21,11 +25,13 @@ import net.minecraftforge.registries.RegistryObject;
 
 import static cofh.lib.util.constants.BlockStatePropertiesCoFH.ACTIVE;
 import static cofh.lib.util.helpers.BlockHelper.lightValue;
+import static cofh.thermal.core.util.RegistrationHelper.registerAugmentableBlock;
+import static cofh.thermal.lib.util.ThermalAugmentRules.MACHINE_VALIDATOR;
 import static net.minecraft.world.level.block.state.BlockBehaviour.Properties.of;
 
 public class ThermalExtraBlocks {
 
-    public static DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, ThermalExtra.MOD_ID);
+    public static DeferredRegisterCoFH<Block> BLOCKS = DeferredRegisterCoFH.create(ForgeRegistries.BLOCKS, ThermalExtra.MOD_ID);
 
     public static RegistryObject<Block> SOUL_INFUSED_BLOCK = register("soul_infused_block");
     public static RegistryObject<Block> SHELLITE_BLOCK = register("shellite_block");
@@ -37,6 +43,8 @@ public class ThermalExtraBlocks {
     public static RegistryObject<Block> DRAGONSTEEL_GLASS = registerGlass("dragonsteel_glass");
 
     public static RegistryObject<DynamoBlock> DYNAMO_COLD = BLOCKS.register("dynamo_frost", () -> new DynamoBlock(of().sound(SoundType.NETHERITE_BLOCK).strength(2.0F).lightLevel(lightValue(ACTIVE, 7)), DynamoColdBlockEntity.class, ThermalExtraBlockEntities.DYNAMO_COLD));
+
+    public static RegistryObject<Item> METAl_INFUSER = registerAugmentableBlock("metal_infuser", () -> new EntityBlockActive4Way(of().sound(SoundType.NETHERITE_BLOCK).strength(2.0F).lightLevel(lightValue(ACTIVE, 0)), MachineMetalInfuserBlockEntity .class, ThermalExtraBlockEntities.METAL_INFUSER), () -> ThermalCoreConfig.machineAugments, MACHINE_VALIDATOR, ThermalExtra.MOD_ID);
 
     private static Rarity getRarity(String name) {
 

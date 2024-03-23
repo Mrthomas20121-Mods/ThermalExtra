@@ -1,0 +1,15 @@
+{
+  "type": "thermal:smelter",
+  "energy": 4000,
+  "ingredients": [
+    {
+      "item": "thermal_extra:amethyst_dust"
+    }
+  ],
+  "result": [
+    {
+      "count": 1,
+      "item": "minecraft:amethyst_block"
+    }
+  ]
+}

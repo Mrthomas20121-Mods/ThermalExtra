@@ -1,0 +1,6 @@
+{
+  "parent": "thermal:block/machine_base",
+  "textures": {
+    "north": "thermal_extra:block/machines/machine_metal_infuser"
+  }
+}

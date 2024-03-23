@@ -126,6 +126,8 @@ public class ExtraModelGen extends ItemModelProviderCoFH {
         itemModel(ThermalExtraFluids.dragonsteel.getBucket());
 
         blockItem(ThermalExtraBlocks.DYNAMO_COLD);
+
+        blockItem(ThermalExtraBlocks.BLOCKS.getSup("metal_infuser"));
     }
 
     public void itemModel(RegistryObject<? extends Item> registryObject) {

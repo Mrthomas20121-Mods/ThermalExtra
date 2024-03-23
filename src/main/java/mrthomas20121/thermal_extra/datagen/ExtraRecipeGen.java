@@ -3,7 +3,11 @@ package mrthomas20121.thermal_extra.datagen;
 import cofh.lib.init.data.RecipeProviderCoFH;
 import cofh.lib.init.tags.ItemTagsCoFH;
 import cofh.thermal.core.ThermalCore;
+import cofh.thermal.core.util.managers.machine.SmelterRecipeManager;
+import cofh.thermal.core.util.recipes.machine.SmelterRecipe;
 import mrthomas20121.thermal_extra.ThermalExtra;
+import mrthomas20121.thermal_extra.datagen.thermal_recipe.ThermalBuilder;
+import mrthomas20121.thermal_extra.datagen.thermal_recipe.ThermalRecipeBuilder;
 import mrthomas20121.thermal_extra.init.ThermalExtraBlocks;
 import mrthomas20121.thermal_extra.init.ThermalExtraItems;
 import mrthomas20121.thermal_extra.init.ThermalExtraTags;
@@ -21,6 +25,7 @@ import net.minecraftforge.common.Tags;
 import javax.annotation.Nonnull;
 import java.util.function.Consumer;
 
+import static cofh.thermal.core.init.registries.TCoreRecipeSerializers.*;
 import static cofh.thermal.lib.util.ThermalFlags.*;
 
 public class ExtraRecipeGen extends RecipeProviderCoFH {
@@ -140,7 +145,25 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
         this.generateSmeltingAndBlastingRecipes(ThermalExtraItems.ITEMS, consumer, "dragonsteel", 1f);
 
         generateAugmentRecipes(consumer);
+
+        ThermalBuilder.multiCatalyst()
+                .ingredient(ThermalExtraItems.sticky_ball.get())
+                .primaryMod(0.8f)
+                .secondaryMod(5f)
+                .energyMod(0.35f)
+                .useChanceMod(0.3f)
+                .addCatalyst(new ResourceLocation("thermal_extra:machines/pulverizer/catalyst/sticky_ball"), ThermalBuilder.pulverizerCatalyst())
+                .addCatalyst(new ResourceLocation("thermal_extra:machines/smelter/catalyst/sticky_ball"), ThermalBuilder.smelterCatalyst())
+                .save(consumer);
+
+        ThermalBuilder.smelter()
+                .energy(4000)
+                .withInputItems(ThermalExtraItems.amethyst_dust.get())
+                .withOutputItems(Items.AMETHYST_BLOCK)
+                .save(consumer, new ResourceLocation("thermal_extra:test"));
     }
+
+
 
     public void generateAugmentRecipes(@Nonnull Consumer<FinishedRecipe> consumer) {
 
@@ -177,12 +200,11 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
         part = ThermalCore.ITEMS.get("item_filter_augment");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, result)
-                .define('G', ItemTagsCoFH.GEARS_ENDERIUM)
-                .define('I', ItemTagsCoFH.DUSTS_APATITE)
+                .define('G', ItemTagsCoFH.NUGGETS_ENDERIUM)
                 .define('X', part)
-                .pattern("IGI")
+                .pattern(" G ")
                 .pattern("GXG")
-                .pattern("IGI")
+                .pattern(" G ")
                 .unlockedBy("has_item_filter_augment", has(part))
                 .save(withConditions(consumer).flag(FLAG_UPGRADE_AUGMENTS), this.modid + ":" + folder + "/" + name(result));
     }

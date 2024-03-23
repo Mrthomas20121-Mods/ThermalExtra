@@ -1,9 +1,8 @@
 package mrthomas20121.thermal_extra.filter;
 
-import cofh.core.common.inventory.ItemFilterMenu;
 import cofh.core.util.filter.FilterHolderType;
 import cofh.core.util.filter.ItemFilter;
-import mrthomas20121.thermal_extra.containers.AdvancedItemFilterMenu;
+import mrthomas20121.thermal_extra.inventory.AdvancedItemFilterMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Inventory;

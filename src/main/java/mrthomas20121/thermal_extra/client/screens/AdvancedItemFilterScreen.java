@@ -9,7 +9,7 @@ import cofh.core.common.network.packet.server.FilterableGuiTogglePacket;
 import cofh.core.util.helpers.FilterHelper;
 import cofh.core.util.helpers.RenderHelper;
 import com.mojang.blaze3d.platform.GlStateManager;
-import mrthomas20121.thermal_extra.containers.AdvancedItemFilterMenu;
+import mrthomas20121.thermal_extra.inventory.AdvancedItemFilterMenu;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -120,7 +120,7 @@ public class AdvancedItemFilterScreen extends ContainerScreenCoFH<AdvancedItemFi
     // region ELEMENTS
     protected void addButtons() {
 
-        addElement(new ElementButton(this, 140, 22) {
+        addElement(new ElementButton(this, 152, 22) {
 
             @Override
             public boolean mouseClicked(double mouseX, double mouseY, int mouseButton) {
@@ -135,7 +135,7 @@ public class AdvancedItemFilterScreen extends ContainerScreenCoFH<AdvancedItemFi
                 .setTooltipFactory(new SimpleTooltip(Component.translatable("info.cofh.filter.allowlist.0")))
                 .setVisible(() -> !menu.getAllowList()));
 
-        addElement(new ElementButton(this, 140, 22) {
+        addElement(new ElementButton(this, 152, 22) {
 
             @Override
             public boolean mouseClicked(double mouseX, double mouseY, int mouseButton) {
@@ -150,7 +150,7 @@ public class AdvancedItemFilterScreen extends ContainerScreenCoFH<AdvancedItemFi
                 .setTooltipFactory(new SimpleTooltip(Component.translatable("info.cofh.filter.allowlist.1")))
                 .setVisible(menu::getAllowList));
 
-        addElement(new ElementButton(this, 140, 44) {
+        addElement(new ElementButton(this, 152, 44) {
 
             @Override
             public boolean mouseClicked(double mouseX, double mouseY, int mouseButton) {
@@ -165,7 +165,7 @@ public class AdvancedItemFilterScreen extends ContainerScreenCoFH<AdvancedItemFi
                 .setTooltipFactory(new SimpleTooltip(Component.translatable("info.cofh.filter.checkNBT.0")))
                 .setVisible(() -> !menu.getCheckNBT()));
 
-        addElement(new ElementButton(this, 140, 44) {
+        addElement(new ElementButton(this, 152, 44) {
 
             @Override
             public boolean mouseClicked(double mouseX, double mouseY, int mouseButton) {
@@ -178,7 +178,7 @@ public class AdvancedItemFilterScreen extends ContainerScreenCoFH<AdvancedItemFi
                 .setSize(20, 20)
                 .setTexture(TEX_USE_NBT, 40, 20)
                 .setTooltipFactory(new SimpleTooltip(Component.translatable("info.cofh.filter.checkNBT.1")))
-                .setVisible(() -> menu.getCheckNBT()));
+                .setVisible(menu::getCheckNBT));
     }
     // endregion
 }

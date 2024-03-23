@@ -6,7 +6,6 @@ import mrthomas20121.thermal_extra.init.ThermalExtraRecipeTypes;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeManager;
 
-
 public class ColdFuelManager extends SingleItemFuelManager {
 
     private static final ColdFuelManager INSTANCE = new ColdFuelManager();

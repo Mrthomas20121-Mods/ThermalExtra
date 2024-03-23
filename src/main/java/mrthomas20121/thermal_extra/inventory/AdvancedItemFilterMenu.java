@@ -1,4 +1,4 @@
-package mrthomas20121.thermal_extra.containers;
+package mrthomas20121.thermal_extra.inventory;
 
 import cofh.core.common.inventory.ContainerMenuCoFH;
 import cofh.core.common.network.packet.server.ContainerConfigPacket;
@@ -79,10 +79,10 @@ public class AdvancedItemFilterMenu extends ContainerMenuCoFH implements IFilter
         int rows = MathHelper.clamp(slots / 3, 1, 3);
         int rowSize = slots / rows;
 
-        int xOffset = 68 - 9 * rowSize;
-        int yOffset = 46 - 9 * rows;
+        int xOffset = 80 - 9 * rowSize;
+        int yOffset = 45 - 9 * rows;
 
-        for (int i = 0; i < filter.size(); ++i) {
+        for (int i = 0; i < slots; ++i) {
             addSlot(new SlotFalseCopy(filterInventory, i, xOffset + i % rowSize * 18, yOffset + i / rowSize * 18));
         }
         bindPlayerInventory(inventory);

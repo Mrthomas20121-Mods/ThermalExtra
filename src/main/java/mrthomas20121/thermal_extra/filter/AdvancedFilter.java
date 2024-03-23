@@ -9,7 +9,7 @@ public class AdvancedFilter {
 
     public static final String ITEM_FILTER_TYPE = "advanced_item";
 
-    public static final int SIZE = 21;
+    public static final int SIZE = 24;
     public static final IFilterFactory<IFilter> FACTORY = (nbt, holderType,  held, pos) -> new AdvancedItemFilter(SIZE, holderType, held, pos).read(nbt);
 
     public static void init() {

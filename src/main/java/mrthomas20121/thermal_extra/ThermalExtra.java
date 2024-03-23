@@ -3,6 +3,7 @@ package mrthomas20121.thermal_extra;
 import cofh.core.client.event.CoreClientEvents;
 import mrthomas20121.thermal_extra.client.screens.AdvancedItemFilterScreen;
 import mrthomas20121.thermal_extra.client.screens.DynamoFrostScreen;
+import mrthomas20121.thermal_extra.client.screens.machine.MachineMetalInfuserScreen;
 import mrthomas20121.thermal_extra.datagen.*;
 import mrthomas20121.thermal_extra.filter.AdvancedFilter;
 import mrthomas20121.thermal_extra.init.*;
@@ -68,6 +69,7 @@ public class ThermalExtra {
 	public static void clientEvents(FMLClientSetupEvent event) {
 		event.enqueueWork(() -> CoreClientEvents.addNamespace(MOD_ID));
 		event.enqueueWork(() -> {
+			MenuScreens.register(ThermalExtraContainers.METAL_INFUSER_CONTAINER.get(), MachineMetalInfuserScreen::new);
 			MenuScreens.register(ThermalExtraContainers.DYNAMO_FROST_CONTAINER.get(), DynamoFrostScreen::new);
 			MenuScreens.register(ThermalExtraContainers.ADVANCED_ITEM_FILTER_CONTAINER.get(), AdvancedItemFilterScreen::new);
 		});

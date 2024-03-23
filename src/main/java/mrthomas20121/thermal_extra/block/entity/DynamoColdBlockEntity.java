@@ -1,9 +1,9 @@
-package mrthomas20121.thermal_extra.block;
+package mrthomas20121.thermal_extra.block.entity;
 
 import cofh.lib.common.inventory.ItemStorageCoFH;
 import cofh.thermal.core.common.config.ThermalCoreConfig;
 import cofh.thermal.lib.common.block.entity.DynamoBlockEntity;
-import mrthomas20121.thermal_extra.containers.DynamoFrostMenu;
+import mrthomas20121.thermal_extra.inventory.DynamoFrostMenu;
 import mrthomas20121.thermal_extra.init.ThermalExtraBlockEntities;
 import mrthomas20121.thermal_extra.recipe.ColdFuelManager;
 import net.minecraft.core.BlockPos;

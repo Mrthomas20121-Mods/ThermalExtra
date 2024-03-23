@@ -3,19 +3,16 @@
   "category": "redstone",
   "key": {
     "G": {
-      "tag": "forge:gears/enderium"
-    },
-    "I": {
-      "tag": "forge:dusts/apatite"
+      "tag": "forge:nuggets/enderium"
     },
     "X": {
       "item": "thermal:item_filter_augment"
     }
   },
   "pattern": [
-    "IGI",
+    " G ",
     "GXG",
-    "IGI"
+    " G "
   ],
   "result": {
     "item": "thermal_extra:av_item_filter_augment"
