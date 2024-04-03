@@ -1,0 +1,9 @@
+{
+  "type": "thermal_extra:nitratic_igniter_catalyst",
+  "energy_mod": 1.1,
+  "ingredient": {
+    "item": "minecraft:tnt"
+  },
+  "primary_mod": 1.01,
+  "secondary_mod": 1.01
+}

@@ -18,6 +18,12 @@ public class ThermalExtraFluids {
     public static FluidThermalExtra sunflower_oil = registerFluid("sunflower_oil", 400);
     public static FluidThermalExtra crystallized_sunflower_oil = registerFluid("crystallized_sunflower_oil", 500);
     public static FluidThermalExtra refined_sunflower_oil = registerFluid("refined_sunflower_oil", 500);
+    public static FluidThermalExtra flux_infused_oil = registerFluid("flux_infused_oil", 500);
+    public static FluidThermalExtra flux_diesel = registerFluid("flux_diesel", 1000);
+    public static FluidThermalExtra biodiesel = registerFluid("biodiesel", 1000);
+    public static FluidThermalExtra liquid_biomass = registerFluid("liquid_biomass", 200);
+    public static FluidThermalExtra polyolefin = registerFluid("polyolefin", 500);
+    public static FluidThermalExtra super_biodiesel = registerFluid("super_biodiesel", 1000);
 
     public static FluidThermalExtra registerFluid(String name, int temp) {
         return new FluidThermalExtra(name, String.format("thermal_extra:block/fluids/%s_still", name), String.format("thermal:block/fluids/%s_flow", name), temp);

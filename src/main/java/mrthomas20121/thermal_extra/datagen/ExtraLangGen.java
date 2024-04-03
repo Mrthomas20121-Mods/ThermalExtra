@@ -20,10 +20,15 @@ public class ExtraLangGen extends LanguageProvider {
         add("info.thermal_extra.item_filter", "Advanced Item Filter");
         add("info.thermal_extra.dynamo_frost.0", "Generate RF from Cold Items.");
         add("block.thermal_extra.dynamo_frost.keyword", "blizz cube snow ice packed blue cold frost frozen engine generator");
+        add("info.thermal_extra.machine_metal_infuser", "Convert a metallic item into another by putting it in a fluid.");
+        add("info.thermal_extra.machine_nitratic_igniter", "Create an Item by exploding other items together.");
+        add("info.thermal_extra.machine_fluid_mixer", "Mix fluids together to create other fluids");
+        add("info.thermal_extra.require_catalyst", "Catalyst is required.");
 
         // creative tabs
         add("creative_tab.thermal_extra.resources", "Thermal Extra: Resources");
         add("creative_tab.thermal_extra.augments", "Thermal Extra: Augments");
+        add("creative_tab.thermal_extra.machines", "Thermal Extra: Machines");
 
         // fluids and buckets
         add("fluid_type.thermal_extra.soul_infused", "Molten Soul Infused");
@@ -33,24 +38,48 @@ public class ExtraLangGen extends LanguageProvider {
         add("fluid_type.thermal_extra.sunflower_oil", "Sunflower Oil");
         add("fluid_type.thermal_extra.crystallized_sunflower_oil", "Crystallized Sunflower Oil");
         add("fluid_type.thermal_extra.refined_sunflower_oil", "Refined Sunflower Oil");
-        add("fluid_type.thermal_extra.basalt", "Basalt");
-        add("fluid_type.thermal_extra.blitz", "Blitz");
-        add("fluid_type.thermal_extra.blizz", "Blizz");
-        add("fluid_type.thermal_extra.icy_water", "Icy Water");
+        add("fluid_type.thermal_extra.flux_infused_oil", "Flux Infused Oil");
+        add("fluid_type.thermal_extra.flux_diesel", "Flux Diesel");
+        add("fluid_type.thermal_extra.biodiesel", "Biodiesel");
+        add("fluid_type.thermal_extra.liquid_biomass", "Liquid Biomass");
+        add("fluid_type.thermal_extra.polyolefin", "Polyolefin");
+        add("fluid_type.thermal_extra.super_biodiesel", "Super Biodiesel");
         addItem(ThermalExtraFluids.soul_infused.getBucket(), "Molten Soul Infused Bucket");
         addItem(ThermalExtraFluids.shellite.getBucket(), "Molten Shellite Bucket");
         addItem(ThermalExtraFluids.twinite.getBucket(), "Molten Twinite Bucket");
         addItem(ThermalExtraFluids.dragonsteel.getBucket(), "Molten Dragonsteel Bucket");
         addItem(ThermalExtraFluids.sunflower_oil.getBucket(), "Sunflower Oil Bucket");
         addItem(ThermalExtraFluids.crystallized_sunflower_oil.getBucket(), "Crystallized Sunflower Oil Bucket");
+        addItem(ThermalExtraFluids.flux_infused_oil.getBucket(), "Flux Infused Oil Bucket");
         addItem(ThermalExtraFluids.refined_sunflower_oil.getBucket(), "Refined Sunflower Oil Bucket");
+        addItem(ThermalExtraFluids.flux_diesel.getBucket(), "Flux Diesel Bucket");
+        addItem(ThermalExtraFluids.biodiesel.getBucket(), "Biodiesel Bucket");
+        addItem(ThermalExtraFluids.liquid_biomass.getBucket(), "Liquid Biomass Bucket");
+        addItem(ThermalExtraFluids.polyolefin.getBucket(), "Polyolefin Bucket");
+        addItem(ThermalExtraFluids.super_biodiesel.getBucket(), "Super Biodiesel Bucket");
 
         addBlock(ThermalExtraBlocks.DYNAMO_COLD, "Frost Dynamo");
+        addBlock(ThermalExtraBlocks.BLOCKS.getSup("metal_infuser"), "Metal Infuser");
+        addBlock(ThermalExtraBlocks.BLOCKS.getSup("advanced_refinery"), "Adv Refinery");
+        addBlock(ThermalExtraBlocks.BLOCKS.getSup("nitratic_igniter"), "Nitratic Igniter");
+        addBlock(ThermalExtraBlocks.BLOCKS.getSup("fluid_mixer"), "Fluid Mixer");
 
         // items and blocks
+
+        // ore chunks
+        addItem(ThermalExtraItems.copper_ore_chunk, "Copper Ore Chunk");
+        addItem(ThermalExtraItems.iron_ore_chunk, "Iron Ore Chunk");
+        addItem(ThermalExtraItems.gold_ore_chunk, "Gold Ore Chunk");
+        addItem(ThermalExtraItems.tin_ore_chunk, "Tin Ore Chunk");
+        addItem(ThermalExtraItems.lead_ore_chunk, "Lead Ore Chunk");
+        addItem(ThermalExtraItems.silver_ore_chunk, "Silver Ore Chunk");
+        addItem(ThermalExtraItems.nickel_ore_chunk, "Nickel Ore Chunk");
+
         addItem(ThermalExtraItems.amethyst_dust, "Amethyst Dust");
         addItem(ThermalExtraItems.soul_sand_dust, "Soul Sand Dust");
         addItem(ThermalExtraItems.sticky_ball, "Sticky Ball");
+        addItem(ThermalExtraItems.chiller_plate_cast, "Plate Cast");
+        addItem(ThermalExtraItems.polyolefin_plate, "Polyolefin Plate");
 
         addBlock(ThermalExtraBlocks.SOUL_INFUSED_BLOCK, "Soul Infused Block");
         addBlock(ThermalExtraBlocks.SOUL_INFUSED_GLASS, "Soul Infused Glass");

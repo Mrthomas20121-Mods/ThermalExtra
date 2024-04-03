@@ -93,24 +93,36 @@ public class ThermalExtraCreativeTabs {
             .build()
     );
 
+    public static RegistryObject<CreativeModeTab> tab_machines = CREATIVE_TABS.register("machines", () -> CreativeModeTab.builder()
+            .icon(() -> new ItemStack(ThermalExtraItems.DYNAMO_COLD.get()))
+            .title(Component.translatable("creative_tab.thermal_extra.machines"))
+            .displayItems((feature, output) -> {
+                output.accept(ThermalExtraBlocks.DYNAMO_COLD.get());
+                output.accept(ThermalExtraBlocks.ADVANCED_REFINERY.get());
+                output.accept(ThermalExtraBlocks.METAl_INFUSER.get());
+                output.accept(ThermalExtraBlocks.NITRATIC_IGNITER.get());
+                output.accept(ThermalExtraBlocks.FLUID_MIXER.get());
+            })
+            .build()
+    );
+
     public static RegistryObject<CreativeModeTab> tab_resources = CREATIVE_TABS.register("resources", () -> CreativeModeTab.builder()
             .icon(() -> new ItemStack(ThermalExtraItems.amethyst_dust.get()))
             .title(Component.translatable("creative_tab.thermal_extra.resources"))
             .displayItems((feature, output) -> {
 
-                output.accept(ThermalExtraBlocks.DYNAMO_COLD.get());
-
-                output.accept(ThermalExtraFluids.dragonsteel.getBucket().get());
-                output.accept(ThermalExtraFluids.twinite.getBucket().get());
-                output.accept(ThermalExtraFluids.shellite.getBucket().get());
-                output.accept(ThermalExtraFluids.soul_infused.getBucket().get());
-                output.accept(ThermalExtraFluids.crystallized_sunflower_oil.getBucket().get());
-                output.accept(ThermalExtraFluids.refined_sunflower_oil.getBucket().get());
-                output.accept(ThermalExtraFluids.sunflower_oil.getBucket().get());
+                output.accept(ThermalExtraItems.copper_ore_chunk.get());
+                output.accept(ThermalExtraItems.iron_ore_chunk.get());
+                output.accept(ThermalExtraItems.gold_ore_chunk.get());
+                output.accept(ThermalExtraItems.tin_ore_chunk.get());
+                output.accept(ThermalExtraItems.lead_ore_chunk.get());
+                output.accept(ThermalExtraItems.silver_ore_chunk.get());
+                output.accept(ThermalExtraItems.nickel_ore_chunk.get());
 
                 output.accept(ThermalExtraItems.amethyst_dust.get());
                 output.accept(ThermalExtraItems.soul_sand_dust.get());
                 output.accept(ThermalExtraItems.sticky_ball.get());
+                output.accept(ThermalExtraItems.chiller_plate_cast.get());
 
                 // metal resources
                 output.accept(ThermalExtraBlocks.SOUL_INFUSED_BLOCK.get());
@@ -144,6 +156,20 @@ public class ThermalExtraCreativeTabs {
                 output.accept(ThermalExtraItems.dragon_steel_dust.get());
                 output.accept(ThermalExtraItems.dragon_steel_plate.get());
                 output.accept(ThermalExtraItems.dragon_steel_gear.get());
+
+                output.accept(ThermalExtraFluids.polyolefin.getBucket().get());
+                output.accept(ThermalExtraFluids.flux_infused_oil.getBucket().get());
+                output.accept(ThermalExtraFluids.flux_diesel.getBucket().get());
+                output.accept(ThermalExtraFluids.biodiesel.getBucket().get());
+                output.accept(ThermalExtraFluids.super_biodiesel.getBucket().get());
+                output.accept(ThermalExtraFluids.liquid_biomass.getBucket().get());
+                output.accept(ThermalExtraFluids.dragonsteel.getBucket().get());
+                output.accept(ThermalExtraFluids.twinite.getBucket().get());
+                output.accept(ThermalExtraFluids.shellite.getBucket().get());
+                output.accept(ThermalExtraFluids.soul_infused.getBucket().get());
+                output.accept(ThermalExtraFluids.sunflower_oil.getBucket().get());
+                output.accept(ThermalExtraFluids.crystallized_sunflower_oil.getBucket().get());
+                output.accept(ThermalExtraFluids.refined_sunflower_oil.getBucket().get());
             })
             .build()
     );

@@ -21,7 +21,6 @@ import net.minecraftforge.fluids.FluidStack;
 
 import java.util.*;
 
-import static cofh.thermal.core.init.registries.TCoreRecipeTypes.CHILLER_RECIPE;
 import static java.util.Arrays.asList;
 
 public class MetalInfuserRecipeManager extends AbstractManager implements IRecipeManager {

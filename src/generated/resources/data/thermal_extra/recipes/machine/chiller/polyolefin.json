@@ -1,0 +1,18 @@
+{
+  "type": "thermal:chiller",
+  "energy": 30000,
+  "ingredients": [
+    {
+      "item": "thermal_extra:chiller_plate_cast"
+    },
+    {
+      "amount": 1000,
+      "fluid": "thermal_extra:polyolefin"
+    }
+  ],
+  "result": [
+    {
+      "item": "thermal_extra:polyolefin_plate"
+    }
+  ]
+}

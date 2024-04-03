@@ -1,0 +1,18 @@
+{
+  "type": "thermal_extra:nitratic_igniter",
+  "energy": 10000,
+  "ingredients": [
+    {
+      "item": "minecraft:shulker_shell"
+    },
+    {
+      "tag": "forge:ingots/enderium"
+    }
+  ],
+  "result": [
+    {
+      "chance": 1.0,
+      "item": "thermal_extra:shellite_ingot"
+    }
+  ]
+}

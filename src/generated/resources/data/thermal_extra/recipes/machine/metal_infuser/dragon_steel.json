@@ -1,0 +1,18 @@
+{
+  "type": "thermal_extra:metal_infuser",
+  "energy": 15000,
+  "ingredients": [
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "amount": 1000,
+      "fluid": "thermal:ender"
+    }
+  ],
+  "result": [
+    {
+      "item": "thermal_extra:dragonsteel_ingot"
+    }
+  ]
+}

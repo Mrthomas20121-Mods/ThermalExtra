@@ -1,0 +1,26 @@
+{
+  "type": "thermal_extra:nitratic_igniter",
+  "energy": 12000,
+  "experience": 1.1,
+  "ingredients": [
+    {
+      "tag": "forge:raw_materials/lead"
+    }
+  ],
+  "result": [
+    {
+      "chance": 1.25,
+      "count": 3,
+      "item": "thermal_extra:lead_ore_chunk",
+      "locked": true
+    },
+    {
+      "chance": 0.55,
+      "item": "thermal_extra:lead_ore_chunk"
+    },
+    {
+      "chance": 0.25,
+      "item": "thermal_extra:silver_ore_chunk"
+    }
+  ]
+}

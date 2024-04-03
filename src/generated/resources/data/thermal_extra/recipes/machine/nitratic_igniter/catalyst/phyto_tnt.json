@@ -1,0 +1,9 @@
+{
+  "type": "thermal_extra:nitratic_igniter_catalyst",
+  "energy_mod": 1.5,
+  "ingredient": {
+    "item": "thermal:phyto_tnt"
+  },
+  "primary_mod": 2.5,
+  "secondary_mod": 2.5
+}

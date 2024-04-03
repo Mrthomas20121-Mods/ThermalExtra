@@ -1,0 +1,24 @@
+{
+  "type": "thermal_extra:advanced_refinery",
+  "energy": 4000,
+  "ingredients": [
+    {
+      "amount": 2000,
+      "fluid": "thermal_extra:liquid_biomass"
+    }
+  ],
+  "result": [
+    {
+      "chance": 0.2,
+      "item": "minecraft:bone_meal"
+    },
+    {
+      "chance": 0.1,
+      "item": "thermal:compost"
+    },
+    {
+      "amount": 1000,
+      "fluid": "thermal_extra:biodiesel"
+    }
+  ]
+}

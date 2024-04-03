@@ -1,14 +1,18 @@
 package mrthomas20121.thermal_extra.datagen;
 
+import cofh.lib.common.fluid.FluidIngredient;
 import cofh.lib.init.data.RecipeProviderCoFH;
 import cofh.lib.init.tags.ItemTagsCoFH;
+import cofh.lib.util.DeferredRegisterCoFH;
+import cofh.lib.util.crafting.IngredientWithCount;
 import cofh.thermal.core.ThermalCore;
-import cofh.thermal.core.util.managers.machine.SmelterRecipeManager;
-import cofh.thermal.core.util.recipes.machine.SmelterRecipe;
+import cofh.thermal.core.init.registries.TCoreFluids;
+import cofh.thermal.lib.util.ThermalIDs;
+import cofh.thermal.lib.util.references.ThermalTags;
 import mrthomas20121.thermal_extra.ThermalExtra;
 import mrthomas20121.thermal_extra.datagen.thermal_recipe.ThermalBuilder;
-import mrthomas20121.thermal_extra.datagen.thermal_recipe.ThermalRecipeBuilder;
 import mrthomas20121.thermal_extra.init.ThermalExtraBlocks;
+import mrthomas20121.thermal_extra.init.ThermalExtraFluids;
 import mrthomas20121.thermal_extra.init.ThermalExtraItems;
 import mrthomas20121.thermal_extra.init.ThermalExtraTags;
 import net.minecraft.data.PackOutput;
@@ -17,15 +21,23 @@ import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
+import net.minecraftforge.fluids.FluidStack;
+import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nonnull;
 import java.util.function.Consumer;
+import java.util.function.Supplier;
 
-import static cofh.thermal.core.init.registries.TCoreRecipeSerializers.*;
+import static cofh.thermal.core.ThermalCore.BLOCKS;
+import static cofh.thermal.core.ThermalCore.ITEMS;
 import static cofh.thermal.lib.util.ThermalFlags.*;
 
 public class ExtraRecipeGen extends RecipeProviderCoFH {
@@ -35,7 +47,7 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
     }
 
     @Override
-    protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
+    protected void buildRecipes(@NotNull Consumer<FinishedRecipe> consumer) {
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.PAPER, 2)
                 .requires(ThermalExtraItems.sticky_ball.get())
@@ -88,7 +100,7 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .unlockedBy("has_apatite_dust", has(ItemTagsCoFH.DUSTS_APATITE))
                 .save(consumer);
 
-        Block glass = ThermalCore.BLOCKS.get("obsidian_glass");
+        Block glass = BLOCKS.get("obsidian_glass");
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ThermalExtraBlocks.SOUL_INFUSED_GLASS.get(), 2)
                 .requires(glass)
@@ -123,7 +135,7 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, ThermalExtraBlocks.DYNAMO_COLD.get())
-                .define('R', ThermalCore.ITEMS.get("rf_coil"))
+                .define('R', ITEMS.get("rf_coil"))
                 .define('G', ItemTagsCoFH.GEARS_INVAR)
                 .define('I', ItemTagsCoFH.INGOTS_SILVER)
                 .define('D', ThermalExtraTags.Items.DUSTS_AMETHYST)
@@ -131,8 +143,30 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .pattern(" R ")
                 .pattern("IGI")
                 .pattern("DED")
-                .unlockedBy("has_rf_coil", has(ThermalCore.ITEMS.get("rf_coil")))
+                .unlockedBy("has_rf_coil", has(ITEMS.get("rf_coil")))
                 .save(consumer, this.modid + ":crafting/dynamo_frost");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, ThermalExtraBlocks.FLUID_MIXER.get())
+                .define('G', ItemTagsCoFH.GEARS_CONSTANTAN)
+                .define('I', ThermalExtraTags.Items.SOUL_INFUSED_INGOT)
+                .define('M', ITEMS.get(ThermalIDs.ID_MACHINE_FRAME))
+                .define('F', ITEMS.get(ThermalIDs.ID_FLUID_CELL_FRAME))
+                .pattern("GIG")
+                .pattern("FMF")
+                .pattern("GIG")
+                .unlockedBy("has_machine_frame", has(ThermalCore.ITEMS.get(ThermalIDs.ID_MACHINE_FRAME)))
+                .save(consumer, this.modid + ":crafting/fluid_fixer");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, ThermalExtraBlocks.ADVANCED_REFINERY.get())
+                .define('G', ItemTagsCoFH.GEARS_ENDERIUM)
+                .define('I', ThermalExtraTags.Items.SOUL_INFUSED_INGOT)
+                .define('M', ITEMS.get(ThermalIDs.ID_MACHINE_REFINERY))
+                .define('F', ITEMS.get(ThermalIDs.ID_FLUID_CELL_FRAME))
+                .pattern("III")
+                .pattern("GMG")
+                .pattern("FFF")
+                .unlockedBy("has_"+ThermalIDs.ID_MACHINE_REFINERY, has(ThermalCore.ITEMS.get(ThermalIDs.ID_MACHINE_REFINERY)))
+                .save(consumer, this.modid + ":crafting/advanced_refinery");
 
         this.generateTypeRecipes(ThermalExtraItems.ITEMS, consumer, "soul_infused");
         this.generateTypeRecipes(ThermalExtraItems.ITEMS, consumer, "shellite");
@@ -146,26 +180,174 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
 
         generateAugmentRecipes(consumer);
 
-        ThermalBuilder.multiCatalyst()
-                .ingredient(ThermalExtraItems.sticky_ball.get())
-                .primaryMod(0.8f)
-                .secondaryMod(5f)
-                .energyMod(0.35f)
-                .useChanceMod(0.3f)
-                .addCatalyst(new ResourceLocation("thermal_extra:machines/pulverizer/catalyst/sticky_ball"), ThermalBuilder.pulverizerCatalyst())
-                .addCatalyst(new ResourceLocation("thermal_extra:machines/smelter/catalyst/sticky_ball"), ThermalBuilder.smelterCatalyst())
-                .save(consumer);
+        generateMachineRecipes(consumer);
+    }
 
-        ThermalBuilder.smelter()
-                .energy(4000)
-                .withInputItems(ThermalExtraItems.amethyst_dust.get())
-                .withOutputItems(Items.AMETHYST_BLOCK)
-                .save(consumer, new ResourceLocation("thermal_extra:test"));
+    public void generateMachineRecipes(@NotNull Consumer<FinishedRecipe> consumer) {
+        ThermalBuilder.nitratic_igniter_catalyst()
+                .ingredient(Blocks.TNT.asItem())
+                .primaryMod(1.01f)
+                .secondaryMod(1.01f)
+                .energyMod(1.1f)
+                .useChanceMod(1f)
+                .save(consumer, new ResourceLocation("thermal_extra:machine/nitratic_igniter/catalyst/tnt"));
+
+        ThermalBuilder.nitratic_igniter_catalyst()
+                .ingredient(BLOCKS.get(ThermalIDs.ID_NUKE_TNT).asItem())
+                .primaryMod(5f)
+                .secondaryMod(5f)
+                .energyMod(1.5f)
+                .useChanceMod(1f)
+                .save(consumer, new ResourceLocation("thermal_extra:machine/nitratic_igniter/catalyst/nuke_tnt"));
+
+        ThermalBuilder.nitratic_igniter_catalyst()
+                .ingredient(BLOCKS.get(ThermalIDs.ID_EARTH_TNT).asItem())
+                .primaryMod(2f)
+                .secondaryMod(3f)
+                .energyMod(1.5f)
+                .useChanceMod(1f)
+                .save(consumer, new ResourceLocation("thermal_extra:machine/nitratic_igniter/catalyst/earth_tnt"));
+
+        ThermalBuilder.nitratic_igniter_catalyst()
+                .ingredient(BLOCKS.get(ThermalIDs.ID_ENDER_TNT).asItem())
+                .primaryMod(3f)
+                .secondaryMod(2f)
+                .energyMod(1.5f)
+                .useChanceMod(1f)
+                .save(consumer, new ResourceLocation("thermal_extra:machine/nitratic_igniter/catalyst/ender_tnt"));
+
+        ThermalBuilder.nitratic_igniter_catalyst()
+                .ingredient(BLOCKS.get(ThermalIDs.ID_FIRE_TNT).asItem())
+                .primaryMod(3f)
+                .secondaryMod(3f)
+                .energyMod(1.5f)
+                .useChanceMod(1f)
+                .save(consumer, new ResourceLocation("thermal_extra:machine/nitratic_igniter/catalyst/fire_tnt"));
+
+        ThermalBuilder.nitratic_igniter_catalyst()
+                .ingredient(BLOCKS.get(ThermalIDs.ID_GLOWSTONE_TNT).asItem())
+                .primaryMod(1.1f)
+                .secondaryMod(5f)
+                .energyMod(1.5f)
+                .useChanceMod(1f)
+                .save(consumer, new ResourceLocation("thermal_extra:machine/nitratic_igniter/catalyst/glowstone_tnt"));
+
+        ThermalBuilder.nitratic_igniter_catalyst()
+                .ingredient(BLOCKS.get(ThermalIDs.ID_ICE_TNT).asItem())
+                .primaryMod(1.9f)
+                .secondaryMod(0.1f)
+                .energyMod(1.5f)
+                .useChanceMod(1f)
+                .save(consumer, new ResourceLocation("thermal_extra:machine/nitratic_igniter/catalyst/ice_tnt"));
+
+        ThermalBuilder.nitratic_igniter_catalyst()
+                .ingredient(BLOCKS.get(ThermalIDs.ID_LIGHTNING_TNT).asItem())
+                .primaryMod(4f)
+                .secondaryMod(0.1f)
+                .energyMod(1.5f)
+                .useChanceMod(1f)
+                .save(consumer, new ResourceLocation("thermal_extra:machine/nitratic_igniter/catalyst/lightning_tnt"));
+
+        ThermalBuilder.nitratic_igniter_catalyst()
+                .ingredient(BLOCKS.get(ThermalIDs.ID_PHYTO_TNT).asItem())
+                .primaryMod(2.5f)
+                .secondaryMod(2.5f)
+                .energyMod(1.5f)
+                .useChanceMod(1f)
+                .save(consumer, new ResourceLocation("thermal_extra:machine/nitratic_igniter/catalyst/phyto_tnt"));
+
+        ThermalBuilder.nitratic_igniter_catalyst()
+                .ingredient(BLOCKS.get(ThermalIDs.ID_REDSTONE_TNT).asItem())
+                .primaryMod(2.5f)
+                .secondaryMod(2.5f)
+                .energyMod(1.5f)
+                .useChanceMod(1f)
+                .save(consumer, new ResourceLocation("thermal_extra:machine/nitratic_igniter/catalyst/redstone_tnt"));
+
+        ThermalBuilder.nitratic_igniter_catalyst()
+                .ingredient(BLOCKS.get(ThermalIDs.ID_SLIME_TNT).asItem())
+                .primaryMod(3.1f)
+                .secondaryMod(2.1f)
+                .energyMod(1.5f)
+                .useChanceMod(1f)
+                .save(consumer, new ResourceLocation("thermal_extra:machine/nitratic_igniter/catalyst/slime_tnt"));
+
+        ThermalBuilder.blastChiller()
+                .energy(30000)
+                .input(FluidIngredient.of(new FluidStack(ThermalExtraFluids.polyolefin.still().get(), 1000)))
+                .input(ThermalExtraItems.chiller_plate_cast.get())
+                .output(ThermalExtraItems.polyolefin_plate.get())
+                .save(consumer, "thermal_extra:machine/chiller/polyolefin");
+
+        ThermalBuilder.metal_infuser()
+                .energy(15000)
+                .input(FluidIngredient.of(new FluidStack(TCoreFluids.ENDER_FLUID.get(), 1000)))
+                .input(Items.NETHERITE_INGOT)
+                .output(ThermalExtraItems.dragon_steel_ingot.get())
+                .save(consumer, "thermal_extra:machine/metal_infuser/dragon_steel");
+
+        ThermalBuilder.nitratic_igniter()
+                .energy(10000)
+                .input(Ingredient.of(new ItemStack(Items.SHULKER_SHELL, 2)))
+                .input(Ingredient.of(ItemTagsCoFH.INGOTS_ENDERIUM))
+                .output(ThermalExtraItems.shellite_ingot.get())
+                .chance()
+                .save(consumer, "thermal_extra:machine/nitratic_igniter/shellite_ingot");
+
+        ThermalBuilder.nitratic_igniter()
+                .energy(10000)
+                .input(Ingredient.of(ThermalExtraTags.Items.SHELLITE_DUST))
+                .input(Ingredient.of(ItemTagsCoFH.DUSTS_NETHERITE))
+                .output(ThermalExtraItems.twinite_dust.get())
+                .chance()
+                .save(consumer, "thermal_extra:machine/nitratic_igniter/twinite_dust");
+
+        nitraticOre(consumer, "copper", Tags.Items.RAW_MATERIALS_COPPER, ThermalExtraItems.copper_ore_chunk, ThermalExtraItems.gold_ore_chunk);
+        nitraticOre(consumer, "iron", Tags.Items.RAW_MATERIALS_IRON, ThermalExtraItems.iron_ore_chunk, ThermalExtraItems.nickel_ore_chunk);
+        nitraticOre(consumer, "gold", Tags.Items.RAW_MATERIALS_GOLD, ThermalExtraItems.gold_ore_chunk, ThermalExtraItems.copper_ore_chunk);
+        nitraticOre(consumer, "tin", ItemTagsCoFH.RAW_MATERIALS_TIN, ThermalExtraItems.tin_ore_chunk, ThermalExtraItems.copper_ore_chunk);
+        nitraticOre(consumer, "lead", ItemTagsCoFH.RAW_MATERIALS_LEAD, ThermalExtraItems.lead_ore_chunk, ThermalExtraItems.silver_ore_chunk);
+        nitraticOre(consumer, "silver", ItemTagsCoFH.RAW_MATERIALS_SILVER, ThermalExtraItems.silver_ore_chunk, ThermalExtraItems.lead_ore_chunk);
+        nitraticOre(consumer, "nickel", ItemTagsCoFH.RAW_MATERIALS_NICKEL, ThermalExtraItems.nickel_ore_chunk, ITEMS.getSup("apatite"));
+
+        ThermalBuilder.metal_infuser()
+                .energy(15000)
+                .input(FluidIngredient.of(new FluidStack(TCoreFluids.ENDER_FLUID.get(), 1000)))
+                .input(ThermalExtraItems.tank_augment_5.get())
+                .output(ThermalExtraItems.tank_augment_6.get())
+                .save(consumer, "thermal_extra:machine/metal_infuser/dragon_steel_tank_augment");
+
+        ThermalBuilder.advanced_refinery()
+                .input(new FluidStack(ThermalExtraFluids.liquid_biomass.still().get(), 2000))
+                .output(new ThermalBuilder.ChanceItemStack(new ItemStack(Items.BONE_MEAL), 0.2f, false))
+                .output(new ThermalBuilder.ChanceItemStack(new ItemStack(ITEMS.get("compost")), 0.1f, false))
+                .output(new FluidStack(ThermalExtraFluids.biodiesel.still().get(), 1000))
+                .save(consumer, "thermal_extra:machine/advanced_refinery/biodiesel");
+
+        ThermalBuilder.fluid_mixer()
+                .energy(10000)
+                .input(TCoreFluids.REDSTONE_FLUID.get(), 1000)
+                .input(TCoreFluids.CRUDE_OIL_FLUID.get(), 1000)
+                .output(new FluidStack(ThermalExtraFluids.flux_infused_oil.still().get(), 1000))
+                .save(consumer, "thermal_extra:machine/fluid_mixer/flux_infused_oil");
+
+        ThermalBuilder.fluid_mixer()
+                .input(FluidIngredient.of(ThermalTags.Fluids.LATEX, 1000))
+                .input(TCoreFluids.CREOSOTE_FLUID.get(), 1000)
+                .output(ThermalExtraFluids.polyolefin.still().get(), 1000)
+                .output(TCoreFluids.RESIN_FLUID.get(), 500)
+                .save(consumer, "thermal_extra:machine/fluid_mixer/polyolefin");
+
+        ThermalBuilder.fluid_mixer()
+                .input(ThermalExtraFluids.biodiesel.getStillFluid().get(), 1000)
+                .input(TCoreFluids.SYRUP_FLUID.get(), 1000)
+                .output(new FluidStack(ThermalExtraFluids.super_biodiesel.still().get(), 1000))
+                .save(consumer, "thermal_extra:machine/fluid_mixer/super_biodiesel");
     }
 
 
 
-    public void generateAugmentRecipes(@Nonnull Consumer<FinishedRecipe> consumer) {
+    public void generateAugmentRecipes(@NotNull Consumer<FinishedRecipe> consumer) {
 
         augmentRecipe(consumer, "area_radius_augment", FLAG_AREA_AUGMENTS, true);
         augmentRecipe(consumer, "potion_amplifier_augment", FLAG_POTION_AUGMENTS, true, true);
@@ -207,6 +389,17 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .pattern(" G ")
                 .unlockedBy("has_item_filter_augment", has(part))
                 .save(withConditions(consumer).flag(FLAG_UPGRADE_AUGMENTS), this.modid + ":" + folder + "/" + name(result));
+    }
+
+    public void nitraticOre(Consumer<FinishedRecipe> consumer, String oreName, TagKey<Item> tagKey, Supplier<Item> mainOreChunk, Supplier<Item> secondaryOreChunk) {
+        ThermalBuilder.nitratic_igniter()
+                .energy(12000)
+                .input(Ingredient.of(tagKey))
+                .output(new ThermalBuilder.ChanceItemStack(new ItemStack(mainOreChunk.get(), 3), 1.25f, true))
+                .output(new ThermalBuilder.ChanceItemStack(new ItemStack(mainOreChunk.get(), 1), 0.55f, false))
+                .output(new ThermalBuilder.ChanceItemStack(new ItemStack(secondaryOreChunk.get(), 1), 0.25f, false))
+                .exp(1.1f)
+                .save(consumer, "thermal_extra:machine/nitratic_igniter/raw_" + oreName);
     }
 
     public void augmentRecipe(@Nonnull Consumer<FinishedRecipe> consumer, String name, String flag) {
@@ -288,6 +481,53 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                         .unlockedBy("has_"+name+"_4", has(part))
                         .save(withConditions(consumer).flag(flag), this.modid + ":" + folder + "/" + name(result));
             }
+        }
+    }
+
+    @Override
+    protected void generateGearRecipe(DeferredRegisterCoFH<Item> reg, Consumer<FinishedRecipe> consumer, String type) {
+
+        Item gear = reg.get(type + "_gear");
+        if (gear == null) {
+            return;
+        }
+        Item ingot = reg.get(type + "_ingot");
+        Item gem = reg.get(type);
+
+        TagKey<Item> ingotTag = forgeTag("ingots/" + type);
+        TagKey<Item> gemTag = forgeTag("gems/" + type);
+
+        if (ingot != null) {
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, gear)
+                    .define('#', ingotTag)
+                    .define('i', Tags.Items.NUGGETS_IRON)
+                    .pattern(" # ")
+                    .pattern("#i#")
+                    .pattern(" # ")
+                    .unlockedBy("has_" + name(ingot), has(ingotTag))
+                    .save(consumer, this.modid + ":parts/" + name(gear));
+
+            ThermalBuilder.press()
+                    .input(new IngredientWithCount(Ingredient.of(ingotTag), 4))
+                    .input(Ingredient.of(ITEMS.get("press_gear_die")))
+                    .output(gear)
+                    .save(consumer, "thermal_extra:machine/press/"+type+"_gear");
+        }
+        if (gem != null) {
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, gear)
+                    .define('#', gemTag)
+                    .define('i', Tags.Items.NUGGETS_IRON)
+                    .pattern(" # ")
+                    .pattern("#i#")
+                    .pattern(" # ")
+                    .unlockedBy("has_" + name(gem), has(gemTag))
+                    .save(consumer, this.modid + ":parts/" + name(gear));
+
+            ThermalBuilder.press()
+                    .input(new IngredientWithCount(Ingredient.of(gemTag), 4))
+                    .input(Ingredient.of(ITEMS.get("press_gear_die")))
+                    .output(gear)
+                    .save(consumer, "thermal_extra:machine/press/"+type+"_gear");
         }
     }
 }

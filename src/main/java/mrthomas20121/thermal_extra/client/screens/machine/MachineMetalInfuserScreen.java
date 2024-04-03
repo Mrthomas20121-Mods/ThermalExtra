@@ -20,8 +20,8 @@ public class MachineMetalInfuserScreen extends MachineScreen<MachineMetalInfuser
 
         super(container, inv, container.tile, titleIn);
         texture = TEXTURE;
-        info = generatePanelInfo("info.thermal.machine_chiller");
-        name = "chiller";
+        info = generatePanelInfo("info.thermal_extra.machine_metal_infuser");
+        name = "metal_infuser";
     }
 
     @Override

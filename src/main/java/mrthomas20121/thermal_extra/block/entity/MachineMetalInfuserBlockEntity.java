@@ -8,6 +8,9 @@ import cofh.thermal.core.common.config.ThermalCoreConfig;
 import cofh.thermal.core.util.managers.machine.BottlerRecipeManager;
 import cofh.thermal.expansion.common.inventory.machine.MachineBottlerMenu;
 import cofh.thermal.lib.common.block.entity.MachineBlockEntity;
+import mrthomas20121.thermal_extra.init.ThermalExtraBlockEntities;
+import mrthomas20121.thermal_extra.inventory.machine.MachineMetalInfuserMenu;
+import mrthomas20121.thermal_extra.recipe.MetalInfuserRecipeManager;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.player.Inventory;
@@ -23,16 +26,17 @@ import static cofh.lib.util.Constants.BUCKET_VOLUME;
 import static cofh.lib.util.Constants.TANK_MEDIUM;
 import static cofh.thermal.expansion.init.registries.TExpBlockEntities.MACHINE_BOTTLER_TILE;
 import static cofh.thermal.expansion.init.registries.TExpSounds.SOUND_MACHINE_BOTTLER;
+import static cofh.thermal.expansion.init.registries.TExpSounds.SOUND_MACHINE_CRUCIBLE;
 
 public class MachineMetalInfuserBlockEntity extends MachineBlockEntity {
 
-    protected ItemStorageCoFH inputSlot = new ItemStorageCoFH(item -> filter.valid(item) && BottlerRecipeManager.instance().validItem(item));
+    protected ItemStorageCoFH inputSlot = new ItemStorageCoFH(item -> filter.valid(item) && MetalInfuserRecipeManager.instance().validItem(item));
     protected ItemStorageCoFH outputSlot = new ItemStorageCoFH();
-    protected FluidStorageCoFH inputTank = new FluidStorageCoFH(TANK_MEDIUM, fluid -> filter.valid(fluid) && BottlerRecipeManager.instance().validFluid(fluid));
+    protected FluidStorageCoFH inputTank = new FluidStorageCoFH(TANK_MEDIUM, fluid -> filter.valid(fluid) && MetalInfuserRecipeManager.instance().validFluid(fluid));
 
     public MachineMetalInfuserBlockEntity(BlockPos pos, BlockState state) {
 
-        super(MACHINE_BOTTLER_TILE.get(), pos, state);
+        super(ThermalExtraBlockEntities.METAL_INFUSER.get(), pos, state);
 
         inventory.addSlot(inputSlot, INPUT);
         inventory.addSlot(outputSlot, OUTPUT);
@@ -46,14 +50,13 @@ public class MachineMetalInfuserBlockEntity extends MachineBlockEntity {
 
     @Override
     protected int getBaseProcessTick() {
-
-        return BottlerRecipeManager.instance().getBasePower();
+        return MetalInfuserRecipeManager.instance().getBasePower();
     }
 
     @Override
     protected boolean cacheRecipe() {
 
-        curRecipe = BottlerRecipeManager.instance().getRecipe(this);
+        curRecipe = MetalInfuserRecipeManager.instance().getRecipe(this);
         if (curRecipe != null) {
             itemInputCounts = curRecipe.getInputItemCounts(this);
             fluidInputCounts = curRecipe.getInputFluidCounts(this);
@@ -80,13 +83,13 @@ public class MachineMetalInfuserBlockEntity extends MachineBlockEntity {
     @Override
     public AbstractContainerMenu createMenu(int i, Inventory inventory, Player player) {
 
-        return new MachineBottlerMenu(i, level, worldPosition, inventory, player);
+        return new MachineMetalInfuserMenu(i, level, worldPosition, inventory, player);
     }
 
     @Override
     protected Object getSound() {
 
-        return new ConditionalSoundInstance(SOUND_MACHINE_BOTTLER.get(), SoundSource.AMBIENT, this, () -> !remove && isActive);
+        return new ConditionalSoundInstance(SOUND_MACHINE_CRUCIBLE.get(), SoundSource.AMBIENT, this, () -> !remove && isActive);
     }
 
 }

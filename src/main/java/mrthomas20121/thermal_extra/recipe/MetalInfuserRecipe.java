@@ -3,6 +3,7 @@ package mrthomas20121.thermal_extra.recipe;
 import cofh.lib.common.fluid.FluidIngredient;
 import cofh.thermal.core.ThermalCore;
 import cofh.thermal.lib.util.recipes.ThermalRecipe;
+import mrthomas20121.thermal_extra.init.ThermalExtraRecipeSerializers;
 import mrthomas20121.thermal_extra.init.ThermalExtraRecipeTypes;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
@@ -13,8 +14,6 @@ import net.minecraftforge.fluids.FluidStack;
 
 import javax.annotation.Nonnull;
 import java.util.List;
-
-import static cofh.thermal.core.init.registries.TCoreRecipeSerializers.CHILLER_RECIPE_SERIALIZER;
 
 public class MetalInfuserRecipe extends ThermalRecipe {
 
@@ -32,8 +31,7 @@ public class MetalInfuserRecipe extends ThermalRecipe {
     @Nonnull
     @Override
     public RecipeSerializer<?> getSerializer() {
-
-        return CHILLER_RECIPE_SERIALIZER.get();
+        return ThermalExtraRecipeSerializers.METAl_INFUSER_RECIPE_SERIALIZER.get();
     }
 
     @Nonnull

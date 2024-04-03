@@ -1,0 +1,18 @@
+{
+  "type": "thermal:press",
+  "energy": 4000,
+  "ingredients": [
+    {
+      "count": 4,
+      "tag": "forge:ingots/twinite"
+    },
+    {
+      "item": "thermal:press_gear_die"
+    }
+  ],
+  "result": [
+    {
+      "item": "thermal_extra:twinite_gear"
+    }
+  ]
+}

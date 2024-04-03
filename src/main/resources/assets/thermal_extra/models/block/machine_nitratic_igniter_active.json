@@ -1,0 +1,6 @@
+{
+  "parent": "thermal_extra:block/machine_nitratic_igniter",
+  "textures": {
+    "north": "thermal_extra:block/machines/machine_nitratic_igniter_active"
+  }
+}

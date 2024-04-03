@@ -1,9 +1,0 @@
-{
-  "type": "thermal:smelter_catalyst",
-  "energy_mod": 1.1,
-  "ingredient": {
-    "item": "thermal_extra:sticky_ball"
-  },
-  "primary_mod": 1.2,
-  "use_chance": 0.5
-}

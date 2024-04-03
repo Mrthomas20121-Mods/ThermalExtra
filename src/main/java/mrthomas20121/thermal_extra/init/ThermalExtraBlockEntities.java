@@ -2,8 +2,7 @@ package mrthomas20121.thermal_extra.init;
 
 import cofh.lib.util.DeferredRegisterCoFH;
 import mrthomas20121.thermal_extra.ThermalExtra;
-import mrthomas20121.thermal_extra.block.entity.DynamoColdBlockEntity;
-import mrthomas20121.thermal_extra.block.entity.MachineMetalInfuserBlockEntity;
+import mrthomas20121.thermal_extra.block.entity.*;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -15,4 +14,8 @@ public class ThermalExtraBlockEntities {
 
     public static RegistryObject<BlockEntityType<?>> DYNAMO_COLD = BLOCK_ENTITIES.register("dynamo_frost", () -> BlockEntityType.Builder.of(DynamoColdBlockEntity::new, ThermalExtraBlocks.DYNAMO_COLD.get()).build(null));
     public static RegistryObject<BlockEntityType<?>> METAL_INFUSER = BLOCK_ENTITIES.register("metal_infuser", () -> BlockEntityType.Builder.of(MachineMetalInfuserBlockEntity::new, ThermalExtraBlocks.BLOCKS.get("metal_infuser")).build(null));
+    public static RegistryObject<BlockEntityType<?>> ADVANCED_REFINERY = BLOCK_ENTITIES.register("advanced_refinery", () -> BlockEntityType.Builder.of(MachineAdvancedRefineryBlockEntity::new, ThermalExtraBlocks.BLOCKS.get("advanced_refinery")).build(null));
+    public static RegistryObject<BlockEntityType<?>> NITRATIC_IGNITER = BLOCK_ENTITIES.register("nitratic_igniter", () -> BlockEntityType.Builder.of(MachineNitraticIgniterBlockEntity::new, ThermalExtraBlocks.BLOCKS.get("nitratic_igniter")).build(null));
+    public static RegistryObject<BlockEntityType<?>> FLUID_MIXER = BLOCK_ENTITIES.register("fluid_mixer", () -> BlockEntityType.Builder.of(MachineFluidMixerBlockEntity::new, ThermalExtraBlocks.BLOCKS.get("fluid_mixer")).build(null));
+
 }

@@ -21,6 +21,14 @@ public class ExtraModelGen extends ItemModelProviderCoFH {
 
     @Override
     protected void registerModels() {
+        itemModel(ThermalExtraItems.copper_ore_chunk);
+        itemModel(ThermalExtraItems.iron_ore_chunk);
+        itemModel(ThermalExtraItems.gold_ore_chunk);
+        itemModel(ThermalExtraItems.tin_ore_chunk);
+        itemModel(ThermalExtraItems.lead_ore_chunk);
+        itemModel(ThermalExtraItems.silver_ore_chunk);
+        itemModel(ThermalExtraItems.nickel_ore_chunk);
+
         itemModel(ThermalExtraItems.dragon_steel_gear);
         itemModel(ThermalExtraItems.dragon_steel_ingot);
         itemModel(ThermalExtraItems.dragon_steel_dust);
@@ -44,6 +52,7 @@ public class ExtraModelGen extends ItemModelProviderCoFH {
         itemModel(ThermalExtraItems.soul_sand_dust);
         itemModel(ThermalExtraItems.amethyst_dust);
         itemModel(ThermalExtraItems.sticky_ball);
+        itemModel(ThermalExtraItems.chiller_plate_cast);
 
         itemModel(ThermalExtraItems.av_item_filter_augment);
 
@@ -117,6 +126,7 @@ public class ExtraModelGen extends ItemModelProviderCoFH {
         itemModel(ThermalExtraItems.dynamo_output_augment_3);
         itemModel(ThermalExtraItems.dynamo_output_augment_4);
 
+        itemModel(ThermalExtraFluids.crystallized_sunflower_oil.getBucket());
         itemModel(ThermalExtraFluids.sunflower_oil.getBucket());
         itemModel(ThermalExtraFluids.crystallized_sunflower_oil.getBucket());
         itemModel(ThermalExtraFluids.refined_sunflower_oil.getBucket());
@@ -124,10 +134,14 @@ public class ExtraModelGen extends ItemModelProviderCoFH {
         itemModel(ThermalExtraFluids.shellite.getBucket());
         itemModel(ThermalExtraFluids.twinite.getBucket());
         itemModel(ThermalExtraFluids.dragonsteel.getBucket());
+        itemModel(ThermalExtraFluids.flux_infused_oil.getBucket());
+        itemModel(ThermalExtraFluids.flux_diesel.getBucket());
+        itemModel(ThermalExtraFluids.biodiesel.getBucket());
+        itemModel(ThermalExtraFluids.liquid_biomass.getBucket());
+        itemModel(ThermalExtraFluids.polyolefin.getBucket());
+        itemModel(ThermalExtraFluids.super_biodiesel.getBucket());
 
         blockItem(ThermalExtraBlocks.DYNAMO_COLD);
-
-        blockItem(ThermalExtraBlocks.BLOCKS.getSup("metal_infuser"));
     }
 
     public void itemModel(RegistryObject<? extends Item> registryObject) {

@@ -1,0 +1,6 @@
+{
+  "parent": "thermal_extra:block/machine_fluid_mixer",
+  "textures": {
+    "north": "thermal_extra:block/machines/machine_fluid_mixer_active"
+  }
+}

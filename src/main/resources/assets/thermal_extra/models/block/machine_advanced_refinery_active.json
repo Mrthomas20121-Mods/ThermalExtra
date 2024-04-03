@@ -1,0 +1,6 @@
+{
+  "parent": "thermal_extra:block/machine_advanced_refinery",
+  "textures": {
+    "north": "thermal_extra:block/machines/machine_advanced_refinery_active"
+  }
+}

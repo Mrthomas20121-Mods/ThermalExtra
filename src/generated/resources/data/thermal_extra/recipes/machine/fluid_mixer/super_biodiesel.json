@@ -1,0 +1,20 @@
+{
+  "type": "thermal_extra:fluid_mixer",
+  "energy": 4000,
+  "ingredients": [
+    {
+      "amount": 1000,
+      "fluid": "thermal_extra:biodiesel"
+    },
+    {
+      "amount": 1000,
+      "fluid": "thermal:syrup"
+    }
+  ],
+  "result": [
+    {
+      "amount": 1000,
+      "fluid": "thermal_extra:super_biodiesel"
+    }
+  ]
+}
