@@ -97,11 +97,13 @@ public class ThermalExtraCreativeTabs {
             .icon(() -> new ItemStack(ThermalExtraItems.DYNAMO_COLD.get()))
             .title(Component.translatable("creative_tab.thermal_extra.machines"))
             .displayItems((feature, output) -> {
+                output.accept(ThermalExtraBlocks.LAVA_GEN.get());
                 output.accept(ThermalExtraBlocks.DYNAMO_COLD.get());
                 output.accept(ThermalExtraBlocks.ADVANCED_REFINERY.get());
                 output.accept(ThermalExtraBlocks.METAl_INFUSER.get());
                 output.accept(ThermalExtraBlocks.NITRATIC_IGNITER.get());
                 output.accept(ThermalExtraBlocks.FLUID_MIXER.get());
+                output.accept(ThermalExtraBlocks.COMPONENT_ASSEMBLY.get());
             })
             .build()
     );

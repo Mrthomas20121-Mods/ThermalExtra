@@ -3,19 +3,19 @@
   "category": "redstone",
   "key": {
     "G": {
-      "tag": "forge:gears/enderium"
+      "tag": "forge:plates/enderium"
     },
     "I": {
-      "tag": "forge:dusts/apatite"
+      "tag": "forge:dusts/diamond"
     },
     "X": {
       "item": "thermal_extra:rf_coil_xfer_augment_1"
     }
   },
   "pattern": [
-    "IGI",
+    " I ",
     "GXG",
-    "IGI"
+    " I "
   ],
   "result": {
     "item": "thermal_extra:rf_coil_xfer_augment_2"

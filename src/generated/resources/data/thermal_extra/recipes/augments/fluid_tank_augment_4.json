@@ -3,19 +3,19 @@
   "category": "redstone",
   "key": {
     "G": {
-      "tag": "forge:gears/twinite"
+      "tag": "forge:plates/twinite"
     },
     "I": {
-      "tag": "forge:dusts/quartz"
+      "tag": "forge:dusts/signalum"
     },
     "X": {
       "item": "thermal_extra:fluid_tank_augment_3"
     }
   },
   "pattern": [
-    "IGI",
+    " I ",
     "GXG",
-    "IGI"
+    " I "
   ],
   "result": {
     "item": "thermal_extra:fluid_tank_augment_4"

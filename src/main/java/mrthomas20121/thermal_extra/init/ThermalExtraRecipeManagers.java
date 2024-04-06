@@ -12,5 +12,6 @@ public class ThermalExtraRecipeManagers {
         registerManager(AdvancedRefineryRecipeManager.instance());
         registerManager(NitraticIgniterRecipeManager.instance());
         registerManager(FluidMixerRecipeManager.instance());
+        registerManager(ComponentAssemblyRecipeManager.instance());
     }
 }

@@ -3,19 +3,19 @@
   "category": "redstone",
   "key": {
     "G": {
-      "tag": "forge:gears/soul_infused"
+      "tag": "forge:plates/soul_infused"
     },
     "I": {
-      "tag": "forge:dusts/niter"
+      "tag": "forge:dusts/quartz"
     },
     "X": {
       "item": "thermal:machine_output_augment"
     }
   },
   "pattern": [
-    "IGI",
+    " I ",
     "GXG",
-    "IGI"
+    " I "
   ],
   "result": {
     "item": "thermal_extra:machine_output_augment_1"

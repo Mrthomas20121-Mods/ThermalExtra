@@ -1,4 +1,4 @@
-package mrthomas20121.thermal_extra.compat.jei;
+package mrthomas20121.thermal_extra.compat.jei.category;
 
 
 import cofh.thermal.lib.compat.jei.ThermalCatalystCategory;

@@ -1,4 +1,4 @@
-package mrthomas20121.thermal_extra.compat.jei;
+package mrthomas20121.thermal_extra.compat.jei.category;
 
 import cofh.core.util.helpers.RenderHelper;
 import cofh.lib.common.fluid.FluidIngredient;

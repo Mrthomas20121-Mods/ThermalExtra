@@ -13,6 +13,7 @@ import mrthomas20121.thermal_extra.client.screens.machine.MachineAdvancedRefiner
 import mrthomas20121.thermal_extra.client.screens.machine.MachineFluidMixerScreen;
 import mrthomas20121.thermal_extra.client.screens.machine.MachineMetalInfuserScreen;
 import mrthomas20121.thermal_extra.client.screens.machine.MachineNitraticIgniterScreen;
+import mrthomas20121.thermal_extra.compat.jei.category.*;
 import mrthomas20121.thermal_extra.init.ThermalExtraBlocks;
 import mrthomas20121.thermal_extra.init.ThermalExtraRecipeTypes;
 import mrthomas20121.thermal_extra.recipe.*;

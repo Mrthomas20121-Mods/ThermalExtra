@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "G": {
+      "item": "minecraft:warped_wart_block"
+    },
+    "I": {
+      "tag": "forge:ingots/soul_infused"
+    },
+    "M": {
+      "item": "thermal:machine_frame"
+    },
+    "N": {
+      "tag": "forge:ingots/iron"
+    },
+    "R": {
+      "item": "thermal:redstone_servo"
+    }
+  },
+  "pattern": [
+    "INI",
+    "GMG",
+    "IRI"
+  ],
+  "result": {
+    "item": "thermal_extra:device_lava_gen"
+  },
+  "show_notification": true
+}

@@ -337,15 +337,15 @@ public class ThermalExtraItems {
     public static final RegistryObject<Item> machine_speed_augment_3 = ITEMS.register("machine_speed_augment_3", () -> new AugmentItem(new Item.Properties().rarity(dark_purple),
             AugmentDataHelper.builder()
                     .type(TAG_AUGMENT_TYPE_MACHINE)
-                    .mod(TAG_AUGMENT_MACHINE_POWER, 1.2F)
+                    .mod(TAG_AUGMENT_MACHINE_POWER, 1.15F)
                     .mod(TAG_AUGMENT_MACHINE_ENERGY, 1.1F)
                     .build()));
 
     public static final RegistryObject<Item> machine_speed_augment_4 = ITEMS.register("machine_speed_augment_4", () -> new AugmentItem(new Item.Properties().rarity(red),
             AugmentDataHelper.builder()
                     .type(TAG_AUGMENT_TYPE_MACHINE)
-                    .mod(TAG_AUGMENT_MACHINE_POWER, 1.10F)
-                    .mod(TAG_AUGMENT_MACHINE_ENERGY, 1.01F)
+                    .mod(TAG_AUGMENT_MACHINE_POWER, 1.2F)
+                    .mod(TAG_AUGMENT_MACHINE_ENERGY, 1.1F)
                     .build()));
 
     public static final RegistryObject<Item> machine_efficiency_augment_1 = ITEMS.register("machine_efficiency_augment_1", () -> new AugmentItem(new Item.Properties().rarity(yellow),

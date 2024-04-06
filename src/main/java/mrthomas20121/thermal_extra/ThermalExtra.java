@@ -3,24 +3,31 @@ package mrthomas20121.thermal_extra;
 import cofh.core.client.event.CoreClientEvents;
 import mrthomas20121.thermal_extra.client.screens.AdvancedItemFilterScreen;
 import mrthomas20121.thermal_extra.client.screens.DynamoFrostScreen;
-import mrthomas20121.thermal_extra.client.screens.machine.MachineAdvancedRefineryScreen;
-import mrthomas20121.thermal_extra.client.screens.machine.MachineFluidMixerScreen;
-import mrthomas20121.thermal_extra.client.screens.machine.MachineMetalInfuserScreen;
-import mrthomas20121.thermal_extra.client.screens.machine.MachineNitraticIgniterScreen;
+import mrthomas20121.thermal_extra.client.screens.device.DeviceLavaGenScreen;
+import mrthomas20121.thermal_extra.client.screens.machine.*;
 import mrthomas20121.thermal_extra.datagen.*;
 import mrthomas20121.thermal_extra.filter.AdvancedFilter;
 import mrthomas20121.thermal_extra.init.*;
+import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
+import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
+import net.minecraftforge.event.entity.player.ItemTooltipEvent;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.registries.ForgeRegistries;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -78,6 +85,8 @@ public class ThermalExtra {
 			MenuScreens.register(ThermalExtraContainers.FLUID_MIXER_CONTAINER.get(), MachineFluidMixerScreen::new);
 			MenuScreens.register(ThermalExtraContainers.DYNAMO_FROST_CONTAINER.get(), DynamoFrostScreen::new);
 			MenuScreens.register(ThermalExtraContainers.ADVANCED_ITEM_FILTER_CONTAINER.get(), AdvancedItemFilterScreen::new);
+			MenuScreens.register(ThermalExtraContainers.LAVA_GEN_CONTAINER.get(), DeviceLavaGenScreen::new);
+			MenuScreens.register(ThermalExtraContainers.COMPONENT_ASSEMBLY_CONTAINER.get(), MachineComponentAssemblyScreen::new);
 		});
 	}
 }

@@ -6,13 +6,13 @@
       "item": "thermal:fluid_cell_frame"
     },
     "G": {
-      "tag": "forge:gears/constantan"
+      "tag": "forge:gears/enderium"
     },
     "I": {
       "tag": "forge:ingots/soul_infused"
     },
     "M": {
-      "item": "thermal:machine_frame"
+      "item": "thermal:machine_refinery"
     }
   },
   "pattern": [

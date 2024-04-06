@@ -3,19 +3,19 @@
   "category": "redstone",
   "key": {
     "G": {
-      "tag": "forge:gears/shellite"
+      "tag": "forge:plates/shellite"
     },
     "I": {
-      "tag": "forge:dusts/cinnabar"
+      "tag": "forge:dusts/ender_pearl"
     },
     "X": {
       "item": "thermal_extra:machine_output_augment_2"
     }
   },
   "pattern": [
-    "IGI",
+    " I ",
     "GXG",
-    "IGI"
+    " I "
   ],
   "result": {
     "item": "thermal_extra:machine_output_augment_3"

@@ -4,7 +4,6 @@ import mrthomas20121.thermal_extra.ThermalExtra;
 import mrthomas20121.thermal_extra.init.ThermalExtraBlocks;
 import mrthomas20121.thermal_extra.init.ThermalExtraFluids;
 import mrthomas20121.thermal_extra.init.ThermalExtraItems;
-import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.LanguageProvider;
 
@@ -24,6 +23,8 @@ public class ExtraLangGen extends LanguageProvider {
         add("info.thermal_extra.machine_nitratic_igniter", "Create an Item by exploding other items together.");
         add("info.thermal_extra.machine_fluid_mixer", "Mix fluids together to create other fluids");
         add("info.thermal_extra.require_catalyst", "Catalyst is required.");
+        add("info.thermal_extra.lava_gen", "Magmatic Accumulator generate Lava if it has 2 or more adjacent lava blocks.");
+        add("info.thermal_extra.lava_gen_nether", "Magmatic Accumulator only works in the nether.");
 
         // creative tabs
         add("creative_tab.thermal_extra.resources", "Thermal Extra: Resources");
@@ -58,13 +59,14 @@ public class ExtraLangGen extends LanguageProvider {
         addItem(ThermalExtraFluids.polyolefin.getBucket(), "Polyolefin Bucket");
         addItem(ThermalExtraFluids.super_biodiesel.getBucket(), "Super Biodiesel Bucket");
 
+        // items and blocks
         addBlock(ThermalExtraBlocks.DYNAMO_COLD, "Frost Dynamo");
         addBlock(ThermalExtraBlocks.BLOCKS.getSup("metal_infuser"), "Metal Infuser");
         addBlock(ThermalExtraBlocks.BLOCKS.getSup("advanced_refinery"), "Adv Refinery");
         addBlock(ThermalExtraBlocks.BLOCKS.getSup("nitratic_igniter"), "Nitratic Igniter");
         addBlock(ThermalExtraBlocks.BLOCKS.getSup("fluid_mixer"), "Fluid Mixer");
-
-        // items and blocks
+        addBlock(ThermalExtraBlocks.BLOCKS.getSup("component_assembly"), "Component Assembly");
+        addBlock(ThermalExtraBlocks.BLOCKS.getSup("device_lava_gen"), "Magmatic Accumulator");
 
         // ore chunks
         addItem(ThermalExtraItems.copper_ore_chunk, "Copper Ore Chunk");

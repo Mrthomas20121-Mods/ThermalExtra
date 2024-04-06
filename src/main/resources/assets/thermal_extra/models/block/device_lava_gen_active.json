@@ -1,0 +1,10 @@
+{
+  "parent": "thermal_extra:block/device_lava_gen",
+  "textures": {
+    "up": "thermal_extra:block/devices/device_lava_gen_top_active",
+    "east": "thermal_extra:block/devices/device_lava_gen_side_active",
+    "west": "thermal_extra:block/devices/device_lava_gen_side_active",
+    "north": "thermal_extra:block/devices/device_lava_gen_active",
+    "south": "thermal_extra:block/devices/device_lava_gen_side_active"
+  }
+}

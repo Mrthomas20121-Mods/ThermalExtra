@@ -3,7 +3,7 @@
   "category": "redstone",
   "key": {
     "G": {
-      "tag": "forge:gears/dragonsteel"
+      "tag": "forge:plates/dragonsteel"
     },
     "I": {
       "tag": "forge:dusts/netherite"
@@ -13,9 +13,9 @@
     }
   },
   "pattern": [
-    "IGI",
+    " I ",
     "GXG",
-    "IGI"
+    " I "
   ],
   "result": {
     "item": "thermal_extra:potion_duration_augment_5"

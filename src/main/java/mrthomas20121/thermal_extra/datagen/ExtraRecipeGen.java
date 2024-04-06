@@ -168,6 +168,18 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .unlockedBy("has_"+ThermalIDs.ID_MACHINE_REFINERY, has(ThermalCore.ITEMS.get(ThermalIDs.ID_MACHINE_REFINERY)))
                 .save(consumer, this.modid + ":crafting/advanced_refinery");
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, ThermalExtraBlocks.LAVA_GEN.get())
+                .define('N', Tags.Items.INGOTS_IRON)
+                .define('R', ThermalCore.ITEMS.get("redstone_servo"))
+                .define('I', ThermalExtraTags.Items.SOUL_INFUSED_INGOT)
+                .define('M', ITEMS.get(ThermalIDs.ID_MACHINE_FRAME))
+                .define('G', Blocks.WARPED_WART_BLOCK)
+                .pattern("INI")
+                .pattern("GMG")
+                .pattern("IRI")
+                .unlockedBy("has_redstone_servo", has(ThermalCore.ITEMS.get("redstone_servo")))
+                .save(consumer, this.modid + ":crafting/device_lava_gen");
+
         this.generateTypeRecipes(ThermalExtraItems.ITEMS, consumer, "soul_infused");
         this.generateTypeRecipes(ThermalExtraItems.ITEMS, consumer, "shellite");
         this.generateTypeRecipes(ThermalExtraItems.ITEMS, consumer, "twinite");
@@ -417,12 +429,12 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
         Item part = ThermalCore.ITEMS.get(name);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, result)
-                .define('G', ThermalExtraTags.Items.SOUL_INFUSED_GEAR)
-                .define('I', ItemTagsCoFH.DUSTS_NITER)
+                .define('G', ThermalExtraTags.Items.SOUL_INFUSED_PLATE)
+                .define('I', ItemTagsCoFH.DUSTS_QUARTZ)
                 .define('X', part)
-                .pattern("IGI")
+                .pattern(" I ")
                 .pattern("GXG")
-                .pattern("IGI")
+                .pattern(" I ")
                 .unlockedBy("has_"+name, has(part))
                 .save(withConditions(consumer).flag(flag), this.modid + ":" + folder + "/" + name(result));
 
@@ -430,12 +442,12 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
         part = ThermalExtraItems.ITEMS.get(name+"_1");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, result)
-                .define('G', ItemTagsCoFH.GEARS_ENDERIUM)
-                .define('I', ItemTagsCoFH.DUSTS_APATITE)
+                .define('G', ItemTagsCoFH.PLATES_ENDERIUM)
+                .define('I', ItemTagsCoFH.DUSTS_DIAMOND)
                 .define('X', part)
-                .pattern("IGI")
+                .pattern(" I ")
                 .pattern("GXG")
-                .pattern("IGI")
+                .pattern(" I ")
                 .unlockedBy("has_"+name+"_1", has(part))
                 .save(withConditions(consumer).flag(flag), this.modid + ":" + folder + "/" + name(result));
 
@@ -443,12 +455,12 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
         part = ThermalExtraItems.ITEMS.get(name+"_2");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, result)
-                .define('G', ThermalExtraTags.Items.SHELLITE_GEAR)
-                .define('I', ItemTagsCoFH.DUSTS_CINNABAR)
+                .define('G', ThermalExtraTags.Items.SHELLITE_PLATE)
+                .define('I', ItemTagsCoFH.DUSTS_ENDER_PEARL)
                 .define('X', part)
-                .pattern("IGI")
+                .pattern(" I ")
                 .pattern("GXG")
-                .pattern("IGI")
+                .pattern(" I ")
                 .unlockedBy("has_"+name+"_1", has(part))
                 .save(withConditions(consumer).flag(flag), this.modid + ":" + folder + "/" + name(result));
 
@@ -458,12 +470,12 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
             part = ThermalExtraItems.ITEMS.get(name+"_3");
 
             ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, result)
-                    .define('G', ThermalExtraTags.Items.TWINITE_GEAR)
-                    .define('I', ItemTagsCoFH.DUSTS_QUARTZ)
+                    .define('G', ThermalExtraTags.Items.TWINITE_PLATE)
+                    .define('I', ItemTagsCoFH.DUSTS_SIGNALUM)
                     .define('X', part)
-                    .pattern("IGI")
+                    .pattern(" I ")
                     .pattern("GXG")
-                    .pattern("IGI")
+                    .pattern(" I ")
                     .unlockedBy("has_"+name+"_3", has(part))
                     .save(withConditions(consumer).flag(flag), this.modid + ":" + folder + "/" + name(result));
             if(fifth) {
@@ -472,12 +484,12 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 part = ThermalExtraItems.ITEMS.get(name+"_4");
 
                 ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, result)
-                        .define('G', ThermalExtraTags.Items.DRAGONSTEEL_GEAR)
+                        .define('G', ThermalExtraTags.Items.DRAGONSTEEL_PLATE)
                         .define('I', ItemTagsCoFH.DUSTS_NETHERITE)
                         .define('X', part)
-                        .pattern("IGI")
+                        .pattern(" I ")
                         .pattern("GXG")
-                        .pattern("IGI")
+                        .pattern(" I ")
                         .unlockedBy("has_"+name+"_4", has(part))
                         .save(withConditions(consumer).flag(flag), this.modid + ":" + folder + "/" + name(result));
             }

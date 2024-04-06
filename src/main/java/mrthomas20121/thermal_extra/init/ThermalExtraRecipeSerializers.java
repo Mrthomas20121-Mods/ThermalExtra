@@ -20,5 +20,6 @@ public class ThermalExtraRecipeSerializers {
     public static final RegistryObject<MachineRecipeSerializer<FluidMixerRecipe>> FLUID_MIXER_RECIPE_SERIALIZER = RECIPE_SERIALIZERS.register("fluid_mixer", () -> new MachineRecipeSerializer<>(FluidMixerRecipe::new, FluidMixerRecipeManager.instance().getDefaultEnergy()));
     public static final RegistryObject<MachineRecipeSerializer<NitraticIgniterRecipe>> NITRATIC_IGNITER_RECIPE_SERIALIZER = RECIPE_SERIALIZERS.register("nitratic_igniter", () -> new MachineRecipeSerializer<>(NitraticIgniterRecipe::new, NitraticIgniterRecipeManager.instance().getDefaultEnergy()));
     public static final RegistryObject<MachineCatalystSerializer<NitraticIgniterCatalyst>> NITRATIC_IGNITER_CATALYST_SERIALIZER = RECIPE_SERIALIZERS.register("nitratic_igniter_catalyst", () -> new MachineCatalystSerializer<>(NitraticIgniterCatalyst::new));
+    public static final RegistryObject<MachineRecipeSerializer<ComponentAssemblyRecipe>> COMPONENT_ASSEMBLY_RECIPE_SERIALIZER = RECIPE_SERIALIZERS.register("component_assembly", () -> new MachineRecipeSerializer<>(ComponentAssemblyRecipe::new, ComponentAssemblyRecipeManager.instance().getDefaultEnergy()));
 
 }

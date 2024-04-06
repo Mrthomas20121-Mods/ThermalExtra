@@ -1,5 +1,7 @@
 {
   "block.thermal_extra.advanced_refinery": "Adv Refinery",
+  "block.thermal_extra.component_assembly": "Component Assembly",
+  "block.thermal_extra.device_lava_gen": "Magmatic Accumulator",
   "block.thermal_extra.dragonsteel_block": "Dragonsteel Block",
   "block.thermal_extra.dragonsteel_glass": "Dragonsteel Glass",
   "block.thermal_extra.dynamo_frost": "Frost Dynamo",
@@ -31,6 +33,8 @@
   "fluid_type.thermal_extra.twinite": "Molten Twinite",
   "info.thermal_extra.dynamo_frost.0": "Generate RF from Cold Items.",
   "info.thermal_extra.item_filter": "Advanced Item Filter",
+  "info.thermal_extra.lava_gen": "Magmatic Accumulator generate Lava if it has 2 or more adjacent lava blocks.",
+  "info.thermal_extra.lava_gen_nether": "Magmatic Accumulator only works in the nether.",
   "info.thermal_extra.machine_fluid_mixer": "Mix fluids together to create other fluids",
   "info.thermal_extra.machine_metal_infuser": "Convert a metallic item into another by putting it in a fluid.",
   "info.thermal_extra.machine_nitratic_igniter": "Create an Item by exploding other items together.",
