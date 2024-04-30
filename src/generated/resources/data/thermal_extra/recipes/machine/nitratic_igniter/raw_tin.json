@@ -4,6 +4,7 @@
   "experience": 1.1,
   "ingredients": [
     {
+      "count": 1,
       "tag": "forge:raw_materials/tin"
     }
   ],
@@ -20,7 +21,7 @@
     },
     {
       "chance": 0.25,
-      "item": "thermal_extra:copper_ore_chunk"
+      "item": "thermal:apatite"
     }
   ]
 }

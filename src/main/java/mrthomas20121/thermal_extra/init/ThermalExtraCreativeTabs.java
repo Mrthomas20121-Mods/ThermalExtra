@@ -120,6 +120,11 @@ public class ThermalExtraCreativeTabs {
                 output.accept(ThermalExtraItems.lead_ore_chunk.get());
                 output.accept(ThermalExtraItems.silver_ore_chunk.get());
                 output.accept(ThermalExtraItems.nickel_ore_chunk.get());
+                output.accept(ThermalExtraItems.aluminum_ore_chunk.get());
+                output.accept(ThermalExtraItems.uranium_ore_chunk.get());
+                output.accept(ThermalExtraItems.osmium_ore_chunk.get());
+                output.accept(ThermalExtraItems.arcane_gold_ore_chunk.get());
+                output.accept(ThermalExtraItems.zinc_ore_chunk.get());
 
                 output.accept(ThermalExtraItems.amethyst_dust.get());
                 output.accept(ThermalExtraItems.soul_sand_dust.get());

@@ -17,7 +17,7 @@ public class CommonEvents {
         ResourceLocation item = ForgeRegistries.ITEMS.getKey(event.getItemStack().getItem());
 
         if(item != null && item.getPath().equals("device_lava_gen")) {
-            event.getToolTip().add(Component.translatable("info.thermal_extra.lava_gen_nether").withStyle(ChatFormatting.GOLD));
+            event.getToolTip().add(1, Component.translatable("info.thermal_extra.lava_gen_nether").withStyle(ChatFormatting.GOLD));
         }
     }
 }

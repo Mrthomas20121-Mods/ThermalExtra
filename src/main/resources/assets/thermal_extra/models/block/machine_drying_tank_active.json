@@ -1,0 +1,6 @@
+{
+  "parent": "thermal_extra:block/machine_drying_tank",
+  "textures": {
+    "north": "thermal_extra:block/machines/machine_drying_tank_active"
+  }
+}

@@ -27,6 +27,7 @@ import net.minecraftforge.fluids.FluidStack;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.util.List;
+import java.util.Objects;
 import java.util.function.BiPredicate;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
@@ -45,7 +46,8 @@ public class DeviceLavaGenBlockEntity extends DeviceBlockEntity implements ITick
 
     public static final BiPredicate<ItemStack, List<ItemStack>> AUG_VALIDATOR = createAllowValidator(TAG_AUGMENT_TYPE_UPGRADE, TAG_AUGMENT_TYPE_FLUID, TAG_AUGMENT_TYPE_FILTER);
 
-    protected static final int GENERATION_RATE = 20;
+    protected static final int GENERATION_RATE = 10;
+    protected static final int GENERATION_RATE_NETHER = 40;
     protected static final Supplier<FluidStack> LAVA = () -> new FluidStack(Fluids.LAVA, 0);
 
     protected ItemStorageCoFH fillSlot = new ItemStorageCoFH(1, FluidHelper::hasFluidHandlerCap);
@@ -104,7 +106,7 @@ public class DeviceLavaGenBlockEntity extends DeviceBlockEntity implements ITick
             updateValidity();
         }
         boolean curActive = isActive;
-        isActive = redstoneControl.getState() && isValid() && this.level.dimensionTypeId().equals(BuiltinDimensionTypes.NETHER);
+        isActive = redstoneControl.getState() && isValid();
         updateActiveState(curActive);
     }
 
@@ -132,7 +134,13 @@ public class DeviceLavaGenBlockEntity extends DeviceBlockEntity implements ITick
         updateActiveState();
 
         if (isActive) {
-            tank.modify((int) (GENERATION_RATE * baseMod));
+            int rate = GENERATION_RATE;
+
+            if(this.level != null && this.level.dimensionTypeId().equals(BuiltinDimensionTypes.NETHER)) {
+                rate = GENERATION_RATE_NETHER;
+            }
+
+            tank.modify((int) (rate * baseMod));
             fillFluid();
         }
     }

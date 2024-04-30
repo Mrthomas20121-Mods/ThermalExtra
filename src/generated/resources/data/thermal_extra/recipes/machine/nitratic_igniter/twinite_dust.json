@@ -3,9 +3,11 @@
   "energy": 10000,
   "ingredients": [
     {
+      "count": 1,
       "tag": "forge:dusts/shellite"
     },
     {
+      "count": 1,
       "tag": "forge:dusts/netherite"
     }
   ],

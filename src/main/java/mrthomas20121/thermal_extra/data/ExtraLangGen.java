@@ -1,4 +1,4 @@
-package mrthomas20121.thermal_extra.datagen;
+package mrthomas20121.thermal_extra.data;
 
 import mrthomas20121.thermal_extra.ThermalExtra;
 import mrthomas20121.thermal_extra.init.ThermalExtraBlocks;
@@ -24,7 +24,7 @@ public class ExtraLangGen extends LanguageProvider {
         add("info.thermal_extra.machine_fluid_mixer", "Mix fluids together to create other fluids");
         add("info.thermal_extra.require_catalyst", "Catalyst is required.");
         add("info.thermal_extra.lava_gen", "Magmatic Accumulator generate Lava if it has 2 or more adjacent lava blocks.");
-        add("info.thermal_extra.lava_gen_nether", "Magmatic Accumulator only works in the nether.");
+        add("info.thermal_extra.lava_gen_nether", "This Block generate more Lava in the nether.");
 
         // creative tabs
         add("creative_tab.thermal_extra.resources", "Thermal Extra: Resources");
@@ -76,6 +76,11 @@ public class ExtraLangGen extends LanguageProvider {
         addItem(ThermalExtraItems.lead_ore_chunk, "Lead Ore Chunk");
         addItem(ThermalExtraItems.silver_ore_chunk, "Silver Ore Chunk");
         addItem(ThermalExtraItems.nickel_ore_chunk, "Nickel Ore Chunk");
+        addItem(ThermalExtraItems.aluminum_ore_chunk, "Aluminum Ore Chunk");
+        addItem(ThermalExtraItems.uranium_ore_chunk, "Uranium Ore Chunk");
+        addItem(ThermalExtraItems.osmium_ore_chunk, "Osmium Ore Chunk");
+        addItem(ThermalExtraItems.arcane_gold_ore_chunk, "Arcane Gold Ore Chunk");
+        addItem(ThermalExtraItems.zinc_ore_chunk, "Zinc Ore Chunk");
 
         addItem(ThermalExtraItems.amethyst_dust, "Amethyst Dust");
         addItem(ThermalExtraItems.soul_sand_dust, "Soul Sand Dust");

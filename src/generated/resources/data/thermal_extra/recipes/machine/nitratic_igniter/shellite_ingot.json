@@ -3,9 +3,11 @@
   "energy": 10000,
   "ingredients": [
     {
+      "count": 1,
       "item": "minecraft:shulker_shell"
     },
     {
+      "count": 1,
       "tag": "forge:ingots/enderium"
     }
   ],

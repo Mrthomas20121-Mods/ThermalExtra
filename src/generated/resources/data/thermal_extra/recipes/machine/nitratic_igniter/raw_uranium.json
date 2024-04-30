@@ -1,0 +1,32 @@
+{
+  "type": "thermal_extra:nitratic_igniter",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:raw_materials/uranium"
+      }
+    }
+  ],
+  "energy": 12000,
+  "experience": 1.1,
+  "ingredients": [
+    {
+      "count": 1,
+      "tag": "forge:raw_materials/uranium"
+    }
+  ],
+  "result": [
+    {
+      "chance": 1.25,
+      "count": 3,
+      "item": "thermal_extra:uranium_ore_chunk",
+      "locked": true
+    },
+    {
+      "chance": 0.65,
+      "item": "thermal_extra:uranium_ore_chunk"
+    }
+  ]
+}

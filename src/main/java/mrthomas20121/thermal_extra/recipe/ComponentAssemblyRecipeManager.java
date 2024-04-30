@@ -12,9 +12,13 @@ import cofh.thermal.lib.util.recipes.ThermalRecipe;
 import cofh.thermal.lib.util.recipes.internal.IMachineRecipe;
 import cofh.thermal.lib.util.recipes.internal.SimpleMachineRecipe;
 import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap;
+import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import it.unimi.dsi.fastutil.objects.ObjectOpenHashSet;
+import mrthomas20121.thermal_extra.ThermalExtra;
 import mrthomas20121.thermal_extra.init.ThermalExtraRecipeTypes;
+import mrthomas20121.thermal_extra.util.CompoundMapWrapper;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeManager;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraftforge.fluids.FluidStack;
@@ -28,12 +32,13 @@ public class ComponentAssemblyRecipeManager extends AbstractManager implements I
     private static final ComponentAssemblyRecipeManager INSTANCE = new ComponentAssemblyRecipeManager();
     protected static final int DEFAULT_ENERGY = 6000;
 
-    protected Map<List<Integer>, IMachineRecipe> recipeMap = new Object2ObjectOpenHashMap<>();
+    protected Map<CompoundMapWrapper, IMachineRecipe> recipeMap = new Object2ObjectOpenHashMap<>();
     protected Set<Fluid> validFluids = new ObjectOpenHashSet<>();
     protected Set<ComparableItemStack> validItems = new ObjectOpenHashSet<>();
 
     protected int maxOutputItems;
     protected int maxOutputFluids;
+    protected int maxInputItems;
 
     public static ComponentAssemblyRecipeManager instance() {
 
@@ -45,23 +50,143 @@ public class ComponentAssemblyRecipeManager extends AbstractManager implements I
         super(DEFAULT_ENERGY);
         this.maxOutputItems = 1;
         this.maxOutputFluids = 1;
+        this.maxInputItems = 6;
     }
 
     public void addRecipe(ThermalRecipe recipe) {
 
-        if (!recipe.getInputFluids().isEmpty()) {
+        if(!recipe.getInputFluids().isEmpty()) {
             for (FluidStack fluidInput : recipe.getInputFluids().get(0).getFluids()) {
-                if (!recipe.getInputItems().isEmpty()) {
-                    for (ItemStack recipeInput : recipe.getInputItems().get(0).getItems()) {
-                        addRecipe(recipe.getEnergy(), recipe.getXp(), Collections.singletonList(recipeInput), Collections.singletonList(fluidInput), recipe.getOutputItems(), recipe.getOutputItemChances(), recipe.getOutputFluids());
+                switch (recipe.getInputItems().size()) {
+                    case 1 -> {
+                        for (ItemStack firstInput : recipe.getInputItems().get(0).getItems()) {
+                            addRecipe(recipe.getEnergy(), recipe.getXp(), Collections.singletonList(firstInput), Collections.singletonList(fluidInput), recipe.getOutputItems(), recipe.getOutputItemChances(), recipe.getOutputFluids());
+                        }
                     }
-                } else {
-                    addRecipe(recipe.getEnergy(), recipe.getXp(), Collections.emptyList(), Collections.singletonList(fluidInput), recipe.getOutputItems(), recipe.getOutputItemChances(), recipe.getOutputFluids());
-                }
+                    case 2 -> {
+                        for (ItemStack firstInput : recipe.getInputItems().get(0).getItems()) {
+                            for (ItemStack secondInput : recipe.getInputItems().get(1).getItems()) {
+                                addRecipe(recipe.getEnergy(), recipe.getXp(), asList(firstInput, secondInput), Collections.singletonList(fluidInput), recipe.getOutputItems(), recipe.getOutputItemChances(), recipe.getOutputFluids());
+                            }
+                        }
+                    }
+                    case 3 -> {
+                        for (ItemStack firstInput : recipe.getInputItems().get(0).getItems()) {
+                            for (ItemStack secondInput : recipe.getInputItems().get(1).getItems()) {
+                                for (ItemStack thirdInput : recipe.getInputItems().get(2).getItems()) {
+                                    addRecipe(recipe.getEnergy(), recipe.getXp(), asList(firstInput, secondInput, thirdInput), Collections.singletonList(fluidInput), recipe.getOutputItems(), recipe.getOutputItemChances(), recipe.getOutputFluids());
+                                }
+                            }
+                        }
+                    }
+                    case 4 -> {
+                        for (ItemStack firstInput : recipe.getInputItems().get(0).getItems()) {
+                            for (ItemStack secondInput : recipe.getInputItems().get(1).getItems()) {
+                                for (ItemStack thirdInput : recipe.getInputItems().get(2).getItems()) {
+                                    for (ItemStack forthInput : recipe.getInputItems().get(3).getItems()) {
+                                        addRecipe(recipe.getEnergy(), recipe.getXp(), asList(firstInput, secondInput, thirdInput, forthInput), Collections.singletonList(fluidInput), recipe.getOutputItems(), recipe.getOutputItemChances(), recipe.getOutputFluids());
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    case 5 -> {
+                        for (ItemStack firstInput : recipe.getInputItems().get(0).getItems()) {
+                            for (ItemStack secondInput : recipe.getInputItems().get(1).getItems()) {
+                                for (ItemStack thirdInput : recipe.getInputItems().get(2).getItems()) {
+                                    for (ItemStack forthInput : recipe.getInputItems().get(3).getItems()) {
+                                        for (ItemStack firthInput : recipe.getInputItems().get(4).getItems()) {
+                                            addRecipe(recipe.getEnergy(), recipe.getXp(), asList(firstInput, secondInput, thirdInput, forthInput, firthInput), Collections.singletonList(fluidInput), recipe.getOutputItems(), recipe.getOutputItemChances(), recipe.getOutputFluids());
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    case 6 -> {
+                        for (ItemStack firstInput : recipe.getInputItems().get(0).getItems()) {
+                            for (ItemStack secondInput : recipe.getInputItems().get(1).getItems()) {
+                                for (ItemStack thirdInput : recipe.getInputItems().get(2).getItems()) {
+                                    for (ItemStack forthInput : recipe.getInputItems().get(3).getItems()) {
+                                        for (ItemStack firthInput : recipe.getInputItems().get(4).getItems()) {
+                                            for (ItemStack sixthInput : recipe.getInputItems().get(5).getItems()) {
+                                                addRecipe(recipe.getEnergy(), recipe.getXp(), asList(firstInput, secondInput, thirdInput, forthInput, firthInput, sixthInput), Collections.singletonList(fluidInput), recipe.getOutputItems(), recipe.getOutputItemChances(), recipe.getOutputFluids());
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    default -> {
+                    }
             }
-        } else if (!recipe.getInputItems().isEmpty()) {
-            for (ItemStack recipeInput : recipe.getInputItems().get(0).getItems()) {
-                addRecipe(recipe.getEnergy(), recipe.getXp(), Collections.singletonList(recipeInput), Collections.emptyList(), recipe.getOutputItems(), recipe.getOutputItemChances(), recipe.getOutputFluids());
+            }
+        }
+        else {
+            switch (recipe.getInputItems().size()) {
+                case 1 -> {
+                    for (ItemStack firstInput : recipe.getInputItems().get(0).getItems()) {
+                        addRecipe(recipe.getEnergy(), recipe.getXp(), Collections.singletonList(firstInput), Collections.emptyList(), recipe.getOutputItems(), recipe.getOutputItemChances(), recipe.getOutputFluids());
+                    }
+                }
+                case 2 -> {
+                    for (ItemStack firstInput : recipe.getInputItems().get(0).getItems()) {
+                        for (ItemStack secondInput : recipe.getInputItems().get(1).getItems()) {
+                            addRecipe(recipe.getEnergy(), recipe.getXp(), asList(firstInput, secondInput), Collections.emptyList(), recipe.getOutputItems(), recipe.getOutputItemChances(), recipe.getOutputFluids());
+                        }
+                    }
+                }
+                case 3 -> {
+                    for (ItemStack firstInput : recipe.getInputItems().get(0).getItems()) {
+                        for (ItemStack secondInput : recipe.getInputItems().get(1).getItems()) {
+                            for (ItemStack thirdInput : recipe.getInputItems().get(2).getItems()) {
+                                addRecipe(recipe.getEnergy(), recipe.getXp(), asList(firstInput, secondInput, thirdInput), Collections.emptyList(), recipe.getOutputItems(), recipe.getOutputItemChances(), recipe.getOutputFluids());
+                            }
+                        }
+                    }
+                }
+                case 4 -> {
+                    for (ItemStack firstInput : recipe.getInputItems().get(0).getItems()) {
+                        for (ItemStack secondInput : recipe.getInputItems().get(1).getItems()) {
+                            for (ItemStack thirdInput : recipe.getInputItems().get(2).getItems()) {
+                                for (ItemStack forthInput : recipe.getInputItems().get(3).getItems()) {
+                                    addRecipe(recipe.getEnergy(), recipe.getXp(), asList(firstInput, secondInput, thirdInput, forthInput), Collections.emptyList(), recipe.getOutputItems(), recipe.getOutputItemChances(), recipe.getOutputFluids());
+                                }
+                            }
+                        }
+                    }
+                }
+                case 5 -> {
+                    for (ItemStack firstInput : recipe.getInputItems().get(0).getItems()) {
+                        for (ItemStack secondInput : recipe.getInputItems().get(1).getItems()) {
+                            for (ItemStack thirdInput : recipe.getInputItems().get(2).getItems()) {
+                                for (ItemStack forthInput : recipe.getInputItems().get(3).getItems()) {
+                                    for (ItemStack firthInput : recipe.getInputItems().get(4).getItems()) {
+                                        addRecipe(recipe.getEnergy(), recipe.getXp(), asList(firstInput, secondInput, thirdInput, forthInput, firthInput), Collections.emptyList(), recipe.getOutputItems(), recipe.getOutputItemChances(), recipe.getOutputFluids());
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                case 6 -> {
+                    for (ItemStack firstInput : recipe.getInputItems().get(0).getItems()) {
+                        for (ItemStack secondInput : recipe.getInputItems().get(1).getItems()) {
+                            for (ItemStack thirdInput : recipe.getInputItems().get(2).getItems()) {
+                                for (ItemStack forthInput : recipe.getInputItems().get(3).getItems()) {
+                                    for (ItemStack firthInput : recipe.getInputItems().get(4).getItems()) {
+                                        for (ItemStack sixthInput : recipe.getInputItems().get(5).getItems()) {
+                                            addRecipe(recipe.getEnergy(), recipe.getXp(), asList(firstInput, secondInput, thirdInput, forthInput, firthInput, sixthInput), Collections.emptyList(), recipe.getOutputItems(), recipe.getOutputItemChances(), recipe.getOutputFluids());
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                default -> {
+                }
             }
         }
     }
@@ -86,64 +211,88 @@ public class ComponentAssemblyRecipeManager extends AbstractManager implements I
     // region RECIPES
     protected IMachineRecipe getRecipe(List<? extends IItemStackHolder> inputSlots, List<? extends IFluidStackHolder> inputTanks) {
 
-        if (inputSlots.isEmpty() && inputTanks.isEmpty() || inputSlots.get(0).isEmpty() && inputTanks.get(0).isEmpty()) {
+        if (inputSlots.isEmpty() && inputTanks.isEmpty() || inputSlots.get(0).isEmpty() && inputTanks.get(0).isEmpty() || inputSlots.isEmpty()) {
             return null;
         }
-        if (inputTanks.isEmpty() || inputTanks.get(0).isEmpty()) {
-            ItemStack inputItem = inputSlots.get(0).getItemStack();
-            return recipeMap.get(Collections.singletonList(makeComparable(inputItem).hashCode()));
+        List<ComparableItemStack> convertedItems = new ArrayList<>(maxInputItems);
+        for (int i = 0; i < maxInputItems; ++i) {
+            if (!inputSlots.get(i).isEmpty()) {
+                ComparableItemStack compStack = makeNBTComparable(inputSlots.get(i).getItemStack());
+                convertedItems.add(compStack);
+            }
         }
-        if (inputSlots.isEmpty() || inputSlots.get(0).isEmpty() || inputSlots.get(0).getItemStack().getItem() instanceof SlotSealItem) {
-            FluidStack inputFluid = inputTanks.get(0).getFluidStack();
-            return recipeMap.get(Collections.singletonList(FluidHelper.fluidHashcode(inputFluid)));
+        if(inputTanks.isEmpty() || inputTanks.get(0).isEmpty()) {
+            return null;
         }
-        ItemStack inputItem = inputSlots.get(0).getItemStack();
-        FluidStack inputFluid = inputTanks.get(0).getFluidStack();
-        return recipeMap.get(asList(makeComparable(inputItem).hashCode(), FluidHelper.fluidHashcode(inputFluid)));
+
+        if (convertedItems.isEmpty()) {
+            return null;
+        }
+        IMachineRecipe ret = inputTanks.isEmpty() || inputTanks.get(0).isEmpty() ? recipeMap.get(CompoundMapWrapper.of(convertedItems)) : recipeMap.get(CompoundMapWrapper.of(convertedItems, inputTanks.get(0).getFluidStack()));
+
+        if (ret == null) {
+            convertedItems.clear();
+            for (int i = 0; i < maxInputItems; ++i) {
+                if (!inputSlots.get(i).isEmpty()) {
+                    ComparableItemStack compStack = makeComparable(inputSlots.get(i).getItemStack());
+                    convertedItems.add(compStack);
+                }
+            }
+            if (convertedItems.isEmpty()) {
+                return null;
+            }
+            ret = inputTanks.isEmpty() || inputTanks.get(0).isEmpty() ? recipeMap.get(CompoundMapWrapper.of(convertedItems)) : recipeMap.get(CompoundMapWrapper.of(convertedItems, inputTanks.get(0).getFluidStack()));
+        }
+        return ret;
     }
 
     protected IMachineRecipe addRecipe(int energy, float experience, List<ItemStack> inputItems, List<FluidStack> inputFluids, List<ItemStack> outputItems, List<Float> chance, List<FluidStack> outputFluids) {
 
-        if (inputItems.isEmpty() && inputFluids.isEmpty() || outputItems.size() > maxOutputItems || outputFluids.size() > maxOutputFluids || energy <= 0) {
+        if(inputItems.isEmpty()) {
+            // cannot be empty
             return null;
         }
-        List<Integer> key;
-        if (inputFluids.isEmpty()) {
-            ItemStack inputItem = inputItems.get(0);
-            if (inputItem.isEmpty()) {
+
+        if (inputItems.size() > maxInputItems || outputItems.size() > maxOutputItems || outputFluids.size() > maxOutputFluids || energy <= 0) {
+            return null;
+        }
+        for (ItemStack stack : inputItems) {
+            if (stack.isEmpty()) {
                 return null;
             }
-            validItems.add(makeComparable(inputItem));
-            key = Collections.singletonList(makeComparable(inputItem).hashCode());
-        } else if (inputItems.isEmpty()) {
-            FluidStack inputFluid = inputFluids.get(0);
-            if (inputFluid.isEmpty()) {
-                return null;
-            }
-            validFluids.add(inputFluid.getFluid());
-            key = Collections.singletonList(FluidHelper.fluidHashcode(inputFluid));
-        } else {
-            ItemStack inputItem = inputItems.get(0);
-            if (inputItem.isEmpty()) {
-                return null;
-            }
-            FluidStack inputFluid = inputFluids.get(0);
-            if (inputFluid.isEmpty()) {
-                return null;
-            }
-            validItems.add(makeComparable(inputItem));
-            validFluids.add(inputFluid.getFluid());
-            key = asList(makeComparable(inputItem).hashCode(), FluidHelper.fluidHashcode(inputFluid));
         }
         for (ItemStack stack : outputItems) {
             if (stack.isEmpty()) {
                 return null;
             }
         }
+
+        List<ComparableItemStack> key = new ObjectArrayList<>();
+        FluidStack fluidStack = FluidStack.EMPTY;
+        if (inputFluids.isEmpty()) {
+            for(ItemStack stack: inputItems) {
+                ComparableItemStack comparableItemStack = makeNBTComparable(stack);
+                validItems.add(comparableItemStack);
+                key.add(comparableItemStack);
+            }
+        }
+        else {
+            for(ItemStack stack: inputItems) {
+                ComparableItemStack comparableItemStack = makeNBTComparable(stack);
+                validItems.add(comparableItemStack);
+                key.add(comparableItemStack);
+            }
+            FluidStack inputFluid = inputFluids.get(0);
+            if (inputFluid.isEmpty()) {
+                return null;
+            }
+            validFluids.add(inputFluid.getFluid());
+            fluidStack = inputFluid;
+        }
         energy = (int) (energy * getDefaultScale());
 
         SimpleMachineRecipe recipe = new SimpleMachineRecipe(energy, experience, inputItems, inputFluids, outputItems, chance, outputFluids);
-        recipeMap.put(key, recipe);
+        recipeMap.put(fluidStack.isEmpty() ? CompoundMapWrapper.of(key): CompoundMapWrapper.of(key, fluidStack), recipe);
         return recipe;
     }
     // endregion
@@ -167,7 +316,7 @@ public class ComponentAssemblyRecipeManager extends AbstractManager implements I
     public void refresh(RecipeManager recipeManager) {
 
         clear();
-        var recipes = recipeManager.getAllRecipesFor(ThermalExtraRecipeTypes.METAL_INFUSER.get());
+        var recipes = recipeManager.getAllRecipesFor(ThermalExtraRecipeTypes.COMPONENT_ASSEMBLY.get());
         for (var entry : recipes) {
             addRecipe(entry);
         }

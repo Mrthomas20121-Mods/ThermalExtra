@@ -1,15 +1,13 @@
-package mrthomas20121.thermal_extra.datagen;
+package mrthomas20121.thermal_extra.data;
 
 import cofh.lib.init.data.ItemModelProviderCoFH;
 import mrthomas20121.thermal_extra.ThermalExtra;
 import mrthomas20121.thermal_extra.init.ThermalExtraBlocks;
 import mrthomas20121.thermal_extra.init.ThermalExtraFluids;
 import mrthomas20121.thermal_extra.init.ThermalExtraItems;
-import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
-import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -28,6 +26,11 @@ public class ExtraModelGen extends ItemModelProviderCoFH {
         itemModel(ThermalExtraItems.lead_ore_chunk);
         itemModel(ThermalExtraItems.silver_ore_chunk);
         itemModel(ThermalExtraItems.nickel_ore_chunk);
+        itemModel(ThermalExtraItems.aluminum_ore_chunk);
+        itemModel(ThermalExtraItems.uranium_ore_chunk);
+        itemModel(ThermalExtraItems.osmium_ore_chunk);
+        itemModel(ThermalExtraItems.arcane_gold_ore_chunk);
+        itemModel(ThermalExtraItems.zinc_ore_chunk);
 
         itemModel(ThermalExtraItems.dragon_steel_gear);
         itemModel(ThermalExtraItems.dragon_steel_ingot);

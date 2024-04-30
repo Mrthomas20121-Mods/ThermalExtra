@@ -42,6 +42,11 @@ public class ThermalExtraItems {
     public static final RegistryObject<Item> silver_ore_chunk = ITEMS.register("silver_ore_chunk", item((prop) -> prop.rarity(yellow)));
     public static final RegistryObject<Item> lead_ore_chunk = ITEMS.register("lead_ore_chunk", item((prop) -> prop.rarity(yellow)));
     public static final RegistryObject<Item> nickel_ore_chunk = ITEMS.register("nickel_ore_chunk", item((prop) -> prop.rarity(yellow)));
+    public static final RegistryObject<Item> aluminum_ore_chunk = ITEMS.register("aluminum_ore_chunk", item((prop) -> prop.rarity(yellow)));
+    public static final RegistryObject<Item> uranium_ore_chunk = ITEMS.register("uranium_ore_chunk", item((prop) -> prop.rarity(yellow)));
+    public static final RegistryObject<Item> osmium_ore_chunk = ITEMS.register("osmium_ore_chunk", item((prop) -> prop.rarity(yellow)));
+    public static final RegistryObject<Item> arcane_gold_ore_chunk = ITEMS.register("arcane_gold_ore_chunk", item((prop) -> prop.rarity(yellow)));
+    public static final RegistryObject<Item> zinc_ore_chunk = ITEMS.register("zinc_ore_chunk", item((prop) -> prop.rarity(yellow)));
 
     public static final RegistryObject<Item> amethyst_dust = ITEMS.register("amethyst_dust", item((prop) -> prop.rarity(yellow)));
     public static final RegistryObject<Item> soul_sand_dust = ITEMS.register("soul_sand_dust", item((prop) -> prop.rarity(yellow)));

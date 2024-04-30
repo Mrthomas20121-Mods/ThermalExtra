@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=north,active=false": {
+      "model": "thermal_extra:block/machine_drying_tank"
+    },
+    "facing=east,active=false": {
+      "model": "thermal_extra:block/machine_drying_tank",
+      "y": 90
+    },
+    "facing=south,active=false": {
+      "model": "thermal_extra:block/machine_drying_tank",
+      "y": 180
+    },
+    "facing=west,active=false": {
+      "model": "thermal_extra:block/machine_drying_tank",
+      "y": 270
+    },
+    "facing=north,active=true": {
+      "model": "thermal_extra:block/machine_drying_tank_active"
+    },
+    "facing=east,active=true": {
+      "model": "thermal_extra:block/machine_drying_tank_active",
+      "y": 90
+    },
+    "facing=south,active=true": {
+      "model": "thermal_extra:block/machine_drying_tank_active",
+      "y": 180
+    },
+    "facing=west,active=true": {
+      "model": "thermal_extra:block/machine_drying_tank_active",
+      "y": 270
+    }
+  }
+}

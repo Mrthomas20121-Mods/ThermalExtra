@@ -21,5 +21,7 @@ public class ThermalExtraRecipeTypes {
     public static final RegistryObject<SerializableRecipeType<NitraticIgniterRecipe>> NITRATIC_IGNITER = RECIPE_TYPES.register("nitratic_igniter", () -> new SerializableRecipeType<>(ThermalExtra.MOD_ID, "nitratic_igniter"));
     public static final RegistryObject<SerializableRecipeType<NitraticIgniterCatalyst>> NITRATIC_IGNITER_CATALYST = RECIPE_TYPES.register("nitratic_igniter_cataylyst", () -> new SerializableRecipeType<>(ThermalExtra.MOD_ID, "nitratic_igniter_catalyst"));
     public static final RegistryObject<SerializableRecipeType<ComponentAssemblyRecipe>> COMPONENT_ASSEMBLY = RECIPE_TYPES.register("component_assembly", () -> new SerializableRecipeType<>(ThermalExtra.MOD_ID, "component_assembly"));
+    public static final RegistryObject<SerializableRecipeType<DryingTankRecipe>> DRYING_TANK = RECIPE_TYPES.register("drying_tank", () -> new SerializableRecipeType<>(ThermalExtra.MOD_ID, "drying_tank"));
+
 
 }

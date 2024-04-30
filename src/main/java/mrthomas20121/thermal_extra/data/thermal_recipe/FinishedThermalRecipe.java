@@ -1,7 +1,8 @@
-package mrthomas20121.thermal_extra.datagen.thermal_recipe;
+package mrthomas20121.thermal_extra.data.thermal_recipe;
 
 import cofh.lib.common.fluid.FluidIngredient;
 import cofh.lib.util.crafting.IngredientWithCount;
+import cofh.lib.util.recipes.RecipeJsonUtils;
 import cofh.thermal.lib.util.recipes.ThermalRecipe;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
@@ -33,11 +34,13 @@ public record FinishedThermalRecipe<T extends ThermalRecipe>(RecipeSerializer<T>
                 ingredients.add(json);
             }
             else {
-                ingredients.add(ingredient.toJson());
+                JsonElement e = ingredient.toJson();
+                e.getAsJsonObject().addProperty("count", 1);
+                ingredients.add(e);
             }
         });
         this.inputFluids.stream().map(FluidIngredient::toJson).forEach(ingredients::add);
-        object.add("ingredients", ingredients);
+        object.add(RecipeJsonUtils.INGREDIENTS, ingredients);
 
         int size = this.outputItems.size();
 

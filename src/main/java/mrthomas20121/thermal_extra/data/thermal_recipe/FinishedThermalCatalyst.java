@@ -1,22 +1,13 @@
-package mrthomas20121.thermal_extra.datagen.thermal_recipe;
+package mrthomas20121.thermal_extra.data.thermal_recipe;
 
-import cofh.lib.common.fluid.FluidIngredient;
 import cofh.thermal.lib.util.recipes.ThermalCatalyst;
-import cofh.thermal.lib.util.recipes.ThermalRecipe;
-import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
-import net.minecraft.world.level.material.Fluid;
-import net.minecraftforge.fluids.FluidStack;
-import net.minecraftforge.registries.ForgeRegistries;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-
-import java.util.List;
 
 import static cofh.lib.util.recipes.RecipeJsonUtils.*;
 

@@ -31,7 +31,7 @@ public class ComponentAssemblyRecipe extends ThermalRecipe {
     @Nonnull
     @Override
     public RecipeSerializer<?> getSerializer() {
-        return ThermalExtraRecipeSerializers.METAl_INFUSER_RECIPE_SERIALIZER.get();
+        return ThermalExtraRecipeSerializers.COMPONENT_ASSEMBLY_RECIPE_SERIALIZER.get();
     }
 
     @Nonnull

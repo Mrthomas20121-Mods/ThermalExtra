@@ -1,5 +1,7 @@
-package mrthomas20121.thermal_extra.datagen;
+package mrthomas20121.thermal_extra.data;
 
+import cofh.lib.init.tags.ItemTagsCoFH;
+import cofh.thermal.expansion.init.data.providers.TExpTagsProvider;
 import cofh.thermal.lib.util.references.ThermalTags;
 import mrthomas20121.thermal_extra.ThermalExtra;
 import mrthomas20121.thermal_extra.init.ThermalExtraBlocks;
@@ -7,13 +9,10 @@ import mrthomas20121.thermal_extra.init.ThermalExtraFluids;
 import mrthomas20121.thermal_extra.init.ThermalExtraItems;
 import mrthomas20121.thermal_extra.init.ThermalExtraTags;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.FluidTagsProvider;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.data.tags.TagsProvider;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.BlockTagsProvider;
@@ -48,6 +47,8 @@ public class ExtraTagGen {
 
         @Override
         protected void addTags(HolderLookup.Provider provider) {
+
+            tag(ThermalTags.Items.MACHINE_CASTS).add(ThermalExtraItems.chiller_plate_cast.get());
 
             tag(Tags.Items.INGOTS).add(
                     ThermalExtraItems.soul_infused_ingot.get(),

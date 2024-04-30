@@ -4,6 +4,7 @@
   "experience": 1.1,
   "ingredients": [
     {
+      "count": 1,
       "tag": "forge:raw_materials/nickel"
     }
   ],
@@ -20,7 +21,7 @@
     },
     {
       "chance": 0.25,
-      "item": "thermal:apatite"
+      "item": "thermal_extra:iron_ore_chunk"
     }
   ]
 }

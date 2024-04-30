@@ -9,7 +9,7 @@
       "tag": "forge:ingots/soul_infused"
     },
     "M": {
-      "item": "thermal:machine_frame"
+      "item": "minecraft:bucket"
     },
     "N": {
       "tag": "forge:ingots/iron"

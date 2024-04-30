@@ -1,4 +1,4 @@
-package mrthomas20121.thermal_extra.datagen.thermal_recipe;
+package mrthomas20121.thermal_extra.data.thermal_recipe;
 
 import cofh.thermal.lib.util.recipes.ThermalCatalyst;
 import net.minecraft.data.recipes.FinishedRecipe;

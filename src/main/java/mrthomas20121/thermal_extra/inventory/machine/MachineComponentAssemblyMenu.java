@@ -22,10 +22,10 @@ public class MachineComponentAssemblyMenu extends BlockEntityCoFHMenu {
         InvWrapperCoFH tileInv = new InvWrapperCoFH(this.tile.getItemInv());
 
         addSlot(new SlotCoFH(tileInv, 0, 62, 17));
-        addSlot(new SlotCoFH(tileInv, 1, 62, 35));
-        addSlot(new SlotCoFH(tileInv, 2, 62, 53));
-        addSlot(new SlotCoFH(tileInv, 3, 80, 17));
-        addSlot(new SlotCoFH(tileInv, 4, 80, 35));
+        addSlot(new SlotCoFH(tileInv, 1, 80, 17));
+        addSlot(new SlotCoFH(tileInv, 2, 62, 35));
+        addSlot(new SlotCoFH(tileInv, 3, 80, 35));
+        addSlot(new SlotCoFH(tileInv, 4, 62, 53));
         addSlot(new SlotCoFH(tileInv, 5, 80, 53));
         addSlot(new SlotRemoveOnly(tileInv, 6, 130, 35));
 

@@ -1,4 +1,4 @@
-package mrthomas20121.thermal_extra.datagen.thermal_recipe;
+package mrthomas20121.thermal_extra.data.thermal_recipe;
 
 import cofh.thermal.lib.util.recipes.ThermalCatalyst;
 import net.minecraft.data.recipes.FinishedRecipe;
@@ -7,11 +7,8 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.crafting.RecipeSerializer;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.function.Consumer;
 

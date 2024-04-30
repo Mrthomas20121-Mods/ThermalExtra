@@ -3,6 +3,7 @@
   "energy": 15000,
   "ingredients": [
     {
+      "count": 1,
       "item": "thermal_extra:fluid_tank_augment_5"
     },
     {

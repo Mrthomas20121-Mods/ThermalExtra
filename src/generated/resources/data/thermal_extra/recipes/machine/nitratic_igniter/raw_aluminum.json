@@ -1,0 +1,36 @@
+{
+  "type": "thermal_extra:nitratic_igniter",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:raw_materials/aluminum"
+      }
+    }
+  ],
+  "energy": 12000,
+  "experience": 1.1,
+  "ingredients": [
+    {
+      "count": 1,
+      "tag": "forge:raw_materials/aluminum"
+    }
+  ],
+  "result": [
+    {
+      "chance": 1.25,
+      "count": 3,
+      "item": "thermal_extra:aluminum_ore_chunk",
+      "locked": true
+    },
+    {
+      "chance": 0.55,
+      "item": "thermal_extra:aluminum_ore_chunk"
+    },
+    {
+      "chance": 0.25,
+      "item": "thermal_extra:iron_ore_chunk"
+    }
+  ]
+}

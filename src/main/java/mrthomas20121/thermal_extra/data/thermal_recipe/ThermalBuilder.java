@@ -1,6 +1,7 @@
-package mrthomas20121.thermal_extra.datagen.thermal_recipe;
+package mrthomas20121.thermal_extra.data.thermal_recipe;
 
 import cofh.lib.common.fluid.FluidIngredient;
+import cofh.lib.util.crafting.IngredientWithCount;
 import cofh.thermal.core.init.registries.TCoreRecipeSerializers;
 import cofh.thermal.core.util.recipes.machine.*;
 import cofh.thermal.lib.util.recipes.ThermalRecipe;
@@ -54,6 +55,14 @@ public class ThermalBuilder<T extends ThermalRecipe> {
 
     public static ThermalBuilder<FluidMixerRecipe> fluid_mixer() {
         return new ThermalBuilder<>(ThermalExtraRecipeSerializers.FLUID_MIXER_RECIPE_SERIALIZER.get());
+    }
+
+    public static ThermalBuilder<DryingTankRecipe> drying_tank() {
+        return new ThermalBuilder<>(ThermalExtraRecipeSerializers.DRYING_TANK_RECIPE_SERIALIZER.get()).chance();
+    }
+
+    public static ThermalBuilder<ComponentAssemblyRecipe> component_assembly() {
+        return new ThermalBuilder<>(ThermalExtraRecipeSerializers.COMPONENT_ASSEMBLY_RECIPE_SERIALIZER.get()).chance();
     }
 
     public static ThermalBuilder<NitraticIgniterRecipe> nitratic_igniter() {
@@ -124,6 +133,11 @@ public class ThermalBuilder<T extends ThermalRecipe> {
         return this;
     }
 
+    public ThermalBuilder<T> input(TagKey<Item> tag, int amount) {
+        this.input(new IngredientWithCount(Ingredient.of(tag), amount));
+        return this;
+    }
+
     public ThermalBuilder<T> input(FluidIngredient ingredient) {
         this.inputFluids.add(ingredient);
         return this;
@@ -134,7 +148,7 @@ public class ThermalBuilder<T extends ThermalRecipe> {
         return this;
     }
 
-    public ThermalBuilder<T> input(TagKey<Fluid> tag, int amount) {
+    public ThermalBuilder<T> input(int amount, TagKey<Fluid> tag) {
         this.input(FluidIngredient.of(tag, amount));
         return this;
     }

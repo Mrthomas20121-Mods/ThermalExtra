@@ -1,4 +1,4 @@
-package mrthomas20121.thermal_extra.datagen;
+package mrthomas20121.thermal_extra.data;
 
 import cofh.lib.common.fluid.FluidIngredient;
 import cofh.lib.init.data.RecipeProviderCoFH;
@@ -10,7 +10,7 @@ import cofh.thermal.core.init.registries.TCoreFluids;
 import cofh.thermal.lib.util.ThermalIDs;
 import cofh.thermal.lib.util.references.ThermalTags;
 import mrthomas20121.thermal_extra.ThermalExtra;
-import mrthomas20121.thermal_extra.datagen.thermal_recipe.ThermalBuilder;
+import mrthomas20121.thermal_extra.data.thermal_recipe.ThermalBuilder;
 import mrthomas20121.thermal_extra.init.ThermalExtraBlocks;
 import mrthomas20121.thermal_extra.init.ThermalExtraFluids;
 import mrthomas20121.thermal_extra.init.ThermalExtraItems;
@@ -29,6 +29,8 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
+import net.minecraftforge.common.crafting.conditions.NotCondition;
+import net.minecraftforge.common.crafting.conditions.TagEmptyCondition;
 import net.minecraftforge.fluids.FluidStack;
 import org.jetbrains.annotations.NotNull;
 
@@ -134,6 +136,14 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .unlockedBy("has_obsidian_glass", has(glass))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, ThermalExtraItems.chiller_plate_cast.get())
+                .define('P', ItemTagsCoFH.PLATES_BRONZE)
+                .pattern(" P ")
+                .pattern("PPP")
+                .pattern(" P ")
+                .unlockedBy("has_bronze_plate", has(ItemTagsCoFH.PLATES_BRONZE))
+                .save(consumer, this.modid + ":crafting/chiller_plate_cast");
+
         ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, ThermalExtraBlocks.DYNAMO_COLD.get())
                 .define('R', ITEMS.get("rf_coil"))
                 .define('G', ItemTagsCoFH.GEARS_INVAR)
@@ -151,7 +161,7 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .define('I', ThermalExtraTags.Items.SOUL_INFUSED_INGOT)
                 .define('M', ITEMS.get(ThermalIDs.ID_MACHINE_FRAME))
                 .define('F', ITEMS.get(ThermalIDs.ID_FLUID_CELL_FRAME))
-                .pattern("GIG")
+                .pattern(" I ")
                 .pattern("FMF")
                 .pattern("GIG")
                 .unlockedBy("has_machine_frame", has(ThermalCore.ITEMS.get(ThermalIDs.ID_MACHINE_FRAME)))
@@ -162,17 +172,28 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .define('I', ThermalExtraTags.Items.SOUL_INFUSED_INGOT)
                 .define('M', ITEMS.get(ThermalIDs.ID_MACHINE_REFINERY))
                 .define('F', ITEMS.get(ThermalIDs.ID_FLUID_CELL_FRAME))
-                .pattern("III")
+                .pattern(" I ")
                 .pattern("GMG")
                 .pattern("FFF")
                 .unlockedBy("has_"+ThermalIDs.ID_MACHINE_REFINERY, has(ThermalCore.ITEMS.get(ThermalIDs.ID_MACHINE_REFINERY)))
                 .save(consumer, this.modid + ":crafting/advanced_refinery");
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, ThermalExtraBlocks.COMPONENT_ASSEMBLY.get())
+                .define('G', ItemTagsCoFH.GEARS_CONSTANTAN)
+                .define('I', ThermalExtraTags.Items.DRAGONSTEEL_INGOT)
+                .define('M', ITEMS.get(ThermalIDs.ID_MACHINE_FRAME))
+                .define('F', ITEMS.get(ThermalIDs.ID_FLUID_CELL_FRAME))
+                .pattern(" I ")
+                .pattern("FMF")
+                .pattern("GIG")
+                .unlockedBy("has_machine_frame", has(ThermalCore.ITEMS.get(ThermalIDs.ID_MACHINE_FRAME)))
+                .save(consumer, this.modid + ":crafting/component_assembly");
+
         ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, ThermalExtraBlocks.LAVA_GEN.get())
                 .define('N', Tags.Items.INGOTS_IRON)
                 .define('R', ThermalCore.ITEMS.get("redstone_servo"))
                 .define('I', ThermalExtraTags.Items.SOUL_INFUSED_INGOT)
-                .define('M', ITEMS.get(ThermalIDs.ID_MACHINE_FRAME))
+                .define('M', Items.BUCKET)
                 .define('G', Blocks.WARPED_WART_BLOCK)
                 .pattern("INI")
                 .pattern("GMG")
@@ -291,6 +312,20 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .output(ThermalExtraItems.polyolefin_plate.get())
                 .save(consumer, "thermal_extra:machine/chiller/polyolefin");
 
+        ThermalBuilder.component_assembly()
+                .energy(5000)
+                .input(new FluidStack(TCoreFluids.REDSTONE_FLUID.get(), 50))
+                .input(Tags.Items.INGOTS_IRON)
+                .output(ThermalCore.ITEMS.get("redstone_servo"))
+                .save(consumer, "thermal_extra:machine/component_assembly/redstone_servo");
+        ThermalBuilder.component_assembly()
+                .energy(5000)
+                .input(new FluidStack(TCoreFluids.ENDER_FLUID.get(), 50))
+                .input(ThermalExtraTags.Items.SHELLITE_INGOT)
+                .input(ItemTagsCoFH.INGOTS_BRONZE)
+                .output(ThermalExtraItems.twinite_ingot.get())
+                .save(consumer, "thermal_extra:machine/component_assembly/twinite_ingot");
+
         ThermalBuilder.metal_infuser()
                 .energy(15000)
                 .input(FluidIngredient.of(new FluidStack(TCoreFluids.ENDER_FLUID.get(), 1000)))
@@ -314,13 +349,24 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .chance()
                 .save(consumer, "thermal_extra:machine/nitratic_igniter/twinite_dust");
 
+        TagKey<Item> rawAluminum = forgeTag("raw_materials/aluminum");
+        TagKey<Item> rawUranium = forgeTag("raw_materials/uranium");
+        TagKey<Item> rawOsmium = forgeTag("raw_materials/osmium");
+        TagKey<Item> rawZinc = forgeTag("raw_materials/zinc");
+        TagKey<Item> rawArcaneGold = forgeTag("raw_materials/arcane_gold");
+
         nitraticOre(consumer, "copper", Tags.Items.RAW_MATERIALS_COPPER, ThermalExtraItems.copper_ore_chunk, ThermalExtraItems.gold_ore_chunk);
         nitraticOre(consumer, "iron", Tags.Items.RAW_MATERIALS_IRON, ThermalExtraItems.iron_ore_chunk, ThermalExtraItems.nickel_ore_chunk);
         nitraticOre(consumer, "gold", Tags.Items.RAW_MATERIALS_GOLD, ThermalExtraItems.gold_ore_chunk, ThermalExtraItems.copper_ore_chunk);
-        nitraticOre(consumer, "tin", ItemTagsCoFH.RAW_MATERIALS_TIN, ThermalExtraItems.tin_ore_chunk, ThermalExtraItems.copper_ore_chunk);
+        nitraticOre(consumer, "tin", ItemTagsCoFH.RAW_MATERIALS_TIN, ThermalExtraItems.tin_ore_chunk, ITEMS.getSup("apatite"));
         nitraticOre(consumer, "lead", ItemTagsCoFH.RAW_MATERIALS_LEAD, ThermalExtraItems.lead_ore_chunk, ThermalExtraItems.silver_ore_chunk);
         nitraticOre(consumer, "silver", ItemTagsCoFH.RAW_MATERIALS_SILVER, ThermalExtraItems.silver_ore_chunk, ThermalExtraItems.lead_ore_chunk);
-        nitraticOre(consumer, "nickel", ItemTagsCoFH.RAW_MATERIALS_NICKEL, ThermalExtraItems.nickel_ore_chunk, ITEMS.getSup("apatite"));
+        nitraticOre(consumer, "nickel", ItemTagsCoFH.RAW_MATERIALS_NICKEL, ThermalExtraItems.nickel_ore_chunk, ThermalExtraItems.iron_ore_chunk);
+        nitraticOre(withConditions(consumer).addCondition(new NotCondition(new TagEmptyCondition("forge:raw_materials/aluminum"))), "aluminum", rawAluminum, ThermalExtraItems.aluminum_ore_chunk, ThermalExtraItems.iron_ore_chunk);
+        nitraticOre(withConditions(consumer).addCondition(new NotCondition(new TagEmptyCondition("forge:raw_materials/uranium"))), "uranium", rawUranium, ThermalExtraItems.uranium_ore_chunk);
+        nitraticOre(withConditions(consumer).addCondition(new NotCondition(new TagEmptyCondition("forge:raw_materials/osmium"))), "osmium", rawOsmium, ThermalExtraItems.osmium_ore_chunk);
+        nitraticOre(withConditions(consumer).addCondition(new NotCondition(new TagEmptyCondition("forge:raw_materials/arcane_gold"))), "arcane_gold", rawOsmium, ThermalExtraItems.arcane_gold_ore_chunk);
+        nitraticOre(withConditions(consumer).addCondition(new NotCondition(new TagEmptyCondition("forge:raw_materials/zinc"))), "zinc", rawOsmium, ThermalExtraItems.zinc_ore_chunk);
 
         ThermalBuilder.metal_infuser()
                 .energy(15000)
@@ -410,6 +456,16 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .output(new ThermalBuilder.ChanceItemStack(new ItemStack(mainOreChunk.get(), 3), 1.25f, true))
                 .output(new ThermalBuilder.ChanceItemStack(new ItemStack(mainOreChunk.get(), 1), 0.55f, false))
                 .output(new ThermalBuilder.ChanceItemStack(new ItemStack(secondaryOreChunk.get(), 1), 0.25f, false))
+                .exp(1.1f)
+                .save(consumer, "thermal_extra:machine/nitratic_igniter/raw_" + oreName);
+    }
+
+    public void nitraticOre(Consumer<FinishedRecipe> consumer, String oreName, TagKey<Item> tagKey, Supplier<Item> mainOreChunk) {
+        ThermalBuilder.nitratic_igniter()
+                .energy(12000)
+                .input(Ingredient.of(tagKey))
+                .output(new ThermalBuilder.ChanceItemStack(new ItemStack(mainOreChunk.get(), 3), 1.25f, true))
+                .output(new ThermalBuilder.ChanceItemStack(new ItemStack(mainOreChunk.get(), 1), 0.65f, false))
                 .exp(1.1f)
                 .save(consumer, "thermal_extra:machine/nitratic_igniter/raw_" + oreName);
     }

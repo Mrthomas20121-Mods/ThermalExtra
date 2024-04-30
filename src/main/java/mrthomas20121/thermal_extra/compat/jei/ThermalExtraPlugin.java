@@ -9,10 +9,7 @@ import mezz.jei.api.registration.IRecipeCategoryRegistration;
 import mezz.jei.api.registration.IRecipeRegistration;
 import mrthomas20121.thermal_extra.ThermalExtra;
 import mrthomas20121.thermal_extra.client.screens.DynamoFrostScreen;
-import mrthomas20121.thermal_extra.client.screens.machine.MachineAdvancedRefineryScreen;
-import mrthomas20121.thermal_extra.client.screens.machine.MachineFluidMixerScreen;
-import mrthomas20121.thermal_extra.client.screens.machine.MachineMetalInfuserScreen;
-import mrthomas20121.thermal_extra.client.screens.machine.MachineNitraticIgniterScreen;
+import mrthomas20121.thermal_extra.client.screens.machine.*;
 import mrthomas20121.thermal_extra.compat.jei.category.*;
 import mrthomas20121.thermal_extra.init.ThermalExtraBlocks;
 import mrthomas20121.thermal_extra.init.ThermalExtraRecipeTypes;
@@ -47,6 +44,7 @@ public class ThermalExtraPlugin implements IModPlugin {
         registration.addRecipes(NITRATIC_IGNITER_TYPE, recipeManager.getAllRecipesFor(ThermalExtraRecipeTypes.NITRATIC_IGNITER.get()));
         registration.addRecipes(NITRATIC_IGNITER_CATALYST_TYPE, recipeManager.getAllRecipesFor(ThermalExtraRecipeTypes.NITRATIC_IGNITER_CATALYST.get()));
         registration.addRecipes(FLUID_MIXER_TYPE, recipeManager.getAllRecipesFor(ThermalExtraRecipeTypes.FLUID_MIXER.get()));
+        registration.addRecipes(COMPONENT_ASSEMBLY_TYPE, recipeManager.getAllRecipesFor(ThermalExtraRecipeTypes.COMPONENT_ASSEMBLY.get()));
     }
 
     @Override
@@ -57,6 +55,7 @@ public class ThermalExtraPlugin implements IModPlugin {
         registration.addRecipeCategories(new NitraticIgniterRecipeCategory(registration.getJeiHelpers().getGuiHelper(), new ItemStack(ThermalExtraBlocks.NITRATIC_IGNITER.get()), NITRATIC_IGNITER_TYPE));
         registration.addRecipeCategories(new NitraticIgniterCatalystCategory(registration.getJeiHelpers().getGuiHelper(), new ItemStack(Blocks.TNT), NITRATIC_IGNITER_CATALYST_TYPE));
         registration.addRecipeCategories(new FluidMixerRecipeCategory(registration.getJeiHelpers().getGuiHelper(), new ItemStack(ThermalExtraBlocks.FLUID_MIXER.get()), FLUID_MIXER_TYPE));
+        registration.addRecipeCategories(new ComponentAssemblyRecipeCategory(registration.getJeiHelpers().getGuiHelper(), new ItemStack(ThermalExtraBlocks.COMPONENT_ASSEMBLY.get()), COMPONENT_ASSEMBLY_TYPE));
     }
 
     @Override
@@ -70,6 +69,7 @@ public class ThermalExtraPlugin implements IModPlugin {
         registration.addRecipeClickArea(MachineAdvancedRefineryScreen.class, 65, progressY, progressW, progressH, ADVANCED_REFINERY_TYPE);
         registration.addRecipeClickArea(MachineNitraticIgniterScreen.class, 94, progressY, progressW, progressH, NITRATIC_IGNITER_TYPE);
         registration.addRecipeClickArea(MachineFluidMixerScreen.class, 80, progressY, progressW, progressH, FLUID_MIXER_TYPE);
+        registration.addRecipeClickArea(MachineComponentAssemblyScreen.class, 92, progressY, progressW, progressH, COMPONENT_ASSEMBLY_TYPE);
     }
 
     @Override
@@ -98,4 +98,5 @@ public class ThermalExtraPlugin implements IModPlugin {
     public static final RecipeType<AdvancedRefineryRecipe> ADVANCED_REFINERY_TYPE = new RecipeType<>(ThermalExtraRecipeTypes.ADVANCED_REFINERY.getId(), AdvancedRefineryRecipe.class);
     public static final RecipeType<NitraticIgniterRecipe> NITRATIC_IGNITER_TYPE = new RecipeType<>(ThermalExtraRecipeTypes.NITRATIC_IGNITER.getId(), NitraticIgniterRecipe.class);
     public static final RecipeType<NitraticIgniterCatalyst> NITRATIC_IGNITER_CATALYST_TYPE = new RecipeType<>(ThermalExtraRecipeTypes.NITRATIC_IGNITER_CATALYST.getId(), NitraticIgniterCatalyst.class);
+    public static final RecipeType<ComponentAssemblyRecipe> COMPONENT_ASSEMBLY_TYPE = new RecipeType<>(ThermalExtraRecipeTypes.COMPONENT_ASSEMBLY.getId(), ComponentAssemblyRecipe.class);
 }

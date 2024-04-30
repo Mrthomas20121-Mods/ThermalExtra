@@ -1,15 +1,11 @@
-package mrthomas20121.thermal_extra.datagen;
+package mrthomas20121.thermal_extra.data;
 
 import cofh.lib.init.data.BlockStateProviderCoFH;
 import mrthomas20121.thermal_extra.ThermalExtra;
 import mrthomas20121.thermal_extra.init.ThermalExtraBlocks;
-import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.client.model.generators.BlockStateProvider;
-import net.minecraftforge.client.model.generators.ConfiguredModel;
-import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 
