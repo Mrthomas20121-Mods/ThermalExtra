@@ -66,6 +66,7 @@ public class ExtraLangGen extends LanguageProvider {
         addBlock(ThermalExtraBlocks.BLOCKS.getSup("nitratic_igniter"), "Nitratic Igniter");
         addBlock(ThermalExtraBlocks.BLOCKS.getSup("fluid_mixer"), "Fluid Mixer");
         addBlock(ThermalExtraBlocks.BLOCKS.getSup("component_assembly"), "Component Assembly");
+        addBlock(ThermalExtraBlocks.BLOCKS.getSup("drying_tank"), "Drying Tank");
         addBlock(ThermalExtraBlocks.BLOCKS.getSup("device_lava_gen"), "Magmatic Accumulator");
 
         // ore chunks

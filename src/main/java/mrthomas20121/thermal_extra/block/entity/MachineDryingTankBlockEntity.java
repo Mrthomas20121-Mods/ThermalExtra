@@ -6,6 +6,7 @@ import cofh.thermal.core.common.config.ThermalCoreConfig;
 import cofh.thermal.lib.common.block.entity.MachineBlockEntity;
 import mrthomas20121.thermal_extra.init.ThermalExtraBlockEntities;
 import mrthomas20121.thermal_extra.inventory.machine.MachineAdvancedRefineryMenu;
+import mrthomas20121.thermal_extra.inventory.machine.MachineDryingTankMenu;
 import mrthomas20121.thermal_extra.recipe.AdvancedRefineryRecipeManager;
 import mrthomas20121.thermal_extra.recipe.DryingTankRecipeManager;
 import net.minecraft.core.BlockPos;
@@ -76,7 +77,7 @@ public class MachineDryingTankBlockEntity extends MachineBlockEntity {
     @Override
     public AbstractContainerMenu createMenu(int i, Inventory inventory, Player player) {
 
-        return new MachineAdvancedRefineryMenu(i, level, worldPosition, inventory, player);
+        return new MachineDryingTankMenu(i, level, worldPosition, inventory, player);
     }
 
     // region OPTIMIZATION

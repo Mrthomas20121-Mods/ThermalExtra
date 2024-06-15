@@ -104,6 +104,7 @@ public class ThermalExtraCreativeTabs {
                 output.accept(ThermalExtraBlocks.NITRATIC_IGNITER.get());
                 output.accept(ThermalExtraBlocks.FLUID_MIXER.get());
                 output.accept(ThermalExtraBlocks.COMPONENT_ASSEMBLY.get());
+                output.accept(ThermalExtraBlocks.DRYING_TANK.get());
             })
             .build()
     );
@@ -125,6 +126,7 @@ public class ThermalExtraCreativeTabs {
                 output.accept(ThermalExtraItems.osmium_ore_chunk.get());
                 output.accept(ThermalExtraItems.arcane_gold_ore_chunk.get());
                 output.accept(ThermalExtraItems.zinc_ore_chunk.get());
+
 
                 output.accept(ThermalExtraItems.amethyst_dust.get());
                 output.accept(ThermalExtraItems.soul_sand_dust.get());
