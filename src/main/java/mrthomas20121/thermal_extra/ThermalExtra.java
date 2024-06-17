@@ -78,7 +78,7 @@ public class ThermalExtra {
 			MenuScreens.register(ThermalExtraContainers.ADVANCED_ITEM_FILTER_CONTAINER.get(), AdvancedItemFilterScreen::new);
 			MenuScreens.register(ThermalExtraContainers.LAVA_GEN_CONTAINER.get(), DeviceLavaGenScreen::new);
 			MenuScreens.register(ThermalExtraContainers.COMPONENT_ASSEMBLY_CONTAINER.get(), MachineComponentAssemblyScreen::new);
-			MenuScreens.register(ThermalExtraContainers.DRYING_TANK_CONTAINER.get(), MachineDryingTankScreen::new);
+			MenuScreens.register(ThermalExtraContainers.ENDOTHERMIC_DEHYDRATOR_CONTAINER.get(), MachineEndothermicDehydratorScreen::new);
 		});
 	}
 }

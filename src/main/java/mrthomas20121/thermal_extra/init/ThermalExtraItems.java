@@ -8,6 +8,7 @@ import cofh.lib.util.DeferredRegisterCoFH;
 import cofh.thermal.lib.common.item.AugmentItem;
 import cofh.thermal.lib.common.item.BlockItemAugmentable;
 import mrthomas20121.thermal_extra.filter.AdvancedFilter;
+import mrthomas20121.thermal_extra.item.ExtraFoods;
 import mrthomas20121.thermal_extra.item.UpgradeAugmentItem;
 import net.minecraft.ChatFormatting;
 import net.minecraft.world.item.Item;
@@ -34,6 +35,15 @@ public class ThermalExtraItems {
     public static Rarity blue = Rarity.create("extra_blue", style -> style.withColor(ChatFormatting.BLUE));
 
     public static final RegistryObject<BlockItemCoFH> DYNAMO_COLD = ITEMS.register("dynamo_frost", () -> new BlockItemAugmentable(ThermalExtraBlocks.DYNAMO_COLD.get(), new Item.Properties()).setAugValidator(DYNAMO_NO_FLUID_VALIDATOR));
+
+    public static final RegistryObject<Item> beef_jerky = ITEMS.register("beef_jerky", item(prop -> prop.food(ExtraFoods.BEEF_JERKY)));
+    public static final RegistryObject<Item> chicken_jerky = ITEMS.register("chicken_jerky", item(prop -> prop.food(ExtraFoods.CHICKEN_JERKY)));
+    public static final RegistryObject<Item> cod_jerky = ITEMS.register("cod_jerky", item(prop -> prop.food(ExtraFoods.COD_JERKY)));
+    public static final RegistryObject<Item> mutton_jerky = ITEMS.register("mutton_jerky", item(prop -> prop.food(ExtraFoods.MUTTON_JERKY)));
+    public static final RegistryObject<Item> pork_jerky = ITEMS.register("pork_jerky", item(prop -> prop.food(ExtraFoods.PORK_JERKY)));
+    public static final RegistryObject<Item> rabbit_jerky = ITEMS.register("rabbit_jerky", item(prop -> prop.food(ExtraFoods.RABBIT_JERKY)));
+    public static final RegistryObject<Item> salmon_jerky = ITEMS.register("salmon_jerky", item(prop -> prop.food(ExtraFoods.SALMON_JERKY)));
+
 
     public static final RegistryObject<Item> copper_ore_chunk = ITEMS.register("copper_ore_chunk", item((prop) -> prop.rarity(yellow)));
     public static final RegistryObject<Item> iron_ore_chunk = ITEMS.register("iron_ore_chunk", item((prop) -> prop.rarity(yellow)));
@@ -356,28 +366,28 @@ public class ThermalExtraItems {
     public static final RegistryObject<Item> machine_efficiency_augment_1 = ITEMS.register("machine_efficiency_augment_1", () -> new AugmentItem(new Item.Properties().rarity(yellow),
             AugmentDataHelper.builder()
                     .type(TAG_AUGMENT_TYPE_MACHINE)
-                    .mod(TAG_AUGMENT_MACHINE_SPEED, -0.12F)
+                    .mod(TAG_AUGMENT_MACHINE_SPEED, -0.9F)
                     .mod(TAG_AUGMENT_MACHINE_ENERGY, 0.87F)
                     .build()));
 
     public static final RegistryObject<Item> machine_efficiency_augment_2 = ITEMS.register("machine_efficiency_augment_2", () -> new AugmentItem(new Item.Properties().rarity(dark_aqua),
             AugmentDataHelper.builder()
                     .type(TAG_AUGMENT_TYPE_MACHINE)
-                    .mod(TAG_AUGMENT_MACHINE_SPEED, -0.12F)
+                    .mod(TAG_AUGMENT_MACHINE_SPEED, -0.8F)
                     .mod(TAG_AUGMENT_MACHINE_ENERGY, 0.83F)
                     .build()));
 
     public static final RegistryObject<Item> machine_efficiency_augment_3 = ITEMS.register("machine_efficiency_augment_3", () -> new AugmentItem(new Item.Properties().rarity(dark_purple),
             AugmentDataHelper.builder()
                     .type(TAG_AUGMENT_TYPE_MACHINE)
-                    .mod(TAG_AUGMENT_MACHINE_SPEED, -0.12F)
+                    .mod(TAG_AUGMENT_MACHINE_SPEED, -0.7F)
                     .mod(TAG_AUGMENT_MACHINE_ENERGY, 0.77F)
                     .build()));
 
     public static final RegistryObject<Item> machine_efficiency_augment_4 = ITEMS.register("machine_efficiency_augment_4", () -> new AugmentItem(new Item.Properties().rarity(red),
             AugmentDataHelper.builder()
                     .type(TAG_AUGMENT_TYPE_MACHINE)
-                    .mod(TAG_AUGMENT_MACHINE_SPEED, -0.12F)
+                    .mod(TAG_AUGMENT_MACHINE_SPEED, -0.6F)
                     .mod(TAG_AUGMENT_MACHINE_ENERGY, 0.73F)
                     .build()));
 

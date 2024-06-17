@@ -19,12 +19,13 @@ public class ExtraLangGen extends LanguageProvider {
         add("info.thermal_extra.item_filter", "Advanced Item Filter");
         add("info.thermal_extra.dynamo_frost.0", "Generate RF from Cold Items.");
         add("block.thermal_extra.dynamo_frost.keyword", "blizz cube snow ice packed blue cold frost frozen engine generator");
-        add("info.thermal_extra.machine_metal_infuser", "Convert a metallic item into another by putting it in a fluid.");
-        add("info.thermal_extra.machine_nitratic_igniter", "Create an Item by exploding other items together.");
-        add("info.thermal_extra.machine_fluid_mixer", "Mix fluids together to create other fluids");
+        add("info.thermal_extra.machine_metal_infuser.0", "Convert a metallic item into another by putting it in a fluid.");
+        add("info.thermal_extra.machine_nitratic_igniter.0", "Create an Item by exploding other items together.");
+        add("info.thermal_extra.machine_fluid_mixer.0", "Mix fluids together to create other fluids");
         add("info.thermal_extra.require_catalyst", "Catalyst is required.");
-        add("info.thermal_extra.lava_gen", "Magmatic Accumulator generate Lava if it has 2 or more adjacent lava blocks.");
-        add("info.thermal_extra.lava_gen_nether", "This Block generate more Lava in the nether.");
+        add("info.thermal_extra.lava_gen.0", "Magmatic Accumulator generate Lava if it has 2 or more adjacent lava blocks.");
+        add("info.thermal_extra.lava_gen_nether.0", "This Block generate more Lava in the nether.");
+        add("info.thermal_extra.endothermic_dehydrator.0", "Evaporate a fluid into items.");
 
         // creative tabs
         add("creative_tab.thermal_extra.resources", "Thermal Extra: Resources");
@@ -66,8 +67,17 @@ public class ExtraLangGen extends LanguageProvider {
         addBlock(ThermalExtraBlocks.BLOCKS.getSup("nitratic_igniter"), "Nitratic Igniter");
         addBlock(ThermalExtraBlocks.BLOCKS.getSup("fluid_mixer"), "Fluid Mixer");
         addBlock(ThermalExtraBlocks.BLOCKS.getSup("component_assembly"), "Component Assembly");
-        addBlock(ThermalExtraBlocks.BLOCKS.getSup("drying_tank"), "Drying Tank");
+        addBlock(ThermalExtraBlocks.BLOCKS.getSup("drying_tank"), "Endothermic Dehydrator");
         addBlock(ThermalExtraBlocks.BLOCKS.getSup("device_lava_gen"), "Magmatic Accumulator");
+
+        // jerky
+        addItem(ThermalExtraItems.beef_jerky, "Beef Jerky");
+        addItem(ThermalExtraItems.chicken_jerky, "Chicken Jerky");
+        addItem(ThermalExtraItems.cod_jerky, "Cod Jerky");
+        addItem(ThermalExtraItems.mutton_jerky, "Mutton Jerky");
+        addItem(ThermalExtraItems.pork_jerky, "Pork Jerky");
+        addItem(ThermalExtraItems.rabbit_jerky, "Rabbit Jerky");
+        addItem(ThermalExtraItems.salmon_jerky, "Salmon Jerky");
 
         // ore chunks
         addItem(ThermalExtraItems.copper_ore_chunk, "Copper Ore Chunk");

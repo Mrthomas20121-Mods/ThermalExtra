@@ -53,12 +53,13 @@ public class ThermalBuilder<T extends ThermalRecipe> {
         return new ThermalBuilder<>(ThermalExtraRecipeSerializers.METAl_INFUSER_RECIPE_SERIALIZER.get());
     }
 
+
     public static ThermalBuilder<FluidMixerRecipe> fluid_mixer() {
         return new ThermalBuilder<>(ThermalExtraRecipeSerializers.FLUID_MIXER_RECIPE_SERIALIZER.get());
     }
 
-    public static ThermalBuilder<DryingTankRecipe> drying_tank() {
-        return new ThermalBuilder<>(ThermalExtraRecipeSerializers.DRYING_TANK_RECIPE_SERIALIZER.get()).chance();
+    public static ThermalBuilder<EndothermicDehydratorRecipe> drying_tank() {
+        return new ThermalBuilder<>(ThermalExtraRecipeSerializers.ENDOTHERMIC_DEHYDRATOR_RECIPE_SERIALIZER.get()).chance();
     }
 
     public static ThermalBuilder<ComponentAssemblyRecipe> component_assembly() {
@@ -211,6 +212,10 @@ public class ThermalBuilder<T extends ThermalRecipe> {
         }
         public static ChanceItemStack of(Item stack) {
             return new ChanceItemStack(new ItemStack(stack), BASE_CHANCE_LOCKED, false);
+        }
+
+        public static ChanceItemStack of(ItemStack stack, float chance) {
+            return new ChanceItemStack(stack, chance, false);
         }
     }
 }

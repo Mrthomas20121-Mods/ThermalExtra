@@ -28,6 +28,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.conditions.NotCondition;
 import net.minecraftforge.common.crafting.conditions.TagEmptyCondition;
@@ -217,6 +218,14 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
     }
 
     public void generateMachineRecipes(@NotNull Consumer<FinishedRecipe> consumer) {
+
+        ThermalBuilder.drying_tank()
+                .input(new FluidStack(Fluids.LAVA, 1000))
+                .output(ThermalBuilder.ChanceItemStack.of(new ItemStack(Items.BLAZE_POWDER), 0.25f))
+                .output(ThermalBuilder.ChanceItemStack.of(new ItemStack(Items.FLINT), 0.25f))
+                .output(ThermalBuilder.ChanceItemStack.of(new ItemStack(Items.MAGMA_CREAM), 0.1f))
+                .save(consumer, modLoc("machine/drying_tank/lava"));
+
         ThermalBuilder.nitratic_igniter_catalyst()
                 .ingredient(Blocks.TNT.asItem())
                 .primaryMod(1.01f)
@@ -597,5 +606,13 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                     .output(gear)
                     .save(consumer, "thermal_extra:machine/press/"+type+"_gear");
         }
+    }
+
+    private ResourceLocation loc(String name) {
+        return new ResourceLocation(this.modLoc(name));
+    }
+
+    private String modLoc(String name) {
+        return ThermalExtra.MOD_ID+":"+name;
     }
 }

@@ -19,6 +19,14 @@ public class ExtraModelGen extends ItemModelProviderCoFH {
 
     @Override
     protected void registerModels() {
+        itemModel(ThermalExtraItems.beef_jerky);
+        itemModel(ThermalExtraItems.chicken_jerky);
+        itemModel(ThermalExtraItems.cod_jerky);
+        itemModel(ThermalExtraItems.mutton_jerky);
+        itemModel(ThermalExtraItems.pork_jerky);
+        itemModel(ThermalExtraItems.rabbit_jerky);
+        itemModel(ThermalExtraItems.salmon_jerky);
+
         itemModel(ThermalExtraItems.copper_ore_chunk);
         itemModel(ThermalExtraItems.iron_ore_chunk);
         itemModel(ThermalExtraItems.gold_ore_chunk);

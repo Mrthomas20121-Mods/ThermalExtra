@@ -15,14 +15,14 @@ import net.minecraftforge.fluids.FluidStack;
 import javax.annotation.Nonnull;
 import java.util.List;
 
-public class DryingTankRecipe extends ThermalRecipe {
+public class EndothermicDehydratorRecipe extends ThermalRecipe {
 
-    public DryingTankRecipe(ResourceLocation recipeId, int energy, float experience, List<Ingredient> inputItems, List<FluidIngredient> inputFluids, List<ItemStack> outputItems, List<Float> outputItemChances, List<FluidStack> outputFluids) {
+    public EndothermicDehydratorRecipe(ResourceLocation recipeId, int energy, float experience, List<Ingredient> inputItems, List<FluidIngredient> inputFluids, List<ItemStack> outputItems, List<Float> outputItemChances, List<FluidStack> outputFluids) {
 
         super(recipeId, energy, experience, inputItems, inputFluids, outputItems, outputItemChances, outputFluids);
 
         if (this.energy <= 0) {
-            int defaultEnergy = DryingTankRecipeManager.instance().getDefaultEnergy();
+            int defaultEnergy = EndothermicDehydratorRecipeManager.instance().getDefaultEnergy();
             ThermalCore.LOG.warn("Energy value for " + recipeId + " was out of allowable range and has been set to a default value of " + defaultEnergy + ".");
             this.energy = defaultEnergy;
         }
@@ -31,14 +31,14 @@ public class DryingTankRecipe extends ThermalRecipe {
     @Nonnull
     @Override
     public RecipeSerializer<?> getSerializer() {
-        return ThermalExtraRecipeSerializers.DRYING_TANK_RECIPE_SERIALIZER.get();
+        return ThermalExtraRecipeSerializers.ENDOTHERMIC_DEHYDRATOR_RECIPE_SERIALIZER.get();
     }
 
     @Nonnull
     @Override
     public RecipeType<?> getType() {
 
-        return ThermalExtraRecipeTypes.DRYING_TANK.get();
+        return ThermalExtraRecipeTypes.ENDOTHERMIC_DEHYDRATOR.get();
     }
 
 }

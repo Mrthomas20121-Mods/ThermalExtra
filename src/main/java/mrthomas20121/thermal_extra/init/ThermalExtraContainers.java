@@ -26,6 +26,6 @@ public class ThermalExtraContainers {
     public static final RegistryObject<MenuType<MachineFluidMixerMenu>> FLUID_MIXER_CONTAINER = CONTAINERS.register("fluid_mixer", () -> IForgeMenuType.create((windowId, inv, data) -> new MachineFluidMixerMenu(windowId, getClientWorld(), data.readBlockPos(), inv, getClientPlayer())));
     public static final RegistryObject<MenuType<DeviceLavaGenMenu>> LAVA_GEN_CONTAINER = CONTAINERS.register("lava_gen", () -> IForgeMenuType.create((windowId, inv, data) -> new DeviceLavaGenMenu(windowId, getClientWorld(), data.readBlockPos(), inv, getClientPlayer())));
     public static final RegistryObject<MenuType<MachineComponentAssemblyMenu>> COMPONENT_ASSEMBLY_CONTAINER = CONTAINERS.register("component_assembly", () -> IForgeMenuType.create((windowId, inv, data) -> new MachineComponentAssemblyMenu(windowId, getClientWorld(), data.readBlockPos(), inv, getClientPlayer())));
-    public static final RegistryObject<MenuType<MachineDryingTankMenu>> DRYING_TANK_CONTAINER = CONTAINERS.register("drying_tank", () -> IForgeMenuType.create((windowId, inv, data) -> new MachineDryingTankMenu(windowId, getClientWorld(), data.readBlockPos(), inv, getClientPlayer())));
+    public static final RegistryObject<MenuType<MachineEndothermicDehydratorMenu>> ENDOTHERMIC_DEHYDRATOR_CONTAINER = CONTAINERS.register("endothermic_dehydrator", () -> IForgeMenuType.create((windowId, inv, data) -> new MachineEndothermicDehydratorMenu(windowId, getClientWorld(), data.readBlockPos(), inv, getClientPlayer())));
 
 }

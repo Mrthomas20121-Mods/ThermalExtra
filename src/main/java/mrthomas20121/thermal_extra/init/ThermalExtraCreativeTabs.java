@@ -4,7 +4,6 @@ import mrthomas20121.thermal_extra.ThermalExtra;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
@@ -104,7 +103,7 @@ public class ThermalExtraCreativeTabs {
                 output.accept(ThermalExtraBlocks.NITRATIC_IGNITER.get());
                 output.accept(ThermalExtraBlocks.FLUID_MIXER.get());
                 output.accept(ThermalExtraBlocks.COMPONENT_ASSEMBLY.get());
-                output.accept(ThermalExtraBlocks.DRYING_TANK.get());
+                output.accept(ThermalExtraBlocks.ENDOTHERMIC_DEHYDRATOR.get());
             })
             .build()
     );
@@ -113,6 +112,14 @@ public class ThermalExtraCreativeTabs {
             .icon(() -> new ItemStack(ThermalExtraItems.amethyst_dust.get()))
             .title(Component.translatable("creative_tab.thermal_extra.resources"))
             .displayItems((feature, output) -> {
+
+                output.accept(ThermalExtraItems.beef_jerky.get());
+                output.accept(ThermalExtraItems.chicken_jerky.get());
+                output.accept(ThermalExtraItems.cod_jerky.get());
+                output.accept(ThermalExtraItems.mutton_jerky.get());
+                output.accept(ThermalExtraItems.pork_jerky.get());
+                output.accept(ThermalExtraItems.rabbit_jerky.get());
+                output.accept(ThermalExtraItems.salmon_jerky.get());
 
                 output.accept(ThermalExtraItems.copper_ore_chunk.get());
                 output.accept(ThermalExtraItems.iron_ore_chunk.get());

@@ -21,6 +21,6 @@ public class ThermalExtraRecipeSerializers {
     public static final RegistryObject<MachineRecipeSerializer<NitraticIgniterRecipe>> NITRATIC_IGNITER_RECIPE_SERIALIZER = RECIPE_SERIALIZERS.register("nitratic_igniter", () -> new MachineRecipeSerializer<>(NitraticIgniterRecipe::new, NitraticIgniterRecipeManager.instance().getDefaultEnergy()));
     public static final RegistryObject<MachineCatalystSerializer<NitraticIgniterCatalyst>> NITRATIC_IGNITER_CATALYST_SERIALIZER = RECIPE_SERIALIZERS.register("nitratic_igniter_catalyst", () -> new MachineCatalystSerializer<>(NitraticIgniterCatalyst::new));
     public static final RegistryObject<MachineRecipeSerializer<ComponentAssemblyRecipe>> COMPONENT_ASSEMBLY_RECIPE_SERIALIZER = RECIPE_SERIALIZERS.register("component_assembly", () -> new MachineRecipeSerializer<>(ComponentAssemblyRecipe::new, ComponentAssemblyRecipeManager.instance().getDefaultEnergy()));
-    public static final RegistryObject<MachineRecipeSerializer<DryingTankRecipe>> DRYING_TANK_RECIPE_SERIALIZER = RECIPE_SERIALIZERS.register("drying_tank", () -> new MachineRecipeSerializer<>(DryingTankRecipe::new, DryingTankRecipeManager.instance().getDefaultEnergy()));
+    public static final RegistryObject<MachineRecipeSerializer<EndothermicDehydratorRecipe>> ENDOTHERMIC_DEHYDRATOR_RECIPE_SERIALIZER = RECIPE_SERIALIZERS.register("endothermic_dehydrator", () -> new MachineRecipeSerializer<>(EndothermicDehydratorRecipe::new, EndothermicDehydratorRecipeManager.instance().getDefaultEnergy()));
 
 }

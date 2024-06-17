@@ -1,0 +1,24 @@
+{
+  "type": "thermal_extra:drying_tank",
+  "energy": 4000,
+  "ingredients": [
+    {
+      "amount": 1000,
+      "fluid": "minecraft:lava"
+    }
+  ],
+  "result": [
+    {
+      "chance": 0.25,
+      "item": "minecraft:blaze_powder"
+    },
+    {
+      "chance": 0.25,
+      "item": "minecraft:flint"
+    },
+    {
+      "chance": 0.1,
+      "item": "minecraft:magma_cream"
+    }
+  ]
+}

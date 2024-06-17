@@ -4,7 +4,6 @@ import cofh.lib.util.DeferredRegisterCoFH;
 import mrthomas20121.thermal_extra.ThermalExtra;
 import mrthomas20121.thermal_extra.block.entity.*;
 import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -18,7 +17,7 @@ public class ThermalExtraBlockEntities {
     public static RegistryObject<BlockEntityType<?>> NITRATIC_IGNITER = BLOCK_ENTITIES.register("nitratic_igniter", () -> BlockEntityType.Builder.of(MachineNitraticIgniterBlockEntity::new, ThermalExtraBlocks.BLOCKS.get("nitratic_igniter")).build(null));
     public static RegistryObject<BlockEntityType<?>> FLUID_MIXER = BLOCK_ENTITIES.register("fluid_mixer", () -> BlockEntityType.Builder.of(MachineFluidMixerBlockEntity::new, ThermalExtraBlocks.BLOCKS.get("fluid_mixer")).build(null));
     public static RegistryObject<BlockEntityType<?>> COMPONENT_ASSEMBLY = BLOCK_ENTITIES.register("component_assembly", () -> BlockEntityType.Builder.of(MachineComponentAssemblyBlockEntity::new, ThermalExtraBlocks.BLOCKS.get("component_assembly")).build(null));
-    public static RegistryObject<BlockEntityType<?>> DRYING_TANK = BLOCK_ENTITIES.register("drying_tank", () -> BlockEntityType.Builder.of(MachineComponentAssemblyBlockEntity::new, ThermalExtraBlocks.BLOCKS.get("drying_tank")).build(null));
+    public static RegistryObject<BlockEntityType<?>> ENDOTHERMIC_DEHYDRATOR = BLOCK_ENTITIES.register("endothermic_dehydrator", () -> BlockEntityType.Builder.of(MachineEndothermicDehydratorBlockEntity::new, ThermalExtraBlocks.BLOCKS.get("endothermic_dehydrator")).build(null));
 
     public static RegistryObject<BlockEntityType<?>> LAVA_GEN = BLOCK_ENTITIES.register("lava_gen", () -> BlockEntityType.Builder.of(DeviceLavaGenBlockEntity::new, ThermalExtraBlocks.BLOCKS.get("device_lava_gen")).build(null));
 

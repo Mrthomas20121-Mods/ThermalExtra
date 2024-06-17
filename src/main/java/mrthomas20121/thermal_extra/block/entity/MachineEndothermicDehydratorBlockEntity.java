@@ -2,13 +2,13 @@ package mrthomas20121.thermal_extra.block.entity;
 
 import cofh.core.util.helpers.FluidHelper;
 import cofh.lib.common.fluid.FluidStorageCoFH;
+import cofh.lib.common.inventory.ItemStorageCoFH;
 import cofh.thermal.core.common.config.ThermalCoreConfig;
 import cofh.thermal.lib.common.block.entity.MachineBlockEntity;
 import mrthomas20121.thermal_extra.init.ThermalExtraBlockEntities;
-import mrthomas20121.thermal_extra.inventory.machine.MachineAdvancedRefineryMenu;
-import mrthomas20121.thermal_extra.inventory.machine.MachineDryingTankMenu;
-import mrthomas20121.thermal_extra.recipe.AdvancedRefineryRecipeManager;
-import mrthomas20121.thermal_extra.recipe.DryingTankRecipeManager;
+import mrthomas20121.thermal_extra.inventory.machine.MachineEndothermicDehydratorMenu;
+import mrthomas20121.thermal_extra.recipe.EndothermicDehydratorRecipeManager;
+import mrthomas20121.thermal_extra.recipe.MetalInfuserRecipeManager;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -22,19 +22,23 @@ import javax.annotation.Nullable;
 import static cofh.lib.api.StorageGroup.*;
 import static cofh.lib.util.Constants.*;
 
-public class MachineDryingTankBlockEntity extends MachineBlockEntity {
+public class MachineEndothermicDehydratorBlockEntity extends MachineBlockEntity {
 
-    protected FluidStorageCoFH inputTank = new FluidStorageCoFH(TANK_MEDIUM, fluid -> filter.valid(fluid) && DryingTankRecipeManager.instance().validFluid(fluid));
+    protected ItemStorageCoFH inputSlot = new ItemStorageCoFH(item -> filter.valid(item) && EndothermicDehydratorRecipeManager.instance().validItem(item));
+    protected FluidStorageCoFH inputTank = new FluidStorageCoFH(TANK_MEDIUM, fluid -> filter.valid(fluid) && EndothermicDehydratorRecipeManager.instance().validFluid(fluid));
+    protected FluidStorageCoFH outputTank = new FluidStorageCoFH(TANK_MEDIUM);
 
-    public MachineDryingTankBlockEntity(BlockPos pos, BlockState state) {
+    public MachineEndothermicDehydratorBlockEntity(BlockPos pos, BlockState state) {
 
-        super(ThermalExtraBlockEntities.DRYING_TANK.get(), pos, state);
+        super(ThermalExtraBlockEntities.ENDOTHERMIC_DEHYDRATOR.get(), pos, state);
 
         inventory.addSlots(OUTPUT, 6);
         inventory.addSlot(chargeSlot, INTERNAL);
 
+        inventory.addSlot(inputSlot, INPUT);
+
         tankInv.addTank(inputTank, INPUT);
-        //tankInv.addTank(outputTankD, OUTPUT);
+        tankInv.addTank(outputTank, OUTPUT);
 
         renderFluid = new FluidStack(Fluids.WATER, BUCKET_VOLUME);
 
@@ -45,13 +49,13 @@ public class MachineDryingTankBlockEntity extends MachineBlockEntity {
     @Override
     protected int getBaseProcessTick() {
 
-        return DryingTankRecipeManager.instance().getBasePower();
+        return EndothermicDehydratorRecipeManager.instance().getBasePower();
     }
 
     @Override
     protected boolean cacheRecipe() {
 
-        curRecipe = DryingTankRecipeManager.instance().getRecipe(this);
+        curRecipe = EndothermicDehydratorRecipeManager.instance().getRecipe(this);
         if (curRecipe != null) {
             fluidInputCounts = curRecipe.getInputFluidCounts(this);
         }
@@ -77,7 +81,7 @@ public class MachineDryingTankBlockEntity extends MachineBlockEntity {
     @Override
     public AbstractContainerMenu createMenu(int i, Inventory inventory, Player player) {
 
-        return new MachineDryingTankMenu(i, level, worldPosition, inventory, player);
+        return new MachineEndothermicDehydratorMenu(i, level, worldPosition, inventory, player);
     }
 
     // region OPTIMIZATION
