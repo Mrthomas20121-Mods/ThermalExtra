@@ -152,6 +152,19 @@ public class ExtraModelGen extends ItemModelProviderCoFH {
         itemModel(ThermalExtraFluids.polyolefin.getBucket());
         itemModel(ThermalExtraFluids.super_biodiesel.getBucket());
 
+        itemModel(ThermalExtraFluids.raw_aluminum.getBucket());
+        itemModel(ThermalExtraFluids.raw_arcane_gold.getBucket());
+        itemModel(ThermalExtraFluids.raw_copper.getBucket());
+        itemModel(ThermalExtraFluids.raw_gold.getBucket());
+        itemModel(ThermalExtraFluids.raw_iron.getBucket());
+        itemModel(ThermalExtraFluids.raw_lead.getBucket());
+        itemModel(ThermalExtraFluids.raw_nickel.getBucket());
+        itemModel(ThermalExtraFluids.raw_osmium.getBucket());
+        itemModel(ThermalExtraFluids.raw_silver.getBucket());
+        itemModel(ThermalExtraFluids.raw_tin.getBucket());
+        itemModel(ThermalExtraFluids.raw_uranium.getBucket());
+        itemModel(ThermalExtraFluids.raw_zinc.getBucket());
+
         blockItem(ThermalExtraBlocks.DYNAMO_COLD);
     }
 

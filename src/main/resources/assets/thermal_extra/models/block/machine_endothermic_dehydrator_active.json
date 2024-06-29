@@ -1,0 +1,6 @@
+{
+  "parent": "thermal_extra:block/machine_endothermic_dehydrator",
+  "textures": {
+    "north": "thermal_extra:block/machines/machine_endothermic_dehydrator_active"
+  }
+}

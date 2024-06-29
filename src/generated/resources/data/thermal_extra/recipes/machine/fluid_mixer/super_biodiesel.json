@@ -1,6 +1,6 @@
 {
   "type": "thermal_extra:fluid_mixer",
-  "energy": 4000,
+  "energy": 10000,
   "ingredients": [
     {
       "amount": 1000,
@@ -8,7 +8,7 @@
     },
     {
       "amount": 1000,
-      "fluid": "thermal:syrup"
+      "fluid": "thermal_extra:twinite"
     }
   ],
   "result": [

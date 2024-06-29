@@ -11,6 +11,7 @@ import cofh.thermal.lib.util.ThermalIDs;
 import cofh.thermal.lib.util.references.ThermalTags;
 import mrthomas20121.thermal_extra.ThermalExtra;
 import mrthomas20121.thermal_extra.data.thermal_recipe.ThermalBuilder;
+import mrthomas20121.thermal_extra.fluid.FluidThermalExtra;
 import mrthomas20121.thermal_extra.init.ThermalExtraBlocks;
 import mrthomas20121.thermal_extra.init.ThermalExtraFluids;
 import mrthomas20121.thermal_extra.init.ThermalExtraItems;
@@ -219,12 +220,96 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
 
     public void generateMachineRecipes(@NotNull Consumer<FinishedRecipe> consumer) {
 
-        ThermalBuilder.drying_tank()
+        ThermalBuilder.endothermic_dehydrator()
                 .input(new FluidStack(Fluids.LAVA, 1000))
                 .output(ThermalBuilder.ChanceItemStack.of(new ItemStack(Items.BLAZE_POWDER), 0.25f))
                 .output(ThermalBuilder.ChanceItemStack.of(new ItemStack(Items.FLINT), 0.25f))
                 .output(ThermalBuilder.ChanceItemStack.of(new ItemStack(Items.MAGMA_CREAM), 0.1f))
-                .save(consumer, modLoc("machine/drying_tank/lava"));
+                .save(consumer, modLoc("machine/endothermic_dehydrator/lava"));
+
+        ThermalBuilder.endothermic_dehydrator()
+                .input(new FluidStack(ThermalExtraFluids.raw_copper.still().get(), 90))
+                .output(ThermalBuilder.ChanceItemStack.of(new ItemStack(ITEMS.get("copper_dust"), 2), 1.25f, true))
+                .output(ThermalBuilder.ChanceItemStack.of(new ItemStack(ITEMS.get("copper_dust")), 0.50f))
+                .output(ThermalBuilder.ChanceItemStack.of(new ItemStack(ITEMS.get("gold_dust")), 0.15f))
+                .save(consumer, modLoc("machine/endothermic_dehydrator/raw_copper"));
+
+        ThermalBuilder.endothermic_dehydrator()
+                .input(new FluidStack(ThermalExtraFluids.raw_gold.still().get(), 90))
+                .output(ThermalBuilder.ChanceItemStack.of(new ItemStack(ITEMS.get("gold_dust"), 2), 1.25f, true))
+                .output(ThermalBuilder.ChanceItemStack.of(new ItemStack(ITEMS.get("gold_dust")), 0.50f))
+                .output(ThermalBuilder.ChanceItemStack.of(new ItemStack(ITEMS.get("copper_dust")), 0.15f))
+                .save(consumer, modLoc("machine/endothermic_dehydrator/raw_gold"));
+
+        ThermalBuilder.endothermic_dehydrator()
+                .input(new FluidStack(ThermalExtraFluids.raw_iron.still().get(), 90))
+                .output(ThermalBuilder.ChanceItemStack.of(new ItemStack(ITEMS.get("iron_dust"), 2), 1.25f, true))
+                .output(ThermalBuilder.ChanceItemStack.of(new ItemStack(ITEMS.get("iron_dust")), 0.50f))
+                .output(ThermalBuilder.ChanceItemStack.of(new ItemStack(ITEMS.get("nickel_dust")), 0.15f))
+                .save(consumer, modLoc("machine/endothermic_dehydrator/raw_iron"));
+
+        ThermalBuilder.endothermic_dehydrator()
+                .input(new FluidStack(ThermalExtraFluids.raw_lead.still().get(), 90))
+                .output(ThermalBuilder.ChanceItemStack.of(new ItemStack(ITEMS.get("lead_dust"), 2), 1.25f, true))
+                .output(ThermalBuilder.ChanceItemStack.of(new ItemStack(ITEMS.get("lead_dust")), 0.50f))
+                .output(ThermalBuilder.ChanceItemStack.of(new ItemStack(ITEMS.get("silver_dust")), 0.15f))
+                .save(consumer, modLoc("machine/endothermic_dehydrator/raw_lead"));
+
+        ThermalBuilder.endothermic_dehydrator()
+                .input(new FluidStack(ThermalExtraFluids.raw_nickel.still().get(), 90))
+                .output(ThermalBuilder.ChanceItemStack.of(new ItemStack(ITEMS.get("nickel_dust"), 2), 1.25f, true))
+                .output(ThermalBuilder.ChanceItemStack.of(new ItemStack(ITEMS.get("nickel_dust")), 0.50f))
+                .output(ThermalBuilder.ChanceItemStack.of(new ItemStack(ITEMS.get("iron_dust")), 0.15f))
+                .save(consumer, modLoc("machine/endothermic_dehydrator/raw_nickel"));
+
+        ThermalBuilder.endothermic_dehydrator()
+                .input(new FluidStack(ThermalExtraFluids.raw_silver.still().get(), 90))
+                .output(ThermalBuilder.ChanceItemStack.of(new ItemStack(ITEMS.get("silver_dust"), 2), 1.25f, true))
+                .output(ThermalBuilder.ChanceItemStack.of(new ItemStack(ITEMS.get("silver_dust")), 0.50f))
+                .output(ThermalBuilder.ChanceItemStack.of(new ItemStack(ITEMS.get("lead_dust")), 0.15f))
+                .save(consumer, modLoc("machine/endothermic_dehydrator/raw_silver"));
+
+        ThermalBuilder.endothermic_dehydrator()
+                .input(new FluidStack(ThermalExtraFluids.raw_tin.still().get(), 90))
+                .output(ThermalBuilder.ChanceItemStack.of(new ItemStack(ITEMS.get("tin_dust"), 2), 1.25f, true))
+                .output(ThermalBuilder.ChanceItemStack.of(new ItemStack(ITEMS.get("tin_dust")), 0.50f))
+                .output(ThermalBuilder.ChanceItemStack.of(new ItemStack(ITEMS.get("apatite")), 0.15f))
+                .save(consumer, modLoc("machine/endothermic_dehydrator/raw_tin"));
+
+        ThermalBuilder.endothermic_dehydrator()
+                .input(Items.COOKED_BEEF)
+                .output(ThermalExtraItems.beef_jerky.get())
+                .save(consumer, modLoc("machine/endothermic_dehydrator/beef_jerky"));
+
+        ThermalBuilder.endothermic_dehydrator()
+                .input(Items.COOKED_CHICKEN)
+                .output(ThermalExtraItems.chicken_jerky.get())
+                .save(consumer, modLoc("machine/endothermic_dehydrator/chicken_jerky"));
+
+        ThermalBuilder.endothermic_dehydrator()
+                .input(Items.COOKED_COD)
+                .output(ThermalExtraItems.cod_jerky.get())
+                .save(consumer, modLoc("machine/endothermic_dehydrator/cod_jerky"));
+
+        ThermalBuilder.endothermic_dehydrator()
+                .input(Items.COOKED_MUTTON)
+                .output(ThermalExtraItems.mutton_jerky.get())
+                .save(consumer, modLoc("machine/endothermic_dehydrator/mutton_jerky"));
+
+        ThermalBuilder.endothermic_dehydrator()
+                .input(Items.COOKED_PORKCHOP)
+                .output(ThermalExtraItems.pork_jerky.get())
+                .save(consumer, modLoc("machine/endothermic_dehydrator/pork_jerky"));
+
+        ThermalBuilder.endothermic_dehydrator()
+                .input(Items.COOKED_RABBIT)
+                .output(ThermalExtraItems.rabbit_jerky.get())
+                .save(consumer, modLoc("machine/endothermic_dehydrator/rabbit_jerky"));
+
+        ThermalBuilder.endothermic_dehydrator()
+                .input(Items.COOKED_SALMON)
+                .output(ThermalExtraItems.salmon_jerky.get())
+                .save(consumer, modLoc("machine/endothermic_dehydrator/salmon_jerky"));
 
         ThermalBuilder.nitratic_igniter_catalyst()
                 .ingredient(Blocks.TNT.asItem())
@@ -401,15 +486,43 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
         ThermalBuilder.fluid_mixer()
                 .input(FluidIngredient.of(ThermalTags.Fluids.LATEX, 1000))
                 .input(TCoreFluids.CREOSOTE_FLUID.get(), 1000)
+                .energy(15000)
                 .output(ThermalExtraFluids.polyolefin.still().get(), 1000)
                 .output(TCoreFluids.RESIN_FLUID.get(), 500)
                 .save(consumer, "thermal_extra:machine/fluid_mixer/polyolefin");
 
         ThermalBuilder.fluid_mixer()
                 .input(ThermalExtraFluids.biodiesel.getStillFluid().get(), 1000)
-                .input(TCoreFluids.SYRUP_FLUID.get(), 1000)
+                .input(ThermalExtraFluids.twinite.getStillFluid().get(), 1000)
+                .energy(10000)
                 .output(new FluidStack(ThermalExtraFluids.super_biodiesel.still().get(), 1000))
                 .save(consumer, "thermal_extra:machine/fluid_mixer/super_biodiesel");
+
+        crucibleRecipe(consumer, 8000, ThermalExtraFluids.raw_aluminum, 120, rawAluminum, "raw_aluminum");
+        crucibleRecipe(consumer, 8000, ThermalExtraFluids.raw_arcane_gold, 120, rawArcaneGold, "raw_arcane_gold");
+        crucibleRecipe(consumer, 8000, ThermalExtraFluids.raw_copper, 120, Tags.Items.RAW_MATERIALS_COPPER, "raw_copper");
+        crucibleRecipe(consumer, 8000, ThermalExtraFluids.raw_gold, 120, Tags.Items.RAW_MATERIALS_GOLD, "raw_gold");
+        crucibleRecipe(consumer, 8000, ThermalExtraFluids.raw_iron, 120, Tags.Items.RAW_MATERIALS_IRON, "raw_iron");
+        crucibleRecipe(consumer, 8000, ThermalExtraFluids.raw_lead, 120, ItemTagsCoFH.RAW_MATERIALS_LEAD, "raw_lead");
+        crucibleRecipe(consumer, 8000, ThermalExtraFluids.raw_nickel, 120, ItemTagsCoFH.RAW_MATERIALS_NICKEL, "raw_nickel");
+        crucibleRecipe(consumer, 8000, ThermalExtraFluids.raw_osmium, 120, rawOsmium, "raw_osmium");
+        crucibleRecipe(consumer, 8000, ThermalExtraFluids.raw_silver, 120, ItemTagsCoFH.RAW_MATERIALS_SILVER, "raw_silver");
+        crucibleRecipe(consumer, 8000, ThermalExtraFluids.raw_tin, 120, ItemTagsCoFH.RAW_MATERIALS_TIN, "raw_tin");
+        crucibleRecipe(consumer, 8000, ThermalExtraFluids.raw_uranium, 120, rawUranium, "raw_uranium");
+        crucibleRecipe(consumer, 8000, ThermalExtraFluids.raw_zinc, 120, rawZinc, "raw_zinc");
+
+        crucibleRecipe(consumer, 8000, ThermalExtraFluids.raw_aluminum, 90, ThermalExtraItems.aluminum_ore_chunk.get(), "raw_aluminum_from_chunk");
+        crucibleRecipe(consumer, 8000, ThermalExtraFluids.raw_arcane_gold, 90, ThermalExtraItems.arcane_gold_ore_chunk.get(), "raw_arcane_gold_from_chunk");
+        crucibleRecipe(consumer, 8000, ThermalExtraFluids.raw_copper, 90, ThermalExtraItems.copper_ore_chunk.get(), "raw_copper_from_chunk");
+        crucibleRecipe(consumer, 8000, ThermalExtraFluids.raw_gold, 90, ThermalExtraItems.gold_ore_chunk.get(), "raw_gold_from_chunk");
+        crucibleRecipe(consumer, 8000, ThermalExtraFluids.raw_iron, 90, ThermalExtraItems.iron_ore_chunk.get(), "raw_iron_from_chunk");
+        crucibleRecipe(consumer, 8000, ThermalExtraFluids.raw_lead, 90, ThermalExtraItems.lead_ore_chunk.get(), "raw_lead_from_chunk");
+        crucibleRecipe(consumer, 8000, ThermalExtraFluids.raw_nickel, 90, ThermalExtraItems.nickel_ore_chunk.get(), "raw_nickel_from_chunk");
+        crucibleRecipe(consumer, 8000, ThermalExtraFluids.raw_osmium, 90, ThermalExtraItems.osmium_ore_chunk.get(), "raw_osmium_from_chunk");
+        crucibleRecipe(consumer, 8000, ThermalExtraFluids.raw_silver, 90, ThermalExtraItems.silver_ore_chunk.get(), "raw_silver_from_chunk");
+        crucibleRecipe(consumer, 8000, ThermalExtraFluids.raw_tin, 90, ThermalExtraItems.tin_ore_chunk.get(), "raw_tin_from_chunk");
+        crucibleRecipe(consumer, 8000, ThermalExtraFluids.raw_uranium, 90, ThermalExtraItems.uranium_ore_chunk.get(), "raw_uranium_from_chunk");
+        crucibleRecipe(consumer, 8000, ThermalExtraFluids.raw_zinc, 90, ThermalExtraItems.zinc_ore_chunk.get(), "raw_zinc_from_chunk");
     }
 
 
@@ -477,6 +590,27 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .output(new ThermalBuilder.ChanceItemStack(new ItemStack(mainOreChunk.get(), 1), 0.65f, false))
                 .exp(1.1f)
                 .save(consumer, "thermal_extra:machine/nitratic_igniter/raw_" + oreName);
+    }
+
+    public ConditionalRecipeConsumer tagExists(Consumer<FinishedRecipe> consumer, TagKey<Item> tag) {
+        return withConditions(consumer).tagExists(tag);
+    }
+
+
+    public void crucibleRecipe(Consumer<FinishedRecipe> consumer, int energy, FluidThermalExtra fluid, int amount, Ingredient input, String name) {
+        ThermalBuilder.crucible()
+                .input(input)
+                .output(fluid.getStillFluid().get(), amount)
+                .energy(energy)
+                .save(consumer, modLoc("machine/crucible/"+name));
+    }
+
+    public void crucibleRecipe(Consumer<FinishedRecipe> consumer, int energy, FluidThermalExtra fluid, int amount, TagKey<Item> input, String name) {
+        this.crucibleRecipe(tagExists(consumer, input), energy, fluid, amount, Ingredient.of(input), name);
+    }
+
+    public void crucibleRecipe(Consumer<FinishedRecipe> consumer, int energy, FluidThermalExtra fluid, int amount, Item input, String name) {
+        this.crucibleRecipe(consumer, energy, fluid, amount, Ingredient.of(input), name);
     }
 
     public void augmentRecipe(@Nonnull Consumer<FinishedRecipe> consumer, String name, String flag) {

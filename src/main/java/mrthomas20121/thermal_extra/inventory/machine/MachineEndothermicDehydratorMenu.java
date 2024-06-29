@@ -32,7 +32,7 @@ public class MachineEndothermicDehydratorMenu extends BlockEntityCoFHMenu {
 
         addSlot(new SlotCoFH(tileInv, 7, 8, 53));
 
-        bindAugmentSlots(tileInv, 4, this.tile.augSize());
+        bindAugmentSlots(tileInv, 8, this.tile.augSize());
         bindPlayerInventory(inventory);
     }
 

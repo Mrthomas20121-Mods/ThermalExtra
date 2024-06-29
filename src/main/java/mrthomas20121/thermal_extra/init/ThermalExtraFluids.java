@@ -24,6 +24,19 @@ public class ThermalExtraFluids {
     public static FluidThermalExtra liquid_biomass = registerFluid("liquid_biomass", 200);
     public static FluidThermalExtra polyolefin = registerFluid("polyolefin", 500);
     public static FluidThermalExtra super_biodiesel = registerFluid("super_biodiesel", 1000);
+    public static FluidThermalExtra raw_aluminum = registerFluid("raw_aluminum", 500);
+    public static FluidThermalExtra raw_arcane_gold = registerFluid("raw_arcane_gold", 500);
+    public static FluidThermalExtra raw_copper = registerFluid("raw_copper", 500);
+    public static FluidThermalExtra raw_gold = registerFluid("raw_gold", 500);
+    public static FluidThermalExtra raw_iron = registerFluid("raw_iron", 500);
+    public static FluidThermalExtra raw_lead = registerFluid("raw_lead", 500);
+    public static FluidThermalExtra raw_nickel = registerFluid("raw_nickel", 500);
+    public static FluidThermalExtra raw_osmium = registerFluid("raw_osmium", 500);
+    public static FluidThermalExtra raw_silver = registerFluid("raw_silver", 500);
+    public static FluidThermalExtra raw_tin = registerFluid("raw_tin", 500);
+    public static FluidThermalExtra raw_uranium = registerFluid("raw_uranium", 500);
+    public static FluidThermalExtra raw_zinc = registerFluid("raw_zinc", 500);
+
 
     public static FluidThermalExtra registerFluid(String name, int temp) {
         return new FluidThermalExtra(name, String.format("thermal_extra:block/fluids/%s_still", name), String.format("thermal:block/fluids/%s_flow", name), temp);

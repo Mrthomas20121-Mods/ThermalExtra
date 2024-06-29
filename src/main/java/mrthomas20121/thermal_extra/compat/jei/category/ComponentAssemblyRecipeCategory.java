@@ -48,7 +48,7 @@ public class ComponentAssemblyRecipeCategory extends ThermalRecipeCategory<Compo
         super(guiHelper, icon, type);
         energyMod = () -> ComponentAssemblyRecipeManager.instance().getDefaultScale();
 
-        background = guiHelper.drawableBuilder(MachineComponentAssemblyScreen.TEXTURE, 26, 11, 124, 62)
+        background = guiHelper.drawableBuilder(MachineComponentAssemblyScreen.TEXTURE, 26, 11, 128, 62)
                 .addPadding(0, 0, 16, 24)
                 .build();
         name = getTextComponent(ThermalExtraBlocks.BLOCKS.get("component_assembly").getDescriptionId());
@@ -129,7 +129,7 @@ public class ComponentAssemblyRecipeCategory extends ThermalRecipeCategory<Compo
                 .setOverlay(inputOverlay, 0, 0)
                 .addTooltipCallback(defaultFluidTooltip());
 
-        builder.addSlot(RecipeIngredientRole.OUTPUT, 149, 11)
+        builder.addSlot(RecipeIngredientRole.OUTPUT, 152, 11)
                 .addIngredients(ForgeTypes.FLUID_STACK, outputFluids.isEmpty() ? List.of(FluidStack.EMPTY) : List.of(outputFluids.get(0)))
                 .setFluidRenderer(tankSize(TANK_MEDIUM), false, 16, 40)
                 .setOverlay(outputOverlay, 0, 0)
@@ -143,7 +143,7 @@ public class ComponentAssemblyRecipeCategory extends ThermalRecipeCategory<Compo
 
         progressBackground.draw(guiGraphics, 88, 22);
         tankInput.draw(guiGraphics, 28, 10);
-        tankOutput.draw(guiGraphics, 148, 10);
+        tankOutput.draw(guiGraphics, 151, 10);
 
         if (!recipe.getInputFluids().isEmpty()) {
             RenderHelper.drawFluid(guiGraphics, 88, 24, recipe.getInputFluids().get(0).getFluids()[0], 24, 16);

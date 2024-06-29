@@ -46,6 +46,21 @@ public class ExtraLangGen extends LanguageProvider {
         add("fluid_type.thermal_extra.liquid_biomass", "Liquid Biomass");
         add("fluid_type.thermal_extra.polyolefin", "Polyolefin");
         add("fluid_type.thermal_extra.super_biodiesel", "Super Biodiesel");
+
+        add("fluid_type.thermal_extra.raw_aluminum", "Molten Raw Aluminum");
+        add("fluid_type.thermal_extra.raw_arcane_gold", "Molten Raw Arcane Gold");
+        add("fluid_type.thermal_extra.raw_copper", "Molten Raw Copper");
+        add("fluid_type.thermal_extra.raw_gold", "Molten Raw Gold");
+        add("fluid_type.thermal_extra.raw_iron", "Molten Raw Iron");
+        add("fluid_type.thermal_extra.raw_lead", "Molten Raw Lead");
+        add("fluid_type.thermal_extra.raw_nickel", "Molten Raw Nickel");
+        add("fluid_type.thermal_extra.raw_osmium", "Molten Raw Osmium");
+        add("fluid_type.thermal_extra.raw_silver", "Molten Raw Silver");
+        add("fluid_type.thermal_extra.raw_tin", "Molten Raw Tin");
+        add("fluid_type.thermal_extra.raw_uranium", "Molten Raw Uranium");
+        add("fluid_type.thermal_extra.raw_zinc", "Molten Raw Zinc");
+
+
         addItem(ThermalExtraFluids.soul_infused.getBucket(), "Molten Soul Infused Bucket");
         addItem(ThermalExtraFluids.shellite.getBucket(), "Molten Shellite Bucket");
         addItem(ThermalExtraFluids.twinite.getBucket(), "Molten Twinite Bucket");
@@ -60,6 +75,19 @@ public class ExtraLangGen extends LanguageProvider {
         addItem(ThermalExtraFluids.polyolefin.getBucket(), "Polyolefin Bucket");
         addItem(ThermalExtraFluids.super_biodiesel.getBucket(), "Super Biodiesel Bucket");
 
+        addItem(ThermalExtraFluids.raw_aluminum.getBucket(), "Raw Aluminum Bucket");
+        addItem(ThermalExtraFluids.raw_arcane_gold.getBucket(), "Raw Arcane Gold Bucket");
+        addItem(ThermalExtraFluids.raw_copper.getBucket(), "Raw Copper Bucket");
+        addItem(ThermalExtraFluids.raw_gold.getBucket(), "Raw Gold Bucket");
+        addItem(ThermalExtraFluids.raw_iron.getBucket(), "Raw Iron Bucket");
+        addItem(ThermalExtraFluids.raw_lead.getBucket(), "Raw Lead Bucket");
+        addItem(ThermalExtraFluids.raw_nickel.getBucket(), "Raw Nickel Bucket");
+        addItem(ThermalExtraFluids.raw_osmium.getBucket(), "Raw Osmium Bucket");
+        addItem(ThermalExtraFluids.raw_silver.getBucket(), "Raw Silver Bucket");
+        addItem(ThermalExtraFluids.raw_tin.getBucket(), "Raw Tin Bucket");
+        addItem(ThermalExtraFluids.raw_uranium.getBucket(), "Raw Uranium Bucket");
+        addItem(ThermalExtraFluids.raw_zinc.getBucket(), "Raw Zinc Bucket");
+
         // items and blocks
         addBlock(ThermalExtraBlocks.DYNAMO_COLD, "Frost Dynamo");
         addBlock(ThermalExtraBlocks.BLOCKS.getSup("metal_infuser"), "Metal Infuser");
@@ -67,7 +95,7 @@ public class ExtraLangGen extends LanguageProvider {
         addBlock(ThermalExtraBlocks.BLOCKS.getSup("nitratic_igniter"), "Nitratic Igniter");
         addBlock(ThermalExtraBlocks.BLOCKS.getSup("fluid_mixer"), "Fluid Mixer");
         addBlock(ThermalExtraBlocks.BLOCKS.getSup("component_assembly"), "Component Assembly");
-        addBlock(ThermalExtraBlocks.BLOCKS.getSup("drying_tank"), "Endothermic Dehydrator");
+        addBlock(ThermalExtraBlocks.BLOCKS.getSup("endothermic_dehydrator"), "Endothermic Dehydrator");
         addBlock(ThermalExtraBlocks.BLOCKS.getSup("device_lava_gen"), "Magmatic Accumulator");
 
         // jerky

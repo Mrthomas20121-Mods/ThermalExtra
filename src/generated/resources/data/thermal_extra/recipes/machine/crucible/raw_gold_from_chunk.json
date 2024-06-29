@@ -1,0 +1,16 @@
+{
+  "type": "thermal:crucible",
+  "energy": 8000,
+  "ingredients": [
+    {
+      "count": 1,
+      "item": "thermal_extra:gold_ore_chunk"
+    }
+  ],
+  "result": [
+    {
+      "amount": 90,
+      "fluid": "thermal_extra:raw_gold"
+    }
+  ]
+}

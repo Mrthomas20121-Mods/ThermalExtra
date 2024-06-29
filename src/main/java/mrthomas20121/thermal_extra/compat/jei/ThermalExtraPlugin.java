@@ -45,6 +45,7 @@ public class ThermalExtraPlugin implements IModPlugin {
         registration.addRecipes(NITRATIC_IGNITER_CATALYST_TYPE, recipeManager.getAllRecipesFor(ThermalExtraRecipeTypes.NITRATIC_IGNITER_CATALYST.get()));
         registration.addRecipes(FLUID_MIXER_TYPE, recipeManager.getAllRecipesFor(ThermalExtraRecipeTypes.FLUID_MIXER.get()));
         registration.addRecipes(COMPONENT_ASSEMBLY_TYPE, recipeManager.getAllRecipesFor(ThermalExtraRecipeTypes.COMPONENT_ASSEMBLY.get()));
+        registration.addRecipes(ENDOTHERMIC_DEHYDRATOR_TYPE, recipeManager.getAllRecipesFor(ThermalExtraRecipeTypes.ENDOTHERMIC_DEHYDRATOR.get()));
     }
 
     @Override
@@ -56,6 +57,7 @@ public class ThermalExtraPlugin implements IModPlugin {
         registration.addRecipeCategories(new NitraticIgniterCatalystCategory(registration.getJeiHelpers().getGuiHelper(), new ItemStack(Blocks.TNT), NITRATIC_IGNITER_CATALYST_TYPE));
         registration.addRecipeCategories(new FluidMixerRecipeCategory(registration.getJeiHelpers().getGuiHelper(), new ItemStack(ThermalExtraBlocks.FLUID_MIXER.get()), FLUID_MIXER_TYPE));
         registration.addRecipeCategories(new ComponentAssemblyRecipeCategory(registration.getJeiHelpers().getGuiHelper(), new ItemStack(ThermalExtraBlocks.COMPONENT_ASSEMBLY.get()), COMPONENT_ASSEMBLY_TYPE));
+        registration.addRecipeCategories(new EndothermicDehydratorRecipeCategory(registration.getJeiHelpers().getGuiHelper(), new ItemStack(ThermalExtraBlocks.ENDOTHERMIC_DEHYDRATOR.get()), ENDOTHERMIC_DEHYDRATOR_TYPE));
     }
 
     @Override
@@ -70,6 +72,7 @@ public class ThermalExtraPlugin implements IModPlugin {
         registration.addRecipeClickArea(MachineNitraticIgniterScreen.class, 94, progressY, progressW, progressH, NITRATIC_IGNITER_TYPE);
         registration.addRecipeClickArea(MachineFluidMixerScreen.class, 80, progressY, progressW, progressH, FLUID_MIXER_TYPE);
         registration.addRecipeClickArea(MachineComponentAssemblyScreen.class, 92, progressY, progressW, progressH, COMPONENT_ASSEMBLY_TYPE);
+        registration.addRecipeClickArea(MachineEndothermicDehydratorScreen.class, 88, progressY, progressW, progressH, ENDOTHERMIC_DEHYDRATOR_TYPE);
     }
 
     @Override
@@ -80,6 +83,7 @@ public class ThermalExtraPlugin implements IModPlugin {
         registration.addRecipeCatalyst(new ItemStack(ThermalExtraBlocks.NITRATIC_IGNITER.get()), NITRATIC_IGNITER_TYPE);
         registration.addRecipeCatalyst(new ItemStack(ThermalExtraBlocks.NITRATIC_IGNITER.get()), NITRATIC_IGNITER_CATALYST_TYPE);
         registration.addRecipeCatalyst(new ItemStack(ThermalExtraBlocks.FLUID_MIXER.get()), FLUID_MIXER_TYPE);
+        registration.addRecipeCatalyst(new ItemStack(ThermalExtraBlocks.ENDOTHERMIC_DEHYDRATOR.get()), ENDOTHERMIC_DEHYDRATOR_TYPE);
     }
 
     private RecipeManager getRecipeManager() {
@@ -99,4 +103,5 @@ public class ThermalExtraPlugin implements IModPlugin {
     public static final RecipeType<NitraticIgniterRecipe> NITRATIC_IGNITER_TYPE = new RecipeType<>(ThermalExtraRecipeTypes.NITRATIC_IGNITER.getId(), NitraticIgniterRecipe.class);
     public static final RecipeType<NitraticIgniterCatalyst> NITRATIC_IGNITER_CATALYST_TYPE = new RecipeType<>(ThermalExtraRecipeTypes.NITRATIC_IGNITER_CATALYST.getId(), NitraticIgniterCatalyst.class);
     public static final RecipeType<ComponentAssemblyRecipe> COMPONENT_ASSEMBLY_TYPE = new RecipeType<>(ThermalExtraRecipeTypes.COMPONENT_ASSEMBLY.getId(), ComponentAssemblyRecipe.class);
+    public static final RecipeType<EndothermicDehydratorRecipe> ENDOTHERMIC_DEHYDRATOR_TYPE = new RecipeType<>(ThermalExtraRecipeTypes.ENDOTHERMIC_DEHYDRATOR.getId(), EndothermicDehydratorRecipe.class);
 }

@@ -1,0 +1,16 @@
+{
+  "type": "thermal_extra:endothermic_dehydrator",
+  "energy": 4000,
+  "ingredients": [
+    {
+      "count": 1,
+      "item": "minecraft:cooked_salmon"
+    }
+  ],
+  "result": [
+    {
+      "chance": 1.0,
+      "item": "thermal_extra:salmon_jerky"
+    }
+  ]
+}

@@ -43,8 +43,8 @@ public class EndothermicDehydratorRecipeManager extends AbstractManager implemen
     private EndothermicDehydratorRecipeManager() {
 
         super(DEFAULT_ENERGY);
-        this.maxOutputItems = 1;
-        this.maxOutputFluids = 0;
+        this.maxOutputItems = 6;
+        this.maxOutputFluids = 1;
     }
 
     public boolean validItem(ItemStack item) {

@@ -44,7 +44,7 @@ public record FinishedThermalRecipe<T extends ThermalRecipe>(RecipeSerializer<T>
 
         int size = this.outputItems.size();
 
-        for(int i = 0; i<size; i++) {
+        for(int i = 0; i < size; i++) {
             float chance = this.outputItemChances.get(i);
             ItemStack itemStack = this.outputItems.get(i);
             boolean locked = this.locked.get(i);
@@ -65,6 +65,7 @@ public record FinishedThermalRecipe<T extends ThermalRecipe>(RecipeSerializer<T>
 
             output.add(stack);
         }
+
         this.outputFluids.forEach(fluidStack -> {
             Fluid fluid = fluidStack.getFluid();
             int amount = fluidStack.getAmount();

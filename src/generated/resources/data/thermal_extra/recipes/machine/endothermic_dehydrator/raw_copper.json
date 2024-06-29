@@ -1,0 +1,26 @@
+{
+  "type": "thermal_extra:endothermic_dehydrator",
+  "energy": 4000,
+  "ingredients": [
+    {
+      "amount": 90,
+      "fluid": "thermal_extra:raw_copper"
+    }
+  ],
+  "result": [
+    {
+      "chance": 1.25,
+      "count": 2,
+      "item": "thermal:copper_dust",
+      "locked": true
+    },
+    {
+      "chance": 0.5,
+      "item": "thermal:copper_dust"
+    },
+    {
+      "chance": 0.15,
+      "item": "thermal:gold_dust"
+    }
+  ]
+}

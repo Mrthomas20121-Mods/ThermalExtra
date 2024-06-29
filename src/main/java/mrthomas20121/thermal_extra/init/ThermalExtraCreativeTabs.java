@@ -186,6 +186,19 @@ public class ThermalExtraCreativeTabs {
                 output.accept(ThermalExtraFluids.sunflower_oil.getBucket().get());
                 output.accept(ThermalExtraFluids.crystallized_sunflower_oil.getBucket().get());
                 output.accept(ThermalExtraFluids.refined_sunflower_oil.getBucket().get());
+
+                output.accept(ThermalExtraFluids.raw_aluminum.getBucket().get());
+                output.accept(ThermalExtraFluids.raw_arcane_gold.getBucket().get());
+                output.accept(ThermalExtraFluids.raw_copper.getBucket().get());
+                output.accept(ThermalExtraFluids.raw_gold.getBucket().get());
+                output.accept(ThermalExtraFluids.raw_iron.getBucket().get());
+                output.accept(ThermalExtraFluids.raw_lead.getBucket().get());
+                output.accept(ThermalExtraFluids.raw_nickel.getBucket().get());
+                output.accept(ThermalExtraFluids.raw_osmium.getBucket().get());
+                output.accept(ThermalExtraFluids.raw_silver.getBucket().get());
+                output.accept(ThermalExtraFluids.raw_tin.getBucket().get());
+                output.accept(ThermalExtraFluids.raw_uranium.getBucket().get());
+                output.accept(ThermalExtraFluids.raw_zinc.getBucket().get());
             })
             .build()
     );

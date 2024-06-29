@@ -32,10 +32,9 @@ public class MachineEndothermicDehydratorBlockEntity extends MachineBlockEntity 
 
         super(ThermalExtraBlockEntities.ENDOTHERMIC_DEHYDRATOR.get(), pos, state);
 
+        inventory.addSlot(inputSlot, INPUT);
         inventory.addSlots(OUTPUT, 6);
         inventory.addSlot(chargeSlot, INTERNAL);
-
-        inventory.addSlot(inputSlot, INPUT);
 
         tankInv.addTank(inputTank, INPUT);
         tankInv.addTank(outputTank, OUTPUT);
@@ -58,6 +57,7 @@ public class MachineEndothermicDehydratorBlockEntity extends MachineBlockEntity 
         curRecipe = EndothermicDehydratorRecipeManager.instance().getRecipe(this);
         if (curRecipe != null) {
             fluidInputCounts = curRecipe.getInputFluidCounts(this);
+            itemInputCounts = curRecipe.getInputItemCounts(this);
         }
         return curRecipe != null;
     }
@@ -83,17 +83,4 @@ public class MachineEndothermicDehydratorBlockEntity extends MachineBlockEntity 
 
         return new MachineEndothermicDehydratorMenu(i, level, worldPosition, inventory, player);
     }
-
-    // region OPTIMIZATION
-    @Override
-    protected boolean validateInputs() {
-
-        if (!cacheRecipe()) {
-            return false;
-        }
-        return inputTank.getAmount() >= fluidInputCounts.get(0);
-    }
-    // endregion
-
-
 }

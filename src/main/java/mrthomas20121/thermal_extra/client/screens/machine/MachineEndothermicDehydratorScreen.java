@@ -29,6 +29,8 @@ public class MachineEndothermicDehydratorScreen extends MachineScreen<MachineEnd
 
         super.init();
 
+        addElement(createInputSlot(this, 62, 26, tile));
+
         addElement(createOutputSlot(this, 118, 17, tile));
         addElement(createOutputSlot(this, 118, 35, tile));
         addElement(createOutputSlot(this, 118, 53, tile));
@@ -37,10 +39,11 @@ public class MachineEndothermicDehydratorScreen extends MachineScreen<MachineEnd
         addElement(createOutputSlot(this, 136, 53, tile));
 
         addElement(setClearable(createMediumInputFluidStorage(this, 34, 22, tile.getTank(0), tile), tile, 0));
-        addElement(setClearable(createMediumOutputFluidStorage(this, 150, 22, tile.getTank(1), tile), tile, 1));
+        addElement(setClearable(createMediumOutputFluidStorage(this, 154, 22, tile.getTank(1), tile), tile, 1));
 
         addElement(ThermalGuiHelper.createDefaultFluidProgress(this, 88, 35, PROG_ARROW_FLUID_RIGHT, tile));
         addElement(ThermalGuiHelper.createDefaultProgress(this, 88, 35, PROG_ARROW_RIGHT, tile));
+        addElement(ThermalGuiHelper.createDefaultSpeed(this, 62, 44, SCALE_COMPACT, tile));
     }
 
 }

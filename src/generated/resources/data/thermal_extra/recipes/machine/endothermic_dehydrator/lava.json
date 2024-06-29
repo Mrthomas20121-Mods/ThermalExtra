@@ -1,5 +1,5 @@
 {
-  "type": "thermal_extra:drying_tank",
+  "type": "thermal_extra:endothermic_dehydrator",
   "energy": 4000,
   "ingredients": [
     {

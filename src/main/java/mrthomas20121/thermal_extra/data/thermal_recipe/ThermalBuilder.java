@@ -37,6 +37,10 @@ public class ThermalBuilder<T extends ThermalRecipe> {
         return new ThermalBuilder<>(TCoreRecipeSerializers.SMELTER_RECIPE_SERIALIZER.get());
     }
 
+    public static ThermalBuilder<CrucibleRecipe> crucible() {
+        return new ThermalBuilder<>(TCoreRecipeSerializers.CRUCIBLE_RECIPE_SERIALIZER.get());
+    }
+
     public static ThermalBuilder<FurnaceRecipe> furnace() {
         return new ThermalBuilder<>(TCoreRecipeSerializers.FURNACE_RECIPE_SERIALIZER.get());
     }
@@ -58,7 +62,7 @@ public class ThermalBuilder<T extends ThermalRecipe> {
         return new ThermalBuilder<>(ThermalExtraRecipeSerializers.FLUID_MIXER_RECIPE_SERIALIZER.get());
     }
 
-    public static ThermalBuilder<EndothermicDehydratorRecipe> drying_tank() {
+    public static ThermalBuilder<EndothermicDehydratorRecipe> endothermic_dehydrator() {
         return new ThermalBuilder<>(ThermalExtraRecipeSerializers.ENDOTHERMIC_DEHYDRATOR_RECIPE_SERIALIZER.get()).chance();
     }
 
@@ -176,6 +180,7 @@ public class ThermalBuilder<T extends ThermalRecipe> {
         return this;
     }
 
+
     public ThermalBuilder<T> output(Item item) {
         this.output(new ItemStack(item));
         return this;
@@ -216,6 +221,10 @@ public class ThermalBuilder<T extends ThermalRecipe> {
 
         public static ChanceItemStack of(ItemStack stack, float chance) {
             return new ChanceItemStack(stack, chance, false);
+        }
+
+        public static ChanceItemStack of(ItemStack stack, float chance, boolean locked) {
+            return new ChanceItemStack(stack, chance, locked);
         }
     }
 }

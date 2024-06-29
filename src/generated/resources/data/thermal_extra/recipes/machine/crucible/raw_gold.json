@@ -1,0 +1,22 @@
+{
+  "type": "thermal:crucible",
+  "conditions": [
+    {
+      "type": "cofh_core:tag_exists",
+      "tag": "forge:raw_materials/gold"
+    }
+  ],
+  "energy": 8000,
+  "ingredients": [
+    {
+      "count": 1,
+      "tag": "forge:raw_materials/gold"
+    }
+  ],
+  "result": [
+    {
+      "amount": 120,
+      "fluid": "thermal_extra:raw_gold"
+    }
+  ]
+}

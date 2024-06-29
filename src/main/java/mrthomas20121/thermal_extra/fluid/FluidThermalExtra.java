@@ -75,6 +75,10 @@ public class FluidThermalExtra extends FluidCoFH {
         return type;
     }
 
+    public String getKey() {
+        return key;
+    }
+
     public static class ClientFluidTypeExtensions implements IClientFluidTypeExtensions {
 
         private final ResourceLocation still;

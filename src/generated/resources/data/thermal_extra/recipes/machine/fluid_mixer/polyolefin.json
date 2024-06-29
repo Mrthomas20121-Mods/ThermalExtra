@@ -1,6 +1,6 @@
 {
   "type": "thermal_extra:fluid_mixer",
-  "energy": 4000,
+  "energy": 15000,
   "ingredients": [
     {
       "amount": 1000,
