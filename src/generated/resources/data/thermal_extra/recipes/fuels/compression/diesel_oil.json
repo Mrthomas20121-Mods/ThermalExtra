@@ -1,0 +1,8 @@
+{
+  "type": "thermal:compression_fuel",
+  "energy": 150000,
+  "ingredient": {
+    "amount": 1000,
+    "fluid": "thermal_extra:diesel"
+  }
+}

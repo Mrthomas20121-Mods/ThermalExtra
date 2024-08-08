@@ -8,17 +8,13 @@
     },
     {
       "amount": 1000,
-      "fluid": "thermal:creosote"
+      "fluid": "thermal:glowstone"
     }
   ],
   "result": [
     {
       "amount": 1000,
       "fluid": "thermal_extra:polyolefin"
-    },
-    {
-      "amount": 500,
-      "fluid": "thermal:resin"
     }
   ]
 }

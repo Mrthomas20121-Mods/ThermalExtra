@@ -1,0 +1,20 @@
+{
+  "type": "thermal:crystallizer",
+  "energy": 10000,
+  "ingredients": [
+    {
+      "count": 1,
+      "item": "thermal_extra:ancient_dust"
+    },
+    {
+      "amount": 1000,
+      "fluid": "minecraft:water"
+    }
+  ],
+  "result": [
+    {
+      "count": 2,
+      "item": "thermal_extra:ancient_dust"
+    }
+  ]
+}

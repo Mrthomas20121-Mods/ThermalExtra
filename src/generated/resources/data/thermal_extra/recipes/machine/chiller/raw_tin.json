@@ -1,0 +1,19 @@
+{
+  "type": "thermal:chiller",
+  "energy": 10000,
+  "ingredients": [
+    {
+      "count": 1,
+      "item": "thermal:chiller_ingot_cast"
+    },
+    {
+      "amount": 90,
+      "fluid": "thermal_extra:raw_tin"
+    }
+  ],
+  "result": [
+    {
+      "item": "thermal:tin_ingot"
+    }
+  ]
+}

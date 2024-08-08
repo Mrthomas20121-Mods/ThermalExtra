@@ -1,0 +1,15 @@
+{
+  "type": "thermal:pulverizer",
+  "energy": 5000,
+  "ingredients": [
+    {
+      "count": 1,
+      "tag": "forge:dusts/dragonsteel"
+    }
+  ],
+  "result": [
+    {
+      "item": "thermal_extra:dragonsteel_dust"
+    }
+  ]
+}

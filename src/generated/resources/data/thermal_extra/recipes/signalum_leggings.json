@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "conditions": [
+    {
+      "type": "cofh_core:tag_exists",
+      "tag": "forge:ingots/signalum"
+    }
+  ],
+  "key": {
+    "X": {
+      "tag": "forge:ingots/signalum"
+    }
+  },
+  "pattern": [
+    "XXX",
+    "X X",
+    "X X"
+  ],
+  "result": {
+    "item": "thermal_extra:signalum_leggings"
+  },
+  "show_notification": true
+}

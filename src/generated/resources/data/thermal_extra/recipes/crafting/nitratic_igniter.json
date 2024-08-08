@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "E": {
+      "tag": "forge:gears/signalum"
+    },
+    "I": {
+      "tag": "forge:rods/twinite"
+    },
+    "M": {
+      "item": "thermal:machine_frame"
+    },
+    "O": {
+      "item": "thermal_extra:polyolefin_plate"
+    },
+    "R": {
+      "item": "thermal:rf_coil"
+    }
+  },
+  "pattern": [
+    " I ",
+    "OMO",
+    "ERE"
+  ],
+  "result": {
+    "item": "thermal_extra:nitratic_igniter"
+  },
+  "show_notification": true
+}

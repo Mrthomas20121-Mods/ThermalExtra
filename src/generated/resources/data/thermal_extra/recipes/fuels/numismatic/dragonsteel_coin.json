@@ -1,0 +1,7 @@
+{
+  "type": "thermal:numismatic_fuel",
+  "energy": 100000,
+  "ingredient": {
+    "tag": "forge:coins/dragonsteel"
+  }
+}

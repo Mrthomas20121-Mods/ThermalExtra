@@ -1,0 +1,20 @@
+{
+  "type": "thermal_extra:advanced_refinery",
+  "energy": 4000,
+  "ingredients": [
+    {
+      "amount": 2000,
+      "fluid": "thermal_extra:crystallized_sunflower_oil"
+    }
+  ],
+  "result": [
+    {
+      "chance": 0.1,
+      "item": "thermal:compost"
+    },
+    {
+      "amount": 1000,
+      "fluid": "thermal_extra:refined_sunflower_oil"
+    }
+  ]
+}

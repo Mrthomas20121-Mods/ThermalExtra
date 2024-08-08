@@ -1,0 +1,22 @@
+{
+  "name": "Endothermic Dehydrator",
+  "icon": "thermal_extra:endothermic_dehydrator",
+  "category": "thermal:machines",
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "The Endothermic Dehydrator is a machine that dehydrate items and fluids."
+    },
+    {
+      "type": "thermal:double_crafting_page",
+      "A.recipe": "thermal_extra:crafting/endothermic_dehydrator",
+      "title": "Endothermic Dehydrator"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Augment Compatibility",
+      "text": "$(li)$(l:thermal:technology/augments/integral_components)Integral Components$(/l)$(li)$(l:thermal:technology/augments/item_filter)Item Filter$(/l)$(li)$(l:thermal:technology/augments/xp_storage)Knowledge Concentrator$(/l)$(li)$(l:thermal:technology/augments/rf_coil)Expanded RF Coil$(/l)$(li)$(l:thermal:technology/augments/rf_coil_storage)Stabilized RF Coil$(/l)$(li)$(l:thermal:technology/augments/rf_coil_xfer)High-Flux RF Coil$(/l)$(li)$(l:thermal:technology/augments/fluid_tank)Expanded Tank Construction$(/l)$(li)$(l:thermal:technology/augments/machine_speed)Flux Linkage Amplifier$(/l)$(li)$(l:thermal:technology/augments/machine_efficiency)Flux Efficiency$(/l)"
+    }
+  ]
+}

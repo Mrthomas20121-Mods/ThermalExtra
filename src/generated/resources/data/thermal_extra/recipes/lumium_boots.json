@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "conditions": [
+    {
+      "type": "cofh_core:tag_exists",
+      "tag": "forge:ingots/lumium"
+    }
+  ],
+  "key": {
+    "X": {
+      "tag": "forge:ingots/lumium"
+    }
+  },
+  "pattern": [
+    "X X",
+    "X X"
+  ],
+  "result": {
+    "item": "thermal_extra:lumium_boots"
+  },
+  "show_notification": true
+}

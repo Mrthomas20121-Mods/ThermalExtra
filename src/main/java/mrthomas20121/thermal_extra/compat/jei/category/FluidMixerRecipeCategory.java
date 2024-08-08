@@ -15,20 +15,19 @@ import mezz.jei.api.recipe.IFocusGroup;
 import mezz.jei.api.recipe.RecipeIngredientRole;
 import mezz.jei.api.recipe.RecipeType;
 import mrthomas20121.thermal_extra.client.screens.machine.MachineFluidMixerScreen;
-import mrthomas20121.thermal_extra.client.screens.machine.MachineMetalInfuserScreen;
 import mrthomas20121.thermal_extra.init.ThermalExtraBlocks;
 import mrthomas20121.thermal_extra.recipe.FluidMixerRecipe;
 import mrthomas20121.thermal_extra.recipe.FluidMixerRecipeManager;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.fluids.FluidStack;
 
 import java.util.List;
 
 import static cofh.lib.util.Constants.TANK_MEDIUM;
 import static cofh.lib.util.helpers.StringHelper.getTextComponent;
-import static cofh.thermal.core.compat.jei.TCoreJeiPlugin.*;
+import static cofh.thermal.core.compat.jei.TCoreJeiPlugin.defaultFluidTooltip;
+import static cofh.thermal.core.compat.jei.TCoreJeiPlugin.tankSize;
 
 public class FluidMixerRecipeCategory extends ThermalRecipeCategory<FluidMixerRecipe> {
 

@@ -14,7 +14,6 @@ public class ThermalExtraRecipeTypes {
     public static final DeferredRegisterCoFH<RecipeType<?>> RECIPE_TYPES = DeferredRegisterCoFH.create(ForgeRegistries.RECIPE_TYPES, ThermalExtra.MOD_ID);
 
     public static final RegistryObject<SerializableRecipeType<ColdFuel>> COLD_FUEL = RECIPE_TYPES.register("cold_fuel", () -> new SerializableRecipeType<>(ThermalExtra.MOD_ID, "cold_fuel"));
-    public static final RegistryObject<SerializableRecipeType<MetalInfuserRecipe>> METAL_INFUSER = RECIPE_TYPES.register("metal_infuser", () -> new SerializableRecipeType<>(ThermalExtra.MOD_ID, "metal_infuser"));
     public static final RegistryObject<SerializableRecipeType<AdvancedRefineryRecipe>> ADVANCED_REFINERY = RECIPE_TYPES.register("advanced_refinery", () -> new SerializableRecipeType<>(ThermalExtra.MOD_ID, "advanced_refinery"));
     public static final RegistryObject<SerializableRecipeType<FluidMixerRecipe>> FLUID_MIXER = RECIPE_TYPES.register("fluid_mixer", () -> new SerializableRecipeType<>(ThermalExtra.MOD_ID, "fluid_mixer"));
     public static final RegistryObject<SerializableRecipeType<NitraticIgniterRecipe>> NITRATIC_IGNITER = RECIPE_TYPES.register("nitratic_igniter", () -> new SerializableRecipeType<>(ThermalExtra.MOD_ID, "nitratic_igniter"));

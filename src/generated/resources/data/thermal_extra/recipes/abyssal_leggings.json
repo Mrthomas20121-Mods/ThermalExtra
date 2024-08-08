@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "conditions": [
+    {
+      "type": "cofh_core:tag_exists",
+      "tag": "forge:ingots/abyssal"
+    }
+  ],
+  "key": {
+    "X": {
+      "tag": "forge:ingots/abyssal"
+    }
+  },
+  "pattern": [
+    "XXX",
+    "X X",
+    "X X"
+  ],
+  "result": {
+    "item": "thermal_extra:abyssal_leggings"
+  },
+  "show_notification": true
+}

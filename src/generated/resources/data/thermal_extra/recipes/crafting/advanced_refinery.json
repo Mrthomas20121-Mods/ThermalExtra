@@ -2,23 +2,26 @@
   "type": "minecraft:crafting_shaped",
   "category": "redstone",
   "key": {
-    "F": {
-      "item": "thermal:fluid_cell_frame"
-    },
     "G": {
-      "tag": "forge:gears/enderium"
+      "tag": "forge:gears/electrum"
+    },
+    "H": {
+      "tag": "thermal:glass/hardened"
     },
     "I": {
-      "tag": "forge:ingots/soul_infused"
+      "tag": "forge:ingots/twinite"
     },
     "M": {
       "item": "thermal:machine_refinery"
+    },
+    "R": {
+      "item": "thermal:rf_coil"
     }
   },
   "pattern": [
     " I ",
-    "GMG",
-    "FFF"
+    "HMH",
+    "GRG"
   ],
   "result": {
     "item": "thermal_extra:advanced_refinery"

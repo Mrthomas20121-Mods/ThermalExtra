@@ -1,7 +1,0 @@
-{
-  "type": "thermal_extra:cold_fuel",
-  "ingredient": {
-    "item": "minecraft:ice"
-  },
-  "energy": 4200
-}

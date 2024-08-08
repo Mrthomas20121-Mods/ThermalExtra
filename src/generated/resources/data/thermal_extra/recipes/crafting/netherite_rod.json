@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "tag": "forge:ingots/netherite"
+    }
+  },
+  "pattern": [
+    "I",
+    "I"
+  ],
+  "result": {
+    "count": 2,
+    "item": "thermal_extra:netherite_rod"
+  },
+  "show_notification": true
+}

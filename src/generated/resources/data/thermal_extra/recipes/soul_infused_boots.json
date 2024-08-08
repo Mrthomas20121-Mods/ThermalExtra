@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "conditions": [
+    {
+      "type": "cofh_core:tag_exists",
+      "tag": "forge:ingots/soul_infused"
+    }
+  ],
+  "key": {
+    "X": {
+      "tag": "forge:ingots/soul_infused"
+    }
+  },
+  "pattern": [
+    "X X",
+    "X X"
+  ],
+  "result": {
+    "item": "thermal_extra:soul_infused_boots"
+  },
+  "show_notification": true
+}

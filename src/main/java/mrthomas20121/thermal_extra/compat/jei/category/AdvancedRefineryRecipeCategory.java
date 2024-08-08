@@ -128,15 +128,15 @@ public class AdvancedRefineryRecipeCategory extends ThermalRecipeCategory<Advanc
                     .setFluidRenderer(tankSize(TANK_MEDIUM), false, 16, 40)
                     .setOverlay(outputOverlayB, 0, 0)
                     .addTooltipCallback(defaultFluidTooltip());
-
-            if(outputFluids.size() == 2) {
+            if(outputFluids.size() >= 2) {
                 slotBuilder1.addIngredients(ForgeTypes.FLUID_STACK, List.of(outputFluids.get(1)));
             }
+
             IRecipeSlotBuilder slotBuilder2 = builder.addSlot(RecipeIngredientRole.OUTPUT, 147, 12)
                     .setFluidRenderer(tankSize(TANK_MEDIUM), false, 16, 40)
                     .setOverlay(outputOverlayC, 0, 0)
                     .addTooltipCallback(defaultFluidTooltip());
-            if(outputFluids.size() == 3) {
+            if(outputFluids.size() >= 3) {
                 slotBuilder2.addIngredients(ForgeTypes.FLUID_STACK, List.of(outputFluids.get(2)));
             }
         }

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "conditions": [
+    {
+      "type": "cofh_core:tag_exists",
+      "tag": "forge:ingots/signalum"
+    }
+  ],
+  "key": {
+    "#": {
+      "tag": "forge:rods/signalum"
+    },
+    "X": {
+      "tag": "forge:ingots/signalum"
+    }
+  },
+  "pattern": [
+    " X ",
+    "  X",
+    "#X "
+  ],
+  "result": {
+    "item": "thermal_extra:signalum_sickle"
+  },
+  "show_notification": true
+}

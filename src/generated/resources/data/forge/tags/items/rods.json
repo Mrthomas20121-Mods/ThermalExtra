@@ -1,0 +1,26 @@
+{
+  "values": [
+    "thermal_extra:copper_rod",
+    "thermal_extra:iron_rod",
+    "thermal_extra:gold_rod",
+    "thermal_extra:diamond_rod",
+    "thermal_extra:emerald_rod",
+    "thermal_extra:netherite_rod",
+    "thermal_extra:lead_rod",
+    "thermal_extra:tin_rod",
+    "thermal_extra:silver_rod",
+    "thermal_extra:nickel_rod",
+    "thermal_extra:bronze_rod",
+    "thermal_extra:electrum_rod",
+    "thermal_extra:constantan_rod",
+    "thermal_extra:invar_rod",
+    "thermal_extra:signalum_rod",
+    "thermal_extra:lumium_rod",
+    "thermal_extra:enderium_rod",
+    "thermal_extra:soul_infused_rod",
+    "thermal_extra:shellite_rod",
+    "thermal_extra:twinite_rod",
+    "thermal_extra:dragonsteel_rod",
+    "thermal_extra:abyssal_rod"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "conditions": [
+    {
+      "type": "cofh_core:tag_exists",
+      "tag": "forge:ingots/shellite"
+    }
+  ],
+  "key": {
+    "X": {
+      "tag": "forge:ingots/shellite"
+    }
+  },
+  "pattern": [
+    "XXX",
+    "X X"
+  ],
+  "result": {
+    "item": "thermal_extra:shellite_helmet"
+  },
+  "show_notification": true
+}

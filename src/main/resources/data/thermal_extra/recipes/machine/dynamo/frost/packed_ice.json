@@ -1,7 +1,0 @@
-{
-  "type": "thermal_extra:cold_fuel",
-  "ingredient": {
-    "item": "minecraft:packed_ice"
-  },
-  "energy": 37800
-}

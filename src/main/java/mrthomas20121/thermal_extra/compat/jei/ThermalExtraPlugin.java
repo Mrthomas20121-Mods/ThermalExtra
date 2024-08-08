@@ -39,7 +39,6 @@ public class ThermalExtraPlugin implements IModPlugin {
         }
 
         registration.addRecipes(COLD_FUEL_TYPE, recipeManager.getAllRecipesFor(ThermalExtraRecipeTypes.COLD_FUEL.get()));
-        registration.addRecipes(METAL_INFUSER_TYPE, recipeManager.getAllRecipesFor(ThermalExtraRecipeTypes.METAL_INFUSER.get()));
         registration.addRecipes(ADVANCED_REFINERY_TYPE, recipeManager.getAllRecipesFor(ThermalExtraRecipeTypes.ADVANCED_REFINERY.get()));
         registration.addRecipes(NITRATIC_IGNITER_TYPE, recipeManager.getAllRecipesFor(ThermalExtraRecipeTypes.NITRATIC_IGNITER.get()));
         registration.addRecipes(NITRATIC_IGNITER_CATALYST_TYPE, recipeManager.getAllRecipesFor(ThermalExtraRecipeTypes.NITRATIC_IGNITER_CATALYST.get()));
@@ -51,10 +50,9 @@ public class ThermalExtraPlugin implements IModPlugin {
     @Override
     public void registerCategories(IRecipeCategoryRegistration registration) {
         registration.addRecipeCategories(new ColdFuelCategory(registration.getJeiHelpers().getGuiHelper(), new ItemStack(ThermalExtraBlocks.DYNAMO_COLD.get()), COLD_FUEL_TYPE));
-        registration.addRecipeCategories(new MetalInfuserRecipeCategory(registration.getJeiHelpers().getGuiHelper(), new ItemStack(ThermalExtraBlocks.METAl_INFUSER.get()), METAL_INFUSER_TYPE));
         registration.addRecipeCategories(new AdvancedRefineryRecipeCategory(registration.getJeiHelpers().getGuiHelper(), new ItemStack(ThermalExtraBlocks.ADVANCED_REFINERY.get()), ADVANCED_REFINERY_TYPE));
         registration.addRecipeCategories(new NitraticIgniterRecipeCategory(registration.getJeiHelpers().getGuiHelper(), new ItemStack(ThermalExtraBlocks.NITRATIC_IGNITER.get()), NITRATIC_IGNITER_TYPE));
-        registration.addRecipeCategories(new NitraticIgniterCatalystCategory(registration.getJeiHelpers().getGuiHelper(), new ItemStack(Blocks.TNT), NITRATIC_IGNITER_CATALYST_TYPE));
+        registration.addRecipeCategories(new NitraticIgniterCatalystCategory(registration.getJeiHelpers().getGuiHelper(), new ItemStack(ThermalExtraBlocks.NITRATIC_IGNITER.get()), NITRATIC_IGNITER_CATALYST_TYPE));
         registration.addRecipeCategories(new FluidMixerRecipeCategory(registration.getJeiHelpers().getGuiHelper(), new ItemStack(ThermalExtraBlocks.FLUID_MIXER.get()), FLUID_MIXER_TYPE));
         registration.addRecipeCategories(new ComponentAssemblyRecipeCategory(registration.getJeiHelpers().getGuiHelper(), new ItemStack(ThermalExtraBlocks.COMPONENT_ASSEMBLY.get()), COMPONENT_ASSEMBLY_TYPE));
         registration.addRecipeCategories(new EndothermicDehydratorRecipeCategory(registration.getJeiHelpers().getGuiHelper(), new ItemStack(ThermalExtraBlocks.ENDOTHERMIC_DEHYDRATOR.get()), ENDOTHERMIC_DEHYDRATOR_TYPE));
@@ -67,7 +65,6 @@ public class ThermalExtraPlugin implements IModPlugin {
         int progressH = 16;
 
         registration.addRecipeClickArea(DynamoFrostScreen.class, 80, progressY, progressH, progressH, COLD_FUEL_TYPE);
-        registration.addRecipeClickArea(MachineMetalInfuserScreen.class, 88, progressY, progressW, progressH, METAL_INFUSER_TYPE);
         registration.addRecipeClickArea(MachineAdvancedRefineryScreen.class, 65, progressY, progressW, progressH, ADVANCED_REFINERY_TYPE);
         registration.addRecipeClickArea(MachineNitraticIgniterScreen.class, 94, progressY, progressW, progressH, NITRATIC_IGNITER_TYPE);
         registration.addRecipeClickArea(MachineFluidMixerScreen.class, 80, progressY, progressW, progressH, FLUID_MIXER_TYPE);
@@ -78,11 +75,10 @@ public class ThermalExtraPlugin implements IModPlugin {
     @Override
     public void registerRecipeCatalysts(IRecipeCatalystRegistration registration) {
         registration.addRecipeCatalyst(new ItemStack(ThermalExtraBlocks.DYNAMO_COLD.get()), COLD_FUEL_TYPE);
-        registration.addRecipeCatalyst(new ItemStack(ThermalExtraBlocks.METAl_INFUSER.get()), METAL_INFUSER_TYPE);
         registration.addRecipeCatalyst(new ItemStack(ThermalExtraBlocks.ADVANCED_REFINERY.get()), ADVANCED_REFINERY_TYPE);
-        registration.addRecipeCatalyst(new ItemStack(ThermalExtraBlocks.NITRATIC_IGNITER.get()), NITRATIC_IGNITER_TYPE);
-        registration.addRecipeCatalyst(new ItemStack(ThermalExtraBlocks.NITRATIC_IGNITER.get()), NITRATIC_IGNITER_CATALYST_TYPE);
+        registration.addRecipeCatalyst(new ItemStack(ThermalExtraBlocks.NITRATIC_IGNITER.get()), NITRATIC_IGNITER_TYPE, NITRATIC_IGNITER_CATALYST_TYPE);
         registration.addRecipeCatalyst(new ItemStack(ThermalExtraBlocks.FLUID_MIXER.get()), FLUID_MIXER_TYPE);
+        registration.addRecipeCatalyst(new ItemStack(ThermalExtraBlocks.COMPONENT_ASSEMBLY.get()), COMPONENT_ASSEMBLY_TYPE);
         registration.addRecipeCatalyst(new ItemStack(ThermalExtraBlocks.ENDOTHERMIC_DEHYDRATOR.get()), ENDOTHERMIC_DEHYDRATOR_TYPE);
     }
 
@@ -97,7 +93,6 @@ public class ThermalExtraPlugin implements IModPlugin {
     }
 
     public static final RecipeType<ColdFuel> COLD_FUEL_TYPE = new RecipeType<>(ThermalExtraRecipeTypes.COLD_FUEL.getId(), ColdFuel.class);
-    public static final RecipeType<MetalInfuserRecipe> METAL_INFUSER_TYPE = new RecipeType<>(ThermalExtraRecipeTypes.METAL_INFUSER.getId(), MetalInfuserRecipe.class);
     public static final RecipeType<FluidMixerRecipe> FLUID_MIXER_TYPE = new RecipeType<>(ThermalExtraRecipeTypes.FLUID_MIXER.getId(), FluidMixerRecipe.class);
     public static final RecipeType<AdvancedRefineryRecipe> ADVANCED_REFINERY_TYPE = new RecipeType<>(ThermalExtraRecipeTypes.ADVANCED_REFINERY.getId(), AdvancedRefineryRecipe.class);
     public static final RecipeType<NitraticIgniterRecipe> NITRATIC_IGNITER_TYPE = new RecipeType<>(ThermalExtraRecipeTypes.NITRATIC_IGNITER.getId(), NitraticIgniterRecipe.class);

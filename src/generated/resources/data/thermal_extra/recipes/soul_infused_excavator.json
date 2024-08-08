@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "conditions": [
+    {
+      "type": "cofh_core:tag_exists",
+      "tag": "forge:ingots/soul_infused"
+    }
+  ],
+  "key": {
+    "#": {
+      "tag": "forge:rods/soul_infused"
+    },
+    "X": {
+      "tag": "forge:ingots/soul_infused"
+    },
+    "Y": {
+      "tag": "forge:storage_blocks/soul_infused"
+    }
+  },
+  "pattern": [
+    " Y ",
+    "X#X",
+    " # "
+  ],
+  "result": {
+    "item": "thermal_extra:soul_infused_excavator"
+  },
+  "show_notification": true
+}

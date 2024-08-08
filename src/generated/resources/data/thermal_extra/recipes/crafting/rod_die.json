@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "tag": "forge:ingots/invar"
+    },
+    "S": {
+      "tag": "forge:rods/wooden"
+    }
+  },
+  "pattern": [
+    " P ",
+    "PSP",
+    " P "
+  ],
+  "result": {
+    "item": "thermal_extra:press_rod_die"
+  },
+  "show_notification": true
+}

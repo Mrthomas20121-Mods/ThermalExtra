@@ -1,0 +1,25 @@
+{
+  "type": "thermal:chiller",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "mekanism"
+    }
+  ],
+  "energy": 10000,
+  "ingredients": [
+    {
+      "count": 1,
+      "item": "thermal:chiller_ingot_cast"
+    },
+    {
+      "amount": 90,
+      "fluid": "thermal_extra:raw_osmium"
+    }
+  ],
+  "result": [
+    {
+      "item": "mekanism:osmium_ingot"
+    }
+  ]
+}

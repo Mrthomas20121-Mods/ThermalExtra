@@ -1,0 +1,22 @@
+{
+  "name": "Cold Dynamo",
+  "icon": "thermal_extra:dynamo_frost",
+  "category": "thermal:dynamos",
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "The Cold Dynamo uses cold items such as ice or snow to produce RF."
+    },
+    {
+      "type": "thermal:double_crafting_page",
+      "A.recipe": "thermal_extra:crafting/dynamo_frost",
+      "title": "Cold Dynamo"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Augment Compatibility",
+      "text": "$(li)$(l:thermal:technology/augments/integral_components)Integral Components$(/l)$(li)$(l:thermal:technology/augments/fluid_tank)Expanded Tank Construction$(/l)$(li)$(l:thermal:technology/augments/dynamo_output)Auxiliary Reaction Chamber$(/l)$(li)$(l:thermal:technology/augments/dynamo_fuel)Multi-cycle Injectors$(/l)"
+    }
+  ]
+}

@@ -14,14 +14,12 @@ import mezz.jei.api.recipe.IFocusGroup;
 import mezz.jei.api.recipe.RecipeIngredientRole;
 import mezz.jei.api.recipe.RecipeType;
 import mrthomas20121.thermal_extra.client.screens.machine.MachineEndothermicDehydratorScreen;
-import mrthomas20121.thermal_extra.client.screens.machine.MachineMetalInfuserScreen;
 import mrthomas20121.thermal_extra.init.ThermalExtraBlocks;
 import mrthomas20121.thermal_extra.recipe.EndothermicDehydratorRecipe;
 import mrthomas20121.thermal_extra.recipe.EndothermicDehydratorRecipeManager;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.fluids.FluidStack;
 
 import java.util.List;

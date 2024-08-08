@@ -1,0 +1,20 @@
+{
+  "type": "thermal:press",
+  "energy": 9000,
+  "ingredients": [
+    {
+      "count": 1,
+      "tag": "forge:ingots/invar"
+    },
+    {
+      "count": 1,
+      "item": "thermal_extra:press_rod_die"
+    }
+  ],
+  "result": [
+    {
+      "count": 2,
+      "item": "thermal_extra:invar_rod"
+    }
+  ]
+}

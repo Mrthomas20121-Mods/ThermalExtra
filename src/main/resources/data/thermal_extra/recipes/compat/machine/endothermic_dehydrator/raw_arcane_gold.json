@@ -1,0 +1,32 @@
+{
+  "type": "thermal_extra:endothermic_dehydrator",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "wizard_reborn"
+    }
+  ],
+  "energy": 100000,
+  "ingredients": [
+    {
+      "amount": 90,
+      "fluid": "thermal_extra:raw_arcane_gold"
+    }
+  ],
+  "result": [
+    {
+      "chance": 1.25,
+      "count": 2,
+      "item": "thermal_extra:arcane_gold_dust",
+      "locked": true
+    },
+    {
+      "chance": 0.5,
+      "item": "thermal_extra:arcane_gold_dust"
+    },
+    {
+      "chance": 0.15,
+      "item": "thermal:copper_dust"
+    }
+  ]
+}

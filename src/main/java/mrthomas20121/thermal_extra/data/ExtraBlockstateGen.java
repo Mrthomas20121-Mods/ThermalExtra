@@ -22,11 +22,13 @@ public class ExtraBlockstateGen extends BlockStateProviderCoFH {
         this.simpleBlock(ThermalExtraBlocks.SHELLITE_BLOCK.get());
         this.simpleBlock(ThermalExtraBlocks.TWINITE_BLOCK.get());
         this.simpleBlock(ThermalExtraBlocks.DRAGONSTEEL_BLOCK.get());
+        this.simpleBlock(ThermalExtraBlocks.ABYSSAL_BLOCK.get());
 
         this.translucentBlock(ThermalExtraBlocks.SOUL_INFUSED_GLASS.get());
         this.translucentBlock(ThermalExtraBlocks.SHELLITE_GLASS.get());
         this.translucentBlock(ThermalExtraBlocks.TWINITE_GLASS.get());
         this.translucentBlock(ThermalExtraBlocks.DRAGONSTEEL_GLASS.get());
+        this.translucentBlock(ThermalExtraBlocks.ABYSSAL_GLASS.get());
     }
 
     public void translucentBlock(Block block) {

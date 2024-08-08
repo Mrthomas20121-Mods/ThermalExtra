@@ -1,0 +1,8 @@
+{
+  "type": "thermal:compression_fuel",
+  "energy": 1000000,
+  "ingredient": {
+    "amount": 1000,
+    "fluid": "thermal_extra:refined_sunflower_oil"
+  }
+}

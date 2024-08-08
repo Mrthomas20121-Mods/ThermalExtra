@@ -1,0 +1,23 @@
+{
+  "type": "thermal:smelter",
+  "energy": 4000,
+  "ingredients": [
+    {
+      "count": 1,
+      "item": "minecraft:shulker_shell"
+    },
+    {
+      "count": 1,
+      "tag": "forge:ingots/lead"
+    },
+    {
+      "count": 1,
+      "tag": "forge:ingots/nickel"
+    }
+  ],
+  "result": [
+    {
+      "item": "thermal_extra:shellite_ingot"
+    }
+  ]
+}

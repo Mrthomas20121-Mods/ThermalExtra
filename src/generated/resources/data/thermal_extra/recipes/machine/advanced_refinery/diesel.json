@@ -1,0 +1,28 @@
+{
+  "type": "thermal_extra:advanced_refinery",
+  "energy": 4000,
+  "ingredients": [
+    {
+      "amount": 1000,
+      "fluid": "thermal_extra:flux_infused_oil"
+    }
+  ],
+  "result": [
+    {
+      "chance": 0.2,
+      "item": "thermal:tar"
+    },
+    {
+      "amount": 1000,
+      "fluid": "thermal_extra:diesel"
+    },
+    {
+      "amount": 1000,
+      "fluid": "thermal:heavy_oil"
+    },
+    {
+      "amount": 1000,
+      "fluid": "thermal:light_oil"
+    }
+  ]
+}

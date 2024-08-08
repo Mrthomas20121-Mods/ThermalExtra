@@ -1,0 +1,15 @@
+{
+  "type": "thermal:pulverizer",
+  "energy": 7000,
+  "ingredients": [
+    {
+      "count": 1,
+      "tag": "forge:obsidian"
+    }
+  ],
+  "result": [
+    {
+      "item": "thermal_extra:obsidian_dust"
+    }
+  ]
+}

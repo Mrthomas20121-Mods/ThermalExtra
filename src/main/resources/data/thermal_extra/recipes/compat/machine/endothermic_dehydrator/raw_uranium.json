@@ -1,0 +1,32 @@
+{
+  "type": "thermal_extra:endothermic_dehydrator",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "immersiveengineering"
+    }
+  ],
+  "energy": 100000,
+  "ingredients": [
+    {
+      "amount": 90,
+      "fluid": "thermal_extra:raw_uranium"
+    }
+  ],
+  "result": [
+    {
+      "chance": 1.25,
+      "count": 2,
+      "item": "immersiveengineering:dust_uranium",
+      "locked": true
+    },
+    {
+      "chance": 0.5,
+      "item": "immersiveengineering:dust_uranium"
+    },
+    {
+      "chance": 0.15,
+      "item": "thermal:lead_dust"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "conditions": [
+    {
+      "type": "cofh_core:tag_exists",
+      "tag": "forge:ingots/twinite"
+    }
+  ],
+  "key": {
+    "#": {
+      "tag": "forge:rods/twinite"
+    },
+    "X": {
+      "tag": "forge:ingots/twinite"
+    }
+  },
+  "pattern": [
+    "XX",
+    " #",
+    " #"
+  ],
+  "result": {
+    "item": "thermal_extra:twinite_hoe"
+  },
+  "show_notification": true
+}

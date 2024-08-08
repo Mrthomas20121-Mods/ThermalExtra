@@ -8,7 +8,6 @@ import cofh.thermal.lib.common.block.entity.MachineBlockEntity;
 import mrthomas20121.thermal_extra.init.ThermalExtraBlockEntities;
 import mrthomas20121.thermal_extra.inventory.machine.MachineEndothermicDehydratorMenu;
 import mrthomas20121.thermal_extra.recipe.EndothermicDehydratorRecipeManager;
-import mrthomas20121.thermal_extra.recipe.MetalInfuserRecipeManager;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;

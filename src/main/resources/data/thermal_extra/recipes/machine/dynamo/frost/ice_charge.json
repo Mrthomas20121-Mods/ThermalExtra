@@ -1,7 +1,0 @@
-{
-  "type": "thermal_extra:cold_fuel",
-  "ingredient": {
-    "item": "thermal:ice_charge"
-  },
-  "energy": 18000
-}

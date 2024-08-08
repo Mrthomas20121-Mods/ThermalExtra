@@ -1,0 +1,20 @@
+{
+  "type": "thermal:press",
+  "energy": 3000,
+  "ingredients": [
+    {
+      "count": 1,
+      "tag": "forge:ingots/twinite"
+    },
+    {
+      "count": 1,
+      "item": "thermal:press_coin_die"
+    }
+  ],
+  "result": [
+    {
+      "count": 3,
+      "item": "thermal_extra:twinite_coin"
+    }
+  ]
+}

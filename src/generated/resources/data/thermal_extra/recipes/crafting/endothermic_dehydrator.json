@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "E": {
+      "tag": "forge:gears/lumium"
+    },
+    "G": {
+      "tag": "thermal:glass/hardened"
+    },
+    "I": {
+      "tag": "forge:ingots/twinite"
+    },
+    "M": {
+      "item": "thermal:machine_frame"
+    },
+    "R": {
+      "item": "thermal:rf_coil"
+    }
+  },
+  "pattern": [
+    " I ",
+    "GMG",
+    "ERE"
+  ],
+  "result": {
+    "item": "thermal_extra:endothermic_dehydrator"
+  },
+  "show_notification": true
+}

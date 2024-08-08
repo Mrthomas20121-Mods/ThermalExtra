@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "conditions": [
+    {
+      "type": "cofh_core:tag_exists",
+      "tag": "forge:ingots/enderium"
+    }
+  ],
+  "key": {
+    "X": {
+      "tag": "forge:ingots/enderium"
+    }
+  },
+  "pattern": [
+    "XXX",
+    "X X"
+  ],
+  "result": {
+    "item": "thermal_extra:enderium_helmet"
+  },
+  "show_notification": true
+}

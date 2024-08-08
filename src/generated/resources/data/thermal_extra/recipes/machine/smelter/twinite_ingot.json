@@ -1,0 +1,23 @@
+{
+  "type": "thermal:smelter",
+  "energy": 4000,
+  "ingredients": [
+    {
+      "count": 2,
+      "tag": "forge:ingots/tin"
+    },
+    {
+      "count": 1,
+      "tag": "forge:rods/blaze"
+    },
+    {
+      "count": 1,
+      "tag": "forge:obsidian"
+    }
+  ],
+  "result": [
+    {
+      "item": "thermal_extra:twinite_ingot"
+    }
+  ]
+}

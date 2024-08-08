@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "conditions": [
+    {
+      "type": "cofh_core:tag_exists",
+      "tag": "forge:ingots/shellite"
+    }
+  ],
+  "key": {
+    "#": {
+      "tag": "forge:rods/shellite"
+    },
+    "X": {
+      "tag": "forge:ingots/shellite"
+    }
+  },
+  "pattern": [
+    "X",
+    "#",
+    "#"
+  ],
+  "result": {
+    "item": "thermal_extra:shellite_shovel"
+  },
+  "show_notification": true
+}

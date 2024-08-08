@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "conditions": [
+    {
+      "type": "cofh_core:tag_exists",
+      "tag": "forge:ingots/enderium"
+    }
+  ],
+  "key": {
+    "#": {
+      "tag": "forge:rods/enderium"
+    },
+    "X": {
+      "tag": "forge:ingots/enderium"
+    },
+    "Y": {
+      "tag": "forge:storage_blocks/enderium"
+    }
+  },
+  "pattern": [
+    "XYX",
+    "X#X",
+    " # "
+  ],
+  "result": {
+    "item": "thermal_extra:enderium_hammer"
+  },
+  "show_notification": true
+}

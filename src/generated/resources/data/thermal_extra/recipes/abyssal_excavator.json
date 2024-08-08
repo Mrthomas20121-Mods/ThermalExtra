@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "conditions": [
+    {
+      "type": "cofh_core:tag_exists",
+      "tag": "forge:ingots/abyssal"
+    }
+  ],
+  "key": {
+    "#": {
+      "tag": "forge:rods/abyssal"
+    },
+    "X": {
+      "tag": "forge:ingots/abyssal"
+    },
+    "Y": {
+      "tag": "forge:storage_blocks/abyssal"
+    }
+  },
+  "pattern": [
+    " Y ",
+    "X#X",
+    " # "
+  ],
+  "result": {
+    "item": "thermal_extra:abyssal_excavator"
+  },
+  "show_notification": true
+}

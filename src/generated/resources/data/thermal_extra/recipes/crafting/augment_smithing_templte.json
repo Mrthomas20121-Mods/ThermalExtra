@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "tag": "forge:plates/invar"
+    },
+    "R": {
+      "item": "thermal:rf_coil"
+    }
+  },
+  "pattern": [
+    " I ",
+    "IRI",
+    " I "
+  ],
+  "result": {
+    "item": "thermal_extra:augment_smithing_upgrade"
+  },
+  "show_notification": true
+}

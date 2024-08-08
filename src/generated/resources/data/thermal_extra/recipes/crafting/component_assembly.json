@@ -2,23 +2,26 @@
   "type": "minecraft:crafting_shaped",
   "category": "redstone",
   "key": {
-    "F": {
-      "item": "thermal:fluid_cell_frame"
-    },
     "G": {
-      "tag": "forge:gears/constantan"
+      "tag": "forge:gears/enderium"
+    },
+    "H": {
+      "tag": "thermal:glass/hardened"
     },
     "I": {
-      "tag": "forge:ingots/dragonsteel"
+      "item": "thermal_extra:polyolefin_plate"
     },
     "M": {
       "item": "thermal:machine_frame"
+    },
+    "R": {
+      "item": "thermal:rf_coil"
     }
   },
   "pattern": [
     " I ",
-    "FMF",
-    "GIG"
+    "HMH",
+    "GRG"
   ],
   "result": {
     "item": "thermal_extra:component_assembly"

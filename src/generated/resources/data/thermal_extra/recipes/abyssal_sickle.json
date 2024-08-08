@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "conditions": [
+    {
+      "type": "cofh_core:tag_exists",
+      "tag": "forge:ingots/abyssal"
+    }
+  ],
+  "key": {
+    "#": {
+      "tag": "forge:rods/abyssal"
+    },
+    "X": {
+      "tag": "forge:ingots/abyssal"
+    }
+  },
+  "pattern": [
+    " X ",
+    "  X",
+    "#X "
+  ],
+  "result": {
+    "item": "thermal_extra:abyssal_sickle"
+  },
+  "show_notification": true
+}

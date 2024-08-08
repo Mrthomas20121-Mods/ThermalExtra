@@ -3,22 +3,16 @@
   "category": "misc",
   "ingredients": [
     {
-      "tag": "forge:dusts/amethyst"
+      "tag": "forge:dusts/tin"
     },
     {
-      "tag": "forge:dusts/amethyst"
+      "tag": "forge:dusts/tin"
     },
     {
-      "tag": "forge:dusts/amethyst"
+      "item": "minecraft:blaze_powder"
     },
     {
-      "tag": "forge:dusts/apatite"
-    },
-    {
-      "tag": "forge:dusts/enderium"
-    },
-    {
-      "tag": "forge:dusts/enderium"
+      "tag": "forge:dusts/obsidian"
     }
   ],
   "result": {

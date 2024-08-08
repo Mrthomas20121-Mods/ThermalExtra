@@ -1,0 +1,15 @@
+{
+  "type": "thermal:pulverizer",
+  "energy": 50000,
+  "ingredients": [
+    {
+      "count": 1,
+      "item": "minecraft:dragon_head"
+    }
+  ],
+  "result": [
+    {
+      "item": "thermal_extra:ancient_dust"
+    }
+  ]
+}

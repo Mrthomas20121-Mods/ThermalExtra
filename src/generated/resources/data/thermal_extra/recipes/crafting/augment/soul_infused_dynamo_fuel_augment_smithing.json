@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "thermal_extra:soul_infused_gear"
+  },
+  "base": {
+    "item": "thermal:dynamo_fuel_augment"
+  },
+  "result": {
+    "item": "thermal_extra:soul_infused_dynamo_fuel_augment"
+  },
+  "template": {
+    "item": "thermal_extra:augment_smithing_upgrade"
+  }
+}

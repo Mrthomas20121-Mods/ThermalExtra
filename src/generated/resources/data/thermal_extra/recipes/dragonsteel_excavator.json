@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "conditions": [
+    {
+      "type": "cofh_core:tag_exists",
+      "tag": "forge:ingots/dragonsteel"
+    }
+  ],
+  "key": {
+    "#": {
+      "tag": "forge:rods/dragonsteel"
+    },
+    "X": {
+      "tag": "forge:ingots/dragonsteel"
+    },
+    "Y": {
+      "tag": "forge:storage_blocks/dragonsteel"
+    }
+  },
+  "pattern": [
+    " Y ",
+    "X#X",
+    " # "
+  ],
+  "result": {
+    "item": "thermal_extra:dragonsteel_excavator"
+  },
+  "show_notification": true
+}

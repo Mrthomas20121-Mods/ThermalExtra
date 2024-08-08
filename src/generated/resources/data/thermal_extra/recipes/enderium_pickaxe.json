@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "conditions": [
+    {
+      "type": "cofh_core:tag_exists",
+      "tag": "forge:ingots/enderium"
+    }
+  ],
+  "key": {
+    "#": {
+      "tag": "forge:rods/enderium"
+    },
+    "X": {
+      "tag": "forge:ingots/enderium"
+    }
+  },
+  "pattern": [
+    "XXX",
+    " # ",
+    " # "
+  ],
+  "result": {
+    "item": "thermal_extra:enderium_pickaxe"
+  },
+  "show_notification": true
+}

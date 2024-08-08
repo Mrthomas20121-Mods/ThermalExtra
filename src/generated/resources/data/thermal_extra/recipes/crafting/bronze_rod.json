@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "tag": "forge:ingots/bronze"
+    }
+  },
+  "pattern": [
+    "I",
+    "I"
+  ],
+  "result": {
+    "count": 2,
+    "item": "thermal_extra:bronze_rod"
+  },
+  "show_notification": true
+}

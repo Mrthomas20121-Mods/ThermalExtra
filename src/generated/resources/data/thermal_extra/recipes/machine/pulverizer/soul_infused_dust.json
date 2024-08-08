@@ -1,0 +1,15 @@
+{
+  "type": "thermal:pulverizer",
+  "energy": 5000,
+  "ingredients": [
+    {
+      "count": 1,
+      "tag": "forge:dusts/soul_infused"
+    }
+  ],
+  "result": [
+    {
+      "item": "thermal_extra:soul_infused_dust"
+    }
+  ]
+}

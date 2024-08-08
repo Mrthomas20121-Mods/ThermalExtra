@@ -26,7 +26,6 @@ public class MachineAdvancedRefineryBlockEntity extends MachineBlockEntity {
     protected FluidStorageCoFH outputTankA = new FluidStorageCoFH(TANK_MEDIUM);
     protected FluidStorageCoFH outputTankB = new FluidStorageCoFH(TANK_MEDIUM);
     protected FluidStorageCoFH outputTankC = new FluidStorageCoFH(TANK_MEDIUM);
-    //protected FluidStorageCoFH outputTankD = new FluidStorageCoFH(TANK_MEDIUM);
 
     public MachineAdvancedRefineryBlockEntity(BlockPos pos, BlockState state) {
 
@@ -39,7 +38,6 @@ public class MachineAdvancedRefineryBlockEntity extends MachineBlockEntity {
         tankInv.addTank(outputTankA, OUTPUT);
         tankInv.addTank(outputTankB, OUTPUT);
         tankInv.addTank(outputTankC, OUTPUT);
-        //tankInv.addTank(outputTankD, OUTPUT);
 
         renderFluid = new FluidStack(Fluids.WATER, BUCKET_VOLUME);
 

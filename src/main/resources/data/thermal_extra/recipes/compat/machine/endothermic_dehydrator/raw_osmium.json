@@ -1,0 +1,32 @@
+{
+  "type": "thermal_extra:endothermic_dehydrator",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "mekanism"
+    }
+  ],
+  "energy": 100000,
+  "ingredients": [
+    {
+      "amount": 90,
+      "fluid": "thermal_extra:raw_osmium"
+    }
+  ],
+  "result": [
+    {
+      "chance": 1.25,
+      "count": 2,
+      "item": "mekanism:osmium_dust",
+      "locked": true
+    },
+    {
+      "chance": 0.5,
+      "item": "mekanism:osmium_dust"
+    },
+    {
+      "chance": 0.15,
+      "item": "thermal:iron_dust"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "conditions": [
+    {
+      "type": "cofh_core:tag_exists",
+      "tag": "forge:ingots/signalum"
+    }
+  ],
+  "key": {
+    "#": {
+      "tag": "forge:rods/signalum"
+    },
+    "X": {
+      "tag": "forge:ingots/signalum"
+    },
+    "Y": {
+      "tag": "forge:storage_blocks/signalum"
+    }
+  },
+  "pattern": [
+    " Y ",
+    "X#X",
+    " # "
+  ],
+  "result": {
+    "item": "thermal_extra:signalum_excavator"
+  },
+  "show_notification": true
+}

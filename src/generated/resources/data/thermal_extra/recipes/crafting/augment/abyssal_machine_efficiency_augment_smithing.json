@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "thermal_extra:abyssal_gear"
+  },
+  "base": {
+    "item": "thermal_extra:dragonsteel_machine_efficiency_augment"
+  },
+  "result": {
+    "item": "thermal_extra:abyssal_machine_efficiency_augment"
+  },
+  "template": {
+    "item": "thermal_extra:augment_smithing_upgrade"
+  }
+}

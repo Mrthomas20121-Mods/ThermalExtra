@@ -1,6 +1,6 @@
 {
   "type": "thermal_extra:endothermic_dehydrator",
-  "energy": 4000,
+  "energy": 100000,
   "ingredients": [
     {
       "amount": 90,

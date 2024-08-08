@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "tag": "forge:nuggets/abyssal"
+    },
+    "I": {
+      "item": "thermal_extra:abyssal_nugget"
+    }
+  },
+  "pattern": [
+    "###",
+    "#I#",
+    "###"
+  ],
+  "result": {
+    "item": "thermal_extra:abyssal_ingot"
+  },
+  "show_notification": true
+}

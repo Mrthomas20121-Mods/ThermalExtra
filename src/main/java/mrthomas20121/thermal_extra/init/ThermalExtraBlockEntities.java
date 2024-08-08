@@ -12,7 +12,6 @@ public class ThermalExtraBlockEntities {
     public static DeferredRegisterCoFH<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegisterCoFH.create(ForgeRegistries.BLOCK_ENTITY_TYPES, ThermalExtra.MOD_ID);
 
     public static RegistryObject<BlockEntityType<?>> DYNAMO_COLD = BLOCK_ENTITIES.register("dynamo_frost", () -> BlockEntityType.Builder.of(DynamoColdBlockEntity::new, ThermalExtraBlocks.DYNAMO_COLD.get()).build(null));
-    public static RegistryObject<BlockEntityType<?>> METAL_INFUSER = BLOCK_ENTITIES.register("metal_infuser", () -> BlockEntityType.Builder.of(MachineMetalInfuserBlockEntity::new, ThermalExtraBlocks.BLOCKS.get("metal_infuser")).build(null));
     public static RegistryObject<BlockEntityType<?>> ADVANCED_REFINERY = BLOCK_ENTITIES.register("advanced_refinery", () -> BlockEntityType.Builder.of(MachineAdvancedRefineryBlockEntity::new, ThermalExtraBlocks.BLOCKS.get("advanced_refinery")).build(null));
     public static RegistryObject<BlockEntityType<?>> NITRATIC_IGNITER = BLOCK_ENTITIES.register("nitratic_igniter", () -> BlockEntityType.Builder.of(MachineNitraticIgniterBlockEntity::new, ThermalExtraBlocks.BLOCKS.get("nitratic_igniter")).build(null));
     public static RegistryObject<BlockEntityType<?>> FLUID_MIXER = BLOCK_ENTITIES.register("fluid_mixer", () -> BlockEntityType.Builder.of(MachineFluidMixerBlockEntity::new, ThermalExtraBlocks.BLOCKS.get("fluid_mixer")).build(null));

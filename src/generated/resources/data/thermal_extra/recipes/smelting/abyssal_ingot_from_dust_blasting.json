@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.0,
+  "ingredient": {
+    "item": "thermal_extra:abyssal_dust"
+  },
+  "result": "thermal_extra:abyssal_ingot"
+}

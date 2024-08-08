@@ -9,16 +9,10 @@
       "item": "minecraft:shulker_shell"
     },
     {
-      "item": "minecraft:shulker_shell"
+      "tag": "forge:dusts/lead"
     },
     {
-      "tag": "forge:dusts/apatite"
-    },
-    {
-      "tag": "forge:dusts/bronze"
-    },
-    {
-      "tag": "forge:dusts/bronze"
+      "tag": "forge:dusts/nickel"
     }
   ],
   "result": {

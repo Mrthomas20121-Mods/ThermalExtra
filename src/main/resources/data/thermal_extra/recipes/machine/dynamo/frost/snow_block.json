@@ -1,7 +1,0 @@
-{
-  "type": "thermal_extra:cold_fuel",
-  "ingredient": {
-    "item": "minecraft:snow_block"
-  },
-  "energy": 4000
-}

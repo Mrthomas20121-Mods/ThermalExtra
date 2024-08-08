@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "thermal_extra:twinite_gear"
+  },
+  "base": {
+    "item": "thermal_extra:soul_infused_fluid_tank_augment"
+  },
+  "result": {
+    "item": "thermal_extra:twinite_fluid_tank_augment"
+  },
+  "template": {
+    "item": "thermal_extra:augment_smithing_upgrade"
+  }
+}

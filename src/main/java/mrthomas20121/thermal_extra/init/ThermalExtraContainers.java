@@ -18,7 +18,6 @@ public class ThermalExtraContainers {
 
     public static DeferredRegisterCoFH<MenuType<?>> CONTAINERS = DeferredRegisterCoFH.create(ForgeRegistries.MENU_TYPES, ThermalExtra.MOD_ID);
 
-    public static final RegistryObject<MenuType<MachineMetalInfuserMenu>> METAL_INFUSER_CONTAINER = CONTAINERS.register("metal_infuser", () -> IForgeMenuType.create((windowId, inv, data) -> new MachineMetalInfuserMenu(windowId, getClientWorld(), data.readBlockPos(), inv, getClientPlayer())));
     public static final RegistryObject<MenuType<MachineAdvancedRefineryMenu>> ADVANCED_REFINERY_CONTAINER = CONTAINERS.register("advanced_refinery", () -> IForgeMenuType.create((windowId, inv, data) -> new MachineAdvancedRefineryMenu(windowId, getClientWorld(), data.readBlockPos(), inv, getClientPlayer())));
     public static final RegistryObject<MenuType<MachineNitraticIgniterMenu>> NITRATIC_IGNITER_CONTAINER = CONTAINERS.register("nitratic_igniter", () -> IForgeMenuType.create((windowId, inv, data) -> new MachineNitraticIgniterMenu(windowId, getClientWorld(), data.readBlockPos(), inv, getClientPlayer())));
     public static final RegistryObject<MenuType<DynamoFrostMenu>> DYNAMO_FROST_CONTAINER = CONTAINERS.register("dynamo_frost", () -> IForgeMenuType.create((windowId, inv, data) -> new DynamoFrostMenu(windowId, getClientWorld(), data.readBlockPos(), inv, getClientPlayer())));

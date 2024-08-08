@@ -15,7 +15,6 @@ import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -25,7 +24,6 @@ import org.apache.logging.log4j.Logger;
 import java.util.concurrent.CompletableFuture;
 
 @Mod(mrthomas20121.thermal_extra.ThermalExtra.MOD_ID)
-@Mod.EventBusSubscriber(modid = ThermalExtra.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ThermalExtra {
 
 	public static final String MOD_ID = "thermal_extra";
@@ -44,10 +42,26 @@ public class ThermalExtra {
 		ThermalExtraCreativeTabs.CREATIVE_TABS.register(bus);
 		AdvancedFilter.init();
 		ThermalExtraRecipeManagers.register();
+
+		bus.addListener(this::gatherData);
+		bus.addListener(this::clientSetup);
 	}
 
-	@SubscribeEvent
-	public static void gatherData(final GatherDataEvent event) {
+	public void clientSetup(FMLClientSetupEvent event) {
+		event.enqueueWork(() -> {
+			CoreClientEvents.addNamespace(ThermalExtra.MOD_ID);
+			MenuScreens.register(ThermalExtraContainers.ADVANCED_REFINERY_CONTAINER.get(), MachineAdvancedRefineryScreen::new);
+			MenuScreens.register(ThermalExtraContainers.NITRATIC_IGNITER_CONTAINER.get(), MachineNitraticIgniterScreen::new);
+			MenuScreens.register(ThermalExtraContainers.FLUID_MIXER_CONTAINER.get(), MachineFluidMixerScreen::new);
+			MenuScreens.register(ThermalExtraContainers.DYNAMO_FROST_CONTAINER.get(), DynamoFrostScreen::new);
+			MenuScreens.register(ThermalExtraContainers.ADVANCED_ITEM_FILTER_CONTAINER.get(), AdvancedItemFilterScreen::new);
+			MenuScreens.register(ThermalExtraContainers.LAVA_GEN_CONTAINER.get(), DeviceLavaGenScreen::new);
+			MenuScreens.register(ThermalExtraContainers.COMPONENT_ASSEMBLY_CONTAINER.get(), MachineComponentAssemblyScreen::new);
+			MenuScreens.register(ThermalExtraContainers.ENDOTHERMIC_DEHYDRATOR_CONTAINER.get(), MachineEndothermicDehydratorScreen::new);
+		});
+	}
+
+	public void gatherData(final GatherDataEvent event) {
 		DataGenerator gen = event.getGenerator();
 		ExistingFileHelper fileHelper = event.getExistingFileHelper();
 		PackOutput packOutput = gen.getPackOutput();
@@ -59,26 +73,11 @@ public class ThermalExtra {
 		gen.addProvider(event.includeServer(), blockTags);
 		gen.addProvider(event.includeServer(), new ExtraTagGen.ItemTags(packOutput, lookupProvider, blockTags.contentsGetter(), fileHelper));
 		gen.addProvider(event.includeServer(), new ExtraTagGen.FluidTags(packOutput, lookupProvider, fileHelper));
+		gen.addProvider(event.includeServer(), new ExtraTagGen.EntityTags(packOutput, lookupProvider, fileHelper));
 
 		// client stuff
 		gen.addProvider(event.includeClient(), new ExtraModelGen(packOutput, fileHelper));
 		gen.addProvider(event.includeClient(), new ExtraLangGen(packOutput));
 		gen.addProvider(event.includeClient(), new ExtraBlockstateGen(packOutput, fileHelper));
-	}
-
-	@SubscribeEvent
-	public static void clientEvents(FMLClientSetupEvent event) {
-		event.enqueueWork(() -> {
-			CoreClientEvents.addNamespace(MOD_ID);
-			MenuScreens.register(ThermalExtraContainers.METAL_INFUSER_CONTAINER.get(), MachineMetalInfuserScreen::new);
-			MenuScreens.register(ThermalExtraContainers.ADVANCED_REFINERY_CONTAINER.get(), MachineAdvancedRefineryScreen::new);
-			MenuScreens.register(ThermalExtraContainers.NITRATIC_IGNITER_CONTAINER.get(), MachineNitraticIgniterScreen::new);
-			MenuScreens.register(ThermalExtraContainers.FLUID_MIXER_CONTAINER.get(), MachineFluidMixerScreen::new);
-			MenuScreens.register(ThermalExtraContainers.DYNAMO_FROST_CONTAINER.get(), DynamoFrostScreen::new);
-			MenuScreens.register(ThermalExtraContainers.ADVANCED_ITEM_FILTER_CONTAINER.get(), AdvancedItemFilterScreen::new);
-			MenuScreens.register(ThermalExtraContainers.LAVA_GEN_CONTAINER.get(), DeviceLavaGenScreen::new);
-			MenuScreens.register(ThermalExtraContainers.COMPONENT_ASSEMBLY_CONTAINER.get(), MachineComponentAssemblyScreen::new);
-			MenuScreens.register(ThermalExtraContainers.ENDOTHERMIC_DEHYDRATOR_CONTAINER.get(), MachineEndothermicDehydratorScreen::new);
-		});
 	}
 }

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "tag": "forge:ingots/abyssal"
+    },
+    "I": {
+      "item": "thermal_extra:abyssal_ingot"
+    }
+  },
+  "pattern": [
+    "###",
+    "#I#",
+    "###"
+  ],
+  "result": {
+    "item": "thermal_extra:abyssal_block"
+  },
+  "show_notification": true
+}

@@ -99,19 +99,19 @@ public class ComponentAssemblyRecipeCategory extends ThermalRecipeCategory<Compo
 
         if (!inputs.isEmpty()) {
             inputSlot1.addIngredients(inputs.get(0));
-            if(inputs.size() == 2) {
+            if(inputs.size() >= 2) {
                 inputSlot2.addIngredients(inputs.get(1));
             }
-            if(inputs.size() == 3) {
+            if(inputs.size() >= 3) {
                 inputSlot3.addIngredients(inputs.get(2));
             }
-            if(inputs.size() == 4) {
+            if(inputs.size() >= 4) {
                 inputSlot4.addIngredients(inputs.get(3));
             }
-            if(inputs.size() == 5) {
+            if(inputs.size() >= 5) {
                 inputSlot5.addIngredients(inputs.get(4));
             }
-            if(inputs.size() == 6) {
+            if(inputs.size() >= 6) {
                 inputSlot6.addIngredients(inputs.get(5));
             }
         }

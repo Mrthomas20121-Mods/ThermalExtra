@@ -3,6 +3,7 @@
     "thermal_extra:soul_infused_block",
     "thermal_extra:shellite_block",
     "thermal_extra:twinite_block",
-    "thermal_extra:dragonsteel_block"
+    "thermal_extra:dragonsteel_block",
+    "thermal_extra:abyssal_block"
   ]
 }

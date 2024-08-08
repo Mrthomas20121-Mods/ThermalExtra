@@ -1,7 +1,0 @@
-{
-  "type": "thermal_extra:cold_fuel",
-  "ingredient": {
-    "item": "minecraft:snowball"
-  },
-  "energy": 1000
-}

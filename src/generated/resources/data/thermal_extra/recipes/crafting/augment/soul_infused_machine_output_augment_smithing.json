@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "thermal_extra:soul_infused_gear"
+  },
+  "base": {
+    "item": "thermal:machine_output_augment"
+  },
+  "result": {
+    "item": "thermal_extra:soul_infused_machine_output_augment"
+  },
+  "template": {
+    "item": "thermal_extra:augment_smithing_upgrade"
+  }
+}

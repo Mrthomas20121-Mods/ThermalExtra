@@ -3,22 +3,16 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "minecraft:dragon_breath"
+      "item": "thermal_extra:ancient_dust"
     },
     {
-      "item": "minecraft:dragon_breath"
+      "item": "thermal_extra:ancient_dust"
     },
     {
-      "item": "minecraft:dragon_breath"
+      "item": "minecraft:netherite_scrap"
     },
     {
-      "tag": "forge:dusts/apatite"
-    },
-    {
-      "tag": "forge:dusts/apatite"
-    },
-    {
-      "tag": "forge:dusts/netherite"
+      "tag": "forge:dusts/ender_pearl"
     }
   ],
   "result": {

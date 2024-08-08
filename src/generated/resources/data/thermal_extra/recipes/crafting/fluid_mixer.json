@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "G": {
+      "tag": "forge:gears/constantan"
+    },
+    "H": {
+      "tag": "thermal:glass/hardened"
+    },
+    "I": {
+      "tag": "forge:ingots/soul_infused"
+    },
+    "M": {
+      "item": "thermal:machine_frame"
+    },
+    "R": {
+      "item": "thermal:rf_coil"
+    }
+  },
+  "pattern": [
+    " I ",
+    "HMH",
+    "GRG"
+  ],
+  "result": {
+    "item": "thermal_extra:fluid_mixer"
+  },
+  "show_notification": true
+}

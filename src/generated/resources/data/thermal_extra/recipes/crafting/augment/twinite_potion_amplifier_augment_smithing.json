@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "thermal_extra:twinite_gear"
+  },
+  "base": {
+    "item": "thermal_extra:soul_infused_potion_amplifier_augment"
+  },
+  "result": {
+    "item": "thermal_extra:twinite_potion_amplifier_augment"
+  },
+  "template": {
+    "item": "thermal_extra:augment_smithing_upgrade"
+  }
+}

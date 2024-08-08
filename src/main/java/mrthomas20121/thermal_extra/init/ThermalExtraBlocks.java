@@ -44,14 +44,15 @@ public class ThermalExtraBlocks {
     public static RegistryObject<Block> SHELLITE_BLOCK = register("shellite_block");
     public static RegistryObject<Block> TWINITE_BLOCK = register("twinite_block");
     public static RegistryObject<Block> DRAGONSTEEL_BLOCK = register("dragonsteel_block");
+    public static RegistryObject<Block> ABYSSAL_BLOCK = register("abyssal_block");
     public static RegistryObject<Block> SOUL_INFUSED_GLASS = registerGlass("soul_infused_glass");
     public static RegistryObject<Block> SHELLITE_GLASS = registerGlass("shellite_glass");
     public static RegistryObject<Block> TWINITE_GLASS = registerGlass("twinite_glass");
     public static RegistryObject<Block> DRAGONSTEEL_GLASS = registerGlass("dragonsteel_glass");
+    public static RegistryObject<Block> ABYSSAL_GLASS = registerGlass("abyssal_glass");
 
     public static RegistryObject<DynamoBlock> DYNAMO_COLD = BLOCKS.register("dynamo_frost", () -> new DynamoBlock(of().sound(SoundType.NETHERITE_BLOCK).strength(2.0F).lightLevel(lightValue(ACTIVE, 7)), DynamoColdBlockEntity.class, ThermalExtraBlockEntities.DYNAMO_COLD));
 
-    public static RegistryObject<Item> METAl_INFUSER = registerAugmentableBlock("metal_infuser", () -> new EntityBlockActive4Way(of().sound(SoundType.NETHERITE_BLOCK).strength(2.0F).lightLevel(lightValue(ACTIVE, 0)), MachineMetalInfuserBlockEntity.class, ThermalExtraBlockEntities.METAL_INFUSER), () -> ThermalCoreConfig.machineAugments, MACHINE_VALIDATOR, ThermalExtra.MOD_ID);
     public static RegistryObject<Item> ADVANCED_REFINERY = registerAugmentableBlock("advanced_refinery", () -> new EntityBlockActive4Way(of().sound(SoundType.NETHERITE_BLOCK).strength(2.0F).lightLevel(lightValue(ACTIVE, 5)), MachineAdvancedRefineryBlockEntity.class, ThermalExtraBlockEntities.ADVANCED_REFINERY), () -> ThermalCoreConfig.machineAugments, MACHINE_VALIDATOR, ThermalExtra.MOD_ID);
     public static RegistryObject<Item> NITRATIC_IGNITER = registerAugmentableBlock("nitratic_igniter", () -> new EntityBlockActive4Way(of().sound(SoundType.NETHERITE_BLOCK).strength(2.0F).lightLevel(lightValue(ACTIVE, 0)), MachineNitraticIgniterBlockEntity.class, ThermalExtraBlockEntities.NITRATIC_IGNITER), () -> ThermalCoreConfig.machineAugments, MACHINE_VALIDATOR, ThermalExtra.MOD_ID);
     public static RegistryObject<Item> FLUID_MIXER = registerAugmentableBlock("fluid_mixer", () -> new EntityBlockActive4Way(of().sound(SoundType.NETHERITE_BLOCK).strength(2.0F).lightLevel(lightValue(ACTIVE, 0)), MachineFluidMixerBlockEntity.class, ThermalExtraBlockEntities.FLUID_MIXER), () -> ThermalCoreConfig.machineAugments, MACHINE_VALIDATOR, ThermalExtra.MOD_ID);

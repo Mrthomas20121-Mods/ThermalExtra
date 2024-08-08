@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "conditions": [
+    {
+      "type": "cofh_core:tag_exists",
+      "tag": "forge:ingots/lumium"
+    }
+  ],
+  "key": {
+    "#": {
+      "tag": "forge:rods/lumium"
+    },
+    "X": {
+      "tag": "forge:ingots/lumium"
+    },
+    "Y": {
+      "tag": "forge:storage_blocks/lumium"
+    }
+  },
+  "pattern": [
+    "XYX",
+    "X#X",
+    " # "
+  ],
+  "result": {
+    "item": "thermal_extra:lumium_hammer"
+  },
+  "show_notification": true
+}

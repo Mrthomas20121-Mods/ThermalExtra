@@ -1,0 +1,15 @@
+{
+  "type": "thermal:smelter",
+  "energy": 4000,
+  "ingredients": [
+    {
+      "count": 1,
+      "tag": "forge:dusts/shellite"
+    }
+  ],
+  "result": [
+    {
+      "item": "thermal_extra:twinite_ingot"
+    }
+  ]
+}

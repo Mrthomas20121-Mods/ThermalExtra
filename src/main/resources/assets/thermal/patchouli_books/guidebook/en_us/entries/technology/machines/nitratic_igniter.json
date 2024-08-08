@@ -1,0 +1,22 @@
+{
+  "name": "Nitratic Igniter",
+  "icon": "thermal_extra:nitratic_igniter",
+  "category": "thermal:machines",
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "The Nitratic Igniter is a machine that uses various tnt to detonate items into new items. Drops can be increased using augments and better $(l:thermal:world/materials/catalysts)catalysts$(/l).$(br2)Nitratic Igniter recipes REQUIRE a catalyst."
+    },
+    {
+      "type": "thermal:double_crafting_page",
+      "A.recipe": "thermal_extra:crafting/nitratic_igniter",
+      "title": "Nitratic Igniter"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Augment Compatibility",
+      "text": "$(li)$(l:thermal:technology/augments/integral_components)Integral Components$(/l)$(li)$(l:thermal:technology/augments/item_filter)Item Filter$(/l)$(li)$(l:thermal:technology/augments/xp_storage)Knowledge Concentrator$(/l)$(li)$(l:thermal:technology/augments/rf_coil)Expanded RF Coil$(/l)$(li)$(l:thermal:technology/augments/rf_coil_storage)Stabilized RF Coil$(/l)$(li)$(l:thermal:technology/augments/rf_coil_xfer)High-Flux RF Coil$(/l)$(li)$(l:thermal:technology/augments/machine_speed)Flux Linkage Amplifier$(/l)$(li)$(l:thermal:technology/augments/machine_efficiency)Flux Efficiency$(/l)$(li)$(l:thermal:technology/augments/machine_output)Auxiliary Process Sieve$(/l)$(li)$(l:thermal:technology/augments/machine_null)Auxiliary Cactus$(/l)$(li)$(l:thermal:technology/augments/machine_catalyst)Catalytic Reclamation Chamber$(/l)"
+    }
+  ]
+}

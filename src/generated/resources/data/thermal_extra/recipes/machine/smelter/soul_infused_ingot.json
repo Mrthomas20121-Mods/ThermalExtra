@@ -1,0 +1,23 @@
+{
+  "type": "thermal:smelter",
+  "energy": 4000,
+  "ingredients": [
+    {
+      "count": 2,
+      "tag": "forge:dusts/soul_sand"
+    },
+    {
+      "count": 1,
+      "tag": "forge:ingots/iron"
+    },
+    {
+      "count": 1,
+      "tag": "forge:ingots/copper"
+    }
+  ],
+  "result": [
+    {
+      "item": "thermal_extra:soul_infused_ingot"
+    }
+  ]
+}

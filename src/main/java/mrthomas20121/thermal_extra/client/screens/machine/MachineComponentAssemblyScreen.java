@@ -4,8 +4,6 @@ import cofh.thermal.core.client.gui.ThermalGuiHelper;
 import cofh.thermal.lib.client.gui.MachineScreen;
 import mrthomas20121.thermal_extra.ThermalExtra;
 import mrthomas20121.thermal_extra.inventory.machine.MachineComponentAssemblyMenu;
-import mrthomas20121.thermal_extra.inventory.machine.MachineMetalInfuserMenu;
-import mrthomas20121.thermal_extra.recipe.ComponentAssemblyRecipe;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;

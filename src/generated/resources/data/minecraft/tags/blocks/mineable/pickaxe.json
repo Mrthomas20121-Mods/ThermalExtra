@@ -8,6 +8,13 @@
     "thermal_extra:shellite_glass",
     "thermal_extra:twinite_glass",
     "thermal_extra:dragonsteel_glass",
-    "thermal_extra:dynamo_frost"
+    "thermal_extra:abyssal_block",
+    "thermal_extra:dynamo_frost",
+    "thermal_extra:device_lava_gen",
+    "thermal_extra:component_assembly",
+    "thermal_extra:endothermic_dehydrator",
+    "thermal_extra:nitratic_igniter",
+    "thermal_extra:advanced_refinery",
+    "thermal_extra:fluid_mixer"
   ]
 }
