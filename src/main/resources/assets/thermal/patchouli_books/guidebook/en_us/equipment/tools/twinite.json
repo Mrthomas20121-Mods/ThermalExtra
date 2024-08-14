@@ -1,0 +1,24 @@
+{
+  "name": "Twinite Tools",
+  "icon": "thermal_extra:twinite_sword",
+  "category": "thermal:tools",
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	    "title": "Twinite Tools",
+	    "text": "Twinite tools do x",
+      "item": {
+		    "tag": "forge:tools/twinite"
+	    }
+    },
+    {
+      "type": "patchouli:spotlight",
+	    "title": "Twinite Armor",
+	    "text": "Full set of Twinite armor makes blazes not see you from far away.",
+      "item": {
+		    "tag": "forge:armors/twinite"
+	    }
+    }
+  ]
+}

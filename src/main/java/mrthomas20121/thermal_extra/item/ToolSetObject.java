@@ -3,6 +3,7 @@ package mrthomas20121.thermal_extra.item;
 import cofh.core.common.item.*;
 import cofh.lib.common.item.*;
 import cofh.lib.util.DeferredRegisterCoFH;
+import mrthomas20121.thermal_extra.item.armor.ExtraArmorItem;
 import net.minecraft.world.item.*;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -45,10 +46,10 @@ public class ToolSetObject {
         this.HAMMER = registry.register(name+"_hammer", () -> new HammerItem(tier, properties));
         this.KNIFE = registry.register(name+"_knife", () -> new KnifeItem(tier, properties));
         this.SICKLE = registry.register(name+"_sickle", () -> new SickleItem(tier, properties));
-        this.HELMET = registry.register(name+"_helmet", () -> new ArmorItemCoFH(material, ArmorItem.Type.HELMET, properties));
-        this.CHESTPLATE = registry.register(name+"_chestplate", () -> new ArmorItemCoFH(material, ArmorItem.Type.CHESTPLATE, properties));
-        this.LEGGINGS = registry.register(name+"_leggings", () -> new ArmorItemCoFH(material, ArmorItem.Type.LEGGINGS, properties));
-        this.BOOTS = registry.register(name+"_boots", () -> new ArmorItemCoFH(material, ArmorItem.Type.BOOTS, properties));
+        this.HELMET = registry.register(name+"_helmet", () -> new ExtraArmorItem(material, ArmorItem.Type.HELMET, properties));
+        this.CHESTPLATE = registry.register(name+"_chestplate", () -> new ExtraArmorItem(material, ArmorItem.Type.CHESTPLATE, properties));
+        this.LEGGINGS = registry.register(name+"_leggings", () -> new ExtraArmorItem(material, ArmorItem.Type.LEGGINGS, properties));
+        this.BOOTS = registry.register(name+"_boots", () -> new ExtraArmorItem(material, ArmorItem.Type.BOOTS, properties));
     }
 
     public RegistryObject<AxeItemCoFH> axe() {

@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smithing_transform",
   "addition": {
-    "item": "thermal:enderium_gear"
+    "item": "thermal_extra:shellite_gear"
   },
   "base": {
     "item": "thermal:item_filter_augment"

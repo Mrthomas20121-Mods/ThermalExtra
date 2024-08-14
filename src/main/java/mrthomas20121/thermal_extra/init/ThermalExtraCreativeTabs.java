@@ -22,6 +22,7 @@ public class ThermalExtraCreativeTabs {
             .icon(() -> new ItemStack(ThermalExtraItems.INTEGRAL_COMPONENT.get()))
             .title(Component.translatable("creative_tab.thermal_extra.augments"))
             .displayItems((feature, output) -> {
+                output.accept(ThermalExtraItems.ABYSSAL_INTEGRAL_COMPONENT.get());
                 output.accept(ThermalExtraItems.INTEGRAL_COMPONENT.get());
 
                 output.accept(ThermalExtraItems.AV_ITEM_FILTER_AUGMENT.get());

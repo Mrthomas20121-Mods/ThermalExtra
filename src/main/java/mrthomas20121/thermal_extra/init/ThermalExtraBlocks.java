@@ -63,13 +63,16 @@ public class ThermalExtraBlocks {
     private static Rarity getRarity(String name) {
 
         if(name.contains("shellite")) {
-            return ThermalExtraItems.red;
+            return ThermalExtraItems.dark_purple;
         }
         else if(name.contains("twinite")) {
-            return ThermalExtraItems.dark_purple;
+            return ThermalExtraItems.red;
         }
         else if(name.contains("dragonsteel")) {
             return ThermalExtraItems.dark_aqua;
+        }
+        else if(name.contains("abyssal")) {
+            return ThermalExtraItems.green;
         }
 
         return ThermalExtraItems.yellow;

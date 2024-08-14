@@ -1,14 +1,5 @@
 {
   "values": [
-    "#forge:ingots/shellite",
-    "thermal_extra:shellite_axe",
-    "thermal_extra:shellite_pickaxe",
-    "thermal_extra:shellite_shovel",
-    "thermal_extra:shellite_hoe",
-    "thermal_extra:shellite_sword",
-    "thermal_extra:shellite_excavator",
-    "thermal_extra:shellite_hammer",
-    "thermal_extra:shellite_knife",
-    "thermal_extra:shellite_sickle"
+    "#forge:ingots/shellite"
   ]
 }

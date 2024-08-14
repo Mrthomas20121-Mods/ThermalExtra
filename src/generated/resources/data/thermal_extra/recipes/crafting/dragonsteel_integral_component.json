@@ -6,7 +6,7 @@
       "tag": "forge:gears/dragonsteel"
     },
     "I": {
-      "tag": "forge:dusts/netherite"
+      "item": "thermal_extra:ancient_dust"
     },
     "X": {
       "item": "thermal:upgrade_augment_3"

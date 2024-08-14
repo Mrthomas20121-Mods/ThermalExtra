@@ -7,12 +7,19 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.monster.piglin.Piglin;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
+import net.minecraftforge.event.entity.EntityEvent;
+import net.minecraftforge.event.entity.EntityMobGriefingEvent;
 import net.minecraftforge.event.entity.EntityTeleportEvent;
+import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.entity.player.AttackEntityEvent;
 import net.minecraftforge.event.entity.player.CriticalHitEvent;
@@ -31,12 +38,26 @@ public class CommonEvents {
     }
 
     @SubscribeEvent
+    public static void visibilityEvent(LivingEvent.LivingVisibilityEvent event) {
+
+        // this is always nonnull in vanilla, but you never know
+        Entity lookingEntity = event.getLookingEntity();
+        if(lookingEntity == null) {
+            return;
+        }
+
+        if(isFullArmor(ThermalExtraTags.Items.TWINITE_ARMOR, event.getEntity()) && lookingEntity.getType().equals(EntityType.BLAZE)) {
+            event.modifyVisibility(0.2f);
+        }
+    }
+
+    @SubscribeEvent
     public static void attackEntity(AttackEntityEvent event) {
         if(!event.isCanceled()) {
             Player player = event.getEntity();
-            if(player.getMainHandItem().is(ThermalExtraTags.Items.ENDERIUM_TOOLS)) {
-                if(event.getTarget() instanceof LivingEntity entity) {
-                    entity.addEffect(new MobEffectInstance(CoreMobEffects.ENDERFERENCE.get()));
+            if(player.getMainHandItem().is(ThermalExtraTags.Items.ABYSSAL_TOOLS)) {
+                if(event.getTarget() instanceof LivingEntity entity && !entity.hasEffect(MobEffects.WEAKNESS)) {
+                    entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS));
                 }
             }
         }

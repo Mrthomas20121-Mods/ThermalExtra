@@ -1100,22 +1100,29 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
             }
         }
 
-        augmentSmithing(consumer, ITEMS.get("item_filter_augment"), RecipeCategory.MISC, ThermalExtraItems.AV_ITEM_FILTER_AUGMENT.get(), ITEMS.get("enderium_gear"));
+        augmentSmithing(consumer, ITEMS.get("item_filter_augment"), RecipeCategory.MISC, ThermalExtraItems.AV_ITEM_FILTER_AUGMENT.get(), ThermalExtraItems.SHELLITE_GEAR.get());
 
-        String folder = "augments";
-
-        Item result = ThermalExtraItems.INTEGRAL_COMPONENT.get();
         Item part = ThermalCore.ITEMS.get("upgrade_augment_3");
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, result)
+        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, ThermalExtraItems.INTEGRAL_COMPONENT.get())
                 .define('G', ThermalExtraTags.Items.DRAGONSTEEL_GEAR)
-                .define('I', ItemTagsCoFH.DUSTS_NETHERITE)
+                .define('I', ThermalExtraItems.ANCIENT_DUST.get())
                 .define('X', part)
                 .pattern("IGI")
                 .pattern("GXG")
                 .pattern("IGI")
                 .unlockedBy("has_upgrade_augment_3", has(part))
-                .save(withConditions(consumer).flag(FLAG_UPGRADE_AUGMENTS), this.modid + ":" + folder + "/" + name(result));
+                .save(withConditions(consumer).flag(FLAG_UPGRADE_AUGMENTS), modLoc("crafting/dragonsteel_integral_component"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, ThermalExtraItems.ABYSSAL_INTEGRAL_COMPONENT.get())
+                .define('G', ThermalExtraTags.Items.ABYSSAL_GEAR)
+                .define('I', ThermalExtraItems.ANCIENT_DUST.get())
+                .define('X', ThermalExtraItems.INTEGRAL_COMPONENT.get())
+                .pattern("IGI")
+                .pattern("GXG")
+                .pattern("IGI")
+                .unlockedBy("has_dragonsteel_upgrade_augment", has(ThermalExtraItems.INTEGRAL_COMPONENT.get()))
+                .save(withConditions(consumer).flag(FLAG_UPGRADE_AUGMENTS), modLoc("crafting/abyssal_integral_component"));
     }
 
     public void nitraticOre(Consumer<FinishedRecipe> consumer, String oreName, TagKey<Item> tagKey, Supplier<Item> mainOreChunk, Supplier<Item> secondaryOreChunk) {

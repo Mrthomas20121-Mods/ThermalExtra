@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "G": {
+      "tag": "forge:gears/abyssal"
+    },
+    "I": {
+      "item": "thermal_extra:ancient_dust"
+    },
+    "X": {
+      "item": "thermal_extra:upgrade_augment"
+    }
+  },
+  "pattern": [
+    "IGI",
+    "GXG",
+    "IGI"
+  ],
+  "result": {
+    "item": "thermal_extra:abyssal_upgrade_augment"
+  },
+  "show_notification": true
+}

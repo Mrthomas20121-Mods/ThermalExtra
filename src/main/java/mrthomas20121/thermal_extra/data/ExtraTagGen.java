@@ -14,6 +14,7 @@ import net.minecraft.data.tags.FluidTagsProvider;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.Item;
@@ -166,12 +167,19 @@ public class ExtraTagGen {
             tag(ThermalExtraTags.Items.ABYSSAL_COIN).add(ThermalExtraItems.ABYSSAL_COIN.get());
             tag(ThermalExtraTags.Items.ABYSSAL_REPAIR_MATERIAL).addTag(ThermalExtraTags.Items.ABYSSAL_INGOT);
 
+            tag(net.minecraft.tags.ItemTags.PIGLIN_LOVED).add(
+                    ThermalExtraItems.LUMIUM_SET.helmet().get(),
+                    ThermalExtraItems.LUMIUM_SET.chestplate().get(),
+                    ThermalExtraItems.LUMIUM_SET.leggings().get(),
+                    ThermalExtraItems.LUMIUM_SET.boots().get()
+            );
+
             toolsetTags(ThermalExtraItems.SIGNALUM_SET, ThermalExtraTags.Items.SIGNALUM_TOOLS, ThermalExtraTags.Items.SIGNALUM_ARMOR);
             toolsetTags(ThermalExtraItems.LUMIUM_SET, ThermalExtraTags.Items.LUMIUM_TOOLS, ThermalExtraTags.Items.LUMIUM_ARMOR);
             toolsetTags(ThermalExtraItems.ENDERIUM_SET, ThermalExtraTags.Items.ENDERIUM_TOOLS, ThermalExtraTags.Items.ENDERIUM_ARMOR);
 
             toolsetTags(ThermalExtraItems.SOUL_INFUSED_SET, ThermalExtraTags.Items.SOUL_INFUSED_TOOLS, ThermalExtraTags.Items.SOUL_INFUSED_ARMOR);
-            toolsetTags(ThermalExtraItems.SHELLITE_SET, ThermalExtraTags.Items.SHELLITE_REPAIR_MATERIAL, ThermalExtraTags.Items.SHELLITE_ARMOR);
+            toolsetTags(ThermalExtraItems.SHELLITE_SET, ThermalExtraTags.Items.SHELLITE_TOOLS, ThermalExtraTags.Items.SHELLITE_ARMOR);
             toolsetTags(ThermalExtraItems.TWINITE_SET, ThermalExtraTags.Items.TWINITE_TOOLS, ThermalExtraTags.Items.TWINITE_ARMOR);
             toolsetTags(ThermalExtraItems.DRAGONSTEEL_SET, ThermalExtraTags.Items.DRAGONSTEEL_TOOLS, ThermalExtraTags.Items.DRAGONSTEEL_ARMOR);
             toolsetTags(ThermalExtraItems.ABYSSAL_SET, ThermalExtraTags.Items.ABYSSAL_TOOLS, ThermalExtraTags.Items.ABYSSAL_ARMOR);
