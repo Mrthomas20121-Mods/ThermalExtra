@@ -52,18 +52,6 @@ public class CommonEvents {
     }
 
     @SubscribeEvent
-    public static void attackEntity(AttackEntityEvent event) {
-        if(!event.isCanceled()) {
-            Player player = event.getEntity();
-            if(player.getMainHandItem().is(ThermalExtraTags.Items.ABYSSAL_TOOLS)) {
-                if(event.getTarget() instanceof LivingEntity entity && !entity.hasEffect(MobEffects.WEAKNESS)) {
-                    entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS));
-                }
-            }
-        }
-    }
-
-    @SubscribeEvent
     public static void criticalHit(CriticalHitEvent event) {
         if(!event.isCanceled()) {
             Player player = event.getEntity();

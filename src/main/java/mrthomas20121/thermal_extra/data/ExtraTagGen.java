@@ -67,6 +67,7 @@ public class ExtraTagGen {
         }
 
         @Override
+        @SuppressWarnings("unchecked")
         protected void addTags(HolderLookup.Provider provider) {
 
             tag(ThermalTags.Items.MACHINE_CASTS).add(ThermalExtraItems.CHILLER_PLATE_CAST.get());
@@ -172,6 +173,17 @@ public class ExtraTagGen {
                     ThermalExtraItems.LUMIUM_SET.chestplate().get(),
                     ThermalExtraItems.LUMIUM_SET.leggings().get(),
                     ThermalExtraItems.LUMIUM_SET.boots().get()
+            );
+
+            tag(Tags.Items.TOOLS).addTags(
+                    ThermalExtraTags.Items.ABYSSAL_TOOLS,
+                    ThermalExtraTags.Items.DRAGONSTEEL_TOOLS,
+                    ThermalExtraTags.Items.TWINITE_TOOLS,
+                    ThermalExtraTags.Items.SHELLITE_TOOLS,
+                    ThermalExtraTags.Items.SOUL_INFUSED_TOOLS,
+                    ThermalExtraTags.Items.ENDERIUM_TOOLS,
+                    ThermalExtraTags.Items.LUMIUM_TOOLS,
+                    ThermalExtraTags.Items.SIGNALUM_TOOLS
             );
 
             toolsetTags(ThermalExtraItems.SIGNALUM_SET, ThermalExtraTags.Items.SIGNALUM_TOOLS, ThermalExtraTags.Items.SIGNALUM_ARMOR);
