@@ -1,0 +1,24 @@
+{
+  "type": "thermal:refinery",
+  "energy": 4000,
+  "ingredients": [
+    {
+      "amount": 100,
+      "fluid": "thermal_extra:flux_infused_oil"
+    }
+  ],
+  "result": [
+    {
+      "chance": 0.1,
+      "item": "thermal:bitumen"
+    },
+    {
+      "amount": 100,
+      "fluid": "thermal:heavy_oil"
+    },
+    {
+      "amount": 100,
+      "fluid": "thermal:light_oil"
+    }
+  ]
+}

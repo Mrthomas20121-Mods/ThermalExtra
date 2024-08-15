@@ -1,8 +1,0 @@
-{
-  "type": "thermal:compression_fuel",
-  "energy": 10000,
-  "ingredient": {
-    "amount": 1000,
-    "fluid": "thermal_extra:flux_infused_oil"
-  }
-}

@@ -86,6 +86,10 @@ public class MachineRecipeBuilder<T extends ThermalRecipe> {
         return new MachineRecipeBuilder<>(ThermalExtraRecipeSerializers.ADVANCED_REFINERY_RECIPE_SERIALIZER.get());
     }
 
+    public static MachineRecipeBuilder<RefineryRecipe> refinery() {
+        return new MachineRecipeBuilder<>(TCoreRecipeSerializers.REFINERY_RECIPE_SERIALIZER.get());
+    }
+
     public static CatalystBuilder<PulverizerCatalyst> pulverizerCatalyst() {
         return new CatalystBuilder<>(TCoreRecipeSerializers.PULVERIZER_CATALYST_SERIALIZER.get());
     }

@@ -1,0 +1,20 @@
+{
+  "type": "thermal_extra:advanced_refinery",
+  "energy": 4000,
+  "ingredients": [
+    {
+      "amount": 100,
+      "fluid": "thermal:light_oil"
+    }
+  ],
+  "result": [
+    {
+      "chance": 0.25,
+      "item": "thermal:sulfur_dust"
+    },
+    {
+      "amount": 80,
+      "fluid": "thermal_extra:diesel"
+    }
+  ]
+}

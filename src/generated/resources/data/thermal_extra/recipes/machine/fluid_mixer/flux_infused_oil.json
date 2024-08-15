@@ -3,17 +3,17 @@
   "energy": 10000,
   "ingredients": [
     {
-      "amount": 1000,
+      "amount": 100,
       "fluid": "thermal:redstone"
     },
     {
-      "amount": 1000,
+      "amount": 100,
       "fluid": "thermal:crude_oil"
     }
   ],
   "result": [
     {
-      "amount": 1000,
+      "amount": 100,
       "fluid": "thermal_extra:flux_infused_oil"
     }
   ]

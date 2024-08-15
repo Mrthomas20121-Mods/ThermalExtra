@@ -981,24 +981,42 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
         nitraticOre(withConditions(consumer).addCondition(new NotCondition(new TagEmptyCondition("forge:raw_materials/zinc"))), "zinc", rawOsmium, ThermalExtraItems.ZINC_ORE_CHUNK);
 
         MachineRecipeBuilder.advanced_refinery()
-                .input(new FluidStack(ThermalExtraFluids.CRYSTALLIZED_SUNFLOWER_OIL.still().get(), 2000))
+                .input(new FluidStack(ThermalExtraFluids.CRYSTALLIZED_SUNFLOWER_OIL.still().get(), 200))
                 .output(new MachineRecipeBuilder.ChanceItemStack(new ItemStack(ITEMS.get("compost")), 0.1f, false))
-                .output(new FluidStack(ThermalExtraFluids.REFINED_SUNFLOWER_OIL.still().get(), 1000))
+                .output(new FluidStack(ThermalExtraFluids.REFINED_SUNFLOWER_OIL.still().get(), 100))
                 .save(consumer, "thermal_extra:machine/advanced_refinery/refined_sunflower_oil");
 
+        MachineRecipeBuilder.refinery()
+                .input(new FluidStack(ThermalExtraFluids.FLUX_INFUSED_OIL.still().get(), 100))
+                .output(new MachineRecipeBuilder.ChanceItemStack(new ItemStack(ITEMS.get("bitumen")), 0.1f, false))
+                .output(new FluidStack(TCoreFluids.HEAVY_OIL_FLUID.get(), 100))
+                .output(new FluidStack(TCoreFluids.LIGHT_OIL_FLUID.get(), 100))
+                .save(consumer, "thermal_extra:machine/refinery/flux_infused_oil");
+
         MachineRecipeBuilder.advanced_refinery()
-                .input(new FluidStack(ThermalExtraFluids.FLUX_INFUSED_OIL.still().get(), 1000))
-                .output(new MachineRecipeBuilder.ChanceItemStack(new ItemStack(ITEMS.get("tar")), 0.2f, false))
-                .output(new FluidStack(ThermalExtraFluids.DIESEL.still().get(), 1000))
-                .output(new FluidStack(TCoreFluids.HEAVY_OIL_FLUID.get(), 1000))
-                .output(new FluidStack(TCoreFluids.LIGHT_OIL_FLUID.get(), 1000))
-                .save(consumer, "thermal_extra:machine/advanced_refinery/diesel");
+                .input(new FluidStack(ThermalExtraFluids.FLUX_INFUSED_OIL.still().get(), 100))
+                .output(new MachineRecipeBuilder.ChanceItemStack(new ItemStack(ITEMS.get("bitumen")), 0.15f, false))
+                .output(new FluidStack(TCoreFluids.HEAVY_OIL_FLUID.get(), 150))
+                .output(new FluidStack(TCoreFluids.LIGHT_OIL_FLUID.get(), 150))
+                .save(consumer, "thermal_extra:machine/advanced_refinery/flux_infused_oil");
+
+        MachineRecipeBuilder.advanced_refinery()
+                .input(new FluidStack(TCoreFluids.HEAVY_OIL_FLUID.get(), 100))
+                .output(new MachineRecipeBuilder.ChanceItemStack(new ItemStack(ITEMS.get("tar")), 0.15f, false))
+                .output(new FluidStack(ThermalExtraFluids.DIESEL.still().get(), 80))
+                .save(consumer, "thermal_extra:machine/advanced_refinery/heavy_oil");
+
+        MachineRecipeBuilder.advanced_refinery()
+                .input(new FluidStack(TCoreFluids.LIGHT_OIL_FLUID.get(), 100))
+                .output(new MachineRecipeBuilder.ChanceItemStack(new ItemStack(ITEMS.get("sulfur_dust")), 0.25f, false))
+                .output(new FluidStack(ThermalExtraFluids.DIESEL.still().get(), 80))
+                .save(consumer, "thermal_extra:machine/advanced_refinery/light_oil");
 
         MachineRecipeBuilder.fluid_mixer()
                 .energy(10000)
-                .input(TCoreFluids.REDSTONE_FLUID.get(), 1000)
-                .input(TCoreFluids.CRUDE_OIL_FLUID.get(), 1000)
-                .output(new FluidStack(ThermalExtraFluids.FLUX_INFUSED_OIL.still().get(), 1000))
+                .input(TCoreFluids.REDSTONE_FLUID.get(), 100)
+                .input(TCoreFluids.CRUDE_OIL_FLUID.get(), 100)
+                .output(new FluidStack(ThermalExtraFluids.FLUX_INFUSED_OIL.still().get(), 100))
                 .save(consumer, "thermal_extra:machine/fluid_mixer/flux_infused_oil");
 
         MachineRecipeBuilder.fluid_mixer()
@@ -1081,14 +1099,9 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .buildFluid(consumer, "thermal_extra:fuels/compression/refined_sunflower_oil");
 
         DynamoRecipeBuilder.compression()
-                .fluid(new FluidStack(ThermalExtraFluids.FLUX_INFUSED_OIL.still().get(), 1000))
-                .energy(10000)
-                .buildFluid(consumer, "thermal_extra:fuels/compression/flux_infused_oil");
-
-        DynamoRecipeBuilder.compression()
                 .fluid(new FluidStack(ThermalExtraFluids.DIESEL.still().get(), 1000))
-                .energy(150000)
-                .buildFluid(consumer, "thermal_extra:fuels/compression/diesel_oil");
+                .energy(2000000)
+                .buildFluid(consumer, "thermal_extra:fuels/compression/diesel");
 
     }
 

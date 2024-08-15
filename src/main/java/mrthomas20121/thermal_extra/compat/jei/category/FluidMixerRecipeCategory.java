@@ -31,8 +31,6 @@ import static cofh.thermal.core.compat.jei.TCoreJeiPlugin.tankSize;
 
 public class FluidMixerRecipeCategory extends ThermalRecipeCategory<FluidMixerRecipe> {
 
-    protected IDrawableStatic tankBackground;
-
     protected IDrawableStatic tankInputA;
     protected IDrawableStatic tankInputB;
     protected IDrawableStatic tankOutputC;
@@ -55,7 +53,6 @@ public class FluidMixerRecipeCategory extends ThermalRecipeCategory<FluidMixerRe
 
         progressBackground = Drawables.getDrawables(guiHelper).getProgress(Drawables.PROGRESS_DROP);
         progressFluidBackground = Drawables.getDrawables(guiHelper).getProgressFill(Drawables.PROGRESS_DROP);
-        speedBackground = Drawables.getDrawables(guiHelper).getScale(Drawables.SCALE_FLAME);
 
         tankInputA = Drawables.getDrawables(guiHelper).getTank(Drawables.TANK_MEDIUM);
         tankOverlayA = Drawables.getDrawables(guiHelper).getTankOverlay(Drawables.TANK_MEDIUM);
@@ -71,7 +68,6 @@ public class FluidMixerRecipeCategory extends ThermalRecipeCategory<FluidMixerRe
 
         progress = guiHelper.createAnimatedDrawable(Drawables.getDrawables(guiHelper).getProgressFill(Drawables.PROGRESS_DROP), 200, IDrawableAnimated.StartDirection.LEFT, false);
         progressFluid = guiHelper.createAnimatedDrawable(Drawables.getDrawables(guiHelper).getProgress(Drawables.PROGRESS_DROP), 200, IDrawableAnimated.StartDirection.LEFT, true);
-        speed = guiHelper.createAnimatedDrawable(Drawables.getDrawables(guiHelper).getScaleFill(Drawables.SCALE_FLAME), 400, IDrawableAnimated.StartDirection.TOP, true);
     }
 
     @Override
@@ -124,13 +120,10 @@ public class FluidMixerRecipeCategory extends ThermalRecipeCategory<FluidMixerRe
         tankInputB.draw(guiGraphics, 51, 10);
         tankOutputC.draw(guiGraphics, 114, 10);
         tankOutputD.draw(guiGraphics, 141, 10);
-        speedBackground.draw(guiGraphics, 52, 34);
 
         RenderHelper.drawFluid(guiGraphics, 78, 24, recipe.getInputFluids().get(0).getFluids()[0], 24, 16);
         progressFluidBackground.draw(guiGraphics, 78, 24);
         progressFluid.draw(guiGraphics, 78, 24);
-
-        speed.draw(guiGraphics, 52, 34);
     }
 
 }
