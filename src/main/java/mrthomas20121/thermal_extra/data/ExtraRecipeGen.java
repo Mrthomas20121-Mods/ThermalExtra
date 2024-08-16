@@ -445,6 +445,12 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .save(consumer, modLoc("machine/chiller/raw_silver"));
 
         MachineRecipeBuilder.press()
+                .energy(6000)
+                .input(Items.SUNFLOWER)
+                .output(ThermalExtraFluids.SUNFLOWER_OIL.still().get(), 100)
+                .save(consumer, "thermal_extra:machine/press/sunflower");
+
+        MachineRecipeBuilder.press()
                 .energy(9000)
                 .input(Tags.Items.INGOTS_COPPER)
                 .input(ThermalExtraItems.PRESS_ROD_DIE.get())
