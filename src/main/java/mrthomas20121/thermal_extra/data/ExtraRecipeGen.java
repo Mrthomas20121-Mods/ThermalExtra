@@ -305,7 +305,7 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 ItemTagsCoFH.INGOTS_LEAD,
                 ItemTagsCoFH.INGOTS_TIN,
                 ItemTagsCoFH.INGOTS_SILVER,
-                ItemTagsCoFH.INGOTS_LEAD,
+                ItemTagsCoFH.INGOTS_NICKEL,
                 ItemTagsCoFH.INGOTS_BRONZE,
                 ItemTagsCoFH.INGOTS_ELECTRUM,
                 ItemTagsCoFH.INGOTS_CONSTANTAN,

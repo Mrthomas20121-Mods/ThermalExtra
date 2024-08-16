@@ -74,6 +74,7 @@ public class ThermalExtra {
 		gen.addProvider(event.includeServer(), new ExtraTagGen.ItemTags(packOutput, lookupProvider, blockTags.contentsGetter(), fileHelper));
 		gen.addProvider(event.includeServer(), new ExtraTagGen.FluidTags(packOutput, lookupProvider, fileHelper));
 		gen.addProvider(event.includeServer(), new ExtraTagGen.EntityTags(packOutput, lookupProvider, fileHelper));
+		gen.addProvider(event.includeServer(), new ExtraLootTableProvider(packOutput));
 
 		// client stuff
 		gen.addProvider(event.includeClient(), new ExtraModelGen(packOutput, fileHelper));
