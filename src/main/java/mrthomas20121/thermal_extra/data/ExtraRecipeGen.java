@@ -157,6 +157,14 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .unlockedBy("has_obsidian_glass", has(glass))
                 .save(consumer);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ThermalExtraBlocks.ABYSSAL_GLASS.get(), 2)
+                .requires(glass)
+                .requires(glass)
+                .requires(fromTags(ThermalExtraTags.Items.ABYSSAL_INGOT, ThermalExtraTags.Items.ABYSSAL_DUST))
+                .requires(Items.FIRE_CHARGE)
+                .unlockedBy("has_obsidian_glass", has(glass))
+                .save(consumer);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ThermalExtraItems.PRESS_ROD_DIE.get())
                 .define('P', ItemTagsCoFH.INGOTS_INVAR)
                 .define('S', Tags.Items.RODS_WOODEN)
@@ -926,7 +934,7 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
 
         MachineRecipeBuilder.smelter()
                 .input(ThermalExtraTags.Items.SHELLITE_DUST)
-                .output(ThermalExtraItems.TWINITE_INGOT.get())
+                .output(ThermalExtraItems.SHELLITE_INGOT.get())
                 .save(consumer, modLoc("machine/smelter/shellite_ingot_from_dust"));
 
         MachineRecipeBuilder.smelter()

@@ -37,16 +37,16 @@ public enum EnumAugment {
         map.put(TAG_AUGMENT_FLUID_STORAGE, 4f);
     }),
     MACHINE_SPEED_AUGMENT(TAG_AUGMENT_TYPE_MACHINE, "Flux Linkage Amplifier", (valueMap, map) -> {
-        valueMap.put(TAG_AUGMENT_MACHINE_POWER, 1f);
-        map.put(TAG_AUGMENT_MACHINE_POWER, 0.05f);
+        valueMap.put(TAG_AUGMENT_MACHINE_POWER, 1.1f);
+        map.put(TAG_AUGMENT_MACHINE_POWER, 0f);
         valueMap.put(TAG_AUGMENT_MACHINE_ENERGY, 1f);
-        map.put(TAG_AUGMENT_MACHINE_ENERGY, 0.05f);
+        map.put(TAG_AUGMENT_MACHINE_ENERGY, -1f);
     }),
     MACHINE_EFFICIENCY_AUGMENT(TAG_AUGMENT_TYPE_MACHINE, "Flux Efficiency", (valueMap, map) -> {
         valueMap.put(TAG_AUGMENT_MACHINE_SPEED, -0.12f);
         map.put(TAG_AUGMENT_MACHINE_SPEED, 0f);
         valueMap.put(TAG_AUGMENT_MACHINE_ENERGY, 0.9f);
-        map.put(TAG_AUGMENT_MACHINE_ENERGY, -0.1f);
+        map.put(TAG_AUGMENT_MACHINE_ENERGY, -0.05f);
     }),
     MACHINE_OUTPUT_AUGMENT(TAG_AUGMENT_TYPE_MACHINE, "Auxiliary Process Sieve", (valueMap, map) -> {
         valueMap.put(TAG_AUGMENT_MACHINE_SECONDARY, 0.15f);
