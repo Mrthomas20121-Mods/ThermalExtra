@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:blasting",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "wizards_reborn"
+    }
+  ],
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.0,
+  "ingredient": {
+    "item": "thermal_extra:zinc_dust"
+  },
+  "result": "create:zinc_ingot"
+}

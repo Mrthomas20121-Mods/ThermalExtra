@@ -117,9 +117,16 @@ public class ExtraTagGen {
                     ThermalExtraItems.TWINITE_DUST.get(),
                     ThermalExtraItems.TWINITE_DUST.get(),
                     ThermalExtraItems.DRAGONSTEEL_DUST.get(),
-                    ThermalExtraItems.ABYSSAL_DUST.get()
+                    ThermalExtraItems.ABYSSAL_DUST.get(),
+                    ThermalExtraItems.AMETHYST_DUST.get(),
+                    ThermalExtraItems.ANCIENT_DUST.get(),
+                    ThermalExtraItems.OBSIDIAN_DUST.get(),
+                    ThermalExtraItems.ARCANE_GOLD_DUST.get(),
+                    ThermalExtraItems.ZINC_DUST.get()
             );
 
+            tag(ThermalExtraTags.Items.DUSTS_ARCANE_GOLD).add(ThermalExtraItems.ARCANE_GOLD_DUST.get());
+            tag(ThermalExtraTags.Items.DUSTS_ZINC).add(ThermalExtraItems.ZINC_DUST.get());
             tag(ThermalExtraTags.Items.DUSTS_OBSIDIAN).add(ThermalExtraItems.OBSIDIAN_DUST.get());
             tag(ThermalExtraTags.Items.DUSTS_SOUL_SAND).add(ThermalExtraItems.SOUL_SAND_DUST.get());
             tag(ThermalExtraTags.Items.DUSTS_AMETHYST).add(ThermalExtraItems.AMETHYST_DUST.get());

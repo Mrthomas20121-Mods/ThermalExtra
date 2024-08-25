@@ -1,20 +1,16 @@
 {
-  "type": "thermal:chiller",
+  "type": "thermal:smelter",
   "conditions": [
     {
       "type": "forge:mod_loaded",
       "modid": "wizards_reborn"
     }
   ],
-  "energy": 10000,
+  "energy": 4000,
   "ingredients": [
     {
       "count": 1,
-      "item": "thermal:chiller_ingot_cast"
-    },
-    {
-      "amount": 90,
-      "fluid": "thermal_extra:raw_arcane_gold"
+      "tag": "forge:dusts/arcane_gold"
     }
   ],
   "result": [

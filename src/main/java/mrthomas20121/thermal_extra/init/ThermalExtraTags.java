@@ -92,6 +92,8 @@ public class ThermalExtraTags {
         public static TagKey<Item> COINS = create("forge:coins");
         public static TagKey<Item> PLATES = create("forge:plates");
 
+        public static TagKey<Item> DUSTS_ZINC = create("forge:dusts/zinc");
+        public static TagKey<Item> DUSTS_ARCANE_GOLD = create("forge:dusts/arcane_gold");
         public static TagKey<Item> DUSTS_SOUL_SAND = create("forge:dusts/soul_sand");
         public static TagKey<Item> DUSTS_AMETHYST = create("forge:dusts/amethyst");
 

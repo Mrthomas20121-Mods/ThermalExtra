@@ -1,0 +1,21 @@
+{
+  "type": "thermal:smelter",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "energy": 4000,
+  "ingredients": [
+    {
+      "count": 1,
+      "tag": "forge:dusts/zinc"
+    }
+  ],
+  "result": [
+    {
+      "item": "create:zinc_ingot"
+    }
+  ]
+}

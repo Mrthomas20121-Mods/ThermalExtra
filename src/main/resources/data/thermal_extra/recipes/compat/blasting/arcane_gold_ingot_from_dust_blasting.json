@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:blasting",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "wizards_reborn"
+    }
+  ],
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.0,
+  "ingredient": {
+    "item": "thermal_extra:arcane_gold_dust"
+  },
+  "result": "wizards_reborn:arcane_gold_ingot"
+}

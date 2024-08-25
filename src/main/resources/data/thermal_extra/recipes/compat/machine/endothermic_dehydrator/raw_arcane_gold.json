@@ -3,7 +3,7 @@
   "conditions": [
     {
       "type": "forge:mod_loaded",
-      "modid": "wizard_reborn"
+      "modid": "wizards_reborn"
     }
   ],
   "energy": 100000,

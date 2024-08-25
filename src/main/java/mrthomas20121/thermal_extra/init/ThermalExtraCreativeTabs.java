@@ -181,6 +181,10 @@ public class ThermalExtraCreativeTabs {
                 output.accept(ThermalExtraFluids.RAW_TIN.getBucket().get());
                 output.accept(ThermalExtraFluids.RAW_URANIUM.getBucket().get());
                 output.accept(ThermalExtraFluids.RAW_ZINC.getBucket().get());
+
+                output.accept(ThermalExtraItems.ARCANE_GOLD_DUST.get());
+                output.accept(ThermalExtraItems.ZINC_DUST.get());
+                output.accept(ThermalExtraItems.AUGMENT_TEMPLATE.get());
             })
             .build()
     );

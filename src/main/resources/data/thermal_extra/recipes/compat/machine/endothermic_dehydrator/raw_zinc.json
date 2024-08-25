@@ -17,12 +17,12 @@
     {
       "chance": 1.25,
       "count": 2,
-      "item": "create:zinc_dust",
+      "item": "thermal_extra:zinc_dust",
       "locked": true
     },
     {
       "chance": 0.5,
-      "item": "create:zinc_dust"
+      "item": "thermal_extra:zinc_dust"
     },
     {
       "chance": 0.15,

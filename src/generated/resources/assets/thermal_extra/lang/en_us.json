@@ -331,6 +331,7 @@
   "item.thermal_extra.twinite_sword": "Twinite Sword",
   "item.thermal_extra.upgrade_augment": "Dragonsteel Integral Component",
   "item.thermal_extra.uranium_ore_chunk": "Uranium Ore Chunk",
+  "item.thermal_extra.zinc_dust": "Zinc Dust",
   "item.thermal_extra.zinc_ore_chunk": "Zinc Ore Chunk",
   "thermal_extra.augment.upgrade": "Improves base attributes. Other augments may be more effective as a result.",
   "upgrade.thermal_extra.augment_upgrade": "Augment Upgrade"

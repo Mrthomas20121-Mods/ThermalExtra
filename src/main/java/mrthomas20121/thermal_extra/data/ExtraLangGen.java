@@ -135,6 +135,7 @@ public class ExtraLangGen extends LanguageProvider {
         addItem(ThermalExtraItems.ZINC_ORE_CHUNK, "Zinc Ore Chunk");
 
         addItem(ThermalExtraItems.ARCANE_GOLD_DUST, "Arcane Gold Dust");
+        addItem(ThermalExtraItems.ZINC_DUST, "Zinc Dust");
         addItem(ThermalExtraItems.ANCIENT_DUST, "Ancient Dust");
         addItem(ThermalExtraItems.OBSIDIAN_DUST, "Obsidian Dust");
         addItem(ThermalExtraItems.AMETHYST_DUST, "Amethyst Dust");

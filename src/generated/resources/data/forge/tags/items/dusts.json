@@ -4,6 +4,11 @@
     "thermal_extra:twinite_dust",
     "thermal_extra:twinite_dust",
     "thermal_extra:dragonsteel_dust",
-    "thermal_extra:abyssal_dust"
+    "thermal_extra:abyssal_dust",
+    "thermal_extra:amethyst_dust",
+    "thermal_extra:ancient_dust",
+    "thermal_extra:obsidian_dust",
+    "thermal_extra:arcane_gold_dust",
+    "thermal_extra:zinc_dust"
   ]
 }

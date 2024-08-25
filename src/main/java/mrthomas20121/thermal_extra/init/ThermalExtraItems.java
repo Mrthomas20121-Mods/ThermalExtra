@@ -68,6 +68,7 @@ public class ThermalExtraItems {
     public static final RegistryObject<Item> ZINC_ORE_CHUNK = ITEMS.register("zinc_ore_chunk", item((prop) -> prop.rarity(yellow)));
 
     public static final RegistryObject<Item> ARCANE_GOLD_DUST = ITEMS.register("arcane_gold_dust", item((prop) -> prop.rarity(yellow)));
+    public static final RegistryObject<Item> ZINC_DUST = ITEMS.register("zinc_dust", item((prop) -> prop.rarity(yellow)));
     public static final RegistryObject<Item> ANCIENT_DUST = ITEMS.register("ancient_dust", item((prop) -> prop.rarity(blue)));
     public static final RegistryObject<Item> OBSIDIAN_DUST = ITEMS.register("obsidian_dust", item((prop) -> prop.rarity(dark_purple)));
     public static final RegistryObject<Item> AMETHYST_DUST = ITEMS.register("amethyst_dust", item((prop) -> prop.rarity(yellow)));

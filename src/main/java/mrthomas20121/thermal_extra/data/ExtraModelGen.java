@@ -115,6 +115,7 @@ public class ExtraModelGen extends ItemModelProviderCoFH {
         toolset(ThermalExtraItems.ABYSSAL_SET);
 
         itemModel(ThermalExtraItems.ARCANE_GOLD_DUST);
+        itemModel(ThermalExtraItems.ZINC_DUST);
         itemModel(ThermalExtraItems.SOUL_SAND_DUST);
         itemModel(ThermalExtraItems.AMETHYST_DUST);
         itemModel(ThermalExtraItems.STICKY_BALL);
