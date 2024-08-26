@@ -3,7 +3,7 @@
   "conditions": [
     {
       "type": "forge:mod_loaded",
-      "modid": "wizards_reborn"
+      "modid": "create"
     }
   ],
   "category": "misc",

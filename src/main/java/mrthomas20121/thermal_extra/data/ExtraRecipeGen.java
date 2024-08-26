@@ -991,8 +991,8 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
         nitraticOre(withConditions(consumer).addCondition(new NotCondition(new TagEmptyCondition("forge:raw_materials/aluminum"))), "aluminum", rawAluminum, ThermalExtraItems.ALUMINUM_ORE_CHUNK, ThermalExtraItems.IRON_ORE_CHUNK);
         nitraticOre(withConditions(consumer).addCondition(new NotCondition(new TagEmptyCondition("forge:raw_materials/uranium"))), "uranium", rawUranium, ThermalExtraItems.URANIUM_ORE_CHUNK);
         nitraticOre(withConditions(consumer).addCondition(new NotCondition(new TagEmptyCondition("forge:raw_materials/osmium"))), "osmium", rawOsmium, ThermalExtraItems.OSMIUM_ORE_CHUNK);
-        nitraticOre(withConditions(consumer).addCondition(new NotCondition(new TagEmptyCondition("forge:raw_materials/arcane_gold"))), "arcane_gold", rawOsmium, ThermalExtraItems.ARCANE_GOLD_ORE_CHUNK);
-        nitraticOre(withConditions(consumer).addCondition(new NotCondition(new TagEmptyCondition("forge:raw_materials/zinc"))), "zinc", rawOsmium, ThermalExtraItems.ZINC_ORE_CHUNK);
+        nitraticOre(withConditions(consumer).addCondition(new NotCondition(new TagEmptyCondition("forge:raw_materials/arcane_gold"))), "arcane_gold", rawArcaneGold, ThermalExtraItems.ARCANE_GOLD_ORE_CHUNK);
+        nitraticOre(withConditions(consumer).addCondition(new NotCondition(new TagEmptyCondition("forge:raw_materials/zinc"))), "zinc", rawZinc, ThermalExtraItems.ZINC_ORE_CHUNK);
 
         MachineRecipeBuilder.advanced_refinery()
                 .input(new FluidStack(ThermalExtraFluids.CRYSTALLIZED_SUNFLOWER_OIL.still().get(), 200))
