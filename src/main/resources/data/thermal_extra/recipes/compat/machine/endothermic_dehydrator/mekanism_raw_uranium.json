@@ -3,11 +3,14 @@
   "conditions": [
     {
       "type": "forge:mod_loaded",
-      "modid": "immersiveengineering"
+      "modid": "mekanism"
     },
     {
-      "type": "forge:mod_loaded",
-      "modid": "mekanism"
+      "type": "forge:not",
+      "value": {
+        "type": "forge:mod_loaded",
+        "modid": "immersiveengineering"
+      }
     }
   ],
   "energy": 100000,
@@ -21,12 +24,12 @@
     {
       "chance": 1.25,
       "count": 2,
-      "item": "immersiveengineering:dust_uranium",
+      "item": "mekanism:dust_uranium",
       "locked": true
     },
     {
       "chance": 0.5,
-      "item": "immersiveengineering:dust_uranium"
+      "item": "mekanism:dust_uranium"
     },
     {
       "chance": 0.15,

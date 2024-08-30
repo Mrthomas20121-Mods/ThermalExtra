@@ -6,8 +6,11 @@
       "modid": "immersiveengineering"
     },
     {
-      "type": "forge:mod_loaded",
-      "modid": "mekanism"
+      "type": "forge:not",
+      "value": {
+        "type": "forge:mod_loaded",
+        "modid": "mekanism"
+      }
     }
   ],
   "energy": 100000,

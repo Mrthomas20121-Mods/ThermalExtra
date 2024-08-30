@@ -17,12 +17,12 @@
     {
       "chance": 1.25,
       "count": 2,
-      "item": "mekanism:osmium_dust",
+      "item": "mekanism:dust_osmium",
       "locked": true
     },
     {
       "chance": 0.5,
-      "item": "mekanism:osmium_dust"
+      "item": "mekanism:dust_osmium"
     },
     {
       "chance": 0.15,
