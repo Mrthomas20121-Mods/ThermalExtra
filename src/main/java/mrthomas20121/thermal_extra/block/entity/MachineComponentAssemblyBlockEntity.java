@@ -77,17 +77,6 @@ public class MachineComponentAssemblyBlockEntity extends MachineBlockEntity {
     }
 
     @Override
-    protected void resolveInputs() {
-        for (int i = 0; i < itemInputCounts.size(); ++i) {
-            inputSlots[i].modify(-itemInputCounts.get(i));
-        }
-
-        for (int i = 0; i < fluidInputCounts.size(); ++i) {
-            inputTanks().get(i).modify(-fluidInputCounts.get(i));
-        }
-    }
-
-    @Override
     protected boolean cacheRenderFluid() {
 
         if (curRecipe == null) {

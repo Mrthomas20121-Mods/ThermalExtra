@@ -8,7 +8,7 @@
     },
     {
       "amount": 100,
-      "fluid": "thermal:crude_oil"
+      "fluid_tag": "forge:crude_oil"
     }
   ],
   "result": [

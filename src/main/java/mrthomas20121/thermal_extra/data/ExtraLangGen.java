@@ -140,7 +140,7 @@ public class ExtraLangGen extends LanguageProvider {
         addItem(ThermalExtraItems.OBSIDIAN_DUST, "Obsidian Dust");
         addItem(ThermalExtraItems.AMETHYST_DUST, "Amethyst Dust");
         addItem(ThermalExtraItems.SOUL_SAND_DUST, "Soul Sand Dust");
-        addItem(ThermalExtraItems.STICKY_BALL, "Sticky Ball");
+        addItem(ThermalExtraItems.STICKY_BALL, "Resin Ball");
         addItem(ThermalExtraItems.CHILLER_PLATE_CAST, "Plate Cast");
         addItem(ThermalExtraItems.POLYOLEFIN_PLATE, "Polyolefin Plate");
 

@@ -127,6 +127,7 @@ public class ExtraModelGen extends ItemModelProviderCoFH {
         itemModel(ThermalExtraFluids.SUNFLOWER_OIL.getBucket());
         itemModel(ThermalExtraFluids.CRYSTALLIZED_SUNFLOWER_OIL.getBucket());
         itemModel(ThermalExtraFluids.REFINED_SUNFLOWER_OIL.getBucket());
+        itemModel(ThermalExtraFluids.MOLTEN_ABYSSAL.getBucket());
         itemModel(ThermalExtraFluids.MOLTEN_SOUL_INFUSED.getBucket());
         itemModel(ThermalExtraFluids.MOLTEN_SHELLITE.getBucket());
         itemModel(ThermalExtraFluids.MOLTEN_TWINITE.getBucket());

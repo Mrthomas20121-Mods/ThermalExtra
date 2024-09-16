@@ -74,7 +74,7 @@ public class ExtraTagGen {
 
             tag(Tags.Items.INGOTS).add(
                     ThermalExtraItems.SOUL_INFUSED_INGOT.get(),
-                    ThermalExtraItems.TWINITE_INGOT.get(),
+                    ThermalExtraItems.SHELLITE_INGOT.get(),
                     ThermalExtraItems.TWINITE_INGOT.get(),
                     ThermalExtraItems.DRAGONSTEEL_INGOT.get(),
                     ThermalExtraItems.ABYSSAL_INGOT.get()
@@ -82,7 +82,7 @@ public class ExtraTagGen {
 
             tag(Tags.Items.NUGGETS).add(
                     ThermalExtraItems.SOUL_INFUSED_NUGGET.get(),
-                    ThermalExtraItems.TWINITE_NUGGET.get(),
+                    ThermalExtraItems.SHELLITE_NUGGET.get(),
                     ThermalExtraItems.TWINITE_NUGGET.get(),
                     ThermalExtraItems.DRAGONSTEEL_NUGGET.get(),
                     ThermalExtraItems.ABYSSAL_NUGGET.get()
@@ -90,7 +90,7 @@ public class ExtraTagGen {
 
             tag(ThermalExtraTags.Items.GEARS).add(
                     ThermalExtraItems.SOUL_INFUSED_GEAR.get(),
-                    ThermalExtraItems.TWINITE_GEAR.get(),
+                    ThermalExtraItems.SHELLITE_GEAR.get(),
                     ThermalExtraItems.TWINITE_GEAR.get(),
                     ThermalExtraItems.DRAGONSTEEL_GEAR.get(),
                     ThermalExtraItems.ABYSSAL_GEAR.get()
@@ -98,7 +98,7 @@ public class ExtraTagGen {
 
             tag(ThermalExtraTags.Items.COINS).add(
                     ThermalExtraItems.SOUL_INFUSED_COIN.get(),
-                    ThermalExtraItems.TWINITE_COIN.get(),
+                    ThermalExtraItems.SHELLITE_COIN.get(),
                     ThermalExtraItems.TWINITE_COIN.get(),
                     ThermalExtraItems.DRAGONSTEEL_COIN.get(),
                     ThermalExtraItems.ABYSSAL_COIN.get()
@@ -106,7 +106,7 @@ public class ExtraTagGen {
 
             tag(ThermalExtraTags.Items.PLATES).add(
                     ThermalExtraItems.SOUL_INFUSED_PLATE.get(),
-                    ThermalExtraItems.TWINITE_PLATE.get(),
+                    ThermalExtraItems.SHELLITE_PLATE.get(),
                     ThermalExtraItems.TWINITE_PLATE.get(),
                     ThermalExtraItems.DRAGONSTEEL_PLATE.get(),
                     ThermalExtraItems.ABYSSAL_PLATE.get()
@@ -114,7 +114,7 @@ public class ExtraTagGen {
 
             tag(Tags.Items.DUSTS).add(
                     ThermalExtraItems.SOUL_INFUSED_DUST.get(),
-                    ThermalExtraItems.TWINITE_DUST.get(),
+                    ThermalExtraItems.SHELLITE_DUST.get(),
                     ThermalExtraItems.TWINITE_DUST.get(),
                     ThermalExtraItems.DRAGONSTEEL_DUST.get(),
                     ThermalExtraItems.ABYSSAL_DUST.get(),

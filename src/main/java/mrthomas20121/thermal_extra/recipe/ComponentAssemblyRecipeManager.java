@@ -221,7 +221,8 @@ public class ComponentAssemblyRecipeManager extends AbstractManager implements I
                 convertedItems.add(compStack);
             }
         }
-        if(inputTanks.isEmpty() || inputTanks.get(0).isEmpty()) {
+
+        if((inputTanks.isEmpty() || inputTanks.get(0).isEmpty()) && convertedItems.isEmpty()) {
             return null;
         }
 

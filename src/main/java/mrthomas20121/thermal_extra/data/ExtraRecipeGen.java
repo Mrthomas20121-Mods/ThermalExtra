@@ -2,6 +2,7 @@ package mrthomas20121.thermal_extra.data;
 
 import cofh.lib.common.fluid.FluidIngredient;
 import cofh.lib.init.data.RecipeProviderCoFH;
+import cofh.lib.init.tags.FluidTagsCoFH;
 import cofh.lib.init.tags.ItemTagsCoFH;
 import cofh.lib.util.DeferredRegisterCoFH;
 import cofh.lib.util.crafting.IngredientWithCount;
@@ -20,6 +21,8 @@ import mrthomas20121.thermal_extra.init.ThermalExtraItems;
 import mrthomas20121.thermal_extra.init.ThermalExtraTags;
 import mrthomas20121.thermal_extra.item.augment.EnumAugment;
 import mrthomas20121.thermal_extra.item.augment.ExtraAugmentType;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
@@ -36,6 +39,7 @@ import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.conditions.NotCondition;
 import net.minecraftforge.common.crafting.conditions.TagEmptyCondition;
 import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.registries.ForgeRegistries;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.HashMap;
@@ -901,6 +905,12 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .output(ThermalExtraItems.POLYOLEFIN_PLATE.get())
                 .save(consumer, "thermal_extra:machine/chiller/polyolefin");
 
+        MachineRecipeBuilder.blastChiller()
+                .energy(30000)
+                .input(FluidIngredient.of(new FluidStack(TCoreFluids.RESIN_FLUID.get(), 1000)))
+                .output(ThermalExtraItems.STICKY_BALL.get())
+                .save(consumer, "thermal_extra:machine/chiller/polyolefin");
+
         MachineRecipeBuilder.smelter()
                 .input(ThermalExtraTags.Items.DUSTS_SOUL_SAND, 2)
                 .input(Tags.Items.INGOTS_IRON)
@@ -967,13 +977,12 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .input(Tags.Items.INGOTS_IRON)
                 .output(ThermalCore.ITEMS.get("redstone_servo"))
                 .save(consumer, "thermal_extra:machine/component_assembly/redstone_servo");
+
         MachineRecipeBuilder.component_assembly()
                 .energy(5000)
-                .input(new FluidStack(TCoreFluids.ENDER_FLUID.get(), 50))
-                .input(ThermalExtraTags.Items.SHELLITE_INGOT)
-                .input(ItemTagsCoFH.INGOTS_BRONZE)
-                .output(ThermalExtraItems.TWINITE_INGOT.get())
-                .save(consumer, "thermal_extra:machine/component_assembly/twinite_ingot");
+                .input(Tags.Items.INGOTS_IRON)
+                .output(ThermalCore.ITEMS.get("redstone_servo"))
+                .save(consumer, "thermal_extra:machine/component_assembly/redstone_servo1");
 
         TagKey<Item> rawAluminum = forgeTag("raw_materials/aluminum");
         TagKey<Item> rawUranium = forgeTag("raw_materials/uranium");
@@ -1029,7 +1038,7 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
         MachineRecipeBuilder.fluid_mixer()
                 .energy(10000)
                 .input(TCoreFluids.REDSTONE_FLUID.get(), 100)
-                .input(TCoreFluids.CRUDE_OIL_FLUID.get(), 100)
+                .input(FluidIngredient.of(TagKey.create(Registries.FLUID, new ResourceLocation("forge:crude_oil")),  100))
                 .output(new FluidStack(ThermalExtraFluids.FLUX_INFUSED_OIL.still().get(), 100))
                 .save(consumer, "thermal_extra:machine/fluid_mixer/flux_infused_oil");
 

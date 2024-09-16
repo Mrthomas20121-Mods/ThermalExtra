@@ -1,6 +1,7 @@
 package mrthomas20121.thermal_extra;
 
 import cofh.core.client.event.CoreClientEvents;
+import cofh.core.common.config.ConfigManager;
 import mrthomas20121.thermal_extra.client.screens.AdvancedItemFilterScreen;
 import mrthomas20121.thermal_extra.client.screens.DynamoFrostScreen;
 import mrthomas20121.thermal_extra.client.screens.device.DeviceLavaGenScreen;
@@ -8,6 +9,7 @@ import mrthomas20121.thermal_extra.client.screens.machine.*;
 import mrthomas20121.thermal_extra.data.*;
 import mrthomas20121.thermal_extra.filter.AdvancedFilter;
 import mrthomas20121.thermal_extra.init.*;
+import mrthomas20121.thermal_extra.util.ThermalExtraConfig;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
@@ -18,6 +20,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.registries.NewRegistryEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -28,6 +31,8 @@ public class ThermalExtra {
 
 	public static final String MOD_ID = "thermal_extra";
 	public static final Logger LOGGER = LogManager.getLogger();
+
+	public static final ConfigManager CONFIG_MANAGER = new ConfigManager();
 
 	public ThermalExtra() {
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -43,8 +48,12 @@ public class ThermalExtra {
 		AdvancedFilter.init();
 		ThermalExtraRecipeManagers.register();
 
+		CONFIG_MANAGER.register(bus)
+				.addServerConfig(new ThermalExtraConfig());
+
 		bus.addListener(this::gatherData);
 		bus.addListener(this::clientSetup);
+		bus.addListener(this::registrySetup);
 	}
 
 	public void clientSetup(FMLClientSetupEvent event) {
@@ -59,6 +68,12 @@ public class ThermalExtra {
 			MenuScreens.register(ThermalExtraContainers.COMPONENT_ASSEMBLY_CONTAINER.get(), MachineComponentAssemblyScreen::new);
 			MenuScreens.register(ThermalExtraContainers.ENDOTHERMIC_DEHYDRATOR_CONTAINER.get(), MachineEndothermicDehydratorScreen::new);
 		});
+	}
+
+	private void registrySetup(final NewRegistryEvent event) {
+		CONFIG_MANAGER.setupClient();
+		CONFIG_MANAGER.setupServer();
+		CONFIG_MANAGER.setupCommon();
 	}
 
 	public void gatherData(final GatherDataEvent event) {

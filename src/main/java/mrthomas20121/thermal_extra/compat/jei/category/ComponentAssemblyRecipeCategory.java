@@ -124,7 +124,7 @@ public class ComponentAssemblyRecipeCategory extends ThermalRecipeCategory<Compo
         }
 
         builder.addSlot(RecipeIngredientRole.INPUT, 29, 11)
-                .addIngredients(ForgeTypes.FLUID_STACK, List.of(inputFluids.get(0).getFluids()))
+                .addIngredients(ForgeTypes.FLUID_STACK, inputFluids.size() == 0 ? List.of(FluidStack.EMPTY): List.of(inputFluids.get(0).getFluids()))
                 .setFluidRenderer(tankSize(TANK_MEDIUM), false, 16, 40)
                 .setOverlay(inputOverlay, 0, 0)
                 .addTooltipCallback(defaultFluidTooltip());
@@ -150,7 +150,7 @@ public class ComponentAssemblyRecipeCategory extends ThermalRecipeCategory<Compo
             progressFluidBackground.draw(guiGraphics, 88, 24);
             progressFluid.draw(guiGraphics, 88, 24);
         } else {
-            progress.draw(guiGraphics, 88, 24);
+            progress.draw(guiGraphics, 88, 23);
         }
     }
 
