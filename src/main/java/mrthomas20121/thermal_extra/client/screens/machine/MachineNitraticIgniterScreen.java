@@ -19,7 +19,7 @@ public class MachineNitraticIgniterScreen extends MachineScreen<MachineNitraticI
 
         super(container, inv, container.tile, titleIn);
         texture = TEXTURE;
-        info = generatePanelInfo("info.thermal_extra.nitratic_igniter");
+        info = generatePanelInfo("info.thermal_extra.machine_nitratic_igniter");
         name = "nitratic_igniter";
     }
 

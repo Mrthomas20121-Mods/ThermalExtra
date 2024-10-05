@@ -19,7 +19,7 @@ public class DeviceLavaGenScreen extends AugmentableTileScreen<DeviceLavaGenMenu
 
         super(container, inv, container.tile, titleIn);
         texture = TEXTURE;
-        info = generatePanelInfo("info.thermal.device_water_gen");
+        info = generatePanelInfo("info.thermal_extra.lava_gen");
     }
 
     @Override
