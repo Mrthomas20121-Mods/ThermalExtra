@@ -13,7 +13,6 @@ import cofh.thermal.lib.util.recipes.internal.IMachineRecipe;
 import cofh.thermal.lib.util.recipes.internal.SimpleMachineRecipe;
 import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap;
 import it.unimi.dsi.fastutil.objects.ObjectOpenHashSet;
-import mrthomas20121.thermal_extra.ThermalExtra;
 import mrthomas20121.thermal_extra.init.ThermalExtraRecipeTypes;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeManager;
@@ -28,7 +27,8 @@ public class FluidMixerRecipeManager extends AbstractManager implements IRecipeM
     protected static final int DEFAULT_ENERGY = 6000;
 
     protected Map<Integer, IMachineRecipe> recipeMap = new Object2ObjectOpenHashMap<>();
-    protected Set<Fluid> validFluids = new ObjectOpenHashSet<>();
+    protected Set<Fluid> validLeftFluids = new ObjectOpenHashSet<>();
+    protected Set<Fluid> validRightFluids = new ObjectOpenHashSet<>();
     protected Set<ComparableItemStack> validItems = new ObjectOpenHashSet<>();
 
     protected int maxOutputItems;
@@ -49,14 +49,19 @@ public class FluidMixerRecipeManager extends AbstractManager implements IRecipeM
     protected void clear() {
 
         recipeMap.clear();
-        validFluids.clear();
+        validLeftFluids.clear();
         validItems.clear();
     }
 
     // region RECIPES
-    public boolean validRecipe(FluidStack input) {
+    public boolean validFluid(FluidStack input) {
 
-        return validFluids.contains(input.getFluid());
+        return validLeftFluids.contains(input.getFluid());
+    }
+
+    public boolean validRightFluid(FluidStack input) {
+
+        return validRightFluids.contains(input.getFluid());
     }
 
     protected IMachineRecipe getRecipe(FluidStack input1, FluidStack input2) {
@@ -89,8 +94,8 @@ public class FluidMixerRecipeManager extends AbstractManager implements IRecipeM
                 FluidStack fluidStack2 = fluids2[i];
                 Fluid fluid1 = fluidStack1.getFluid();
                 Fluid fluid2 = fluidStack2.getFluid();
-                validFluids.add(fluid1);
-                validFluids.add(fluid2);
+                validLeftFluids.add(fluid1);
+                validRightFluids.add(fluid2);
                 addRecipe(recipe.getEnergy(), recipe.getXp(), Collections.emptyList(), List.of(fluidStack1, fluidStack2), Collections.emptyList(), Collections.emptyList(), recipe.getOutputFluids());
             }
         }
@@ -99,8 +104,8 @@ public class FluidMixerRecipeManager extends AbstractManager implements IRecipeM
                 for (FluidStack fluidStack2 : fluids2) {
                     Fluid fluid1 = fluidStack1.getFluid();
                     Fluid fluid2 = fluidStack2.getFluid();
-                    validFluids.add(fluid1);
-                    validFluids.add(fluid2);
+                    validLeftFluids.add(fluid1);
+                    validRightFluids.add(fluid2);
                     addRecipe(recipe.getEnergy(), recipe.getXp(), Collections.emptyList(), List.of(fluidStack1, fluidStack2), Collections.emptyList(), Collections.emptyList(), recipe.getOutputFluids());
                 }
             }
@@ -110,8 +115,8 @@ public class FluidMixerRecipeManager extends AbstractManager implements IRecipeM
                 for (FluidStack fluidStack1 : fluids1) {
                     Fluid fluid1 = fluidStack1.getFluid();
                     Fluid fluid2 = fluidStack2.getFluid();
-                    validFluids.add(fluid1);
-                    validFluids.add(fluid2);
+                    validLeftFluids.add(fluid1);
+                    validRightFluids.add(fluid2);
                     addRecipe(recipe.getEnergy(), recipe.getXp(), Collections.emptyList(), List.of(fluidStack1, fluidStack2), Collections.emptyList(), Collections.emptyList(), recipe.getOutputFluids());
                 }
             }

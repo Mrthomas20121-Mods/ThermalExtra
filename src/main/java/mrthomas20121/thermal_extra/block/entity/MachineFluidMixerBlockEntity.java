@@ -23,8 +23,8 @@ import static cofh.lib.util.Constants.TANK_MEDIUM;
 
 public class MachineFluidMixerBlockEntity extends MachineBlockEntity {
 
-    protected FluidStorageCoFH inputTank1 = new FluidStorageCoFH(TANK_MEDIUM, fluid -> filter.valid(fluid) && FluidMixerRecipeManager.instance().validRecipe(fluid));
-    protected FluidStorageCoFH inputTank2 = new FluidStorageCoFH(TANK_MEDIUM, fluid -> filter.valid(fluid) && FluidMixerRecipeManager.instance().validRecipe(fluid));
+    protected FluidStorageCoFH inputTank1 = new FluidStorageCoFH(TANK_MEDIUM, fluid -> filter.valid(fluid) && FluidMixerRecipeManager.instance().validFluid(fluid));
+    protected FluidStorageCoFH inputTank2 = new FluidStorageCoFH(TANK_MEDIUM, fluid -> filter.valid(fluid) && FluidMixerRecipeManager.instance().validRightFluid(fluid));
     protected FluidStorageCoFH outputTankA = new FluidStorageCoFH(TANK_MEDIUM);
     protected FluidStorageCoFH outputTankB = new FluidStorageCoFH(TANK_MEDIUM);
 
