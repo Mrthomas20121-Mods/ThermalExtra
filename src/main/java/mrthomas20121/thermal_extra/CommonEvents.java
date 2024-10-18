@@ -55,10 +55,9 @@ public class CommonEvents {
     public static void criticalHit(CriticalHitEvent event) {
         if(!event.isCanceled()) {
             Player player = event.getEntity();
-            if(player.getMainHandItem().is(ThermalExtraTags.Items.DRAGONSTEEL_TOOLS)) {
+            if(player.getMainHandItem().is(ThermalExtraTags.Items.DRAGONSTEEL_TOOLS) && event.isVanillaCritical()) {
                if(player.level().getRandom().nextFloat() <= 0.3F) {
                    event.setDamageModifier(2f);
-                   event.setResult(Event.Result.ALLOW);
                 }
             }
         }
