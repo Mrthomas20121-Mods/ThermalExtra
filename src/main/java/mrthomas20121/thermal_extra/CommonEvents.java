@@ -56,8 +56,8 @@ public class CommonEvents {
         if(!event.isCanceled()) {
             Player player = event.getEntity();
             if(player.getMainHandItem().is(ThermalExtraTags.Items.DRAGONSTEEL_TOOLS)) {
-               event.setDamageModifier(5f);
                if(player.level().getRandom().nextFloat() <= 0.3F) {
+                   event.setDamageModifier(2f);
                    event.setResult(Event.Result.ALLOW);
                 }
             }
