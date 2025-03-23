@@ -40,7 +40,7 @@
   "fluid_type.thermal_extra.raw_silver": "Plata en bruto fundido",
   "fluid_type.thermal_extra.raw_tin": "Estaño en bruto fundido",
   "fluid_type.thermal_extra.raw_uranium": "Uranio en bruto fundido",
-  "fluid_type.thermal_extra.raw_zinc": "Zinc en bruto fundido",
+  "fluid_type.thermal_extra.raw_Cinc": "Cinc en bruto fundido",
   "fluid_type.thermal_extra.refined_sunflower_oil": "Aceite de girasol refinado",
   "fluid_type.thermal_extra.shellite": "Shellita fundida",
   "fluid_type.thermal_extra.soul_infused": "Alma infundida fundida",
@@ -59,7 +59,7 @@
   "info.thermal_extra.machine_nitratic_igniter.0": "Crea un objeto explotando otros objetos juntos.",
   "info.thermal_extra.require_catalyst": "Se requiere un catalizador.",
 
-  "item.minecraft.smithing_template": "Plantilla de herrería",
+  "item.minecraft.smithing_template": "Mejora De Herreria",
 
   "item.thermal_extra.abyssal_bucket": "Cubo de abisal fundido",
   "item.thermal_extra.abyssal_ingot": "Lingote abisal",
@@ -106,7 +106,7 @@
   "item.thermal_extra.iron_ore_chunk": "Trozo de mineral de hierro",
   "item.thermal_extra.uranium_ore_chunk": "Trozo de mineral de uranio",
   "item.thermal_extra.tin_ore_chunk": "Trozo de mineral de estaño",
-  "item.thermal_extra.zinc_ore_chunk": "Trozo de mineral de zinc",
+  "item.thermal_extra.Cinc_ore_chunk": "Trozo de mineral de Cinc",
   "item.thermal_extra.silver_ore_chunk": "Trozo de mineral de plata",
   "item.thermal_extra.osmium_ore_chunk": "Trozo de mineral de osmio",
   "item.thermal_extra.nickel_ore_chunk": "Trozo de mineral de níquel",
@@ -116,7 +116,7 @@
   "item.thermal_extra.amethyst_dust": "Polvo de amatista",
   "item.thermal_extra.ancient_dust": "Polvo antiguo",
   "item.thermal_extra.arcane_gold_dust": "Polvo de oro arcano",
-  "item.thermal_extra.zinc_dust": "Polvo de zinc",
+  "item.thermal_extra.Cinc_dust": "Polvo de Cinc",
   "item.thermal_extra.obsidian_dust": "Polvo de obsidiana",
   "item.thermal_extra.soul_sand_dust": "Polvo de arena de alma",
 
@@ -160,7 +160,7 @@
   "item.thermal_extra.raw_silver_bucket": "Cubo de plata en bruto",
   "item.thermal_extra.raw_tin_bucket": "Cubo de estaño en bruto",
   "item.thermal_extra.raw_uranium_bucket": "Cubo de uranio en bruto",
-  "item.thermal_extra.raw_zinc_bucket": "Cubo de zinc en bruto",
+  "item.thermal_extra.raw_Cinc_bucket": "Cubo de Cinc en bruto",
   "item.thermal_extra.refined_sunflower_oil_bucket": "Cubo de aceite de girasol refinado",
   "item.thermal_extra.sunflower_oil_bucket": "Cubo de aceite de girasol",
 
