@@ -9,10 +9,10 @@
       "tag": "forge:dusts/redstone"
     },
     "G": {
-      "tag": "forge:gears/invar"
+      "item": "thermal:machine_frame"
     },
     "I": {
-      "tag": "forge:ingots/silver"
+      "item": "minecraft:blue_ice"
     },
     "R": {
       "item": "thermal:rf_coil"
