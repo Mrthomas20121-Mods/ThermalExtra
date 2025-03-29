@@ -9,7 +9,7 @@
       "tag": "forge:rods/soul_infused"
     },
     "M": {
-      "item": "minecraft:bucket"
+      "item": "minecraft:lava_bucket"
     },
     "N": {
       "tag": "forge:ingots/iron"
