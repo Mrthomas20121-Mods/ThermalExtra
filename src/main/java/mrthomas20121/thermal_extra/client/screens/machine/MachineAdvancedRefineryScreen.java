@@ -20,7 +20,7 @@ public class MachineAdvancedRefineryScreen extends MachineScreen<MachineAdvanced
 
         super(container, inv, container.tile, titleIn);
         texture = TEXTURE;
-        info = generatePanelInfo("info.thermal.machine_refinery");
+        info = generatePanelInfo("info.thermal_extra.advanced_refinery");
         name = "refinery";
     }
 
