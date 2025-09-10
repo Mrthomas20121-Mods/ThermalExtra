@@ -414,7 +414,7 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
 
         MachineRecipeBuilder.pulverizer()
                 .energy(5000)
-                .input(ThermalExtraTags.Items.ABYSSAL_DUST)
+                .input(ThermalExtraTags.Items.ABYSSAL_INGOT)
                 .output(ThermalExtraItems.ABYSSAL_DUST.get())
                 .save(consumer, modLoc("machine/pulverizer/abyssal_dust"));
 
