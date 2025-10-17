@@ -1020,6 +1020,14 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .output(ThermalCore.ITEMS.get("redstone_servo"))
                 .save(consumer, "thermal_extra:machine/component_assembly/redstone_servo");
 
+        MachineRecipeBuilder.component_assembly()
+                .energy(5000)
+                .input(new FluidStack(TCoreFluids.REDSTONE_FLUID.get(), 50))
+                .input(Tags.Items.INGOTS_IRON, 32)
+                .input(Tags.Items.INGOTS_GOLD, 16)
+                .output(ThermalCore.ITEMS.get("slag"))
+                .save(consumer, "thermal_extra:machine/component_assembly/test");
+
         TagKey<Item> rawAluminum = forgeTag("raw_materials/aluminum");
         TagKey<Item> rawUranium = forgeTag("raw_materials/uranium");
         TagKey<Item> rawOsmium = forgeTag("raw_materials/osmium");

@@ -13,7 +13,6 @@ import cofh.thermal.lib.util.recipes.internal.*;
 import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap;
 import it.unimi.dsi.fastutil.objects.ObjectOpenHashSet;
 import mrthomas20121.thermal_extra.init.ThermalExtraRecipeTypes;
-import mrthomas20121.thermal_extra.util.CompoundMapWrapper;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeManager;
 import net.minecraftforge.fluids.FluidStack;
@@ -28,7 +27,7 @@ public class NitraticIgniterRecipeManager extends AbstractManager implements IRe
     private static final NitraticIgniterRecipeManager INSTANCE = new NitraticIgniterRecipeManager();
     protected static final int DEFAULT_ENERGY = 3200;
 
-    protected Map<CompoundMapWrapper, IMachineRecipe> recipeMap = new Object2ObjectOpenHashMap<>();
+    protected Map<RecipeMapWrapper, IMachineRecipe> recipeMap = new Object2ObjectOpenHashMap<>();
     protected Map<ComparableItemStack, IRecipeCatalyst> catalystMap = new Object2ObjectOpenHashMap<>();
     protected Set<ComparableItemStack> validItems = new ObjectOpenHashSet<>();
 
@@ -106,7 +105,7 @@ public class NitraticIgniterRecipeManager extends AbstractManager implements IRe
         if (convertedItems.isEmpty()) {
             return null;
         }
-        IMachineRecipe ret = recipeMap.get(CompoundMapWrapper.of(convertedItems));
+        IMachineRecipe ret = recipeMap.get(new RecipeMapWrapper(convertedItems));
 
         if (ret == null) {
             convertedItems.clear();
@@ -119,7 +118,7 @@ public class NitraticIgniterRecipeManager extends AbstractManager implements IRe
             if (convertedItems.isEmpty()) {
                 return null;
             }
-            ret = recipeMap.get(CompoundMapWrapper.of(convertedItems));
+            ret = recipeMap.get(new RecipeMapWrapper(convertedItems));
         }
         return ret;
     }
@@ -155,7 +154,7 @@ public class NitraticIgniterRecipeManager extends AbstractManager implements IRe
         } else {
             recipe = new InternalNitraticIgniterRecipe(energy, experience, inputItems, inputFluids, outputItems, chance, outputFluids);
         }
-        recipeMap.put(CompoundMapWrapper.of(convertedItems), recipe);
+        recipeMap.put(new RecipeMapWrapper(convertedItems), recipe);
         return recipe;
     }
     // endregion

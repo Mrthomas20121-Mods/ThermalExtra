@@ -1,6 +1,7 @@
 package mrthomas20121.thermal_extra.recipe;
 
 import cofh.lib.common.fluid.FluidIngredient;
+import cofh.lib.util.crafting.ComparableItemStack;
 import cofh.thermal.core.ThermalCore;
 import cofh.thermal.lib.util.recipes.ThermalRecipe;
 import mrthomas20121.thermal_extra.init.ThermalExtraRecipeSerializers;
@@ -13,7 +14,9 @@ import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraftforge.fluids.FluidStack;
 
 import javax.annotation.Nonnull;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class ComponentAssemblyRecipe extends ThermalRecipe {
 
