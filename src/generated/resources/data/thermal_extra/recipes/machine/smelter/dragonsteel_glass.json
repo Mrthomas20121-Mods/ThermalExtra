@@ -7,12 +7,13 @@
       "tag": "forge:ingots/dragonsteel"
     },
     {
-      "count": 1,
+      "count": 2,
       "item": "thermal:obsidian_glass"
     }
   ],
   "result": [
     {
+	  "count": 2,
       "item": "thermal_extra:dragonsteel_glass"
     }
   ]

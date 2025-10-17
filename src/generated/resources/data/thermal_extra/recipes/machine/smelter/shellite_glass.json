@@ -7,12 +7,13 @@
       "tag": "forge:ingots/shellite"
     },
     {
-      "count": 1,
+      "count": 2,
       "item": "thermal:obsidian_glass"
     }
   ],
   "result": [
     {
+		"count": 2,
       "item": "thermal_extra:shellite_glass"
     }
   ]
