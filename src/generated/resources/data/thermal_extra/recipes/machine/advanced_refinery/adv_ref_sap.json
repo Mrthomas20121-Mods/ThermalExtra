@@ -1,0 +1,19 @@
+{
+  "type": "thermal_extra:advanced_refinery",
+  "ingredient": {
+    "fluid": "thermal:sap",
+    "amount": 1000
+  },
+  "result": [
+    {
+      "fluid": "thermal:syrup",
+      "amount": 750
+    },
+    {
+      "fluid": "minecraft:water",
+      "amount": 250
+    }
+  ],
+  "energy": 4000,
+  "experience": 0.2
+}

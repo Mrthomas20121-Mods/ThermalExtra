@@ -1,0 +1,19 @@
+{
+  "type": "thermal_extra:advanced_refinery",
+  "ingredient": {
+    "fluid": "thermal:resin",
+    "amount": 200
+  },
+  "result": [
+    {
+      "fluid": "thermal:tree_oil",
+      "amount": 150
+    },
+    {
+      "item": "thermal:rosin",
+      "chance": 0.70
+    }
+  ],
+  "energy": 4000,
+  "experience": 0.2
+}
