@@ -70,16 +70,6 @@ public enum EnumAugment {
         valueMap.put(TAG_AUGMENT_DYNAMO_ENERGY, 1.1f);
         map.put(TAG_AUGMENT_DYNAMO_ENERGY, 0.02f);
     }),
-    POTION_AMPLIFIER_AUGMENT(TAG_AUGMENT_TYPE_POTION, "Alchemical Amplifier", (valueMap, map) -> {
-        valueMap.put(TAG_AUGMENT_POTION_AMPLIFIER, 1f);
-        map.put(TAG_AUGMENT_POTION_AMPLIFIER, 0.25f);
-        valueMap.put(TAG_AUGMENT_POTION_DURATION, -0.25f);
-        map.put(TAG_AUGMENT_POTION_DURATION, 0f);
-    }),
-    POTION_DURATION_AUGMENT(TAG_AUGMENT_TYPE_POTION, "Alchemical Extender", (valueMap, map) -> {
-        valueMap.put(TAG_AUGMENT_POTION_DURATION, 1f);
-        map.put(TAG_AUGMENT_POTION_DURATION, 0.1f);
-    }),
     AREA_RADIUS_AUGMENT(TAG_AUGMENT_TYPE_AREA_EFFECT, "Radial Enhancement", (valueMap, map) -> {
         valueMap.put(TAG_AUGMENT_RADIUS, 1f);
         map.put(TAG_AUGMENT_RADIUS, 1f);

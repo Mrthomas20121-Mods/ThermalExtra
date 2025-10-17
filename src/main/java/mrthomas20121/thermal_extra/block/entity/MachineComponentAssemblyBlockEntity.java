@@ -21,6 +21,8 @@ import net.minecraftforge.fluids.FluidStack;
 
 import javax.annotation.Nullable;
 
+import java.util.List;
+
 import static cofh.core.util.helpers.ItemHelper.itemsEqual;
 import static cofh.lib.api.StorageGroup.*;
 import static cofh.lib.util.Constants.BUCKET_VOLUME;
@@ -89,6 +91,22 @@ public class MachineComponentAssemblyBlockEntity extends MachineBlockEntity {
         FluidStack prevFluid = renderFluid;
         renderFluid = new FluidStack(inputTank.getFluidStack(), BUCKET_VOLUME);
         return !FluidHelper.fluidsEqual(renderFluid, prevFluid);
+    }
+
+    @Override
+    protected boolean validateInputs() {
+
+        if (!cacheRecipe()) {
+            return false;
+        }
+        List<? extends ItemStorageCoFH> slotInputs = inputSlots();
+        for (int i = 0; i < slotInputs.size() && i < itemInputCounts.size(); ++i) {
+            int inputCount = itemInputCounts.get(i);
+            if (slotInputs.get(i).getItemStack().getCount() < inputCount) {
+                return false;
+            }
+        }
+        return true;
     }
 
     @Nullable
