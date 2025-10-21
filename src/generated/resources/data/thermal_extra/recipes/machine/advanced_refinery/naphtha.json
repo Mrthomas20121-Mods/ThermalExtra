@@ -1,0 +1,21 @@
+{
+  "type": "thermal_extra:advanced_refinery",
+  "energy": 6000,
+  "experience": 0.3,
+  "ingredients": [
+    {
+      "amount": 100,
+      "fluid_tag": "forge:naphtha"
+    }
+  ],
+  "result": [
+    {
+      "amount": 75,
+      "fluid": "thermal_extra:diesel"
+    },
+    {
+      "amount": 25,
+      "fluid": "thermal_extra:gasoline"
+    }
+  ]
+}

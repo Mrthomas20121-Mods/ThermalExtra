@@ -85,6 +85,8 @@ public class ThermalExtraCreativeTabs {
                 output.accept(ThermalExtraItems.SOUL_SAND_DUST.get());
                 output.accept(ThermalExtraItems.STICKY_BALL.get());
                 output.accept(ThermalExtraItems.CHILLER_PLATE_CAST.get());
+                output.accept(ThermalExtraItems.POLYOLEFIN_PLATE.get());
+                output.accept(ThermalExtraItems.PARAFFIN_WAX.get());
 
                 output.accept(ThermalExtraItems.SOUL_INFUSED_ROD.get());
                 output.accept(ThermalExtraItems.TWINITE_ROD.get());

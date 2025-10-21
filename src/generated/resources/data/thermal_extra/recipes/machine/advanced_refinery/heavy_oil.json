@@ -1,0 +1,21 @@
+{
+  "type": "thermal_extra:advanced_refinery",
+  "energy": 6000,
+  "experience": 0.3,
+  "ingredients": [
+    {
+      "amount": 100,
+      "fluid": "thermal:heavy_oil"
+    }
+  ],
+  "result": [
+    {
+      "chance": 0.1,
+      "item": "thermal:tar"
+    },
+    {
+      "amount": 75,
+      "fluid": "thermal:refined_fuel"
+    }
+  ]
+}

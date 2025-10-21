@@ -4,14 +4,18 @@
   "experience": 0.3,
   "ingredients": [
     {
-      "amount": 200,
-      "fluid": "thermal_extra:crystallized_sunflower_oil"
+      "amount": 100,
+      "fluid": "thermal:light_oil"
     }
   ],
   "result": [
     {
+      "chance": 0.2,
+      "item": "thermal:sulfur_dust"
+    },
+    {
       "amount": 100,
-      "fluid": "thermal_extra:refined_sunflower_oil"
+      "fluid": "thermal:refined_fuel"
     }
   ]
 }

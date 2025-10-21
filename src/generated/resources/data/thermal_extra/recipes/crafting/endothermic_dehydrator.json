@@ -3,7 +3,7 @@
   "category": "redstone",
   "key": {
     "E": {
-      "tag": "forge:gears/lumium"
+      "item": "thermal_extra:paraffin_wax"
     },
     "G": {
       "tag": "thermal:glass/hardened"

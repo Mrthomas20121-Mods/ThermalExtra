@@ -4,7 +4,7 @@
   "ingredients": [
     {
       "amount": 100,
-      "fluid": "thermal:redstone"
+      "fluid_tag": "forge:redstone"
     },
     {
       "amount": 100,

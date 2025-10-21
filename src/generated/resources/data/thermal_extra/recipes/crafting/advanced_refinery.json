@@ -3,7 +3,7 @@
   "category": "redstone",
   "key": {
     "G": {
-      "tag": "forge:gears/electrum"
+      "tag": "forge:gears/constantan"
     },
     "H": {
       "tag": "thermal:glass/hardened"
@@ -12,14 +12,17 @@
       "tag": "forge:ingots/twinite"
     },
     "M": {
-      "item": "thermal:machine_refinery"
+      "item": "thermal:machine_frame"
+    },
+    "P": {
+      "item": "thermal_extra:paraffin_wax"
     },
     "R": {
       "item": "thermal:rf_coil"
     }
   },
   "pattern": [
-    " I ",
+    "PIP",
     "HMH",
     "GRG"
   ],

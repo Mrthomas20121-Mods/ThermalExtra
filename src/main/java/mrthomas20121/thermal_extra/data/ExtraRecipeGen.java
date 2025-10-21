@@ -166,6 +166,16 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .unlockedBy("has_obsidian_glass", has(glass))
                 .save(consumer);
 
+        Item paraffin = ThermalExtraItems.PARAFFIN_WAX.get();
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.CANDLE)
+                .define('P', paraffin)
+                .define('S', Tags.Items.STRING)
+                .pattern("S")
+                .pattern("P")
+                .unlockedBy(getHasName(paraffin), has(paraffin))
+                .save(consumer, this.modid + ":crafting/candle_from_paraffin");
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ThermalExtraItems.PRESS_ROD_DIE.get())
                 .define('P', ItemTagsCoFH.INGOTS_INVAR)
                 .define('S', Tags.Items.RODS_WOODEN)
@@ -218,12 +228,13 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .save(consumer, this.modid + ":crafting/fluid_mixer");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, ThermalExtraBlocks.ADVANCED_REFINERY.get())
-                .define('G', ItemTagsCoFH.GEARS_ELECTRUM)
+                .define('P', ThermalExtraItems.PARAFFIN_WAX.get())
+                .define('G', ItemTagsCoFH.GEARS_CONSTANTAN)
                 .define('I', ThermalExtraTags.Items.TWINITE_INGOT)
-                .define('M', ITEMS.get(ThermalIDs.ID_MACHINE_REFINERY))
+                .define('M', ITEMS.get(ThermalIDs.ID_MACHINE_FRAME))
                 .define('H', ThermalTags.Items.HARDENED_GLASS)
                 .define('R', ITEMS.get("rf_coil"))
-                .pattern(" I ")
+                .pattern("PIP")
                 .pattern("HMH")
                 .pattern("GRG")
                 .unlockedBy("has_"+ThermalIDs.ID_MACHINE_REFINERY, has(ThermalCore.ITEMS.get(ThermalIDs.ID_MACHINE_REFINERY)))
@@ -245,7 +256,7 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .define('G', ThermalTags.Items.HARDENED_GLASS)
                 .define('I', ThermalExtraTags.Items.TWINITE_INGOT)
                 .define('M', ITEMS.get(ThermalIDs.ID_MACHINE_FRAME))
-                .define('E', ItemTagsCoFH.GEARS_LUMIUM)
+                .define('E', ThermalExtraItems.PARAFFIN_WAX.get())
                 .define('R', ITEMS.get("rf_coil"))
                 .pattern(" I ")
                 .pattern("GMG")
@@ -915,6 +926,12 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
 
         MachineRecipeBuilder.blastChiller()
                 .energy(30000)
+                .input(FluidIngredient.of(new FluidStack(ThermalExtraFluids.PARAFFIN_WAX.still().get(), 1000)))
+                .output(ThermalExtraItems.PARAFFIN_WAX.get())
+                .save(consumer, "thermal_extra:machine/chiller/paraffin_wax");
+
+        MachineRecipeBuilder.blastChiller()
+                .energy(30000)
                 .input(FluidIngredient.of(new FluidStack(TCoreFluids.RESIN_FLUID.get(), 1000)))
                 .output(ThermalExtraItems.STICKY_BALL.get())
                 .save(consumer, "thermal_extra:machine/chiller/sticky_ball");
@@ -1038,18 +1055,24 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
         MachineRecipeBuilder.refinery()
                 .input(new FluidStack(ThermalExtraFluids.CRYSTALLIZED_SUNFLOWER_OIL.still().get(), 200))
                 .output(new FluidStack(ThermalExtraFluids.REFINED_SUNFLOWER_OIL.still().get(), 50))
+                .energy(6000)
+                .exp(0.3f)
                 .save(consumer, "thermal_extra:machine/refinery/refined_sunflower_oil");
 
         MachineRecipeBuilder.advanced_refinery()
                 .input(new FluidStack(ThermalExtraFluids.CRYSTALLIZED_SUNFLOWER_OIL.still().get(), 200))
                 .output(new FluidStack(ThermalExtraFluids.REFINED_SUNFLOWER_OIL.still().get(), 100))
+                .energy(6000)
+                .exp(0.3f)
                 .save(consumer, "thermal_extra:machine/advanced_refinery/refined_sunflower_oil");
 
         MachineRecipeBuilder.refinery()
                 .input(new FluidStack(ThermalExtraFluids.FLUX_INFUSED_OIL.still().get(), 100))
-                .output(new MachineRecipeBuilder.ChanceItemStack(new ItemStack(ITEMS.get("bitumen")), 0.1f, false))
+                .output(new MachineRecipeBuilder.ChanceItemStack(new ItemStack(ITEMS.get("bitumen")), 0.10f, false))
                 .output(new FluidStack(ThermalExtraFluids.NAPHTHA.still().get(), 50))
                 .output(new FluidStack(ThermalExtraFluids.PARAFFIN_WAX.still().get(), 50))
+                .energy(6000)
+                .exp(0.3f)
                 .save(consumer, "thermal_extra:machine/refinery/flux_infused_oil");
 
         MachineRecipeBuilder.advanced_refinery()
@@ -1058,33 +1081,88 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .output(new FluidStack(ThermalExtraFluids.NAPHTHA.still().get(), 50))
                 .output(new FluidStack(ThermalExtraFluids.PARAFFIN_WAX.still().get(), 50))
                 .output(new FluidStack(ThermalExtraFluids.LUBRICANT.still().get(), 100))
+                .energy(6000)
+                .exp(0.3f)
                 .save(consumer, "thermal_extra:machine/advanced_refinery/flux_infused_oil");
 
-//        MachineRecipeBuilder.advanced_refinery()
-//                .input(new FluidStack(TCoreFluids.HEAVY_OIL_FLUID.get(), 100))
-//                .output(new MachineRecipeBuilder.ChanceItemStack(new ItemStack(ITEMS.get("tar")), 0.15f, false))
-//                .output(new FluidStack(ThermalExtraFluids.DIESEL.still().get(), 80))
-//                .save(consumer, "thermal_extra:machine/advanced_refinery/heavy_oil");
-//
-//        MachineRecipeBuilder.advanced_refinery()
-//                .input(new FluidStack(TCoreFluids.LIGHT_OIL_FLUID.get(), 100))
-//                .output(new MachineRecipeBuilder.ChanceItemStack(new ItemStack(ITEMS.get("sulfur_dust")), 0.25f, false))
-//                .output(new FluidStack(ThermalExtraFluids.DIESEL.still().get(), 80))
-//                .save(consumer, "thermal_extra:machine/advanced_refinery/light_oil");
+        MachineRecipeBuilder.advanced_refinery()
+                .input(FluidIngredient.of(ThermalTags.Fluids.CRUDE_OIL, 100))
+                .output(new MachineRecipeBuilder.ChanceItemStack(new ItemStack(ITEMS.get("bitumen")), 0.10f, false))
+                .output(new FluidStack(TCoreFluids.HEAVY_OIL_FLUID.get(), 40))
+                .output(new FluidStack(TCoreFluids.LIGHT_OIL_FLUID.get(), 60))
+                .energy(6000)
+                .exp(0.3f)
+                .save(consumer, "thermal_extra:machine/advanced_refinery/crude_oil");
+
+        MachineRecipeBuilder.advanced_refinery()
+                .input(new FluidStack(TCoreFluids.HEAVY_OIL_FLUID.get(), 100))
+                .output(new MachineRecipeBuilder.ChanceItemStack(new ItemStack(ITEMS.get("tar")), 0.10f, false))
+                .output(new FluidStack(TCoreFluids.REFINED_FUEL_FLUID.get(), 75))
+                .energy(6000)
+                .exp(0.3f)
+                .save(consumer, "thermal_extra:machine/advanced_refinery/heavy_oil");
+
+        MachineRecipeBuilder.advanced_refinery()
+                .input(new FluidStack(TCoreFluids.LIGHT_OIL_FLUID.get(), 100))
+                .output(new MachineRecipeBuilder.ChanceItemStack(new ItemStack(ITEMS.get("sulfur_dust")), 0.20f, false))
+                .output(new FluidStack(TCoreFluids.REFINED_FUEL_FLUID.get(), 100))
+                .energy(6000)
+                .exp(0.3f)
+                .save(consumer, "thermal_extra:machine/advanced_refinery/light_oil");
+
+        MachineRecipeBuilder.advanced_refinery()
+                .input(new FluidStack(TCoreFluids.RESIN_FLUID.get(), 200))
+                .output(new MachineRecipeBuilder.ChanceItemStack(new ItemStack(ITEMS.get("rosin")), 0.50f, false))
+                .output(new FluidStack(TCoreFluids.TREE_OIL_FLUID.get(), 150))
+                .energy(6000)
+                .exp(0.3f)
+                .save(consumer, "thermal_extra:machine/advanced_refinery/resin");
+
+        MachineRecipeBuilder.advanced_refinery()
+                .input(new FluidStack(TCoreFluids.SAP_FLUID.get(), 1000))
+                .output(new MachineRecipeBuilder.ChanceItemStack(new ItemStack(ITEMS.get("rosin")), 0.50f, false))
+                .output(new FluidStack(TCoreFluids.SYRUP_FLUID.get(), 500))
+                .output(new FluidStack(Fluids.WATER, 500))
+                .energy(6000)
+                .exp(0.3f)
+                .save(consumer, "thermal_extra:machine/advanced_refinery/sap");
+
+        MachineRecipeBuilder.advanced_refinery()
+                .input(FluidIngredient.of(ThermalExtraFluids.LUBRICANT.tag(), 1000))
+                .output(new FluidStack(ThermalExtraFluids.POLYOLEFIN.still().get(), 1000))
+                .energy(6000)
+                .exp(0.3f)
+                .save(consumer, "thermal_extra:machine/advanced_refinery/polyolefin");
+
+        MachineRecipeBuilder.refinery()
+                .input(FluidIngredient.of(ThermalExtraFluids.LUBRICANT.tag(), 1000))
+                .output(new FluidStack(ThermalExtraFluids.POLYOLEFIN.still().get(), 750))
+                .energy(6000)
+                .exp(0.3f)
+                .save(consumer, "thermal_extra:machine/refinery/polyolefin");
+
+        MachineRecipeBuilder.refinery()
+                .input(FluidIngredient.of(ThermalExtraFluids.NAPHTHA.tag(), 100))
+                .output(new FluidStack(ThermalExtraFluids.DIESEL.still().get(), 75))
+                .output(new FluidStack(ThermalExtraFluids.GASOLINE.still().get(), 25))
+                .energy(6000)
+                .exp(0.3f)
+                .save(consumer, "thermal_extra:machine/refinery/naphtha");
+
+        MachineRecipeBuilder.advanced_refinery()
+                .input(FluidIngredient.of(ThermalExtraFluids.NAPHTHA.tag(), 100))
+                .output(new FluidStack(ThermalExtraFluids.DIESEL.still().get(), 75))
+                .output(new FluidStack(ThermalExtraFluids.GASOLINE.still().get(), 25))
+                .energy(6000)
+                .exp(0.3f)
+                .save(consumer, "thermal_extra:machine/advanced_refinery/naphtha");
 
         MachineRecipeBuilder.fluid_mixer()
                 .energy(10000)
-                .input(TCoreFluids.REDSTONE_FLUID.get(), 100)
+                .input(FluidIngredient.of(ThermalTags.Fluids.REDSTONE, 100))
                 .input(FluidIngredient.of(TagKey.create(Registries.FLUID, new ResourceLocation("forge:crude_oil")),  100))
                 .output(new FluidStack(ThermalExtraFluids.FLUX_INFUSED_OIL.still().get(), 100))
                 .save(consumer, "thermal_extra:machine/fluid_mixer/flux_infused_oil");
-
-        MachineRecipeBuilder.fluid_mixer()
-                .input(FluidIngredient.of(ThermalTags.Fluids.LATEX, 1000))
-                .input(TCoreFluids.GLOWSTONE_FLUID.get(), 1000)
-                .energy(15000)
-                .output(ThermalExtraFluids.POLYOLEFIN.still().get(), 1000)
-                .save(consumer, "thermal_extra:machine/fluid_mixer/polyolefin");
 
         crucibleRecipe(consumer, 8000, ThermalExtraFluids.RAW_ALUMINUM, 120, rawAluminum, "raw_aluminum");
         crucibleRecipe(consumer, 8000, ThermalExtraFluids.RAW_ARCANE_GOLD, 120, rawArcaneGold, "raw_arcane_gold");
@@ -1162,6 +1240,16 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .fluid(new FluidStack(ThermalExtraFluids.DIESEL.still().get(), 1000))
                 .energy(2000000)
                 .buildFluid(consumer, "thermal_extra:fuels/compression/diesel");
+
+        DynamoRecipeBuilder.compression()
+                .fluid(new FluidStack(ThermalExtraFluids.GASOLINE.still().get(), 1000))
+                .energy(2500000)
+                .buildFluid(consumer, "thermal_extra:fuels/compression/gasoline");
+
+        DynamoRecipeBuilder.compression()
+                .fluid(new FluidStack(ThermalExtraFluids.NAPHTHA.still().get(), 1000))
+                .energy(500000)
+                .buildFluid(consumer, "thermal_extra:fuels/compression/naphtha");
 
     }
 

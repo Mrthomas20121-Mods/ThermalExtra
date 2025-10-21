@@ -102,6 +102,7 @@ public class ExtraLangGen extends LanguageProvider {
         addItem(ThermalExtraFluids.DIESEL.getBucket(), "Diesel Bucket");
         addItem(ThermalExtraFluids.GASOLINE.getBucket(), "Gasoline Bucket");
         addItem(ThermalExtraFluids.NAPHTHA.getBucket(), "Naphtha Bucket");
+        addItem(ThermalExtraFluids.LUBRICANT.getBucket(), "Lubricant Bucket");
         addItem(ThermalExtraFluids.PARAFFIN_WAX.getBucket(), "Paraffin Wax Bucket");
         addItem(ThermalExtraFluids.POLYOLEFIN.getBucket(), "Polyolefin Bucket");
 
@@ -168,6 +169,7 @@ public class ExtraLangGen extends LanguageProvider {
         addItem(ThermalExtraItems.STICKY_BALL, "Resin Ball");
         addItem(ThermalExtraItems.CHILLER_PLATE_CAST, "Plate Cast");
         addItem(ThermalExtraItems.POLYOLEFIN_PLATE, "Polyolefin Plate");
+        addItem(ThermalExtraItems.PARAFFIN_WAX, "Paraffin Wax");
 
         addItem(ThermalExtraItems.COPPER_ROD, "Copper Rod");
         addItem(ThermalExtraItems.IRON_ROD, "Iron Rod");

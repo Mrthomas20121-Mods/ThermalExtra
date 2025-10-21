@@ -119,6 +119,7 @@ public class ExtraModelGen extends ItemModelProviderCoFH {
         itemModel(ThermalExtraItems.SOUL_SAND_DUST);
         itemModel(ThermalExtraItems.AMETHYST_DUST);
         itemModel(ThermalExtraItems.STICKY_BALL);
+        itemModel(ThermalExtraItems.PARAFFIN_WAX);
         itemModel(ThermalExtraItems.CHILLER_PLATE_CAST);
 
         itemModel(ThermalExtraItems.AV_ITEM_FILTER_AUGMENT);

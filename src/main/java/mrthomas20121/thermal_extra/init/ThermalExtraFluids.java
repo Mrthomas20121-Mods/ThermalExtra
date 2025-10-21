@@ -51,7 +51,7 @@ public class ThermalExtraFluids {
 
     // non metal fluids
     public static FluidHolder PARAFFIN_WAX = register(modLoc("paraffin_wax"), 300, MapColor.QUARTZ, 5);
-    public static FluidHolder LUBRICANT = register(modLoc("lubricant"), liquid(500), MapColor.TERRACOTTA_YELLOW, 10);
+    public static FluidHolder LUBRICANT = register(modLoc("lubricant"), liquid(800), MapColor.TERRACOTTA_YELLOW, 10);
     public static FluidHolder SUNFLOWER_OIL = register(modLoc("sunflower_oil"), liquid(500), MapColor.COLOR_YELLOW, 3);
     public static FluidHolder CRYSTALLIZED_SUNFLOWER_OIL = register(modLoc("crystallized_sunflower_oil"), liquid(500), MapColor.COLOR_YELLOW, 5);
     public static FluidHolder REFINED_SUNFLOWER_OIL = register(modLoc("refined_sunflower_oil"), liquid(500), MapColor.COLOR_ORANGE, 10);

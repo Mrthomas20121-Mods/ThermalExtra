@@ -5,13 +5,17 @@
   "ingredients": [
     {
       "amount": 200,
-      "fluid": "thermal_extra:crystallized_sunflower_oil"
+      "fluid": "thermal:resin"
     }
   ],
   "result": [
     {
-      "amount": 100,
-      "fluid": "thermal_extra:refined_sunflower_oil"
+      "chance": 0.5,
+      "item": "thermal:rosin"
+    },
+    {
+      "amount": 150,
+      "fluid": "thermal:tree_oil"
     }
   ]
 }

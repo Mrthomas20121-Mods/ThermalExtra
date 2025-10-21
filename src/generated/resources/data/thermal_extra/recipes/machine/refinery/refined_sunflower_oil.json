@@ -1,6 +1,7 @@
 {
   "type": "thermal:refinery",
-  "energy": 4000,
+  "energy": 6000,
+  "experience": 0.3,
   "ingredients": [
     {
       "amount": 200,

@@ -1,0 +1,17 @@
+{
+  "type": "thermal:refinery",
+  "energy": 6000,
+  "experience": 0.3,
+  "ingredients": [
+    {
+      "amount": 1000,
+      "fluid_tag": "forge:lubricant"
+    }
+  ],
+  "result": [
+    {
+      "amount": 750,
+      "fluid": "thermal_extra:polyolefin"
+    }
+  ]
+}

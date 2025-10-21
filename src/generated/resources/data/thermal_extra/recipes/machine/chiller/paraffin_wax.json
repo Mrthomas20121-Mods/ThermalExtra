@@ -1,0 +1,15 @@
+{
+  "type": "thermal:chiller",
+  "energy": 30000,
+  "ingredients": [
+    {
+      "amount": 1000,
+      "fluid": "thermal_extra:paraffin_wax"
+    }
+  ],
+  "result": [
+    {
+      "item": "thermal_extra:paraffin_wax"
+    }
+  ]
+}

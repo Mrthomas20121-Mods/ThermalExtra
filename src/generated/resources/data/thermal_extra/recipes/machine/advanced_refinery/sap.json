@@ -1,0 +1,25 @@
+{
+  "type": "thermal_extra:advanced_refinery",
+  "energy": 6000,
+  "experience": 0.3,
+  "ingredients": [
+    {
+      "amount": 1000,
+      "fluid": "thermal:sap"
+    }
+  ],
+  "result": [
+    {
+      "chance": 0.5,
+      "item": "thermal:rosin"
+    },
+    {
+      "amount": 500,
+      "fluid": "thermal:syrup"
+    },
+    {
+      "amount": 500,
+      "fluid": "minecraft:water"
+    }
+  ]
+}

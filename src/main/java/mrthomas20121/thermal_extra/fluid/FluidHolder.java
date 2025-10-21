@@ -31,6 +31,7 @@ public class FluidHolder {
     protected RegistryObject<Item> bucket;
     private final RegistryObject<FluidType> type;
     private boolean isMetal = false;
+    private final TagKey<Fluid> tag;
 
     public FluidHolder(ResourceLocation name, Supplier<FluidType> fluidTypeSupplier, BlockBehaviour.Properties properties) {
         this.name = name;
@@ -39,6 +40,7 @@ public class FluidHolder {
         this.type = ThermalExtraFluids.FLUID_TYPES.register(name.getPath(), fluidTypeSupplier);
         this.bucket = ThermalExtraItems.ITEMS.register(bucket(name.getPath()), () -> new BucketItem(stillFluid, new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
         this.block = ThermalExtraBlocks.BLOCKS.register(name.getPath(), () -> new LiquidBlock(flowingFluid, properties));
+        this.tag = forgeTag(isMetal ? molten(this.name.getPath()): this.name.getPath());
     }
 
     public FluidHolder metal() {
@@ -66,6 +68,10 @@ public class FluidHolder {
         return this.getFlowingFluid();
     }
 
+    public boolean isMetal() {
+        return isMetal;
+    }
+
     public RegistryObject<LiquidBlock> getBlock() {
         return block;
     }
@@ -79,7 +85,7 @@ public class FluidHolder {
     }
 
     public TagKey<Fluid> tag() {
-        return forgeTag(isMetal ? molten(this.name.getPath()): this.name.getPath());
+        return this.tag;
     }
 
     protected ForgeFlowingFluid.Properties fluidProperties() {

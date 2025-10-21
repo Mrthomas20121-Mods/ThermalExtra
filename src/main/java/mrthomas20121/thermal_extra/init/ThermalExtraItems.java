@@ -76,6 +76,7 @@ public class ThermalExtraItems {
     public static final RegistryObject<Item> STICKY_BALL = ITEMS.register("sticky_ball", item((prop) -> prop.rarity(yellow)));
     public static final RegistryObject<Item> CHILLER_PLATE_CAST = ITEMS.register("chiller_plate_cast", item((prop) -> {}));
     public static final RegistryObject<Item> POLYOLEFIN_PLATE = ITEMS.register("polyolefin_plate", item((prop) -> prop.rarity(yellow), true));
+    public static final RegistryObject<Item> PARAFFIN_WAX = ITEMS.register("paraffin_wax", item((prop) -> prop.rarity(yellow)));
 
     public static ToolSetObject SIGNALUM_SET = new ToolSetObject(ITEMS, "signalum", ThermalExtraTiers.SIGNALUM, ThermalExtraArmorMaterials.SIGNALUM, yellow);
     public static ToolSetObject LUMIUM_SET = new ToolSetObject(ITEMS, "lumium", ThermalExtraTiers.LUMIUM, ThermalExtraArmorMaterials.LUMIUM, yellow);
