@@ -81,7 +81,7 @@ public class DeviceHarvesterBlockEntity extends AugmentableBlockEntity implement
                 energyStorage.modify(-processTick);
                 if (process >= processMax) {
                     process -= processMax;
-                    BlockPos.betweenClosedStream(worldPosition.offset(-radius, -2, -radius), worldPosition.offset(radius, 1, radius))
+                    BlockPos.betweenClosedStream(worldPosition.offset(-radius, -2, -radius), worldPosition.offset(radius, 2, radius))
                             .forEach(this::dropBlock);
                 }
             } else {
