@@ -2,6 +2,8 @@ package mrthomas20121.thermal_extra;
 
 import cofh.core.client.event.CoreClientEvents;
 import cofh.core.common.config.ConfigManager;
+import cofh.thermal.core.util.managers.machine.RefineryRecipeManager;
+import cofh.thermal.lib.util.recipes.internal.IMachineRecipe;
 import mrthomas20121.thermal_extra.client.screens.AdvancedItemFilterScreen;
 import mrthomas20121.thermal_extra.client.screens.DynamoFrostScreen;
 import mrthomas20121.thermal_extra.client.screens.device.DeviceHarvesterScreen;
@@ -10,6 +12,7 @@ import mrthomas20121.thermal_extra.client.screens.machine.*;
 import mrthomas20121.thermal_extra.data.*;
 import mrthomas20121.thermal_extra.filter.AdvancedFilter;
 import mrthomas20121.thermal_extra.init.*;
+import mrthomas20121.thermal_extra.recipe.AdvancedRefineryRecipeManager;
 import mrthomas20121.thermal_extra.util.ThermalExtraConfig;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.core.HolderLookup;
@@ -26,6 +29,7 @@ import net.minecraftforge.registries.NewRegistryEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 @Mod(mrthomas20121.thermal_extra.ThermalExtra.MOD_ID)
@@ -56,10 +60,6 @@ public class ThermalExtra {
 		bus.addListener(this::gatherData);
 		bus.addListener(this::clientSetup);
 		bus.addListener(this::registrySetup);
-	}
-
-	public void setup(FMLCommonSetupEvent event) {
-		
 	}
 
 	public void clientSetup(FMLClientSetupEvent event) {

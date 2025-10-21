@@ -72,6 +72,10 @@ public class ExtraLangGen extends LanguageProvider {
         add("fluid_type.thermal_extra.refined_sunflower_oil", "Refined Sunflower Oil");
         add("fluid_type.thermal_extra.flux_infused_oil", "Flux Infused Oil");
         add("fluid_type.thermal_extra.diesel", "Diesel");
+        add("fluid_type.thermal_extra.gasoline", "Gasoline");
+        add("fluid_type.thermal_extra.naphtha", "Naphtha");
+        add("fluid_type.thermal_extra.lubricant", "Lubricant");
+        add("fluid_type.thermal_extra.paraffin_wax", "Paraffin Wax");
         add("fluid_type.thermal_extra.polyolefin", "Polyolefin");
         add("fluid_type.thermal_extra.raw_aluminum", "Molten Raw Aluminum");
         add("fluid_type.thermal_extra.raw_arcane_gold", "Molten Raw Arcane Gold");
@@ -86,16 +90,19 @@ public class ExtraLangGen extends LanguageProvider {
         add("fluid_type.thermal_extra.raw_uranium", "Molten Raw Uranium");
         add("fluid_type.thermal_extra.raw_zinc", "Molten Raw Zinc");
 
-        addItem(ThermalExtraFluids.MOLTEN_SOUL_INFUSED.getBucket(), "Molten Soul Infused Bucket");
-        addItem(ThermalExtraFluids.MOLTEN_SHELLITE.getBucket(), "Molten Shellite Bucket");
-        addItem(ThermalExtraFluids.MOLTEN_TWINITE.getBucket(), "Molten Twinite Bucket");
-        addItem(ThermalExtraFluids.MOLTEN_DRAGONSTEEL.getBucket(), "Molten Dragonsteel Bucket");
-        addItem(ThermalExtraFluids.MOLTEN_ABYSSAL.getBucket(), "Molten Abyssal Bucket");
+        addItem(ThermalExtraFluids.SOUL_INFUSED.getBucket(), "Molten Soul Infused Bucket");
+        addItem(ThermalExtraFluids.SHELLITE.getBucket(), "Molten Shellite Bucket");
+        addItem(ThermalExtraFluids.TWINITE.getBucket(), "Molten Twinite Bucket");
+        addItem(ThermalExtraFluids.DRAGONSTEEL.getBucket(), "Molten Dragonsteel Bucket");
+        addItem(ThermalExtraFluids.ABYSSAL.getBucket(), "Molten Abyssal Bucket");
         addItem(ThermalExtraFluids.SUNFLOWER_OIL.getBucket(), "Sunflower Oil Bucket");
         addItem(ThermalExtraFluids.CRYSTALLIZED_SUNFLOWER_OIL.getBucket(), "Crystallized Sunflower Oil Bucket");
         addItem(ThermalExtraFluids.FLUX_INFUSED_OIL.getBucket(), "Flux Infused Oil Bucket");
         addItem(ThermalExtraFluids.REFINED_SUNFLOWER_OIL.getBucket(), "Refined Sunflower Oil Bucket");
         addItem(ThermalExtraFluids.DIESEL.getBucket(), "Diesel Bucket");
+        addItem(ThermalExtraFluids.GASOLINE.getBucket(), "Gasoline Bucket");
+        addItem(ThermalExtraFluids.NAPHTHA.getBucket(), "Naphtha Bucket");
+        addItem(ThermalExtraFluids.PARAFFIN_WAX.getBucket(), "Paraffin Wax Bucket");
         addItem(ThermalExtraFluids.POLYOLEFIN.getBucket(), "Polyolefin Bucket");
 
         addItem(ThermalExtraFluids.RAW_ALUMINUM.getBucket(), "Molten Raw Aluminum Bucket");

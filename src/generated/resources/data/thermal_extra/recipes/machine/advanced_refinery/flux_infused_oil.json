@@ -3,7 +3,7 @@
   "energy": 4000,
   "ingredients": [
     {
-      "amount": 100,
+      "amount": 200,
       "fluid": "thermal_extra:flux_infused_oil"
     }
   ],
@@ -13,12 +13,16 @@
       "item": "thermal:bitumen"
     },
     {
-      "amount": 150,
-      "fluid": "thermal:heavy_oil"
+      "amount": 50,
+      "fluid": "thermal_extra:naphtha"
     },
     {
-      "amount": 150,
-      "fluid": "thermal:light_oil"
+      "amount": 50,
+      "fluid": "thermal_extra:paraffin_wax"
+    },
+    {
+      "amount": 100,
+      "fluid": "thermal_extra:lubricant"
     }
   ]
 }

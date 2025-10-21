@@ -1,9 +1,7 @@
 package mrthomas20121.thermal_extra.data;
 
-import cofh.core.init.CoreFluids;
 import cofh.lib.common.fluid.FluidIngredient;
 import cofh.lib.init.data.RecipeProviderCoFH;
-import cofh.lib.init.tags.FluidTagsCoFH;
 import cofh.lib.init.tags.ItemTagsCoFH;
 import cofh.lib.util.DeferredRegisterCoFH;
 import cofh.lib.util.crafting.IngredientWithCount;
@@ -15,14 +13,13 @@ import cofh.thermal.lib.util.references.ThermalTags;
 import mrthomas20121.thermal_extra.ThermalExtra;
 import mrthomas20121.thermal_extra.data.thermal_recipe.DynamoRecipeBuilder;
 import mrthomas20121.thermal_extra.data.thermal_recipe.MachineRecipeBuilder;
-import mrthomas20121.thermal_extra.fluid.FluidThermalExtra;
+import mrthomas20121.thermal_extra.fluid.FluidHolder;
 import mrthomas20121.thermal_extra.init.ThermalExtraBlocks;
 import mrthomas20121.thermal_extra.init.ThermalExtraFluids;
 import mrthomas20121.thermal_extra.init.ThermalExtraItems;
 import mrthomas20121.thermal_extra.init.ThermalExtraTags;
 import mrthomas20121.thermal_extra.item.augment.EnumAugment;
 import mrthomas20121.thermal_extra.item.augment.ExtraAugmentType;
-import net.minecraft.core.Registry;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
@@ -40,7 +37,6 @@ import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.conditions.NotCondition;
 import net.minecraftforge.common.crafting.conditions.TagEmptyCondition;
 import net.minecraftforge.fluids.FluidStack;
-import net.minecraftforge.registries.ForgeRegistries;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.HashMap;
@@ -927,7 +923,7 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .input(ThermalExtraTags.Items.DUSTS_SOUL_SAND, 2)
                 .input(Tags.Items.INGOTS_IRON)
                 .input(Tags.Items.INGOTS_COPPER)
-                .output(ThermalExtraItems.SOUL_INFUSED_INGOT.get())
+                .output(ThermalExtraItems.SOUL_INFUSED_INGOT.get(), 2)
                 .save(consumer, modLoc("machine/smelter/soul_infused_ingot"));
 
         MachineRecipeBuilder.smelter()
@@ -939,7 +935,7 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .input(ItemTagsCoFH.INGOTS_TIN, 2)
                 .input(Tags.Items.RODS_BLAZE)
                 .input(Tags.Items.OBSIDIAN)
-                .output(ThermalExtraItems.TWINITE_INGOT.get())
+                .output(ThermalExtraItems.TWINITE_INGOT.get(), 2)
                 .save(consumer, modLoc("machine/smelter/twinite_ingot"));
 
         MachineRecipeBuilder.smelter()
@@ -951,7 +947,7 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .input(Items.SHULKER_SHELL, 2)
                 .input(ItemTagsCoFH.INGOTS_LEAD)
                 .input(ItemTagsCoFH.INGOTS_NICKEL)
-                .output(ThermalExtraItems.SHELLITE_INGOT.get())
+                .output(ThermalExtraItems.SHELLITE_INGOT.get(), 2)
                 .save(consumer, modLoc("machine/smelter/shellite_ingot"));
 
         MachineRecipeBuilder.smelter()
@@ -963,7 +959,7 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .input(ThermalExtraItems.ANCIENT_DUST.get(), 2)
                 .input(Items.NETHERITE_SCRAP)
                 .input(ItemTagsCoFH.INGOTS_NICKEL)
-            .output(ThermalExtraItems.DRAGONSTEEL_INGOT.get())
+            .output(ThermalExtraItems.DRAGONSTEEL_INGOT.get(), 2)
                 .save(consumer, modLoc("machine/smelter/dragonsteel_ingot"));
 
         MachineRecipeBuilder.smelter()
@@ -975,7 +971,7 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .input(ItemTagsCoFH.DUSTS_DIAMOND, 2)
                 .input(Items.NETHERITE_SCRAP)
                 .input(Items.ECHO_SHARD)
-                .output(ThermalExtraItems.ABYSSAL_INGOT.get())
+                .output(ThermalExtraItems.ABYSSAL_INGOT.get(), 2)
                 .save(consumer, modLoc("machine/smelter/abyssal_ingot"));
 
         MachineRecipeBuilder.smelter()
@@ -985,32 +981,32 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
 
         MachineRecipeBuilder.smelter()
                 .input(ThermalExtraTags.Items.SOUL_INFUSED_INGOT)
-                .input(ITEMS.get(ThermalIDs.ID_OBSIDIAN_GLASS))
-                .output(ThermalExtraBlocks.SOUL_INFUSED_GLASS.get())
+                .input(ITEMS.get(ThermalIDs.ID_OBSIDIAN_GLASS), 2)
+                .output(ThermalExtraBlocks.SOUL_INFUSED_GLASS.get(), 2)
                 .save(consumer, modLoc("machine/smelter/soul_infused_glass"));
 
         MachineRecipeBuilder.smelter()
                 .input(ThermalExtraTags.Items.TWINITE_INGOT)
-                .input(ITEMS.get(ThermalIDs.ID_OBSIDIAN_GLASS))
-                .output(ThermalExtraBlocks.TWINITE_GLASS.get())
+                .input(ITEMS.get(ThermalIDs.ID_OBSIDIAN_GLASS), 2)
+                .output(ThermalExtraBlocks.TWINITE_GLASS.get(), 2)
                 .save(consumer, modLoc("machine/smelter/twinite_glass"));
 
         MachineRecipeBuilder.smelter()
                 .input(ThermalExtraTags.Items.SHELLITE_INGOT)
-                .input(ITEMS.get(ThermalIDs.ID_OBSIDIAN_GLASS))
-                .output(ThermalExtraBlocks.SHELLITE_GLASS.get())
+                .input(ITEMS.get(ThermalIDs.ID_OBSIDIAN_GLASS), 2)
+                .output(ThermalExtraBlocks.SHELLITE_GLASS.get(), 2)
                 .save(consumer, modLoc("machine/smelter/shellite_glass"));
 
         MachineRecipeBuilder.smelter()
                 .input(ThermalExtraTags.Items.DRAGONSTEEL_INGOT)
-                .input(ITEMS.get(ThermalIDs.ID_OBSIDIAN_GLASS))
-                .output(ThermalExtraBlocks.DRAGONSTEEL_GLASS.get())
+                .input(ITEMS.get(ThermalIDs.ID_OBSIDIAN_GLASS), 2)
+                .output(ThermalExtraBlocks.DRAGONSTEEL_GLASS.get(), 2)
                 .save(consumer, modLoc("machine/smelter/dragonsteel_glass"));
 
         MachineRecipeBuilder.smelter()
                 .input(ThermalExtraTags.Items.ABYSSAL_INGOT)
-                .input(ITEMS.get(ThermalIDs.ID_OBSIDIAN_GLASS))
-                .output(ThermalExtraBlocks.ABYSSAL_GLASS.get())
+                .input(ITEMS.get(ThermalIDs.ID_OBSIDIAN_GLASS), 2)
+                .output(ThermalExtraBlocks.ABYSSAL_GLASS.get(), 2)
                 .save(consumer, modLoc("machine/smelter/abyssal_glass"));
 
         MachineRecipeBuilder.component_assembly()
@@ -1019,14 +1015,6 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .input(Tags.Items.INGOTS_IRON)
                 .output(ThermalCore.ITEMS.get("redstone_servo"))
                 .save(consumer, "thermal_extra:machine/component_assembly/redstone_servo");
-
-        MachineRecipeBuilder.component_assembly()
-                .energy(5000)
-                .input(new FluidStack(TCoreFluids.REDSTONE_FLUID.get(), 50))
-                .input(Tags.Items.INGOTS_IRON, 32)
-                .input(Tags.Items.INGOTS_GOLD, 16)
-                .output(ThermalCore.ITEMS.get("slag"))
-                .save(consumer, "thermal_extra:machine/component_assembly/test");
 
         TagKey<Item> rawAluminum = forgeTag("raw_materials/aluminum");
         TagKey<Item> rawUranium = forgeTag("raw_materials/uranium");
@@ -1047,37 +1035,42 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
         nitraticOre(withConditions(consumer).addCondition(new NotCondition(new TagEmptyCondition("forge:raw_materials/arcane_gold"))), "arcane_gold", rawArcaneGold, ThermalExtraItems.ARCANE_GOLD_ORE_CHUNK);
         nitraticOre(withConditions(consumer).addCondition(new NotCondition(new TagEmptyCondition("forge:raw_materials/zinc"))), "zinc", rawZinc, ThermalExtraItems.ZINC_ORE_CHUNK);
 
+        MachineRecipeBuilder.refinery()
+                .input(new FluidStack(ThermalExtraFluids.CRYSTALLIZED_SUNFLOWER_OIL.still().get(), 200))
+                .output(new FluidStack(ThermalExtraFluids.REFINED_SUNFLOWER_OIL.still().get(), 50))
+                .save(consumer, "thermal_extra:machine/refinery/refined_sunflower_oil");
+
         MachineRecipeBuilder.advanced_refinery()
                 .input(new FluidStack(ThermalExtraFluids.CRYSTALLIZED_SUNFLOWER_OIL.still().get(), 200))
-                .output(new MachineRecipeBuilder.ChanceItemStack(new ItemStack(ITEMS.get("compost")), 0.1f, false))
                 .output(new FluidStack(ThermalExtraFluids.REFINED_SUNFLOWER_OIL.still().get(), 100))
                 .save(consumer, "thermal_extra:machine/advanced_refinery/refined_sunflower_oil");
 
         MachineRecipeBuilder.refinery()
                 .input(new FluidStack(ThermalExtraFluids.FLUX_INFUSED_OIL.still().get(), 100))
                 .output(new MachineRecipeBuilder.ChanceItemStack(new ItemStack(ITEMS.get("bitumen")), 0.1f, false))
-                .output(new FluidStack(TCoreFluids.HEAVY_OIL_FLUID.get(), 100))
-                .output(new FluidStack(TCoreFluids.LIGHT_OIL_FLUID.get(), 100))
+                .output(new FluidStack(ThermalExtraFluids.NAPHTHA.still().get(), 50))
+                .output(new FluidStack(ThermalExtraFluids.PARAFFIN_WAX.still().get(), 50))
                 .save(consumer, "thermal_extra:machine/refinery/flux_infused_oil");
 
         MachineRecipeBuilder.advanced_refinery()
-                .input(new FluidStack(ThermalExtraFluids.FLUX_INFUSED_OIL.still().get(), 100))
+                .input(new FluidStack(ThermalExtraFluids.FLUX_INFUSED_OIL.still().get(), 200))
                 .output(new MachineRecipeBuilder.ChanceItemStack(new ItemStack(ITEMS.get("bitumen")), 0.15f, false))
-                .output(new FluidStack(TCoreFluids.HEAVY_OIL_FLUID.get(), 150))
-                .output(new FluidStack(TCoreFluids.LIGHT_OIL_FLUID.get(), 150))
+                .output(new FluidStack(ThermalExtraFluids.NAPHTHA.still().get(), 50))
+                .output(new FluidStack(ThermalExtraFluids.PARAFFIN_WAX.still().get(), 50))
+                .output(new FluidStack(ThermalExtraFluids.LUBRICANT.still().get(), 100))
                 .save(consumer, "thermal_extra:machine/advanced_refinery/flux_infused_oil");
 
-        MachineRecipeBuilder.advanced_refinery()
-                .input(new FluidStack(TCoreFluids.HEAVY_OIL_FLUID.get(), 100))
-                .output(new MachineRecipeBuilder.ChanceItemStack(new ItemStack(ITEMS.get("tar")), 0.15f, false))
-                .output(new FluidStack(ThermalExtraFluids.DIESEL.still().get(), 80))
-                .save(consumer, "thermal_extra:machine/advanced_refinery/heavy_oil");
-
-        MachineRecipeBuilder.advanced_refinery()
-                .input(new FluidStack(TCoreFluids.LIGHT_OIL_FLUID.get(), 100))
-                .output(new MachineRecipeBuilder.ChanceItemStack(new ItemStack(ITEMS.get("sulfur_dust")), 0.25f, false))
-                .output(new FluidStack(ThermalExtraFluids.DIESEL.still().get(), 80))
-                .save(consumer, "thermal_extra:machine/advanced_refinery/light_oil");
+//        MachineRecipeBuilder.advanced_refinery()
+//                .input(new FluidStack(TCoreFluids.HEAVY_OIL_FLUID.get(), 100))
+//                .output(new MachineRecipeBuilder.ChanceItemStack(new ItemStack(ITEMS.get("tar")), 0.15f, false))
+//                .output(new FluidStack(ThermalExtraFluids.DIESEL.still().get(), 80))
+//                .save(consumer, "thermal_extra:machine/advanced_refinery/heavy_oil");
+//
+//        MachineRecipeBuilder.advanced_refinery()
+//                .input(new FluidStack(TCoreFluids.LIGHT_OIL_FLUID.get(), 100))
+//                .output(new MachineRecipeBuilder.ChanceItemStack(new ItemStack(ITEMS.get("sulfur_dust")), 0.25f, false))
+//                .output(new FluidStack(ThermalExtraFluids.DIESEL.still().get(), 80))
+//                .save(consumer, "thermal_extra:machine/advanced_refinery/light_oil");
 
         MachineRecipeBuilder.fluid_mixer()
                 .energy(10000)
@@ -1256,19 +1249,19 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
         SmithingTransformRecipeBuilder.smithing(Ingredient.of(ThermalExtraItems.AUGMENT_TEMPLATE.get()), Ingredient.of(pIngredientItem), Ingredient.of(ingot), pCategory, pResultItem).unlocks(getHasName(ingot), has(Items.NETHERITE_INGOT)).save(pFinishedRecipeConsumer, "thermal_extra:crafting/augment/"+getItemName(pResultItem) + "_smithing");
     }
     
-    public void crucibleRecipe(Consumer<FinishedRecipe> consumer, int energy, FluidThermalExtra fluid, int amount, Ingredient input, String name) {
+    public void crucibleRecipe(Consumer<FinishedRecipe> consumer, int energy, FluidHolder fluid, int amount, Ingredient input, String name) {
         MachineRecipeBuilder.crucible()
                 .input(input)
-                .output(fluid.getStillFluid().get(), amount)
+                .output(fluid.still().get(), amount)
                 .energy(energy)
                 .save(consumer, modLoc("machine/crucible/"+name));
     }
 
-    public void crucibleRecipe(Consumer<FinishedRecipe> consumer, int energy, FluidThermalExtra fluid, int amount, TagKey<Item> input, String name) {
+    public void crucibleRecipe(Consumer<FinishedRecipe> consumer, int energy, FluidHolder fluid, int amount, TagKey<Item> input, String name) {
         this.crucibleRecipe(tagExists(consumer, input), energy, fluid, amount, Ingredient.of(input), name);
     }
 
-    public void crucibleRecipe(Consumer<FinishedRecipe> consumer, int energy, FluidThermalExtra fluid, int amount, Item input, String name) {
+    public void crucibleRecipe(Consumer<FinishedRecipe> consumer, int energy, FluidHolder fluid, int amount, Item input, String name) {
         this.crucibleRecipe(consumer, energy, fluid, amount, Ingredient.of(input), name);
     }
 

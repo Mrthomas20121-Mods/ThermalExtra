@@ -50,11 +50,16 @@ public class ExtraTagGen {
 
         @Override
         protected void addTags(HolderLookup.Provider provider) {
-            tag(ThermalExtraTags.Fluids.SOUL_INFUSED).add(ThermalExtraFluids.MOLTEN_SOUL_INFUSED.still().get());
-            tag(ThermalExtraTags.Fluids.SHELLITE).add(ThermalExtraFluids.MOLTEN_SHELLITE.still().get());
-            tag(ThermalExtraTags.Fluids.TWINITE).add(ThermalExtraFluids.MOLTEN_TWINITE.still().get());
-            tag(ThermalExtraTags.Fluids.DRAGONSTEEL).add(ThermalExtraFluids.MOLTEN_DRAGONSTEEL.still().get());
-            tag(ThermalExtraTags.Fluids.ABYSSAL).add(ThermalExtraFluids.MOLTEN_ABYSSAL.still().get());
+            tag(ThermalExtraFluids.SOUL_INFUSED.tag()).add(ThermalExtraFluids.SOUL_INFUSED.still().get());
+            tag(ThermalExtraFluids.SHELLITE.tag()).add(ThermalExtraFluids.SHELLITE.still().get());
+            tag(ThermalExtraFluids.TWINITE.tag()).add(ThermalExtraFluids.TWINITE.still().get());
+            tag(ThermalExtraFluids.DRAGONSTEEL.tag()).add(ThermalExtraFluids.DRAGONSTEEL.still().get());
+            tag(ThermalExtraFluids.ABYSSAL.tag()).add(ThermalExtraFluids.ABYSSAL.still().get());
+
+            tag(ThermalExtraFluids.DIESEL.tag()).add(ThermalExtraFluids.DIESEL.still().get());
+            tag(ThermalExtraFluids.GASOLINE.tag()).add(ThermalExtraFluids.GASOLINE.still().get());
+            tag(ThermalExtraFluids.LUBRICANT.tag()).add(ThermalExtraFluids.LUBRICANT.still().get());
+            tag(ThermalExtraFluids.NAPHTHA.tag()).add(ThermalExtraFluids.NAPHTHA.still().get());
 
             //tag();
         }
@@ -298,12 +303,25 @@ public class ExtraTagGen {
                     set.sickle().get()
             );
 
+            tag(Tags.Items.TOOLS).addTag(tool);
+
+            tag(ThermalExtraTags.Items.KNIVES).add(set.knife().get());
+            tag(ThermalExtraTags.Items.TOOLS_KNIVES).add(set.knife().get());
+            tag(ThermalExtraTags.Items.HAMMERS).add(set.hammer().get());
+            tag(ThermalExtraTags.Items.TOOLS_HAMMERS).add(set.hammer().get());
+
             tag(armor).add(
                     set.helmet().get(),
                     set.chestplate().get(),
                     set.leggings().get(),
                     set.boots().get()
             );
+
+            tag(Tags.Items.ARMORS).addTag(armor);
+            tag(Tags.Items.ARMORS_HELMETS).add(set.helmet().get());
+            tag(Tags.Items.ARMORS_CHESTPLATES).add(set.chestplate().get());
+            tag(Tags.Items.ARMORS_LEGGINGS).add(set.leggings().get());
+            tag(Tags.Items.ARMORS_BOOTS).add(set.boots().get());
         }
     }
 

@@ -13,12 +13,12 @@
       "item": "thermal:bitumen"
     },
     {
-      "amount": 100,
-      "fluid": "thermal:heavy_oil"
+      "amount": 50,
+      "fluid": "thermal_extra:naphtha"
     },
     {
-      "amount": 100,
-      "fluid": "thermal:light_oil"
+      "amount": 50,
+      "fluid": "thermal_extra:paraffin_wax"
     }
   ]
 }

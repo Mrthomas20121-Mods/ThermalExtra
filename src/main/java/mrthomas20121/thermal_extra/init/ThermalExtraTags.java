@@ -20,18 +20,6 @@ public class ThermalExtraTags {
         }
     }
 
-    public static class Fluids {
-        private static TagKey<Fluid> create(String name) {
-            return TagKey.create(Registries.FLUID, new ResourceLocation(name));
-        }
-
-        public static TagKey<Fluid> SOUL_INFUSED = ThermalExtraFluids.MOLTEN_SOUL_INFUSED.getFluidTag();
-        public static TagKey<Fluid> SHELLITE = ThermalExtraFluids.MOLTEN_SHELLITE.getFluidTag();
-        public static TagKey<Fluid> TWINITE = ThermalExtraFluids.MOLTEN_TWINITE.getFluidTag();
-        public static TagKey<Fluid> DRAGONSTEEL = ThermalExtraFluids.MOLTEN_DRAGONSTEEL.getFluidTag();
-        public static TagKey<Fluid> ABYSSAL = ThermalExtraFluids.MOLTEN_ABYSSAL.getFluidTag();
-    }
-
     public static class Blocks {
 
         private static TagKey<Block> create(String name) {
@@ -61,6 +49,11 @@ public class ThermalExtraTags {
         private static TagKey<Item> create(String name) {
             return TagKey.create(Registries.ITEM, new ResourceLocation(name));
         }
+
+        public static TagKey<Item> KNIVES = create("forge:knifes");
+        public static TagKey<Item> TOOLS_KNIVES = create("forge:tools/knifes");
+        public static TagKey<Item> HAMMERS = create("forge:hammers");
+        public static TagKey<Item> TOOLS_HAMMERS = create("forge:tools/hammers");
 
         public static TagKey<Item> RAW_MATERIALS_ALUMINUM = create("forge:raw_materials/aluminum");
         public static TagKey<Item> RAW_MATERIALS_ARCANE_GOLD = create("forge:raw_materials/arcane_gold");

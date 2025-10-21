@@ -6,6 +6,7 @@ import cofh.lib.api.inventory.IItemStackHolder;
 import cofh.lib.common.fluid.FluidStackHolder;
 import cofh.lib.util.crafting.ComparableItemStack;
 import cofh.thermal.core.common.item.SlotSealItem;
+import cofh.thermal.core.util.managers.machine.RefineryRecipeManager;
 import cofh.thermal.lib.util.managers.AbstractManager;
 import cofh.thermal.lib.util.managers.IRecipeManager;
 import cofh.thermal.lib.util.recipes.IThermalInventory;
@@ -83,6 +84,16 @@ public class AdvancedRefineryRecipeManager extends AbstractManager implements IR
         for (FluidStack fluidInput : recipe.getInputFluids().get(0).getFluids()) {
             addRecipe(recipe.getEnergy(), recipe.getXp(), Collections.emptyList(), Collections.singletonList(fluidInput), recipe.getOutputItems(), recipe.getOutputItemChances(), recipe.getOutputFluids());
         }
+    }
+
+    public void addRecipe(IMachineRecipe recipe) {
+
+        if (recipe.getInputFluids().isEmpty()) {
+            return;
+        }
+        FluidStack fluidStack = recipe.getInputFluids().get(0);
+
+        recipeMap.put(FluidHelper.fluidHashcode(fluidStack), recipe);
     }
 
     protected IMachineRecipe addRecipe(int energy, float experience, List<ItemStack> inputItems, List<FluidStack> inputFluids, List<ItemStack> outputItems, List<Float> chance, List<FluidStack> outputFluids) {

@@ -1,0 +1,16 @@
+{
+  "type": "thermal:refinery",
+  "energy": 4000,
+  "ingredients": [
+    {
+      "amount": 200,
+      "fluid": "thermal_extra:crystallized_sunflower_oil"
+    }
+  ],
+  "result": [
+    {
+      "amount": 50,
+      "fluid": "thermal_extra:refined_sunflower_oil"
+    }
+  ]
+}

@@ -9,10 +9,6 @@
   ],
   "result": [
     {
-      "chance": 0.1,
-      "item": "thermal:compost"
-    },
-    {
       "amount": 100,
       "fluid": "thermal_extra:refined_sunflower_oil"
     }

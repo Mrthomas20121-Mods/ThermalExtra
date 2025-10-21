@@ -127,13 +127,17 @@ public class ExtraModelGen extends ItemModelProviderCoFH {
         itemModel(ThermalExtraFluids.SUNFLOWER_OIL.getBucket());
         itemModel(ThermalExtraFluids.CRYSTALLIZED_SUNFLOWER_OIL.getBucket());
         itemModel(ThermalExtraFluids.REFINED_SUNFLOWER_OIL.getBucket());
-        itemModel(ThermalExtraFluids.MOLTEN_ABYSSAL.getBucket());
-        itemModel(ThermalExtraFluids.MOLTEN_SOUL_INFUSED.getBucket());
-        itemModel(ThermalExtraFluids.MOLTEN_SHELLITE.getBucket());
-        itemModel(ThermalExtraFluids.MOLTEN_TWINITE.getBucket());
-        itemModel(ThermalExtraFluids.MOLTEN_DRAGONSTEEL.getBucket());
+        itemModel(ThermalExtraFluids.ABYSSAL.getBucket());
+        itemModel(ThermalExtraFluids.SOUL_INFUSED.getBucket());
+        itemModel(ThermalExtraFluids.SHELLITE.getBucket());
+        itemModel(ThermalExtraFluids.TWINITE.getBucket());
+        itemModel(ThermalExtraFluids.DRAGONSTEEL.getBucket());
         itemModel(ThermalExtraFluids.FLUX_INFUSED_OIL.getBucket());
         itemModel(ThermalExtraFluids.DIESEL.getBucket());
+        itemModel(ThermalExtraFluids.GASOLINE.getBucket());
+        itemModel(ThermalExtraFluids.NAPHTHA.getBucket());
+        itemModel(ThermalExtraFluids.LUBRICANT.getBucket());
+        itemModel(ThermalExtraFluids.PARAFFIN_WAX.getBucket());
         itemModel(ThermalExtraFluids.POLYOLEFIN.getBucket());
 
         itemModel(ThermalExtraFluids.RAW_ALUMINUM.getBucket());

@@ -7,6 +7,14 @@
     "#forge:tools/soul_infused",
     "#forge:tools/enderium",
     "#forge:tools/lumium",
-    "#forge:tools/signalum"
+    "#forge:tools/signalum",
+    "#forge:tools/signalum",
+    "#forge:tools/lumium",
+    "#forge:tools/enderium",
+    "#forge:tools/soul_infused",
+    "#forge:tools/shellite",
+    "#forge:tools/twinite",
+    "#forge:tools/dragonsteel",
+    "#forge:tools/abyssal"
   ]
 }

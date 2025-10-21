@@ -6,6 +6,7 @@ import cofh.lib.init.data.loot.BlockLootSubProviderCoFH;
 import mrthomas20121.thermal_extra.ThermalExtra;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.GlassBlock;
+import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.jetbrains.annotations.NotNull;
 
@@ -21,7 +22,7 @@ public class ExtraBlockLoot extends BlockLootSubProviderCoFH {
                     else if(block instanceof EntityBlockActive6Way || block instanceof EntityBlockActive4Way) {
                         createSyncDropTable(block);
                     }
-                    else {
+                    else if (!(block instanceof LiquidBlock)) {
                         dropSelf(block);
                     }
                 });

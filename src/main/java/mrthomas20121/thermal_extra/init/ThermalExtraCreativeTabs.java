@@ -159,13 +159,17 @@ public class ThermalExtraCreativeTabs {
                 output.accept(ThermalExtraItems.ABYSSAL_GEAR.get());
                 addToolSet(ThermalExtraItems.ABYSSAL_SET, output);
 
-                output.accept(ThermalExtraFluids.POLYOLEFIN.getBucket().get());
                 output.accept(ThermalExtraFluids.FLUX_INFUSED_OIL.getBucket().get());
                 output.accept(ThermalExtraFluids.DIESEL.getBucket().get());
-                output.accept(ThermalExtraFluids.MOLTEN_DRAGONSTEEL.getBucket().get());
-                output.accept(ThermalExtraFluids.MOLTEN_TWINITE.getBucket().get());
-                output.accept(ThermalExtraFluids.MOLTEN_SHELLITE.getBucket().get());
-                output.accept(ThermalExtraFluids.MOLTEN_SOUL_INFUSED.getBucket().get());
+                output.accept(ThermalExtraFluids.GASOLINE.getBucket().get());
+                output.accept(ThermalExtraFluids.LUBRICANT.getBucket().get());
+                output.accept(ThermalExtraFluids.NAPHTHA.getBucket().get());
+                output.accept(ThermalExtraFluids.POLYOLEFIN.getBucket().get());
+                output.accept(ThermalExtraFluids.PARAFFIN_WAX.getBucket().get());
+                output.accept(ThermalExtraFluids.DRAGONSTEEL.getBucket().get());
+                output.accept(ThermalExtraFluids.TWINITE.getBucket().get());
+                output.accept(ThermalExtraFluids.SHELLITE.getBucket().get());
+                output.accept(ThermalExtraFluids.SOUL_INFUSED.getBucket().get());
                 output.accept(ThermalExtraFluids.SUNFLOWER_OIL.getBucket().get());
                 output.accept(ThermalExtraFluids.CRYSTALLIZED_SUNFLOWER_OIL.getBucket().get());
                 output.accept(ThermalExtraFluids.REFINED_SUNFLOWER_OIL.getBucket().get());
