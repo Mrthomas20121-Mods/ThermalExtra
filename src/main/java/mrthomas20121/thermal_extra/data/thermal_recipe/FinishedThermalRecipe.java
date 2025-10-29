@@ -28,16 +28,10 @@ public record FinishedThermalRecipe<T extends ThermalRecipe>(RecipeSerializer<T>
         JsonArray output = new JsonArray();
         JsonArray ingredients = new JsonArray();
         this.inputItems.forEach(ingredient -> {
-            if(ingredient instanceof IngredientWithCount c) {
-                JsonElement json = c.toJson();
-                json.getAsJsonObject().addProperty("count", c.getItems()[0].getCount());
-                ingredients.add(json);
-            }
-            else {
-                JsonElement e = ingredient.toJson();
-                e.getAsJsonObject().addProperty("count", 1);
-                ingredients.add(e);
-            }
+            JsonElement e = ingredient.toJson();
+            int count = ingredient.getItems()[0].getCount();
+            if(count > 1) e.getAsJsonObject().addProperty("count", count);
+            ingredients.add(e);
         });
         this.inputFluids.stream().map(FluidIngredient::toJson).forEach(ingredients::add);
         object.add(RecipeJsonUtils.INGREDIENTS, ingredients);
