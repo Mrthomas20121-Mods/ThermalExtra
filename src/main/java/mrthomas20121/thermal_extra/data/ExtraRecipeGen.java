@@ -107,20 +107,20 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ThermalExtraItems.DRAGONSTEEL_DUST.get(), 2)
                 .requires(ThermalExtraItems.ANCIENT_DUST.get())
                 .requires(ThermalExtraItems.ANCIENT_DUST.get())
-                .requires(Items.NETHERITE_SCRAP)
-                .requires(ItemTagsCoFH.DUSTS_ENDER_PEARL)
+                .requires(ItemTagsCoFH.DUSTS_CINNABAR)
+                .requires(ItemTagsCoFH.DUSTS_ENDERIUM)
                 .unlockedBy("has_ancient_dust", has(ThermalExtraItems.ANCIENT_DUST.get()))
-                .unlockedBy("has_netherite_scrap", has(Items.NETHERITE_SCRAP))
-                .unlockedBy("has_nickel_dust", has(ItemTagsCoFH.DUSTS_NICKEL))
+                .unlockedBy("has_netherite_dust", has(ItemTagsCoFH.DUSTS_CINNABAR))
+                .unlockedBy("has_enderium_dust", has(ItemTagsCoFH.DUSTS_ENDERIUM))
                 .save(consumer);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ThermalExtraItems.ABYSSAL_DUST.get(), 2)
-                .requires(ItemTagsCoFH.DUSTS_DIAMOND)
-                .requires(ItemTagsCoFH.DUSTS_DIAMOND)
-                .requires(Items.NETHERITE_SCRAP)
+                .requires(ThermalExtraItems.ANCIENT_DUST.get())
+                .requires(ThermalExtraItems.ANCIENT_DUST.get())
+                .requires(ItemTagsCoFH.DUSTS_NETHERITE)
                 .requires(Items.ECHO_SHARD)
-                .unlockedBy("has_nickel_dust", has(ItemTagsCoFH.DUSTS_NICKEL))
-                .unlockedBy("has_netherite_scrap", has(Items.NETHERITE_SCRAP))
+                .unlockedBy("has_ancient_dust", has(ThermalExtraItems.ANCIENT_DUST.get()))
+                .unlockedBy("has_netherite_dust", has(ItemTagsCoFH.DUSTS_NETHERITE))
                 .unlockedBy("has_echo_shard", has(Items.ECHO_SHARD))
                 .save(consumer);
 
@@ -974,8 +974,8 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
 
         MachineRecipeBuilder.smelter()
                 .input(ThermalExtraItems.ANCIENT_DUST.get(), 2)
-                .input(Items.NETHERITE_SCRAP)
-                .input(ItemTagsCoFH.INGOTS_NICKEL)
+                .input(ItemTagsCoFH.GEMS_CINNABAR)
+                .input(ItemTagsCoFH.INGOTS_ENDERIUM)
             .output(ThermalExtraItems.DRAGONSTEEL_INGOT.get(), 2)
                 .save(consumer, modLoc("machine/smelter/dragonsteel_ingot"));
 
@@ -985,8 +985,8 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .save(consumer, modLoc("machine/smelter/dragonsteel_ingot_from_dust"));
 
         MachineRecipeBuilder.smelter()
-                .input(ItemTagsCoFH.DUSTS_DIAMOND, 2)
-                .input(Items.NETHERITE_SCRAP)
+                .input(ThermalExtraItems.ANCIENT_DUST.get(), 2)
+                .input(ItemTagsCoFH.DUSTS_NETHERITE)
                 .input(Items.ECHO_SHARD)
                 .output(ThermalExtraItems.ABYSSAL_INGOT.get(), 2)
                 .save(consumer, modLoc("machine/smelter/abyssal_ingot"));

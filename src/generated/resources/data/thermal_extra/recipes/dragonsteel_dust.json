@@ -9,10 +9,10 @@
       "item": "thermal_extra:ancient_dust"
     },
     {
-      "item": "minecraft:netherite_scrap"
+      "tag": "forge:dusts/cinnabar"
     },
     {
-      "tag": "forge:dusts/ender_pearl"
+      "tag": "forge:dusts/enderium"
     }
   ],
   "result": {

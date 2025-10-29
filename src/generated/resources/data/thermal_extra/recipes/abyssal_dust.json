@@ -3,13 +3,13 @@
   "category": "misc",
   "ingredients": [
     {
-      "tag": "forge:dusts/diamond"
+      "item": "thermal_extra:ancient_dust"
     },
     {
-      "tag": "forge:dusts/diamond"
+      "item": "thermal_extra:ancient_dust"
     },
     {
-      "item": "minecraft:netherite_scrap"
+      "tag": "forge:dusts/netherite"
     },
     {
       "item": "minecraft:echo_shard"
