@@ -4,7 +4,6 @@
   "experience": 1.1,
   "ingredients": [
     {
-      "count": 1,
       "tag": "forge:raw_materials/nickel"
     }
   ],

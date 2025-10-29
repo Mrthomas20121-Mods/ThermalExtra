@@ -3,11 +3,9 @@
   "energy": 3000,
   "ingredients": [
     {
-      "count": 1,
       "tag": "forge:nuggets/soul_infused"
     },
     {
-      "count": 1,
       "item": "thermal:press_coin_die"
     }
   ],

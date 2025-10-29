@@ -3,7 +3,6 @@
   "energy": 30000,
   "ingredients": [
     {
-      "count": 1,
       "item": "thermal_extra:chiller_plate_cast"
     },
     {

@@ -3,7 +3,6 @@
   "energy": 50000,
   "ingredients": [
     {
-      "count": 1,
       "item": "minecraft:dragon_head"
     }
   ],

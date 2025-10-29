@@ -3,11 +3,9 @@
   "energy": 3000,
   "ingredients": [
     {
-      "count": 1,
       "tag": "forge:ingots/dragonsteel"
     },
     {
-      "count": 1,
       "item": "thermal:press_coin_die"
     }
   ],

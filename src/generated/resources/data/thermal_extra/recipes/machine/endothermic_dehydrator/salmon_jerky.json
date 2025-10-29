@@ -3,7 +3,6 @@
   "energy": 4000,
   "ingredients": [
     {
-      "count": 1,
       "item": "minecraft:cooked_salmon"
     }
   ],

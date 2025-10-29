@@ -3,11 +3,9 @@
   "energy": 9000,
   "ingredients": [
     {
-      "count": 1,
       "tag": "forge:ingots/enderium"
     },
     {
-      "count": 1,
       "item": "thermal_extra:press_rod_die"
     }
   ],

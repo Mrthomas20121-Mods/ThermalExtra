@@ -3,7 +3,6 @@
   "energy": 6000,
   "ingredients": [
     {
-      "count": 1,
       "item": "minecraft:sunflower"
     }
   ],
