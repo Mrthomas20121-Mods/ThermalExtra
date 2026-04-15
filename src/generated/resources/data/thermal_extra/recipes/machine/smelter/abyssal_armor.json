@@ -1,0 +1,15 @@
+{
+  "type": "thermal:smelter",
+  "energy": 4000,
+  "ingredients": [
+    {
+      "tag": "forge:armors/abyssal"
+    }
+  ],
+  "result": [
+    {
+      "count": 3,
+      "item": "thermal_extra:abyssal_ingot"
+    }
+  ]
+}

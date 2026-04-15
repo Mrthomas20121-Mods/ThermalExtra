@@ -1026,6 +1026,86 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .output(ThermalExtraBlocks.ABYSSAL_GLASS.get(), 2)
                 .save(consumer, modLoc("machine/smelter/abyssal_glass"));
 
+        MachineRecipeBuilder.smelter()
+                .input(ThermalExtraTags.Items.ABYSSAL_TOOLS)
+                .output(ThermalExtraItems.ABYSSAL_INGOT.get())
+                .save(consumer, modLoc("machine/smelter/abyssal_tools"));
+
+        MachineRecipeBuilder.smelter()
+                .input(ThermalExtraTags.Items.DRAGONSTEEL_TOOLS)
+                .output(ThermalExtraItems.DRAGONSTEEL_INGOT.get())
+                .save(consumer, modLoc("machine/smelter/dragonsteel_tools"));
+
+        MachineRecipeBuilder.smelter()
+                .input(ThermalExtraTags.Items.SHELLITE_TOOLS)
+                .output(ThermalExtraItems.SHELLITE_INGOT.get())
+                .save(consumer, modLoc("machine/smelter/shellite_tools"));
+
+        MachineRecipeBuilder.smelter()
+                .input(ThermalExtraTags.Items.TWINITE_TOOLS)
+                .output(ThermalExtraItems.TWINITE_INGOT.get())
+                .save(consumer, modLoc("machine/smelter/twinite_tools"));
+
+        MachineRecipeBuilder.smelter()
+                .input(ThermalExtraTags.Items.SOUL_INFUSED_TOOLS)
+                .output(ThermalExtraItems.SOUL_INFUSED_INGOT.get())
+                .save(consumer, modLoc("machine/smelter/soul_infused_tools"));
+
+        MachineRecipeBuilder.smelter()
+                .input(ThermalExtraTags.Items.ENDERIUM_TOOLS)
+                .output(ITEMS.get("enderium_ingot"))
+                .save(consumer, modLoc("machine/smelter/enderium_tools"));
+
+        MachineRecipeBuilder.smelter()
+                .input(ThermalExtraTags.Items.LUMIUM_TOOLS)
+                .output(ITEMS.get("lumium_ingot"))
+                .save(consumer, modLoc("machine/smelter/lumium_tools"));
+
+        MachineRecipeBuilder.smelter()
+                .input(ThermalExtraTags.Items.SIGNALUM_TOOLS)
+                .output(ITEMS.get("signalum_ingot"))
+                .save(consumer, modLoc("machine/smelter/signalum_tools"));
+
+        MachineRecipeBuilder.smelter()
+                .input(ThermalExtraTags.Items.ABYSSAL_ARMOR)
+                .output(ThermalExtraItems.ABYSSAL_INGOT.get(), 3)
+                .save(consumer, modLoc("machine/smelter/abyssal_armor"));
+
+        MachineRecipeBuilder.smelter()
+                .input(ThermalExtraTags.Items.DRAGONSTEEL_ARMOR)
+                .output(ThermalExtraItems.DRAGONSTEEL_INGOT.get(), 3)
+                .save(consumer, modLoc("machine/smelter/dragonsteel_armor"));
+
+        MachineRecipeBuilder.smelter()
+                .input(ThermalExtraTags.Items.SHELLITE_ARMOR)
+                .output(ThermalExtraItems.SHELLITE_INGOT.get(), 3)
+                .save(consumer, modLoc("machine/smelter/shellite_armor"));
+
+        MachineRecipeBuilder.smelter()
+                .input(ThermalExtraTags.Items.TWINITE_ARMOR)
+                .output(ThermalExtraItems.TWINITE_INGOT.get(), 3)
+                .save(consumer, modLoc("machine/smelter/twinite_armor"));
+
+        MachineRecipeBuilder.smelter()
+                .input(ThermalExtraTags.Items.SOUL_INFUSED_ARMOR)
+                .output(ThermalExtraItems.SOUL_INFUSED_INGOT.get(), 3)
+                .save(consumer, modLoc("machine/smelter/soul_infused_armor"));
+
+        MachineRecipeBuilder.smelter()
+                .input(ThermalExtraTags.Items.ENDERIUM_ARMOR)
+                .output(ITEMS.get("enderium_ingot"), 3)
+                .save(consumer, modLoc("machine/smelter/enderium_armor"));
+
+        MachineRecipeBuilder.smelter()
+                .input(ThermalExtraTags.Items.LUMIUM_ARMOR)
+                .output(ITEMS.get("lumium_ingot"), 3)
+                .save(consumer, modLoc("machine/smelter/lumium_armor"));
+
+        MachineRecipeBuilder.smelter()
+                .input(ThermalExtraTags.Items.SIGNALUM_ARMOR)
+                .output(ITEMS.get("signalum_ingot"), 3)
+                .save(consumer, modLoc("machine/smelter/signalum_armor"));
+
         MachineRecipeBuilder.component_assembly()
                 .energy(5000)
                 .input(new FluidStack(TCoreFluids.REDSTONE_FLUID.get(), 50))

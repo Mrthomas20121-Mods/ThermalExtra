@@ -1,0 +1,15 @@
+{
+  "type": "thermal:smelter",
+  "energy": 4000,
+  "ingredients": [
+    {
+      "tag": "forge:armors/lumium"
+    }
+  ],
+  "result": [
+    {
+      "count": 3,
+      "item": "thermal:lumium_ingot"
+    }
+  ]
+}

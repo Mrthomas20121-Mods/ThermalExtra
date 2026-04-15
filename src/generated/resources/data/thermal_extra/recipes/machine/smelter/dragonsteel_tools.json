@@ -1,0 +1,14 @@
+{
+  "type": "thermal:smelter",
+  "energy": 4000,
+  "ingredients": [
+    {
+      "tag": "forge:tools/dragonsteel"
+    }
+  ],
+  "result": [
+    {
+      "item": "thermal_extra:dragonsteel_ingot"
+    }
+  ]
+}

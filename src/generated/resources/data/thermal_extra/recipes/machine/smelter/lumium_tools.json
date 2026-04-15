@@ -1,0 +1,14 @@
+{
+  "type": "thermal:smelter",
+  "energy": 4000,
+  "ingredients": [
+    {
+      "tag": "forge:tools/lumium"
+    }
+  ],
+  "result": [
+    {
+      "item": "thermal:lumium_ingot"
+    }
+  ]
+}

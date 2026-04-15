@@ -1,0 +1,15 @@
+{
+  "type": "thermal:smelter",
+  "energy": 4000,
+  "ingredients": [
+    {
+      "tag": "forge:armors/enderium"
+    }
+  ],
+  "result": [
+    {
+      "count": 3,
+      "item": "thermal:enderium_ingot"
+    }
+  ]
+}

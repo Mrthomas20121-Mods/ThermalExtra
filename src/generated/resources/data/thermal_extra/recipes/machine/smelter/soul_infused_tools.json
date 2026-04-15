@@ -1,0 +1,14 @@
+{
+  "type": "thermal:smelter",
+  "energy": 4000,
+  "ingredients": [
+    {
+      "tag": "forge:tools/soul_infused"
+    }
+  ],
+  "result": [
+    {
+      "item": "thermal_extra:soul_infused_ingot"
+    }
+  ]
+}

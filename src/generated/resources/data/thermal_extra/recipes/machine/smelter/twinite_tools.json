@@ -1,0 +1,14 @@
+{
+  "type": "thermal:smelter",
+  "energy": 4000,
+  "ingredients": [
+    {
+      "tag": "forge:tools/twinite"
+    }
+  ],
+  "result": [
+    {
+      "item": "thermal_extra:twinite_ingot"
+    }
+  ]
+}

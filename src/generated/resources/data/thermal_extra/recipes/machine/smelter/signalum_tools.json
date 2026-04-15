@@ -1,0 +1,14 @@
+{
+  "type": "thermal:smelter",
+  "energy": 4000,
+  "ingredients": [
+    {
+      "tag": "forge:tools/signalum"
+    }
+  ],
+  "result": [
+    {
+      "item": "thermal:signalum_ingot"
+    }
+  ]
+}
