@@ -371,6 +371,12 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .output(ThermalExtraItems.ANCIENT_DUST.get(), 2)
                 .save(consumer, "thermal_extra:machine/crystallizer/ancient_dust");
 
+        MachineRecipeBuilder.furnace()
+                .energy(5000)
+                .input(ThermalExtraItems.RAW_MEAT_INGOT.get())
+                .output(ThermalExtraItems.COOKED_MEAT_INGOT.get())
+                .save(consumer, "thermal_extra:machine/redstone_furnace/cooked_meat_ingot");
+
         MachineRecipeBuilder.pulverizer()
                 .energy(7000)
                 .input(Tags.Items.GEMS_AMETHYST)
@@ -475,6 +481,12 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .output(ITEMS.get("silver_ingot"))
                 .energy(10000)
                 .save(consumer, modLoc("machine/chiller/raw_silver"));
+
+        MachineRecipeBuilder.press()
+                .energy(5000)
+                .input(ThermalExtraTags.Items.FOODS_RAW_MEAT, 2)
+                .output(ThermalExtraItems.RAW_MEAT_INGOT.get())
+                .save(consumer, "thermal_extra:machine/press/raw_meat_ingot");
 
         MachineRecipeBuilder.press()
                 .energy(6000)

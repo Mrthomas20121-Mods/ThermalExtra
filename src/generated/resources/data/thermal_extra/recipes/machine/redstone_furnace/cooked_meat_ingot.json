@@ -1,0 +1,14 @@
+{
+  "type": "thermal:furnace",
+  "energy": 5000,
+  "ingredients": [
+    {
+      "item": "thermal_extra:raw_meat_ingot"
+    }
+  ],
+  "result": [
+    {
+      "item": "thermal_extra:cooked_meat_ingot"
+    }
+  ]
+}

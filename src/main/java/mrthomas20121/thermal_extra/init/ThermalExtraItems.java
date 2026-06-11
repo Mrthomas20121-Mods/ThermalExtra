@@ -46,6 +46,9 @@ public class ThermalExtraItems {
 
     public static final RegistryObject<SmithingTemplateItem> AUGMENT_TEMPLATE = ITEMS.register("augment_smithing_upgrade", () -> SmithingTemplateHelper.createTemplate("augment"));
 
+    public static final RegistryObject<Item> RAW_MEAT_INGOT = ITEMS.register("raw_meat_ingot", item(prop -> prop.food(ExtraFoods.RAW_MEAT_INGOT)));
+    public static final RegistryObject<Item> COOKED_MEAT_INGOT = ITEMS.register("cooked_meat_ingot", item(prop -> prop.food(ExtraFoods.COOKED_MEAT_INGOT)));
+
     public static final RegistryObject<Item> BEEF_JERKY = ITEMS.register("beef_jerky", item(prop -> prop.food(ExtraFoods.BEEF_JERKY)));
     public static final RegistryObject<Item> CHICKEN_JERKY = ITEMS.register("chicken_jerky", item(prop -> prop.food(ExtraFoods.CHICKEN_JERKY)));
     public static final RegistryObject<Item> COD_JERKY = ITEMS.register("cod_jerky", item(prop -> prop.food(ExtraFoods.COD_JERKY)));

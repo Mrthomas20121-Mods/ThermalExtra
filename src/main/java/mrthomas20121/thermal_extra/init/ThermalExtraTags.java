@@ -55,6 +55,8 @@ public class ThermalExtraTags {
         public static TagKey<Item> HAMMERS = create("forge:hammers");
         public static TagKey<Item> TOOLS_HAMMERS = create("forge:tools/hammers");
 
+        public static TagKey<Item> FOODS_RAW_MEAT = create("forge:foods/meat/raw");
+
         public static TagKey<Item> RAW_MATERIALS_ALUMINUM = create("forge:raw_materials/aluminum");
         public static TagKey<Item> RAW_MATERIALS_ARCANE_GOLD = create("forge:raw_materials/arcane_gold");
         public static TagKey<Item> RAW_MATERIALS_URANIUM = create("forge:raw_materials/uranium");

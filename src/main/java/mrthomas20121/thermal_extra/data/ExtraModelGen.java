@@ -24,6 +24,10 @@ public class ExtraModelGen extends ItemModelProviderCoFH {
 
     @Override
     protected void registerModels() {
+
+        itemModel(ThermalExtraItems.RAW_MEAT_INGOT);
+        itemModel(ThermalExtraItems.COOKED_MEAT_INGOT);
+
         itemModel(ThermalExtraItems.BEEF_JERKY);
         itemModel(ThermalExtraItems.CHICKEN_JERKY);
         itemModel(ThermalExtraItems.COD_JERKY);

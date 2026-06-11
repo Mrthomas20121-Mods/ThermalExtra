@@ -137,6 +137,10 @@ public class ExtraLangGen extends LanguageProvider {
         addBlock(ThermalExtraBlocks.BLOCKS.getSup("device_lava_gen"), "Magmatic Accumulator");
         addBlock(ThermalExtraBlocks.BLOCKS.getSup("device_harvester"), "Crop Harvester");
 
+        // meat ingot
+        addItem(ThermalExtraItems.RAW_MEAT_INGOT, "Raw Meat Ingot");
+        addItem(ThermalExtraItems.COOKED_MEAT_INGOT, "Cooked Meat Ingot");
+
         // jerky
         addItem(ThermalExtraItems.BEEF_JERKY, "Beef Jerky");
         addItem(ThermalExtraItems.CHICKEN_JERKY, "Chicken Jerky");

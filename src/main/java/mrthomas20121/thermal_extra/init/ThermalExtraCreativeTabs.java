@@ -58,6 +58,9 @@ public class ThermalExtraCreativeTabs {
             .title(Component.translatable("creative_tab.thermal_extra.resources"))
             .displayItems((feature, output) -> {
 
+                output.accept(ThermalExtraItems.RAW_MEAT_INGOT.get());
+                output.accept(ThermalExtraItems.COOKED_MEAT_INGOT.get());
+
                 output.accept(ThermalExtraItems.BEEF_JERKY.get());
                 output.accept(ThermalExtraItems.CHICKEN_JERKY.get());
                 output.accept(ThermalExtraItems.COD_JERKY.get());

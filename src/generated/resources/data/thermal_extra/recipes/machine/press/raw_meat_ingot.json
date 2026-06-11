@@ -1,0 +1,15 @@
+{
+  "type": "thermal:press",
+  "energy": 5000,
+  "ingredients": [
+    {
+      "count": 2,
+      "tag": "forge:foods/meat/raw"
+    }
+  ],
+  "result": [
+    {
+      "item": "thermal_extra:raw_meat_ingot"
+    }
+  ]
+}
