@@ -219,7 +219,7 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .define('R', ITEMS.get("rf_coil"))
                 .define('G', ThermalExtraTags.Items.SOUL_INFUSED_GEAR)
                 .define('I', ThermalExtraTags.Items.TWINITE_INGOT)
-                .define('C', ItemTagsCoFH.INGOTS_CONSTANTAN)
+                .define('C', ThermalExtraTags.Items.SOUL_INFUSED_INGOT)
                 .define('E', Tags.Items.DUSTS_REDSTONE)
                 .pattern(" R ")
                 .pattern("IGI")
