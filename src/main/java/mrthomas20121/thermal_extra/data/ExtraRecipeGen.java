@@ -1304,55 +1304,55 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
         DynamoRecipeBuilder.cold().ingredient(ITEMS.get("blizz_rod")).energy(120000).build(consumer, "thermal_extra:fuels/cold/blizz_cube");
         DynamoRecipeBuilder.cold().ingredient(ITEMS.get("blizz_powder")).energy(120000).build(consumer, "thermal_extra:fuels/cold/blizz_powder");
 
-        DynamoRecipeBuilder.terraceous().ingredient(Tags.Items.RAW_MATERIALS_COPPER).energy(2000)
+        DynamoRecipeBuilder.terraceous().ingredient(Tags.Items.RAW_MATERIALS_COPPER).energy(20000)
                 .build(withConditions(consumer).addCondition(new TagExistsRecipeCondition(new ResourceLocation("forge:raw_materials/copper"))),
                         "thermal_extra:fuels/terraceous/raw_copper");
 
-        DynamoRecipeBuilder.terraceous().ingredient(Tags.Items.RAW_MATERIALS_IRON).energy(4000)
+        DynamoRecipeBuilder.terraceous().ingredient(Tags.Items.RAW_MATERIALS_IRON).energy(25000)
                 .build(withConditions(consumer).addCondition(new TagExistsRecipeCondition(new ResourceLocation("forge:raw_materials/iron"))),
                         "thermal_extra:fuels/terraceous/raw_iron");
 
-        DynamoRecipeBuilder.terraceous().ingredient(Tags.Items.RAW_MATERIALS_GOLD).energy(3000)
+        DynamoRecipeBuilder.terraceous().ingredient(Tags.Items.RAW_MATERIALS_GOLD).energy(23000)
                 .build(withConditions(consumer).addCondition(new TagExistsRecipeCondition(new ResourceLocation("forge:raw_materials/gold"))),
                         "thermal_extra:fuels/terraceous/raw_gold");
 
-        DynamoRecipeBuilder.terraceous().ingredient(ItemTagsCoFH.RAW_MATERIALS_LEAD).energy(4000)
+        DynamoRecipeBuilder.terraceous().ingredient(ItemTagsCoFH.RAW_MATERIALS_LEAD).energy(25000)
                 .build(withConditions(consumer).addCondition(new TagExistsRecipeCondition(new ResourceLocation("forge:raw_materials/lead"))),
                         "thermal_extra:fuels/terraceous/raw_lead");
 
-        DynamoRecipeBuilder.terraceous().ingredient(ItemTagsCoFH.RAW_MATERIALS_SILVER).energy(5000)
+        DynamoRecipeBuilder.terraceous().ingredient(ItemTagsCoFH.RAW_MATERIALS_SILVER).energy(30000)
                 .build(withConditions(consumer).addCondition(new TagExistsRecipeCondition(new ResourceLocation("forge:raw_materials/silver"))),
                         "thermal_extra:fuels/terraceous/raw_silver");
 
-        DynamoRecipeBuilder.terraceous().ingredient(ItemTagsCoFH.RAW_MATERIALS_NICKEL).energy(6000)
+        DynamoRecipeBuilder.terraceous().ingredient(ItemTagsCoFH.RAW_MATERIALS_NICKEL).energy(30000)
                 .build(withConditions(consumer).addCondition(new TagExistsRecipeCondition(new ResourceLocation("forge:raw_materials/nickel"))),
                         "thermal_extra:fuels/terraceous/raw_nickel");
 
-        DynamoRecipeBuilder.terraceous().ingredient(ItemTagsCoFH.RAW_MATERIALS_TIN).energy(4000)
+        DynamoRecipeBuilder.terraceous().ingredient(ItemTagsCoFH.RAW_MATERIALS_TIN).energy(20000)
                 .build(withConditions(consumer).addCondition(new TagExistsRecipeCondition(new ResourceLocation("forge:raw_materials/tin"))),
                         "thermal_extra:fuels/terraceous/raw_tin");
 
-        DynamoRecipeBuilder.terraceous().ingredient(ThermalExtraTags.Items.RAW_MATERIALS_ALUMINUM).energy(4000)
+        DynamoRecipeBuilder.terraceous().ingredient(ThermalExtraTags.Items.RAW_MATERIALS_ALUMINUM).energy(25000)
                 .build(withConditions(consumer).addCondition(new TagExistsRecipeCondition(new ResourceLocation("forge:raw_materials/aluminum"))),
                         "thermal_extra:fuels/terraceous/raw_aluminum");
 
-        DynamoRecipeBuilder.terraceous().ingredient(ThermalExtraTags.Items.RAW_MATERIALS_ARCANE_GOLD).energy(6000)
+        DynamoRecipeBuilder.terraceous().ingredient(ThermalExtraTags.Items.RAW_MATERIALS_ARCANE_GOLD).energy(30000)
                 .build(withConditions(consumer).addCondition(new TagExistsRecipeCondition(new ResourceLocation("forge:raw_materials/arcane_gold"))),
                         "thermal_extra:fuels/terraceous/raw_arcane_gold");
 
-        DynamoRecipeBuilder.terraceous().ingredient(ThermalExtraTags.Items.RAW_MATERIALS_OSMIUM).energy(5000)
+        DynamoRecipeBuilder.terraceous().ingredient(ThermalExtraTags.Items.RAW_MATERIALS_OSMIUM).energy(30000)
                 .build(withConditions(consumer).addCondition(new TagExistsRecipeCondition(new ResourceLocation("forge:raw_materials/osmium"))),
                         "thermal_extra:fuels/terraceous/raw_osmium");
 
-        DynamoRecipeBuilder.terraceous().ingredient(ThermalExtraTags.Items.RAW_MATERIALS_TITANIUM).energy(6000)
+        DynamoRecipeBuilder.terraceous().ingredient(ThermalExtraTags.Items.RAW_MATERIALS_TITANIUM).energy(30000)
                 .build(withConditions(consumer).addCondition(new TagExistsRecipeCondition(new ResourceLocation("forge:raw_materials/titanium"))),
                         "thermal_extra:fuels/terraceous/raw_titanium");
 
-        DynamoRecipeBuilder.terraceous().ingredient(ThermalExtraTags.Items.RAW_MATERIALS_URANIUM).energy(4000)
+        DynamoRecipeBuilder.terraceous().ingredient(ThermalExtraTags.Items.RAW_MATERIALS_URANIUM).energy(50000)
                 .build(withConditions(consumer).addCondition(new TagExistsRecipeCondition(new ResourceLocation("forge:raw_materials/uranium"))),
                         "thermal_extra:fuels/terraceous/raw_uranium");
 
-        DynamoRecipeBuilder.terraceous().ingredient(ThermalExtraTags.Items.RAW_MATERIALS_ZINC).energy(4000)
+        DynamoRecipeBuilder.terraceous().ingredient(ThermalExtraTags.Items.RAW_MATERIALS_ZINC).energy(24000)
                 .build(withConditions(consumer).addCondition(new TagExistsRecipeCondition(new ResourceLocation("forge:raw_materials/zinc"))),
                         "thermal_extra:fuels/terraceous/raw_zinc");
 
