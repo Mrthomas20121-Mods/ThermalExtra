@@ -8,6 +8,7 @@ public class ThermalExtraRecipeManagers {
 
     public static void register() {
         registerManager(ColdFuelManager.instance());
+        registerManager(TerraceousFuelManager.instance());
         registerManager(AdvancedRefineryRecipeManager.instance());
         registerManager(NitraticIgniterRecipeManager.instance());
         registerManager(FluidMixerRecipeManager.instance());
