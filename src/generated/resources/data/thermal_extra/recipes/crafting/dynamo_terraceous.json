@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "C": {
+      "tag": "forge:ingots/constantan"
+    },
+    "E": {
+      "tag": "forge:dusts/redstone"
+    },
+    "G": {
+      "tag": "forge:gears/soul_infused"
+    },
+    "I": {
+      "tag": "forge:ingots/twinite"
+    },
+    "R": {
+      "item": "thermal:rf_coil"
+    }
+  },
+  "pattern": [
+    " R ",
+    "IGI",
+    "CEC"
+  ],
+  "result": {
+    "item": "thermal_extra:dynamo_terraceous"
+  },
+  "show_notification": true
+}

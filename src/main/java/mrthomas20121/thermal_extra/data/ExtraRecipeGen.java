@@ -215,6 +215,18 @@ public class ExtraRecipeGen extends RecipeProviderCoFH {
                 .unlockedBy("has_rf_coil", has(ITEMS.get("rf_coil")))
                 .save(consumer, this.modid + ":crafting/dynamo_frost");
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, ThermalExtraBlocks.DYNAMO_TERRACEOUS.get())
+                .define('R', ITEMS.get("rf_coil"))
+                .define('G', ThermalExtraTags.Items.SOUL_INFUSED_GEAR)
+                .define('I', ThermalExtraTags.Items.TWINITE_INGOT)
+                .define('C', ItemTagsCoFH.INGOTS_CONSTANTAN)
+                .define('E', Tags.Items.DUSTS_REDSTONE)
+                .pattern(" R ")
+                .pattern("IGI")
+                .pattern("CEC")
+                .unlockedBy("has_rf_coil", has(ITEMS.get("rf_coil")))
+                .save(consumer, this.modid + ":crafting/dynamo_terraceous");
+
         ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, ThermalExtraBlocks.FLUID_MIXER.get())
                 .define('G', ItemTagsCoFH.GEARS_CONSTANTAN)
                 .define('I', ThermalExtraTags.Items.SOUL_INFUSED_INGOT)
