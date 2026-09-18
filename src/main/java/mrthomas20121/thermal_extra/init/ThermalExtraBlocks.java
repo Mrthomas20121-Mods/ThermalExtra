@@ -52,6 +52,7 @@ public class ThermalExtraBlocks {
     public static RegistryObject<Block> ABYSSAL_GLASS = registerGlass("abyssal_glass");
 
     public static RegistryObject<DynamoBlock> DYNAMO_COLD = BLOCKS.register("dynamo_frost", () -> new DynamoBlock(of().sound(SoundType.NETHERITE_BLOCK).strength(2.0F).lightLevel(lightValue(ACTIVE, 7)), DynamoColdBlockEntity.class, ThermalExtraBlockEntities.DYNAMO_COLD));
+    public static RegistryObject<DynamoBlock> DYNAMO_TERRACEOUS = BLOCKS.register("dynamo_terraceous", () -> new DynamoBlock(of().sound(SoundType.NETHERITE_BLOCK).strength(2.0F).lightLevel(lightValue(ACTIVE, 7)), DynamoTerraceousBlockEntity.class, ThermalExtraBlockEntities.DYNAMO_TERRACEOUS));
 
     public static RegistryObject<Item> ADVANCED_REFINERY = registerAugmentableBlock("advanced_refinery", () -> new EntityBlockActive4Way(of().sound(SoundType.NETHERITE_BLOCK).strength(2.0F).lightLevel(lightValue(ACTIVE, 5)), MachineAdvancedRefineryBlockEntity.class, ThermalExtraBlockEntities.ADVANCED_REFINERY), () -> ThermalCoreConfig.machineAugments, MACHINE_VALIDATOR, ThermalExtra.MOD_ID);
     public static RegistryObject<Item> NITRATIC_IGNITER = registerAugmentableBlock("nitratic_igniter", () -> new EntityBlockActive4Way(of().sound(SoundType.NETHERITE_BLOCK).strength(2.0F).lightLevel(lightValue(ACTIVE, 0)), MachineNitraticIgniterBlockEntity.class, ThermalExtraBlockEntities.NITRATIC_IGNITER), () -> ThermalCoreConfig.machineAugments, MACHINE_VALIDATOR, ThermalExtra.MOD_ID);

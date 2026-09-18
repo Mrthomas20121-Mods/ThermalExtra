@@ -6,6 +6,7 @@ import mrthomas20121.thermal_extra.item.augment.EnumAugment;
 import mrthomas20121.thermal_extra.item.augment.ExtraAugmentType;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.registries.DeferredRegister;
@@ -19,6 +20,7 @@ public class ThermalExtraCreativeTabs {
     }
 
     public static RegistryObject<CreativeModeTab> tab_augments = CREATIVE_TABS.register("augments", () -> CreativeModeTab.builder()
+            .withTabsBefore(new ResourceLocation(ThermalExtra.MOD_ID, "resources"))
             .icon(() -> new ItemStack(ThermalExtraItems.INTEGRAL_COMPONENT.get()))
             .title(Component.translatable("creative_tab.thermal_extra.augments"))
             .displayItems((feature, output) -> {
@@ -38,12 +40,14 @@ public class ThermalExtraCreativeTabs {
     );
 
     public static RegistryObject<CreativeModeTab> tab_machines = CREATIVE_TABS.register("machines", () -> CreativeModeTab.builder()
+            .withTabsBefore(new ResourceLocation(ThermalExtra.MOD_ID, "augments"))
             .icon(() -> new ItemStack(ThermalExtraItems.DYNAMO_COLD.get()))
             .title(Component.translatable("creative_tab.thermal_extra.machines"))
             .displayItems((feature, output) -> {
                 output.accept(ThermalExtraBlocks.HARVESTER.get());
                 output.accept(ThermalExtraBlocks.LAVA_GEN.get());
                 output.accept(ThermalExtraBlocks.DYNAMO_COLD.get());
+                output.accept(ThermalExtraBlocks.DYNAMO_TERRACEOUS.get());
                 output.accept(ThermalExtraBlocks.ADVANCED_REFINERY.get());
                 output.accept(ThermalExtraBlocks.NITRATIC_IGNITER.get());
                 output.accept(ThermalExtraBlocks.FLUID_MIXER.get());

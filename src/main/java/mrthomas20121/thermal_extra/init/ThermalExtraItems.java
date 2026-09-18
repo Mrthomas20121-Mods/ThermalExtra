@@ -43,6 +43,7 @@ public class ThermalExtraItems {
     public static Rarity green = Rarity.create("extra_green", style -> style.withColor(ChatFormatting.DARK_GREEN));
 
     public static final RegistryObject<BlockItemCoFH> DYNAMO_COLD = ITEMS.register("dynamo_frost", () -> new BlockItemAugmentable(ThermalExtraBlocks.DYNAMO_COLD.get(), new Item.Properties()).setAugValidator(DYNAMO_NO_FLUID_VALIDATOR));
+    public static final RegistryObject<BlockItemCoFH> DYNAMO_TERRACEOUS = ITEMS.register("dynamo_terraceous", () -> new BlockItemAugmentable(ThermalExtraBlocks.DYNAMO_TERRACEOUS.get(), new Item.Properties()).setAugValidator(DYNAMO_NO_FLUID_VALIDATOR));
 
     public static final RegistryObject<SmithingTemplateItem> AUGMENT_TEMPLATE = ITEMS.register("augment_smithing_upgrade", () -> SmithingTemplateHelper.createTemplate("augment"));
 

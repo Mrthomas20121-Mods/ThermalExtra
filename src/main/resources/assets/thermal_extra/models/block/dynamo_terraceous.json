@@ -1,0 +1,8 @@
+{
+  "parent": "thermal:block/dynamo_base",
+  "textures": {
+    "top": "thermal_extra:block/dynamos/dynamo_terraceous",
+    "side": "thermal_extra:block/dynamos/dynamo_terraceous_side",
+    "bottom": "thermal_extra:block/dynamos/dynamo_terraceous"
+  }
+}

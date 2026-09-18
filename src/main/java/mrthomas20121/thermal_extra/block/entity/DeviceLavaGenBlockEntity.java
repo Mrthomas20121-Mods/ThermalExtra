@@ -70,6 +70,7 @@ public class DeviceLavaGenBlockEntity extends DeviceBlockEntity implements ITick
         renderFluid = new FluidStack(Fluids.LAVA, BUCKET_VOLUME);
     }
 
+    @SuppressWarnings("deprecation")
     @Override
     protected void updateValidity() {
 

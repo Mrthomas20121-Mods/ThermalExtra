@@ -391,6 +391,7 @@ public class ExtraTagGen {
                     ThermalExtraBlocks.DRAGONSTEEL_GLASS.get(),
                     ThermalExtraBlocks.ABYSSAL_BLOCK.get(),
                     ThermalExtraBlocks.DYNAMO_COLD.get(),
+                    ThermalExtraBlocks.DYNAMO_TERRACEOUS.get(),
                     ThermalExtraBlocks.BLOCKS.get("device_harvester"),
                     ThermalExtraBlocks.BLOCKS.get("device_lava_gen"),
                     ThermalExtraBlocks.BLOCKS.get("component_assembly"),

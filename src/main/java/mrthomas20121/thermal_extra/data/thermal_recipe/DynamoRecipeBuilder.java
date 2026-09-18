@@ -8,6 +8,7 @@ import cofh.thermal.lib.util.recipes.ThermalFuel;
 import com.google.gson.JsonObject;
 import mrthomas20121.thermal_extra.init.ThermalExtraRecipeSerializers;
 import mrthomas20121.thermal_extra.recipe.ColdFuel;
+import mrthomas20121.thermal_extra.recipe.TerraceousFuel;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
@@ -26,6 +27,10 @@ public class DynamoRecipeBuilder<T extends ThermalFuel> {
 
     public static DynamoRecipeBuilder<ColdFuel> cold() {
         return new DynamoRecipeBuilder<>(ThermalExtraRecipeSerializers.COLD_FUEL_SERIALIZER.get());
+    }
+
+    public static DynamoRecipeBuilder<TerraceousFuel> terraceous() {
+        return new DynamoRecipeBuilder<>(ThermalExtraRecipeSerializers.TERRACEOUS_FUEL_SERIALIZER.get());
     }
 
     public static DynamoRecipeBuilder<NumismaticFuel> numismatic() {

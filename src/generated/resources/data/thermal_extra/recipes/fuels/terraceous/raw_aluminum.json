@@ -1,0 +1,13 @@
+{
+  "type": "thermal_extra:terraceous_fuel",
+  "conditions": [
+    {
+      "type": "cofh_core:tag_exists",
+      "tag": "forge:raw_materials/aluminum"
+    }
+  ],
+  "energy": 4000,
+  "ingredient": {
+    "tag": "forge:raw_materials/aluminum"
+  }
+}

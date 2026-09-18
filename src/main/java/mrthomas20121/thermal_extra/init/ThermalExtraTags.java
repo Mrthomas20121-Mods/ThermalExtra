@@ -62,6 +62,7 @@ public class ThermalExtraTags {
         public static TagKey<Item> RAW_MATERIALS_URANIUM = create("forge:raw_materials/uranium");
         public static TagKey<Item> RAW_MATERIALS_OSMIUM = create("forge:raw_materials/osmium");
         public static TagKey<Item> RAW_MATERIALS_ZINC = create("forge:raw_materials/zinc");
+        public static TagKey<Item> RAW_MATERIALS_TITANIUM = create("forge:raw_materials/titanium");
 
         public static TagKey<Item> DUSTS_OBSIDIAN = create("forge:dusts/obsidian");
 

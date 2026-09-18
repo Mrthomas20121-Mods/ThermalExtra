@@ -129,6 +129,7 @@ public class ExtraLangGen extends LanguageProvider {
 
         // items and blocks
         addBlock(ThermalExtraBlocks.DYNAMO_COLD, "Gelid Dynamo");
+        addBlock(ThermalExtraBlocks.DYNAMO_TERRACEOUS, "Terraceous Dynamo");
         addBlock(ThermalExtraBlocks.BLOCKS.getSup("advanced_refinery"), "Adv. Refinery");
         addBlock(ThermalExtraBlocks.BLOCKS.getSup("nitratic_igniter"), "Nitratic Igniter");
         addBlock(ThermalExtraBlocks.BLOCKS.getSup("fluid_mixer"), "Fluid Mixer");

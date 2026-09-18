@@ -4,6 +4,7 @@ import cofh.lib.util.DeferredRegisterCoFH;
 import mrthomas20121.thermal_extra.ThermalExtra;
 import mrthomas20121.thermal_extra.inventory.AdvancedItemFilterMenu;
 import mrthomas20121.thermal_extra.inventory.DynamoFrostMenu;
+import mrthomas20121.thermal_extra.inventory.DynamoTerraceousMenu;
 import mrthomas20121.thermal_extra.inventory.device.DeviceHarvesterMenu;
 import mrthomas20121.thermal_extra.inventory.device.DeviceLavaGenMenu;
 import mrthomas20121.thermal_extra.inventory.machine.*;
@@ -22,6 +23,7 @@ public class ThermalExtraContainers {
     public static final RegistryObject<MenuType<MachineAdvancedRefineryMenu>> ADVANCED_REFINERY_CONTAINER = CONTAINERS.register("advanced_refinery", () -> IForgeMenuType.create((windowId, inv, data) -> new MachineAdvancedRefineryMenu(windowId, getClientWorld(), data.readBlockPos(), inv, getClientPlayer())));
     public static final RegistryObject<MenuType<MachineNitraticIgniterMenu>> NITRATIC_IGNITER_CONTAINER = CONTAINERS.register("nitratic_igniter", () -> IForgeMenuType.create((windowId, inv, data) -> new MachineNitraticIgniterMenu(windowId, getClientWorld(), data.readBlockPos(), inv, getClientPlayer())));
     public static final RegistryObject<MenuType<DynamoFrostMenu>> DYNAMO_FROST_CONTAINER = CONTAINERS.register("dynamo_frost", () -> IForgeMenuType.create((windowId, inv, data) -> new DynamoFrostMenu(windowId, getClientWorld(), data.readBlockPos(), inv, getClientPlayer())));
+    public static final RegistryObject<MenuType<DynamoTerraceousMenu>> DYNAMO_TERRACEOUS_CONTAINER = CONTAINERS.register("dynamo_terraceous", () -> IForgeMenuType.create((windowId, inv, data) -> new DynamoTerraceousMenu(windowId, getClientWorld(), data.readBlockPos(), inv, getClientPlayer())));
     public static final RegistryObject<MenuType<AdvancedItemFilterMenu>> ADVANCED_ITEM_FILTER_CONTAINER = CONTAINERS.register("advanced_item_filter", () -> IForgeMenuType.create((windowId, inv, data) -> new AdvancedItemFilterMenu(windowId, getClientWorld(), inv, getClientPlayer(), data.readVarInt(), data.readVarInt(), data.readBlockPos())));
     public static final RegistryObject<MenuType<MachineFluidMixerMenu>> FLUID_MIXER_CONTAINER = CONTAINERS.register("fluid_mixer", () -> IForgeMenuType.create((windowId, inv, data) -> new MachineFluidMixerMenu(windowId, getClientWorld(), data.readBlockPos(), inv, getClientPlayer())));
     public static final RegistryObject<MenuType<DeviceHarvesterMenu>> HARVESTER_CONTAINER = CONTAINERS.register("harvester", () -> IForgeMenuType.create((windowId, inv, data) -> new DeviceHarvesterMenu(windowId, getClientWorld(), data.readBlockPos(), inv, getClientPlayer())));
