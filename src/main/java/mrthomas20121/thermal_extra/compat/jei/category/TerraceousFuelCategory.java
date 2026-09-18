@@ -28,7 +28,7 @@ public class TerraceousFuelCategory extends ThermalFuelCategory<TerraceousFuel> 
         background = guiHelper.drawableBuilder(DynamoStirlingScreen.TEXTURE, 26, 11, 70, 62)
                 .addPadding(0, 0, 16, 78)
                 .build();
-        name = getTextComponent(ThermalExtraBlocks.DYNAMO_COLD.get().getDescriptionId());
+        name = getTextComponent(ThermalExtraBlocks.DYNAMO_TERRACEOUS.get().getDescriptionId());
 
         durationBackground = Drawables.getDrawables(guiHelper).getScale(Drawables.SCALE_FLAME);
         duration = guiHelper.createAnimatedDrawable(Drawables.getDrawables(guiHelper).getScaleFill(Drawables.SCALE_FLAME), 400, IDrawableAnimated.StartDirection.TOP, true);

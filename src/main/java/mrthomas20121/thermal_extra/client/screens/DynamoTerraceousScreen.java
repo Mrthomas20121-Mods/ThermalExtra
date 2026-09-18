@@ -20,7 +20,7 @@ public class DynamoTerraceousScreen extends DynamoScreen<DynamoTerraceousMenu> {
 
         super(container, inv, container.tile, titleIn);
         texture = TEXTURE;
-        info = appendLine(generatePanelInfo("info.thermal_extra.dynamo_frost"), "info.thermal.dynamo.throttle");
+        info = appendLine(generatePanelInfo("info.thermal_extra.dynamo_terraceous"), "info.thermal.dynamo.throttle");
     }
 
     @Override
