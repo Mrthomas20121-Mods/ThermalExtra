@@ -57,6 +57,7 @@
   "info.thermal_extra.device_harvester.2": "Not exactly a replacement for a farmer villager.",
   "info.thermal_extra.dynamo_frost.0": "Generates Redstone Flux using extreme cold.",
   "info.thermal_extra.dynamo_frost.1": "Might be a portal to a really hot, dry place in need of ice.",
+  "info.thermal_extra.dynamo_terraceous.0": "Generate RF by melting raw ores.",
   "info.thermal_extra.endothermic_dehydrator.0": "Dries out items or fluids to yield various products.",
   "info.thermal_extra.endothermic_dehydrator.1": "May also concentrate fluids, yielding a more potent fluid.",
   "info.thermal_extra.endothermic_dehydrator.2": "Automatic drying rack.",

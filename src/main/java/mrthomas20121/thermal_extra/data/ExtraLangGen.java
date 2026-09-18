@@ -26,6 +26,7 @@ public class ExtraLangGen extends LanguageProvider {
 
         add("info.thermal_extra.dynamo_frost.0", "Generates Redstone Flux using extreme cold.");
         add("info.thermal_extra.dynamo_frost.1", "Might be a portal to a really hot, dry place in need of ice.");
+        add("info.thermal_extra.dynamo_terraceous.0", "Generate RF by melting raw ores.");
         add("block.thermal_extra.dynamo_frost.keyword", "blizz cube snow ice packed blue cold frost frozen engine generator");
         add("info.thermal_extra.machine_metal_infuser.0", "Uses fluids to assemble multiple items into a more complex form.");
         add("info.thermal_extra.machine_metal_infuser.1", "Some recipes may leave waste fluids to deal with.");
