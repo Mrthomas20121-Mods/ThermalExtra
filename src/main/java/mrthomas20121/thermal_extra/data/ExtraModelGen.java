@@ -159,6 +159,7 @@ public class ExtraModelGen extends ItemModelProviderCoFH {
         itemModel(ThermalExtraFluids.RAW_ZINC.getBucket());
 
         blockItem(ThermalExtraBlocks.DYNAMO_COLD);
+        blockItem(ThermalExtraBlocks.DYNAMO_TERRACEOUS);
     }
 
     private void toolset(ToolSetObject set) {
