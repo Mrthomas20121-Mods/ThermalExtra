@@ -1,0 +1,20 @@
+{
+  "type": "thermal_extra:component_assembly",
+  "energy": 5000,
+  "ingredients": [
+    {
+      "count": 2,
+      "tag": "forge:gems/quartz"
+    },
+    {
+      "amount": 100,
+      "fluid": "thermal_extra:sunflower_oil"
+    }
+  ],
+  "result": [
+    {
+      "amount": 100,
+      "fluid": "thermal_extra:crystallized_sunflower_oil"
+    }
+  ]
+}
