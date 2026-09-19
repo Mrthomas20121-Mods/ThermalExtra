@@ -18,7 +18,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.Supplier;
 
-public class FluidHolder {
+public class FluidHolder implements Supplier<ForgeFlowingFluid> {
 
     private static TagKey<Fluid> forgeTag(String name) {
         return TagKey.create(Registries.FLUID, new ResourceLocation("forge", name));
@@ -66,6 +66,11 @@ public class FluidHolder {
 
     public RegistryObject<ForgeFlowingFluid> flowing() {
         return this.getFlowingFluid();
+    }
+
+    @Override
+    public ForgeFlowingFluid get() {
+        return this.still().get();
     }
 
     public boolean isMetal() {
