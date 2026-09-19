@@ -14,6 +14,7 @@ public class ThermalExtraConfig implements IBaseConfig {
     private Supplier<Boolean> harvesterReplantBlock;
 
     private Supplier<Integer> dynamoColdPower;
+    private Supplier<Integer> dynamoTerraceousPower;
     private Supplier<Integer> machineAdvancedRefineryPower;
     private Supplier<Integer> machineComponentAssemblyPower;
     private Supplier<Integer> machineEndothermicDehydratorPower;
@@ -45,6 +46,14 @@ public class ThermalExtraConfig implements IBaseConfig {
         dynamoColdPower = builder
                 .comment("This sets the base power generation (RF/t) for the Cold Dynamo.")
                 .defineInRange("Base Power", ColdFuelManager.instance().getBasePower(), ColdFuelManager.instance().getMinPower(), ColdFuelManager.instance().getMaxPower());
+
+        builder.pop();
+
+        builder.push("Terraceous Dynamo");
+
+        dynamoTerraceousPower = builder
+                .comment("This sets the base power generation (RF/t) for the Terraceous Dynamo.")
+                .defineInRange("Base Power", TerraceousFuelManager.instance().getBasePower(), TerraceousFuelManager.instance().getMinPower(), TerraceousFuelManager.instance().getMaxPower());
 
         builder.pop();
 
@@ -108,6 +117,10 @@ public class ThermalExtraConfig implements IBaseConfig {
 
         if (dynamoColdPower != null) {
             ColdFuelManager.instance().setBasePower(dynamoColdPower.get());
+        }
+
+        if (dynamoTerraceousPower != null) {
+            TerraceousFuelManager.instance().setBasePower(dynamoTerraceousPower.get());
         }
 
         if (machineAdvancedRefineryPower != null) {
