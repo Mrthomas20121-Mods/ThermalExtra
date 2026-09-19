@@ -6,7 +6,7 @@
       "tag": "forge:raw_materials/uranium"
     }
   ],
-  "energy": 4000,
+  "energy": 50000,
   "ingredient": {
     "tag": "forge:raw_materials/uranium"
   }

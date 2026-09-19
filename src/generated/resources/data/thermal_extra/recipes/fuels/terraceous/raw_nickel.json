@@ -6,7 +6,7 @@
       "tag": "forge:raw_materials/nickel"
     }
   ],
-  "energy": 6000,
+  "energy": 30000,
   "ingredient": {
     "tag": "forge:raw_materials/nickel"
   }

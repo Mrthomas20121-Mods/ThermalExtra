@@ -6,7 +6,7 @@
       "tag": "forge:raw_materials/silver"
     }
   ],
-  "energy": 5000,
+  "energy": 30000,
   "ingredient": {
     "tag": "forge:raw_materials/silver"
   }

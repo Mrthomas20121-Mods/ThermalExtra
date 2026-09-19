@@ -6,7 +6,7 @@
       "tag": "forge:raw_materials/tin"
     }
   ],
-  "energy": 4000,
+  "energy": 20000,
   "ingredient": {
     "tag": "forge:raw_materials/tin"
   }

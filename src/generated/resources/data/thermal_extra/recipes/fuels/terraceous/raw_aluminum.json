@@ -6,7 +6,7 @@
       "tag": "forge:raw_materials/aluminum"
     }
   ],
-  "energy": 4000,
+  "energy": 25000,
   "ingredient": {
     "tag": "forge:raw_materials/aluminum"
   }
